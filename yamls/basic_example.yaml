@@ -1,0 +1,11 @@
+dag:
+  id: basic_example
+  description: DAG de teste
+  data_path: './data'
+  verify:
+    location: mx
+    cellphone_number: 'NUMBER'
+    address:
+      column: 'ADDRESS'
+      identifier: '__-_____'
+    area_code: 'ZIPCODE'
