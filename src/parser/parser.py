@@ -13,23 +13,15 @@ class YAMLParser():
             dag_config_dict = yaml.safe_load(file)
 
         dag = self._try_get(dag_config_dict, 'dag')
-        dag_id = self._try_get(dag, 'id')
-        description = self._try_get(dag, 'description')
-        verify = self._try_get(dag, 'verify')
 
-        location = verify.get('location', None)
-        cellphone_number = verify.get('cellphone_number', None)
-        address = verify.get('address', None)
-        area_code = verify.get('area_code', None)
+        initial_parser = {
+            "dag_id": self._try_get(dag, 'id'),
+            "data_path": self._try_get(dag, 'data_path'),
+            "description": self._try_get(dag, 'description'),
+            "feature_engineering": self._try_get(dag, 'feature_engineering'),
+        }
 
-        return (
-            dag_id,
-            description,
-            location,
-            cellphone_number,
-            address,
-            area_code
-            )
+        return initial_parser
 
     def _try_get(self, variable: dict, field, error_msg=None):
         try:
