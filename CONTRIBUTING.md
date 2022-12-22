@@ -9,7 +9,7 @@ To contribute to this project, follow the next steps:
 * *Fork* (just to external contributors)
 * Create [*issues*](CONTRIBUTING.md#issues)
 * Create [*branchs*](CONTRIBUTING.md#branches-policy)
-* Follow the commit policy [*commits*](CONTRIBUTING.md#commits)
+* Follow the commit policy [*commits*](CONTRIBUTING.md#commit-policy)
 * Submit [*Pull Request*](CONTRIBUTING.md#merges-and-pull-requests-policy)
 
 
@@ -19,7 +19,7 @@ The *issues* need title, description, at least one asigned, *labels*, *milestone
 
 The Labels used in the project are described in the topic [Labels](https://github.com/PDA-FGA/Playground/labels).
 
-To create a issue follow [Issue template](issue_template.md)
+To create a issue follow [task template](/.github/ISSUE_TEMPLATE/task.md) or [user history template](/.github/ISSUE_TEMPLATE/user-story.md)
 
 ### Branches Policy
 
@@ -31,7 +31,7 @@ See the merge policy in the topic [Merges para *master*](CONTRIBUTING.md#merges-
 
 #### Branch Names  
 
-The development branches will be created from the *main* branch with the default naming `x_issue_name`, where `x` represents the issue tracking code.
+The development branches will be created from the *main* branch with the default naming `x/issue_name`, where `x` represents the issue tracking code.
 
 ### Commits Policy
 
@@ -41,7 +41,7 @@ All commits must be mention the issue, for that, just add `#<issue_number>`.
  #21 Adding contributing guide
 ```
 
-** \*\*By default, the `#` character defines a comment line in the commit message file. To resolve this issue, use the command:**
+**By default, the `#` character defines a comment line in the commit message file. To resolve this issue, use the command:**
 ```
 git config --local core.commentChar '!'
 ```
