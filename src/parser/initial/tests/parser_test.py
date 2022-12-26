@@ -1,11 +1,11 @@
 import pytest
 
-from parser.parser import YAMLParser
+from parser.initial.parser import YAMLParser
 
 class TestYamlParser:
 
     yamlParser = YAMLParser
-    yaml = yamlParser('src/parser/tests/mock/first_case/ymal_mock.yaml').parse()
+    yaml = yamlParser('src/parser/initial/tests/mock/ymal_mock.yaml').parse()
     
     def test_yaml_has_path(self):
         assert 'data_path' in self.yaml
@@ -27,7 +27,7 @@ class TestYamlParser:
 def test_try_get_fail():
     yamlParser = YAMLParser
     with pytest.raises(ValueError) as exc:
-        yamlParser('src/parser/tests/mock/ymal_mock_fail.yaml').parse()
+        yamlParser('src/parser/initial/tests/mock/ymal_mock_fail.yaml').parse()
         
     assert "Erro no arquivo ymal_mock_fail.yaml: O campo `description` é obrigatório." in str(exc.value)
     assert exc.type == ValueError

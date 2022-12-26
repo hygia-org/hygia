@@ -1,8 +1,8 @@
 import os
 from pandas import read_csv
 
-from parser.parser import YAMLParser
-from parser.treatment.feature_engineering.parser import FeatureEngineering
+from parser.initial.parser import YAMLParser
+from parser.feature_engineering.parser import FeatureEngineering
 
 class Generator():
     
@@ -20,6 +20,6 @@ class Generator():
             
             for path in dag['data_path']:
                 csv = read_csv(path)
-                return featureEngineringParser(csv).parser(dag['feature_engineering'])
+                return featureEngineringParser(csv).parse(dag['feature_engineering'])
             
 
