@@ -1,19 +1,25 @@
 import os
+from pandas import read_csv
 
-from parser import YAMLParser
+from parser.initial.parser import YAMLParser
+from parser.feature_engineering.parser import FeatureEngineering
 
 class Generator():
-
-    dir = 'yamls'
-    YAMLS_DIR = os.listdir(dir)
-    parser = YAMLParser
+    
+    def __init__(self, dir):
+        self.dir = dir
+        self.yamls_dir = os.listdir(dir)
+    
 
     def generate_dags(self):
+        initialParser = YAMLParser
+        featureEngineringParser = FeatureEngineering
 
-        for file in self.YAMLS_DIR:
-            dag_specs = self.parser(
-                filepath=os.path.join(self.dir, file)).parse()
-            print(dag_specs)
+        for file in self.yamls_dir:
+            dag = initialParser(filepath=os.path.join(self.dir, file)).parse()
             
-Generator().generate_dags()
+            for path in dag['data_path']:
+                csv = read_csv(path)
+                return featureEngineringParser(csv).parse(dag['feature_engineering'])
+            
 

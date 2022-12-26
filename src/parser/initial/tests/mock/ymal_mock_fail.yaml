@@ -1,0 +1,9 @@
+dag:
+  id: basic_example
+  data_path:
+    - 'src/parser/tests/mock/data_mock.csv'
+  feature_engineering:
+    keyboard_smash:
+      columns:
+        - 'ZIPCODE'
+        - ['NUMBER', 'ADDRESS']
