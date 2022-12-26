@@ -1,2 +1,4 @@
 pyyaml
 pandas
+pytest
+pytest-cov

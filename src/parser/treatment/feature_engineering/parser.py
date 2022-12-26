@@ -6,18 +6,24 @@ class FeatureEngineering():
         self.csv = csv
 
     def parser(self, feature: dict):
+        return self._parser_feature_engineering(feature)
+        
+    def _parser_feature_engineering(self, feature: dict):
         if(not feature): return
 
-        self.keyboardSmashParser(feature.get('keyboard_smash', None))
+        return self._keyboard_smash_parser(feature.get('keyboard_smash', None))
 
-    def keyboardSmashParser(self, keyboard_smash: dict):
+    def _keyboard_smash_parser(self, keyboard_smash: dict):
         if(not keyboard_smash): return
         
         columns = keyboard_smash.get('columns', None)
+        dags = []
         for column in columns:
-            print(self.getConcatenatedColumn(column))
+            dags.append(self._get_concatenated_column(column))
+            
+        return dags
         
-    def getConcatenatedColumn(self, column):
+    def _get_concatenated_column(self, column):
         if(type(column) == str):
             return DataFrame(self.csv[column])
         
