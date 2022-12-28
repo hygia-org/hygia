@@ -2,7 +2,16 @@
 
 
 
-## Run metabase
+## Metabase
+
+The metabase will help us visualize and monitor data processing, feature engineering and model monitoring, accompanying us throughout the cycle.
+
+| Keywords  | Description |
+|-----------|-------------|
+|   CSV     | A CSV file is a plain text file that stores table and spreadsheet information. CSV files can be easily imported and exported using programs that store data in tables.|
+| Collection| A collection is a grouping of MongoDB documents. Documents within a collection can have different fields. A collection is the equivalent of a table in a relational database system.|
+|  Database | A database stores one or more collections of documents.|
+| Mongo| It is a NoSQL database developed by MongoDB Inc. MongoDB database is built to store a huge amount of data and also perform fast.|
 
 **Environment check**
 
@@ -22,11 +31,20 @@ In the root folder, run the command
 
 ```make up```
 
-**Load data into the database**
+**Loading data into a non-relational database**
 
-Open another terminal and run the command
+This command is used to load the .csv file into the local database, where it is necessary to pass the file path, database and collection as an argument
 
-```make migrate```
+- path = .csv file path
+- database = database name
+- collection = collection name
+
+exemple:
+
+
+```make migrate path=data/data_example.csv database=general  collection=order```
+
+
 
 **Connect the database to the metabase**
 
@@ -36,3 +54,11 @@ Open another terminal and run the command
 - step 4: Add database authentication data
 
 ![](https://raw.githubusercontent.com/francisco1code/Files/main/a.gif)
+
+**Exemple mongo connect metabase**
+|  metabase  | credential  |
+|------------|-------------|
+|    host    |  mongo  |
+|dabase_name | use the name you define in make migrate|
+|    user    |   lappis    |
+|  password  |   lappis    |
