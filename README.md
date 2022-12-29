@@ -13,5 +13,5 @@ python src/index.py
 
 ### Testing
 ```
-pytest tests/
+pytest --cov
 ```
