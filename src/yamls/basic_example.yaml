@@ -4,7 +4,22 @@ dag:
   data_path:
     - 'data/data_example.csv'
     - 'data/data_example2.csv'
+
   feature_engineering:
-    keyboard_smash:
-      columns:
-        - ['NUMBER', 'ADDRESS', 'ZIPCODE']
+    - input:
+        columns:
+          - tudo_junto: ['NUMBER', 'ADDRESS', 'ZIPCODE']
+          - apenas_number: 'NUMBER'
+        features:
+          word_embedding:
+            data_lang: 'es'
+            tudo_junto:
+              dimensions: 23
+
+    - input:
+        columns:
+          - apenas_number: 'NUMBER'
+        features:
+          word_embedding: 'off'
+          keyboard_smash:
+            ksmash_sequence_vowels: 'off'

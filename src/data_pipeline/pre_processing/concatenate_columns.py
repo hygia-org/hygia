@@ -1,16 +1,15 @@
 from pandas import DataFrame
 
-def get_concatenated_column(csv, columns):
+def get_concatenated_column(csv, columns, column_name):
     if(type(columns) == str):
-        return DataFrame(csv[columns])
+        csv[column_name] = csv[columns]
+        return DataFrame(csv[column_name])
     
-    value_name = ''
     for value in columns:
-        if (value_name != ''): 
-            csv[value_name + value] = csv[value_name].astype(str) + ' ' + csv[value].astype(str)
-            if (value_name != last_value): del csv[value_name]
-            
-        last_value = value
-        value_name = value_name + value        
+        if(not(column_name in csv)):
+            csv[column_name] = csv[value].astype(str)
+            continue
         
-    return DataFrame(csv[value_name])
+        csv[column_name] = csv[column_name] + ' ' + csv[value].astype(str)
+        
+    return DataFrame(csv[column_name])
