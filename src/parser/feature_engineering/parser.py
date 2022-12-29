@@ -1,4 +1,4 @@
-from data_treatment.data_pre_processing.concatenate_columns import get_concatenated_column
+from data_pipeline.pre_processing.concatenate_columns import get_concatenated_column
 
 class FeatureEngineering():
     
