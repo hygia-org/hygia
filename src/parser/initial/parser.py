@@ -16,6 +16,7 @@ class YAMLParser(Parser):
         initial_parser = {
             "dag_id": self._try_get(dag, 'id'),
             "data_path": self._try_get(dag, 'data_path'),
+            "output_folder": self._try_get(dag, 'output_folder'),
             "description": self._try_get(dag, 'description'),
             "feature_engineering": self._try_get(dag, 'feature_engineering'),
         }

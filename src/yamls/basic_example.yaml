@@ -4,6 +4,7 @@ dag:
   data_path:
     - 'data/data_example.csv'
     - 'data/data_example2.csv'
+  output_folder: 'output'
 
   feature_engineering:
     - input:
