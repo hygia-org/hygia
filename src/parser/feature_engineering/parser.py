@@ -76,8 +76,6 @@ class FeatureEngineering(Parser):
             
             dimensions[key] = self._get(item, 'dimensions', dimensions_default_value)
             
-            
-        print(columns_name)
         for name in columns_name:
             if(not(name in dimensions)): dimensions[name] = dimensions_default_value
         
