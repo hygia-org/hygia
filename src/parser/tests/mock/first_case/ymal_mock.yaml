@@ -1,9 +1,0 @@
-dag:
-  id: basic_example
-  description: DAG de teste
-  data_path:
-    - 'src/parser/tests/mock/data_mock.csv'
-  feature_engineering:
-    keyboard_smash:
-      columns:
-        - 'NUMBER'

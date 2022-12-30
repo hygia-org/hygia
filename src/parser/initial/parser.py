@@ -1,9 +1,8 @@
 import yaml
 
-class YAMLParser():
+from src.parser.parser import Parser
 
-    def __init__(self, filepath: str):
-        self.filepath = filepath
+class YAMLParser(Parser):
 
     def parse(self):
         return self._parse_yaml()
@@ -17,18 +16,9 @@ class YAMLParser():
         initial_parser = {
             "dag_id": self._try_get(dag, 'id'),
             "data_path": self._try_get(dag, 'data_path'),
+            "output_folder": self._try_get(dag, 'output_folder'),
             "description": self._try_get(dag, 'description'),
             "feature_engineering": self._try_get(dag, 'feature_engineering'),
         }
 
         return initial_parser
-
-    def _try_get(self, variable: dict, field, error_msg=None):
-        try:
-            return variable[field]
-        except KeyError:
-            if not error_msg:
-                error_msg = f'O campo `{field}` é obrigatório.'
-            file_name = self.filepath.split('/')[-1]
-            error_msg = f'Erro no arquivo {file_name}: {error_msg}'
-            raise ValueError(error_msg)

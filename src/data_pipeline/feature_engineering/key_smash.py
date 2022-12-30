@@ -93,8 +93,6 @@ class KeySmash:
         if (count_sequence != 1):
             sequence_regex.append(count_sequence**2)
             
-        print(sequence_regex)
-        
         return sum(sequence_regex)/len(text)
     
     def calculate_number_count_metric(self, text):
