@@ -14,7 +14,8 @@ class TestParser():
         configs = self.parser.parse(self.feature_engineering_data)
         default_case = configs[0]
         
-        assert 'dataframe' in default_case
+        assert 'columns_set_alias' in default_case
+        assert 'columns_set' in default_case
         assert 'enabled_features' in default_case
         
         assert 'data_lang' in default_case
@@ -25,12 +26,10 @@ class TestParser():
         
     def test_get_dataframe(self):
         data = self.feature_engineering_data[0]
-        dataframe, columns_names = self.parser._get_dataframe(data['input']['columns'])
+        columns_set, columns_set_alias = self.parser._get_dataframe(data['input']['columns'])
         
-        for feature in dataframe:
-            assert feature.columns.values in columns_names
-        
-        assert 'apenas_number' in columns_names
+        assert 'tudo_junto' in columns_set[0].keys()
+        assert 'apenas_number' in columns_set_alias
         
     def test_get_features_details(self):
         data = self.feature_engineering_data[0]

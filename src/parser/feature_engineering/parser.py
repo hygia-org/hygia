@@ -8,9 +8,9 @@ class FeatureEngineering(Parser):
         self.csv = csv
 
     def parse(self, data: list):
-        return self._parser_feature_engineering(data)
+        return self._parse_feature_engineering_configs(data)
         
-    def _parser_feature_engineering(self, data: list):
+    def _parse_feature_engineering_configs(self, data: list):
         if(not data): return
         
         configs = []
@@ -18,11 +18,11 @@ class FeatureEngineering(Parser):
             input = self._try_get(inputs, 'input')
             
             # columns
-            dataframe, columns_names = self._get_dataframe(self._try_get(input, 'columns'))
+            columns_set, columns_set_alias = self._get_dataframe(self._try_get(input, 'columns'))
             
             # features
             word_embedding, keyboard_smash = self._get_features_details(self._try_get(input, 'features'))
-            data_lang, dimensions = self._get_word_embedding_config(word_embedding, columns_names)
+            data_lang, dimensions = self._get_word_embedding_config(word_embedding, columns_set_alias)
             
             # Enabled features
             enabled_features = keyboard_smash
@@ -30,7 +30,8 @@ class FeatureEngineering(Parser):
             else: enabled_features['word_embedding'] = True
             
             configs.append({
-                'dataframe': dataframe, 
+                'columns_set_alias': columns_set_alias, 
+                'columns_set': columns_set, 
                 'data_lang': data_lang, 
                 'dimensions': dimensions, 
                 'enabled_features': enabled_features
@@ -41,15 +42,13 @@ class FeatureEngineering(Parser):
     def _get_dataframe(self, columns: dict):
         if(not columns): return 
         
-        columns_names = []
-        dataframe= []
+        columns_set_alias = []
         
         for column in columns:
-            for key, value in column.items():
-                columns_names.append(key)
-                dataframe.append(get_concatenated_column(self.csv, value, key))
+            for key in column.keys():
+                columns_set_alias.append(key)
                 
-        return dataframe, columns_names
+        return columns, columns_set_alias
 
     def _get_features_details(self, features: dict):
         if(not features): return
@@ -61,22 +60,22 @@ class FeatureEngineering(Parser):
         
         return word_embedding, keyboard_smash
     
-    def _get_word_embedding_config(self, feature: dict, columns_name: list):
+    def _get_word_embedding_config(self, feature: dict, columns_set_alias: list):
         if(not feature): return 'es', None
         
         data_lang = self._get(feature, 'data_lang', 'es')
-        del feature['data_lang']
+        if ('data_lang' in feature): del feature['data_lang']
         
         dimensions = {}
         dimensions_default_value = 25
         for key, item in feature.items():
-            if(not(key in columns_name)): 
+            if(not(key in columns_set_alias)): 
                 error_msg = f'Label {key} not match'
                 raise ValueError(error_msg)
             
             dimensions[key] = self._get(item, 'dimensions', dimensions_default_value)
             
-        for name in columns_name:
+        for name in columns_set_alias:
             if(not(name in dimensions)): dimensions[name] = dimensions_default_value
         
         return data_lang, dimensions
