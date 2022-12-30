@@ -1,6 +1,4 @@
-from parser.parser import Parser
-
-from data_pipeline.pre_processing.concatenate_columns import get_concatenated_column
+from src.parser.parser import Parser
 
 class FeatureEngineering(Parser):
     

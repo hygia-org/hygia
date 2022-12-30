@@ -2,13 +2,13 @@ import pytest
 
 from pandas import read_csv
 
-from parser.feature_engineering.parser import FeatureEngineering
+from src.parser.feature_engineering.parser import FeatureEngineering
 
 class TestParser():
     
     def setup_method(self):
         self.feature_engineering_data = [{'input': {'columns': [{'tudo_junto': ['NUMBER', 'ADDRESS', 'ZIPCODE']}, {'apenas_number': 'NUMBER'}], 'features': {'word_embedding': {'data_lang': 'es', 'tudo_junto': {'dimensions': 23}}}}}]
-        self.parser = FeatureEngineering(read_csv('src/tests/mock/data_mock.csv'))
+        self.parser = FeatureEngineering(read_csv('tests/mock/data_mock.csv'))
 
     def test_parser_feature_engineering(self):
         configs = self.parser.parse(self.feature_engineering_data)

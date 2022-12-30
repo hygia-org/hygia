@@ -8,9 +8,9 @@ class Parser():
             return variable[field]
         except KeyError:
             if not error_msg:
-                error_msg = f'O campo `{field}` é obrigatório.'
+                error_msg = f'the field `{field}` is required.'
             file_name = self.filepath.split('/')[-1]
-            error_msg = f'Erro no arquivo {file_name}: {error_msg}'
+            error_msg = f'Error in file {file_name}: {error_msg}'
             raise ValueError(error_msg)
         
     def _get(self, variable: dict, field, default_value):

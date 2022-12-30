@@ -1,14 +1,14 @@
 
-from parser.initial.parser import YAMLParser
+from src.parser.initial.parser import YAMLParser
 
 class TestYamlParser:
 
     yamlParser = YAMLParser
-    yaml = yamlParser('src/tests/mock/success/yaml_mock.yaml').parse()
+    yaml = yamlParser('tests/mock/success/yaml_mock.yaml').parse()
     
     def test_yaml_has_path(self):
         assert 'data_path' in self.yaml
-        assert 'src/tests/mock/data_mock.csv' in self.yaml['data_path']
+        assert 'tests/mock/data_mock.csv' in self.yaml['data_path']
         
     def test_yaml_has_id(self):
         assert 'dag_id' in self.yaml
