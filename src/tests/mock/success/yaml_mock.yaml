@@ -1,0 +1,25 @@
+dag:
+  id: basic_example
+  description: DAG de teste
+  data_path:
+    - 'src/tests/mock/data_mock.csv'
+  output_folder: 'output'
+
+  feature_engineering:
+    - input:
+        columns:
+          - tudo_junto: ['NUMBER', 'ADDRESS', 'ZIPCODE']
+          - apenas_number: 'NUMBER'
+        features:
+          word_embedding:
+            data_lang: 'es'
+            tudo_junto:
+              dimensions: 23
+
+    - input:
+        columns:
+          - apenas_number: 'NUMBER'
+        features:
+          word_embedding: 'off'
+          keyboard_smash:
+            ksmash_sequence_vowels: 'off'

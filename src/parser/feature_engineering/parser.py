@@ -7,10 +7,10 @@ class FeatureEngineering(Parser):
     def __init__(self, csv):
         self.csv = csv
 
-    def parse(self, data: dict):
+    def parse(self, data: list):
         return self._parser_feature_engineering(data)
         
-    def _parser_feature_engineering(self, data: dict):
+    def _parser_feature_engineering(self, data: list):
         if(not data): return
         
         configs = []
@@ -76,6 +76,8 @@ class FeatureEngineering(Parser):
             
             dimensions[key] = self._get(item, 'dimensions', dimensions_default_value)
             
+            
+        print(columns_name)
         for name in columns_name:
             if(not(name in dimensions)): dimensions[name] = dimensions_default_value
         
