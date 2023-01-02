@@ -1,0 +1,17 @@
+name: Publish New Library Release to PyPi
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  send-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+    - name: Publish Library to PyPi
+      uses: coveooss/pypi-publish-with-poetry@v1.0.0
+      with:
+        project-name: my-project-name
+        pypi-token: ${{ secrets.PYPI_TOKEN }}
