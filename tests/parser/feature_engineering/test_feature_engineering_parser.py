@@ -1,18 +1,20 @@
 import pytest
 
-from src.parser.feature_engineering.parser import FeatureEngineering
+from src.parser.feature_engineering.parser import FeatureEngineeringParser
 
-class TestParser():
+class TestFeatureEngineeringParser():
     
     def setup_method(self):
         self.feature_engineering_data = [{'input': {'columns': [{'tudo_junto': ['NUMBER', 'ADDRESS', 'ZIPCODE']}, {'apenas_number': 'NUMBER'}], 'features': {'word_embedding': {'data_lang': 'es', 'tudo_junto': {'dimensions': 23}}}}}]
-        self.parser = FeatureEngineering()
+        self.parser = FeatureEngineeringParser()
 
     def test_parser_feature_engineering(self):
-        configs = self.parser.parse(self.feature_engineering_data)
-        default_case = configs[0]
+        features_config, columns_set_alias = self.parser.parse(self.feature_engineering_data)
+        default_case = features_config[0]
         
-        assert 'columns_set_alias' in default_case
+        assert ['tudo_junto', 'apenas_number'] == columns_set_alias
+        
+        assert 'columns_alias' in default_case
         assert 'columns_set' in default_case
         assert 'enabled_features' in default_case
         

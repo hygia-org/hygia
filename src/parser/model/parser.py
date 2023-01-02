@@ -1,5 +1,5 @@
-from parser.parser import Parser
-from parser.model.const import model_type
+from src.parser.parser import Parser
+from src.parser.model.const import model_type
 
 class ModelParser(Parser):
     
@@ -19,13 +19,10 @@ class ModelParser(Parser):
     def _parse_modal_configs(self, data: list):
         if(not data): return
         
-        configs = []
         random_forest = data.get('random_forest')
         
         if(random_forest):
-            configs.append(self.get_random_forest_address_config(random_forest))
-                
-        return configs
+            return self.get_random_forest_address_config(random_forest)
                 
     def get_random_forest_address_config(self, model: list):
         configs = []
@@ -52,10 +49,10 @@ class ModelParser(Parser):
             
     def get_columns(self, input):
         columns_set_alias = self._try_get(input, 'columns')
-            
+
         for alias in columns_set_alias:
             if(not(alias in self.columns_alias)):
-                raise f'{alias} column not match with the available columns' 
+                raise ValueError(f'`{alias}` column not match with the available columns')
         
         return columns_set_alias
         
@@ -65,12 +62,12 @@ class ModelParser(Parser):
         test_size = self._get(thresholds, 'test_size', 0.3)
         n_estimators = self._get(thresholds, 'n_estimators', 100)
         
-        keyboard_smash_default = self.get_keyboard_smash_default_config(columns_set_alias)
+        keyboard_smash_default = self.get_keyboard_smash_default_thresholds(columns_set_alias)
         keyboard_smash = self._get(thresholds, 'keyboard_smash', keyboard_smash_default)
             
         for key in keyboard_smash.keys():
             if(not(key in columns_set_alias)):
-                raise f'{alias} key not match with the available columns' 
+                raise ValueError(f'`{key}` key not match with the available columns')
             
         for alias in columns_set_alias:
             if(not(alias in keyboard_smash.keys())):
@@ -78,7 +75,7 @@ class ModelParser(Parser):
                 
         return keyboard_smash, n_estimators, test_size
     
-    def get_keyboard_smash_default_config(self, columns_set_alias):
+    def get_keyboard_smash_default_thresholds(self, columns_set_alias):
         default_config = []
         
         for alias in columns_set_alias:

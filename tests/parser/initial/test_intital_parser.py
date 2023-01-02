@@ -1,10 +1,11 @@
 
 from src.parser.initial.parser import YAMLParser
 
-class TestYamlParser:
+class TestYamlParser():
 
-    yamlParser = YAMLParser
-    yaml = yamlParser('tests/mock/success/yaml_mock.yaml').parse()
+    def setup_method(self):
+        yamlParser = YAMLParser
+        self.yaml = yamlParser('tests/mock/success/yaml_mock.yaml').parse()
     
     def test_yaml_has_path(self):
         assert 'data_path' in self.yaml

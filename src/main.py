@@ -1,8 +1,8 @@
 import os
 
-from parser.initial.parser import YAMLParser
-from parser.feature_engineering.parser import FeatureEngineeringParser
-from parser.model.parser import ModelParser
+from src.parser.initial.parser import YAMLParser
+from src.parser.feature_engineering.parser import FeatureEngineeringParser
+from src.parser.model.parser import ModelParser
 
 if __name__ != "__main__":
     exit()   
@@ -16,16 +16,17 @@ def get_config():
         filepath = os.path.join('src/yamls', file)
         config = initialParser(filepath).parse()
     
-        features, columns_set_alias = featureEngineringParser(filepath).parse(config['feature_engineering'])
+        features_configs, columns_set_alias = featureEngineringParser(filepath).parse(config['feature_engineering'])
         del config['feature_engineering']
         
-        print("FEATURES")
-        print(features)
-        print(5*'\n')
-        print(20*'-')
-        print(5*'\n')
-        
-        print(modelParser(columns_set_alias).parse(config['model']))
+        model_configs = modelParser(columns_set_alias).parse(config['model'])
         del config['model']
+        
+        print("FEATURES")
+        print(features_configs)
+        print(3*'\n')
+        print(20*'-')
+        print(3*'\n')
+        print(model_configs)
          
 get_config()
