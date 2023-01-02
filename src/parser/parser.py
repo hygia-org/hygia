@@ -1,6 +1,6 @@
 class Parser():
     
-    def __init__(self, filepath: str):
+    def __init__(self, filepath = 'src/yamls/config.yaml'):
         self.filepath = filepath
     
     def _try_get(self, variable: dict, field, error_msg=None):

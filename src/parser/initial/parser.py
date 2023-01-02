@@ -1,6 +1,6 @@
 import yaml
 
-from src.parser.parser import Parser
+from parser.parser import Parser
 
 class YAMLParser(Parser):
 
@@ -19,6 +19,7 @@ class YAMLParser(Parser):
             "output_folder": self._try_get(dag, 'output_folder'),
             "description": self._try_get(dag, 'description'),
             "feature_engineering": self._try_get(dag, 'feature_engineering'),
+            "model": self._try_get(dag, 'model'),
         }
 
         return initial_parser

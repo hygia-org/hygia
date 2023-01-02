@@ -24,3 +24,20 @@ dag:
           word_embedding: 'off'
           keyboard_smash:
             ksmash_sequence_vowels: 'off'
+
+  model:
+    random_forest:
+      - input:
+          type: 'address'
+          columns:
+            - 'tudo_junto'
+          thresholds:
+            test_size: 0.3
+            n_estimators: 100
+            keyboard_smash:
+              tudo_junto:
+                ksmash_sequence_vowels: 1.00
+                ksmash_sequence_consonants: 1.999
+                ksmash_sequence_special_characters: 2.2499
+                ksmash_numbers: 2.9
+                ksmash_char_frequence: 2.78
