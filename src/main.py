@@ -11,8 +11,8 @@ def get_config():
     initialParser = YAMLParser
     featureEngineringParser = FeatureEngineering
 
-    for file in os.listdir('src/yamls'):
-        config = initialParser(filepath=os.path.join('src/yamls', file)).parse()
+    for file in os.listdir('data/yaml'):
+        config = initialParser(filepath=os.path.join('data/yaml', file)).parse()
         
         for path in config['data_path']:
             csv = read_csv(path)
