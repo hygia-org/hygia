@@ -2,7 +2,7 @@ from whatlies.language import BytePairLanguage
 import numpy as np
 
 class WordEmbedding:
-    def __init__(self, lang="es", dimensions=25):
+    def __init__(self, lang, dimensions):
         """Initialize a word embedding object using the BytePairLanguage model.
 
         Parameters
@@ -29,7 +29,7 @@ class WordEmbedding:
         
         Examples
         --------
-        >>> get_embedding("This is a text")
+        >>> get_embedding("This is a text", "es", 25)
         [ 0.06799883  0.17547965  0.47599664  0.16108984 -0.1360625  -0.10632467
         -0.10654568 -0.09805    -0.33004168 -0.33528003 -0.23304085  0.36661038
         -0.5797167   0.53252834  0.30276018 -0.01584417  0.85087484  0.14121284
