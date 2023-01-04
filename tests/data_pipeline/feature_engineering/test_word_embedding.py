@@ -4,7 +4,9 @@ from src.data_pipeline.feature_engineering.word_embedding import WordEmbedding
 
 class TestWordEmbedding:
     def setup_method(self):
-        self.we = WordEmbedding()
+        lang = "es"
+        dimensions = 25
+        self.we = WordEmbedding(lang, dimensions)
         
     def test_get_embedding(self):
         text = "This is a text"
@@ -13,7 +15,5 @@ class TestWordEmbedding:
                     -0.5797167, 0.53252834, 0.30276018, -0.01584417, 0.85087484, 0.14121284,
                     0.74862367, -0.33011952, 0.015432, 0.02694534, 0.10118082, -0.34017918,
                     -0.14560167]
-        lang = "es"
-        dimensions = 25
-        result = self.we.get_embedding(text, lang, dimensions)
+        result = self.we.get_embedding(text)
         assert np.allclose(result, expected)
