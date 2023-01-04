@@ -1,5 +1,5 @@
 from src.parser.parser import Parser
-from src.parser.model.const import model_type
+from src.parser.const import model_type
 
 class ModelParser(Parser):
     

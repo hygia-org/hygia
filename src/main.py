@@ -1,8 +1,8 @@
 import os
 
-from src.parser.initial.parser import YAMLParser
-from src.parser.feature_engineering.parser import FeatureEngineeringParser
-from src.parser.model.parser import ModelParser
+from parser.YAML_parser import YAMLParser
+from parser.feature_engineering_parser import FeatureEngineeringParser
+from parser.model_parser import ModelParser
 
 if __name__ != "__main__":
     exit()   

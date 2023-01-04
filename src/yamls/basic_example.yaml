@@ -9,17 +9,17 @@ dag:
   feature_engineering:
     - input:
         columns:
-          - tudo_junto: ['NUMBER', 'ADDRESS', 'ZIPCODE']
-          - apenas_number: 'NUMBER'
+          - foo_1: ['NUMBER', 'ADDRESS', 'ZIPCODE']
+          - foo_2: 'NUMBER'
         features:
           word_embedding:
             data_lang: 'es'
-            tudo_junto:
+            foo_1:
               dimensions: 23
 
     - input:
         columns:
-          - apenas_number: 'NUMBER'
+          - foo_2: 'NUMBER'
         features:
           word_embedding: 'off'
           keyboard_smash:
@@ -30,12 +30,12 @@ dag:
       - input:
           type: 'address'
           columns:
-            - 'tudo_junto'
+            - 'foo_1'
           thresholds:
             test_size: 0.3
             n_estimators: 100
             keyboard_smash:
-              tudo_junto:
+              foo_1:
                 ksmash_sequence_vowels: 1.00
                 ksmash_sequence_consonants: 1.999
                 ksmash_sequence_special_characters: 2.2499

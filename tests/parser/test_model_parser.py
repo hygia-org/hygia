@@ -1,12 +1,12 @@
 import pytest
 
-from src.parser.model.parser import ModelParser
+from src.parser.model_parser import ModelParser
 
 class TestParser():
     
     def setup_method(self):
-        self.model_data = {'random_forest': [{'input': {'type': 'address', 'columns': ['tudo_junto'], 'thresholds': {'test_size': 0.3, 'n_estimators': 100, 'keyboard_smash': {'tudo_junto': {'ksmash_sequence_vowels': 1.0, 'ksmash_sequence_consonants': 1.999, 'ksmash_sequence_special_characters': 2.2499, 'ksmash_numbers': 2.9, 'ksmash_char_frequence': 2.78}}}}}]}
-        self.parser = ModelParser(['apenas_number', 'tudo_junto', 'apenas_number'])
+        self.model_data = {'random_forest': [{'input': {'type': 'address', 'columns': ['foo_1'], 'thresholds': {'test_size': 0.3, 'n_estimators': 100, 'keyboard_smash': {'foo_1': {'ksmash_sequence_vowels': 1.0, 'ksmash_sequence_consonants': 1.999, 'ksmash_sequence_special_characters': 2.2499, 'ksmash_numbers': 2.9, 'ksmash_char_frequence': 2.78}}}}}]}
+        self.parser = ModelParser(['foo_2', 'foo_1', 'foo_2'])
         
     def test_parser_model(self):
         configs = self.parser.parse(self.model_data)
@@ -19,7 +19,7 @@ class TestParser():
         assert default_case['type'] == 'address'
         
         assert 'columns_set_alias' in default_case
-        assert 'tudo_junto' in default_case['columns_set_alias']
+        assert 'foo_1' in default_case['columns_set_alias']
         
         assert 'n_estimators' in default_case
         assert default_case['n_estimators'] == 100
@@ -40,7 +40,7 @@ class TestParser():
         assert test_case['type'] == 'address'
         
         assert 'columns_set_alias' in test_case
-        assert 'tudo_junto' in test_case['columns_set_alias']
+        assert 'foo_1' in test_case['columns_set_alias']
         
         assert 'n_estimators' in test_case
         assert test_case['n_estimators'] == 100
@@ -51,9 +51,9 @@ class TestParser():
         assert 'keyboard_smash' in test_case
     
     def test_get_columns(self):
-        columns = self.parser.get_columns({'columns': ['tudo_junto']})
+        columns = self.parser.get_columns({'columns': ['foo_1']})
         
-        assert columns == ['tudo_junto']
+        assert columns == ['foo_1']
     
     def test_get_columns_fallback(self):
         with pytest.raises(ValueError) as exc:
@@ -63,40 +63,40 @@ class TestParser():
         assert exc.type == ValueError
     
     def test_get_thresholds(self):
-        keyboard_smash, n_estimators, test_size = self.parser.get_thresholds({'thresholds': {'test_size': 0.3, 'n_estimators': 100, 'keyboard_smash': {'tudo_junto': {'ksmash_sequence_vowels': 1.0, 'ksmash_sequence_consonants': 1.999, 'ksmash_sequence_special_characters': 2.2499, 'ksmash_numbers': 2.9, 'ksmash_char_frequence': 2.78}}}}, ['tudo_junto'])
+        keyboard_smash, n_estimators, test_size = self.parser.get_thresholds({'thresholds': {'test_size': 0.3, 'n_estimators': 100, 'keyboard_smash': {'foo_1': {'ksmash_sequence_vowels': 1.0, 'ksmash_sequence_consonants': 1.999, 'ksmash_sequence_special_characters': 2.2499, 'ksmash_numbers': 2.9, 'ksmash_char_frequence': 2.78}}}}, ['foo_1'])
 
         assert n_estimators == 100
         assert test_size == 0.3
         
-        assert 'tudo_junto' in keyboard_smash
+        assert 'foo_1' in keyboard_smash
         
-        tudo_junto_thresholds = keyboard_smash['tudo_junto']
-        assert 'ksmash_char_frequence' in tudo_junto_thresholds
-        assert tudo_junto_thresholds['ksmash_char_frequence'] == 2.78
+        foo_1_thresholds = keyboard_smash['foo_1']
+        assert 'ksmash_char_frequence' in foo_1_thresholds
+        assert foo_1_thresholds['ksmash_char_frequence'] == 2.78
         
-        assert 'ksmash_numbers' in tudo_junto_thresholds
-        assert tudo_junto_thresholds['ksmash_numbers'] == 2.9
+        assert 'ksmash_numbers' in foo_1_thresholds
+        assert foo_1_thresholds['ksmash_numbers'] == 2.9
         
-        assert 'ksmash_sequence_consonants' in tudo_junto_thresholds
-        assert tudo_junto_thresholds['ksmash_sequence_consonants'] == 1.999
+        assert 'ksmash_sequence_consonants' in foo_1_thresholds
+        assert foo_1_thresholds['ksmash_sequence_consonants'] == 1.999
         
-        assert 'ksmash_sequence_special_characters' in tudo_junto_thresholds
-        assert tudo_junto_thresholds['ksmash_sequence_special_characters'] == 2.2499
+        assert 'ksmash_sequence_special_characters' in foo_1_thresholds
+        assert foo_1_thresholds['ksmash_sequence_special_characters'] == 2.2499
         
-        assert 'ksmash_sequence_vowels' in tudo_junto_thresholds
-        assert tudo_junto_thresholds['ksmash_sequence_vowels'] == 1.0
+        assert 'ksmash_sequence_vowels' in foo_1_thresholds
+        assert foo_1_thresholds['ksmash_sequence_vowels'] == 1.0
         
     def test_get_thresholds_fallback(self):
         with pytest.raises(ValueError) as exc:
-            self.parser.get_thresholds({'thresholds': {'test_size': 0.3, 'n_estimators': 100, 'keyboard_smash': {'tudo_unto': {'ksmash_sequence_vowels': 1.0, 'ksmash_sequence_consonants': 1.999, 'ksmash_sequence_special_characters': 2.2499, 'ksmash_numbers': 2.9, 'ksmash_char_frequence': 2.78}}}}, ['tudo_junto'])
+            self.parser.get_thresholds({'thresholds': {'test_size': 0.3, 'n_estimators': 100, 'keyboard_smash': {'tudo_unto': {'ksmash_sequence_vowels': 1.0, 'ksmash_sequence_consonants': 1.999, 'ksmash_sequence_special_characters': 2.2499, 'ksmash_numbers': 2.9, 'ksmash_char_frequence': 2.78}}}}, ['foo_1'])
         
         assert "`tudo_unto` key not match with the available columns" in str(exc.value)
         assert exc.type == ValueError
         
     def test_get_keyboard_smash_default_config(self):
-        configs = self.parser.get_keyboard_smash_default_thresholds(['tudo_junto'])
+        configs = self.parser.get_keyboard_smash_default_thresholds(['foo_1'])
         
-        thresholds = configs[0]['tudo_junto']
+        thresholds = configs[0]['foo_1']
         
         assert 'ksmash_char_frequence' in thresholds
         assert thresholds['ksmash_char_frequence'] == 2.78
