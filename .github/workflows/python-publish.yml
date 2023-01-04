@@ -14,21 +14,16 @@ permissions:
   contents: read
 
 jobs:
-  deploy:
-
+  test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.8", "3.9"]
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
+      - uses: actions/checkout@v2
 
-     - name: cache poetry install
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: cache poetry install
         uses: actions/cache@v2
         with:
           path: ~/.local
@@ -50,6 +45,6 @@ jobs:
       - run: poetry install --no-interaction --no-root
         if: steps.cache-deps.outputs.cache-hit != 'true'
 
-      - run: poetry install
+      - run: poetry install --no-interaction
 
       - run: poetry run pytest
