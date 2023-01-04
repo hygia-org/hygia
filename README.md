@@ -1,8 +1,26 @@
 # Playground
 
+### Instaling Requirements
 
+```
+python -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
 
-## Metabase
+### Running
+
+```
+python src/main.py
+```
+
+### Testing
+
+```
+pytest --cov
+```
+
+### Metabase
 
 The metabase will help us visualize and monitor data processing, feature engineering and model monitoring, accompanying us throughout the cycle.
 
@@ -62,3 +80,4 @@ exemple:
 |dabase_name | use the name you define in make migrate|
 |    user    |   lappis    |
 |  password  |   lappis    |
+
