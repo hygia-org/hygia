@@ -6,9 +6,6 @@ license = "MIT"
 authors = [
     "PDA-FGA <rocha.carla@gmail.com>"
 ]
-maintainers = [
-    "Bruno-Felix <auxbfelix@gmail.com>"
-]
 readme = "README.md"
 repository = "https://github.com/PDA-FGA/Playground"
 keywords = ["packaging", "poetry"]
