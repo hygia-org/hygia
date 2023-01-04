@@ -1,7 +1,7 @@
-from src.parser.parser import Parser
+from src.parser.parser_base import ParserBase
 from src.parser.const import model_type
 
-class ModelParser(Parser):
+class ModelParser(ParserBase):
     
     def __init__(self, columns_alias):
         self.columns_alias = columns_alias

@@ -1,12 +1,12 @@
 import pytest
 
-from src.parser.parser import Parser
+from src.parser.parser_base import ParserBase
 
 class TestModelParser():
     
     def setup_method(self):
         self.object_mock = {'data': 23}
-        self.parser = Parser('tests/mock/success/ymal_mock.yaml')
+        self.parser = ParserBase('tests/mock/success/ymal_mock.yaml')
 
     def test_try_get_fail(self):
         with pytest.raises(ValueError) as exc:

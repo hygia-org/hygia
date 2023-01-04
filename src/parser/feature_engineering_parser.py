@@ -1,6 +1,6 @@
-from src.parser.parser import Parser
+from src.parser.parser_base import ParserBase
 
-class FeatureEngineeringParser(Parser):
+class FeatureEngineeringParser(ParserBase):
 
     def parse(self, data: list):
         return self._parse_feature_engineering_configs(data)
