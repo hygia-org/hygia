@@ -3,6 +3,7 @@ import os
 from parser.YAML_parser import YAMLParser
 from parser.feature_engineering_parser import FeatureEngineeringParser
 from parser.model_parser import ModelParser
+from random_forest_address import RandomForestAddress
 
 if __name__ != "__main__":
     exit()   
@@ -28,5 +29,9 @@ def get_config():
         print(20*'-')
         print(3*'\n')
         print(model_configs)
+    
+    # IF 
+    rfa = RandomForestAddress('data_paths', model_configs, features_configs)
+    rfa.run()
          
 get_config()
