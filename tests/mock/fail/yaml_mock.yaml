@@ -8,8 +8,8 @@ dag:
   feature_engineering:
     - input:
         columns:
-          - tudo_junto: ['NUMBER', 'ADDRESS', 'ZIPCODE']
-          - apenas_number: 'NUMBER'
+          - foo_1: ['NUMBER', 'ADDRESS', 'ZIPCODE']
+          - foo_2: 'NUMBER'
         features:
           word_embedding:
             data_lang: 'es'
@@ -18,7 +18,7 @@ dag:
 
     - input:
         columns:
-          - apenas_number: 'NUMBER'
+          - foo_2: 'NUMBER'
         features:
           word_embedding: 'off'
           keyboard_smash:

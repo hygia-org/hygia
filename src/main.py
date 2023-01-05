@@ -1,23 +1,32 @@
 import os
-from pandas import read_csv
 
-from parser.initial.parser import YAMLParser
-from parser.feature_engineering.parser import FeatureEngineering
+from parser.YAML_parser import YAMLParser
+from parser.feature_engineering_parser import FeatureEngineeringParser
+from parser.model_parser import ModelParser
 
 if __name__ != "__main__":
     exit()   
 
 def get_config():
     initialParser = YAMLParser
-    featureEngineringParser = FeatureEngineering
+    featureEngineringParser = FeatureEngineeringParser
+    modelParser = ModelParser
 
     for file in os.listdir('config'):
-        config = initialParser(filepath=os.path.join('config', file)).parse()
-        
-        for path in config['data_path']:
-            csv = read_csv(path)
-            print(featureEngineringParser(csv).parse(config['feature_engineering']))
-            
+        filepath = os.path.join('config', file)
+        config = initialParser(filepath).parse()
+    
+        features_configs, columns_set_alias = featureEngineringParser(filepath).parse(config['feature_engineering'])
         del config['feature_engineering']
+        
+        model_configs = modelParser(columns_set_alias).parse(config['model'])
+        del config['model']
+        
+        print("FEATURES")
+        print(features_configs)
+        print(3*'\n')
+        print(20*'-')
+        print(3*'\n')
+        print(model_configs)
          
 get_config()
