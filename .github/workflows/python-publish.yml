@@ -47,4 +47,4 @@ jobs:
 
       - run: poetry install --no-interaction
 
-      - run: poetry run pytest
+      - run: poetry run pytest --cov
