@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespacedata__pipeline_1_1pre__processing" kind="namespace" language="Python">
+    <compoundname>data_pipeline::pre_processing</compoundname>
+    <innernamespace refid="namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns">data_pipeline::pre_processing::concatenate_columns</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/carla/git/Playground/src/data_pipeline/pre_processing/concatenate_columns.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

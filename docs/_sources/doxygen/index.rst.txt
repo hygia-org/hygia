@@ -17,8 +17,12 @@ Documentation
 .. toctree::
    :maxdepth: 2
 
+<<<<<<< HEAD
    getting_started/index
    user_guide/index
+=======
+
+>>>>>>> fe1d33e (doxygen files)
 
 
 Indices and tables

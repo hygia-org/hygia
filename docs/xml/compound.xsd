@@ -27,11 +27,17 @@
       <xsd:element name="innerdir" type="refType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="innerfile" type="refType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="innerclass" type="refType" minOccurs="0" maxOccurs="unbounded" />
+<<<<<<< HEAD
       <xsd:element name="innerconcept" type="refType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="innernamespace" type="refType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="innerpage" type="refType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="innergroup" type="refType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="qualifier" minOccurs="0" maxOccurs="unbounded" />
+=======
+      <xsd:element name="innernamespace" type="refType" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="innerpage" type="refType" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="innergroup" type="refType" minOccurs="0" maxOccurs="unbounded" />
+>>>>>>> fe1d33e (doxygen files)
       <xsd:element name="templateparamlist" type="templateparamlistType" minOccurs="0" />
       <xsd:element name="sectiondef" type="sectiondefType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="tableofcontents" type="tableofcontentsType" minOccurs="0" maxOccurs="1" />
@@ -144,13 +150,19 @@
       <xsd:element name="definition" minOccurs="0" />
       <xsd:element name="argsstring" minOccurs="0" />
       <xsd:element name="name" />
+<<<<<<< HEAD
       <xsd:element name="qualifiedname" minOccurs="0"/>
+=======
+>>>>>>> fe1d33e (doxygen files)
       <xsd:element name="read" minOccurs="0" />
       <xsd:element name="write" minOccurs="0" />
       <xsd:element name="bitfield" minOccurs="0" />
       <xsd:element name="reimplements" type="reimplementType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="reimplementedby" type="reimplementType" minOccurs="0" maxOccurs="unbounded" />
+<<<<<<< HEAD
       <xsd:element name="qualifier" minOccurs="0" maxOccurs="unbounded" />
+=======
+>>>>>>> fe1d33e (doxygen files)
       <xsd:element name="param" type="paramType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="enumvalue" type="enumvalueType" minOccurs="0" maxOccurs="unbounded" />
       <xsd:element name="requiresclause" type="linkedTextType" minOccurs="0" />
@@ -431,7 +443,10 @@
       <xsd:element name="superscript" type="docMarkupType" />
       <xsd:element name="center" type="docMarkupType" />
       <xsd:element name="small" type="docMarkupType" />
+<<<<<<< HEAD
       <xsd:element name="cite" type="docMarkupType" />
+=======
+>>>>>>> fe1d33e (doxygen files)
       <xsd:element name="del" type="docMarkupType" />
       <xsd:element name="ins" type="docMarkupType" />
       <xsd:element name="htmlonly" type="docHtmlOnlyType" />
@@ -441,9 +456,15 @@
       <xsd:element name="latexonly" type="xsd:string" />
       <xsd:element name="docbookonly" type="xsd:string" />
       <xsd:element name="image" type="docImageType" />
+<<<<<<< HEAD
       <xsd:element name="dot" type="docDotMscType" />
       <xsd:element name="msc" type="docDotMscType" />
       <xsd:element name="plantuml" type="docPlantumlType" />
+=======
+      <xsd:element name="dot" type="docImageType" />
+      <xsd:element name="msc" type="docImageType" />
+      <xsd:element name="plantuml" type="docImageType" />
+>>>>>>> fe1d33e (doxygen files)
       <xsd:element name="anchor" type="docAnchorType" />
       <xsd:element name="formula" type="docFormulaType" />
       <xsd:element name="ref" type="docRefTextType" />
@@ -705,10 +726,13 @@
     <xsd:group ref="docTitleCmdGroup" minOccurs="0" maxOccurs="unbounded" />
   </xsd:complexType>
 
+<<<<<<< HEAD
   <xsd:complexType name="docSummaryType" mixed="true">
     <xsd:group ref="docTitleCmdGroup" minOccurs="0" maxOccurs="unbounded" />
   </xsd:complexType>
 
+=======
+>>>>>>> fe1d33e (doxygen files)
   <xsd:group name="docCmdGroup">
     <xsd:choice>
       <xsd:group ref="docTitleCmdGroup"/>
@@ -716,8 +740,11 @@
       <xsd:element name="preformatted" type="docMarkupType" />
       <xsd:element name="programlisting" type="listingType" />
       <xsd:element name="verbatim" type="xsd:string" />
+<<<<<<< HEAD
       <xsd:element name="javadocliteral" type="xsd:string" />
       <xsd:element name="javadoccode" type="xsd:string" />
+=======
+>>>>>>> fe1d33e (doxygen files)
       <xsd:element name="indexentry" type="docIndexEntryType" />
       <xsd:element name="orderedlist" type="docListType" />
       <xsd:element name="itemizedlist" type="docListType" />
@@ -726,15 +753,24 @@
       <xsd:element name="variablelist" type="docVariableListType" />
       <xsd:element name="table" type="docTableType" />
       <xsd:element name="heading" type="docHeadingType" />
+<<<<<<< HEAD
       <xsd:element name="dotfile" type="docImageFileType" />
       <xsd:element name="mscfile" type="docImageFileType" />
       <xsd:element name="diafile" type="docImageFileType" />
+=======
+      <xsd:element name="dotfile" type="docImageType" />
+      <xsd:element name="mscfile" type="docImageType" />
+      <xsd:element name="diafile" type="docImageType" />
+>>>>>>> fe1d33e (doxygen files)
       <xsd:element name="toclist" type="docTocListType" />
       <xsd:element name="language" type="docLanguageType" />
       <xsd:element name="parameterlist" type="docParamListType" />
       <xsd:element name="xrefsect" type="docXRefSectType" />
       <xsd:element name="copydoc" type="docCopyType" />
+<<<<<<< HEAD
       <xsd:element name="details" type="docDetailsType" />
+=======
+>>>>>>> fe1d33e (doxygen files)
       <xsd:element name="blockquote" type="docBlockQuoteType" />
       <xsd:element name="parblock" type="docParBlockType" />
     </xsd:choice>
@@ -780,7 +816,10 @@
     <xsd:sequence>
       <xsd:element name="para" type="docParaType" minOccurs="0" maxOccurs="unbounded" />
     </xsd:sequence>
+<<<<<<< HEAD
     <xsd:attribute name="value" type="xsd:integer" use="optional"/>
+=======
+>>>>>>> fe1d33e (doxygen files)
   </xsd:complexType>
 
   <xsd:complexType name="docSimpleSectType">
@@ -851,7 +890,10 @@
 
   <xsd:complexType name="docCaptionType" mixed="true">
     <xsd:group ref="docTitleCmdGroup" minOccurs="0" maxOccurs="unbounded" />
+<<<<<<< HEAD
     <xsd:attribute name="id" type="xsd:string" /> 
+=======
+>>>>>>> fe1d33e (doxygen files)
   </xsd:complexType>
 
   <xsd:complexType name="docHeadingType" mixed="true">
@@ -870,6 +912,7 @@
     <xsd:attribute name="caption" type="xsd:string" use="optional"/>
   </xsd:complexType>
 
+<<<<<<< HEAD
   <xsd:complexType name="docDotMscType" mixed="true">
     <xsd:group ref="docTitleCmdGroup" minOccurs="0" maxOccurs="unbounded" />
     <xsd:attribute name="name" type="xsd:string" use="optional"/>
@@ -898,6 +941,8 @@
     <xsd:attribute name="engine" type="DoxPlantumlEngine" use="optional"/>
   </xsd:complexType>
 
+=======
+>>>>>>> fe1d33e (doxygen files)
   <xsd:complexType name="docTocItemType" mixed="true">
     <xsd:group ref="docTitleCmdGroup" minOccurs="0" maxOccurs="unbounded" />
     <xsd:attribute name="id" type="xsd:string" /> 
@@ -967,6 +1012,7 @@
     <xsd:attribute name="link" type="xsd:string" /> 
   </xsd:complexType>
 
+<<<<<<< HEAD
   <xsd:complexType name="docDetailsType">
     <xsd:sequence>
       <xsd:element name="summary" type="docSummaryType" minOccurs="0" maxOccurs="1" />
@@ -974,6 +1020,8 @@
     </xsd:sequence>
   </xsd:complexType>
 
+=======
+>>>>>>> fe1d33e (doxygen files)
   <xsd:complexType name="docBlockQuoteType">
     <xsd:sequence>
       <xsd:element name="para" type="docParaType" minOccurs="0" maxOccurs="unbounded" />
@@ -1087,8 +1135,11 @@
       <xsd:enumeration value="XML" />
       <xsd:enumeration value="SQL" />
       <xsd:enumeration value="Markdown" />
+<<<<<<< HEAD
       <xsd:enumeration value="Slice" />
       <xsd:enumeration value="Lex" />
+=======
+>>>>>>> fe1d33e (doxygen files)
     </xsd:restriction>
   </xsd:simpleType>
 
@@ -1215,6 +1266,7 @@
       <xsd:enumeration value="latex" />
       <xsd:enumeration value="docbook" />
       <xsd:enumeration value="rtf" />
+<<<<<<< HEAD
       <xsd:enumeration value="xml" />
     </xsd:restriction>
   </xsd:simpleType>
@@ -1238,6 +1290,8 @@
       <xsd:enumeration value="flow"/>
       <xsd:enumeration value="board"/>
       <xsd:enumeration value="git"/>
+=======
+>>>>>>> fe1d33e (doxygen files)
     </xsd:restriction>
   </xsd:simpleType>
 

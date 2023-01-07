@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<<<<<<< HEAD
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+=======
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+>>>>>>> fe1d33e (doxygen files)
   <compounddef id="data__pipeline_2____init_____8py" kind="file" language="Python">
     <compoundname>__init__.py</compoundname>
     <briefdescription>
@@ -8,6 +12,10 @@
     </detaileddescription>
     <programlisting>
     </programlisting>
+<<<<<<< HEAD
     <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/__init__.py"/>
+=======
+    <location file="/Users/carla/git/Playground/src/data_pipeline/__init__.py"/>
+>>>>>>> fe1d33e (doxygen files)
   </compounddef>
 </doxygen>

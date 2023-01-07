@@ -47,8 +47,11 @@ function updateStripes()
 {
   $('table.directory tr').
        removeClass('even').filter(':visible:even').addClass('even');
+<<<<<<< HEAD
   $('table.directory tr').
        removeClass('odd').filter(':visible:odd').addClass('odd');
+=======
+>>>>>>> fe1d33e (doxygen files)
 }
 
 function toggleLevel(level)

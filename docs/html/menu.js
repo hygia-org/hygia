@@ -28,6 +28,7 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
     if ('children' in data) {
       result+='<ul>';
       for (var i in data.children) {
+<<<<<<< HEAD
         var url;
         var link;
         link = data.children[i].url;
@@ -37,6 +38,9 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
           url = relPath+link;
         }
         result+='<li><a href="'+url+'">'+
+=======
+        result+='<li><a href="'+relPath+data.children[i].url+'">'+
+>>>>>>> fe1d33e (doxygen files)
                                 data.children[i].text+'</a>'+
                                 makeTree(data.children[i],relPath)+'</li>';
       }
@@ -44,6 +48,7 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
     }
     return result;
   }
+<<<<<<< HEAD
   var searchBoxHtml;
   if (searchEnabled) {
     if (serverSide) {
@@ -54,16 +59,38 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
                   '<input type="text" id="MSearchField" name="query" value="" placeholder="'+search+
                     '" size="20" accesskey="S" onfocus="searchBox.OnSearchFieldFocus(true)"'+
                     ' onblur="searchBox.OnSearchFieldFocus(false)"/>'+
+=======
+  var searchBox;
+  if (searchEnabled) {
+    if (serverSide) {
+      searchBox='<div id="MSearchBox" class="MSearchBoxInactive">'+
+                 '<div class="left">'+
+                  '<form id="FSearchBox" action="'+relPath+searchPage+
+                    '" method="get"><img id="MSearchSelect" src="'+
+                    relPath+'search/mag.svg" alt=""/>'+
+                  '<input type="text" id="MSearchField" name="query" value="'+search+
+                    '" size="20" accesskey="S" onfocus="searchBox.OnSearchFieldFocus(true)"'+
+                    ' onblur="searchBox.OnSearchFieldFocus(false)">'+
+>>>>>>> fe1d33e (doxygen files)
                   '</form>'+
                  '</div>'+
                  '<div class="right"></div>'+
                 '</div>';
     } else {
+<<<<<<< HEAD
       searchBoxHtml='<div id="MSearchBox" class="MSearchBoxInactive">'+
                  '<span class="left">'+
                   '<span id="MSearchSelect" onmouseover="return searchBox.OnSearchSelectShow()"'+
                      ' onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>'+
                   '<input type="text" id="MSearchField" value="" placeholder="'+search+
+=======
+      searchBox='<div id="MSearchBox" class="MSearchBoxInactive">'+
+                 '<span class="left">'+
+                  '<img id="MSearchSelect" src="'+relPath+
+                     'search/mag_sel.svg" onmouseover="return searchBox.OnSearchSelectShow()"'+
+                     ' onmouseout="return searchBox.OnSearchSelectHide()" alt=""/>'+
+                  '<input type="text" id="MSearchField" value="'+search+
+>>>>>>> fe1d33e (doxygen files)
                     '" accesskey="S" onfocus="searchBox.OnSearchFieldFocus(true)" '+
                     'onblur="searchBox.OnSearchFieldFocus(false)" '+
                     'onkeyup="searchBox.OnSearchFieldChange(event)"/>'+
@@ -71,8 +98,13 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
                  '<span class="right"><a id="MSearchClose" '+
                   'href="javascript:searchBox.CloseResultsWindow()">'+
                   '<img id="MSearchCloseImg" border="0" src="'+relPath+
+<<<<<<< HEAD
                   'search/close.svg" alt=""/></a>'+
                  '</span>'+
+=======
+                  'search/close.svg" alt=""/></a>'
+                 '</span>'
+>>>>>>> fe1d33e (doxygen files)
                 '</div>';
     }
   }
@@ -85,7 +117,11 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
                         '</div>');
   $('#main-nav').append(makeTree(menudata,relPath));
   $('#main-nav').children(':first').addClass('sm sm-dox').attr('id','main-menu');
+<<<<<<< HEAD
   if (searchBoxHtml) {
+=======
+  if (searchBox) {
+>>>>>>> fe1d33e (doxygen files)
     $('#main-menu').append('<li id="searchBoxPos2" style="float:right"></li>');
   }
   var $mainMenuState = $('#main-menu-state');
@@ -114,17 +150,27 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
       if (newWidth!=prevWidth) {
         if ($(window).outerWidth()<768) {
           $mainMenuState.prop('checked',false); $menu.hide();
+<<<<<<< HEAD
           $('#searchBoxPos1').html(searchBoxHtml);
+=======
+          $('#searchBoxPos1').html(searchBox);
+>>>>>>> fe1d33e (doxygen files)
           $('#searchBoxPos2').hide();
         } else {
           $menu.show();
           $('#searchBoxPos1').empty();
+<<<<<<< HEAD
           $('#searchBoxPos2').html(searchBoxHtml);
           $('#searchBoxPos2').show();
         }
         if (typeof searchBox!=='undefined') {
           searchBox.CloseResultsWindow();
         }
+=======
+          $('#searchBoxPos2').html(searchBox);
+          $('#searchBoxPos2').show();
+        }
+>>>>>>> fe1d33e (doxygen files)
         prevWidth = newWidth;
       }
     }

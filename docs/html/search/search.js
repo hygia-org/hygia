@@ -73,8 +73,11 @@ function getYPos(item)
   return y;
 }
 
+<<<<<<< HEAD
 var searchResults = new SearchResults("searchResults");
 
+=======
+>>>>>>> fe1d33e (doxygen files)
 /* A class handling everything associated with the search panel.
 
    Parameters:
@@ -82,7 +85,11 @@ var searchResults = new SearchResults("searchResults");
           storing this instance.  Is needed to be able to set timeouts.
    resultPath - path to use for external files
 */
+<<<<<<< HEAD
 function SearchBox(name, resultsPath, extension)
+=======
+function SearchBox(name, resultsPath, label, extension)
+>>>>>>> fe1d33e (doxygen files)
 {
   if (!name || !resultsPath) {  alert("Missing parameters to SearchBox."); }
   if (!extension || extension == "") { extension = ".html"; }
@@ -98,6 +105,10 @@ function SearchBox(name, resultsPath, extension)
   this.hideTimeout           = 0;
   this.searchIndex           = 0;
   this.searchActive          = false;
+<<<<<<< HEAD
+=======
+  this.searchLabel           = label;
+>>>>>>> fe1d33e (doxygen files)
   this.extension             = extension;
 
   // ----------- DOM Elements
@@ -189,8 +200,12 @@ function SearchBox(name, resultsPath, extension)
       }
       else
       {
+<<<<<<< HEAD
         var elem = searchResults.NavNext(0);
         if (elem) elem.focus();
+=======
+        window.frames.MSearchResults.postMessage("take_focus", "*");
+>>>>>>> fe1d33e (doxygen files)
       }
     }
     else if (e.keyCode==27) // Escape out of the search field
@@ -326,12 +341,19 @@ function SearchBox(name, resultsPath, extension)
       idxChar = searchValue.substr(0, 2);
     }
 
+<<<<<<< HEAD
     var jsFile;
+=======
+    var resultsPage;
+    var resultsPageWithSearch;
+    var hasResultsPage;
+>>>>>>> fe1d33e (doxygen files)
 
     var idx = indexSectionsWithContent[this.searchIndex].indexOf(idxChar);
     if (idx!=-1)
     {
        var hexCode=idx.toString(16);
+<<<<<<< HEAD
        jsFile = this.resultsPath + indexSectionNames[this.searchIndex] + '_' + hexCode + '.js';
     }
 
@@ -386,6 +408,42 @@ function SearchBox(name, resultsPath, extension)
     }
 
     this.lastSearchValue = searchValue;
+=======
+       resultsPage = this.resultsPath + '/' + indexSectionNames[this.searchIndex] + '_' + hexCode + this.extension;
+       resultsPageWithSearch = resultsPage+'?'+escape(searchValue);
+       hasResultsPage = true;
+    }
+    else // nothing available for this search term
+    {
+       resultsPage = this.resultsPath + '/nomatches' + this.extension;
+       resultsPageWithSearch = resultsPage;
+       hasResultsPage = false;
+    }
+
+    window.frames.MSearchResults.location = resultsPageWithSearch;
+    var domPopupSearchResultsWindow = this.DOMPopupSearchResultsWindow();
+
+    if (domPopupSearchResultsWindow.style.display!='block')
+    {
+       var domSearchBox = this.DOMSearchBox();
+       this.DOMSearchClose().style.display = 'inline-block';
+       var domPopupSearchResults = this.DOMPopupSearchResults();
+       var left = getXPos(domSearchBox) + 150; // domSearchBox.offsetWidth;
+       var top  = getYPos(domSearchBox) + 20;  // domSearchBox.offsetHeight + 1;
+       domPopupSearchResultsWindow.style.display = 'block';
+       left -= domPopupSearchResults.offsetWidth;
+       var maxWidth = document.body.clientWidth;
+       var width = 400;
+       if (left<10) left=10;
+       if (width+left+8>maxWidth) width=maxWidth-left-8;
+       domPopupSearchResultsWindow.style.top     = top  + 'px';
+       domPopupSearchResultsWindow.style.left    = left + 'px';
+       domPopupSearchResultsWindow.style.width   = width + 'px';
+    }
+
+    this.lastSearchValue = searchValue;
+    this.lastResultsPage = resultsPage;
+>>>>>>> fe1d33e (doxygen files)
   }
 
   // -------- Activation Functions
@@ -399,15 +457,33 @@ function SearchBox(name, resultsPath, extension)
        )
     {
       this.DOMSearchBox().className = 'MSearchBoxActive';
+<<<<<<< HEAD
       this.searchActive = true;
+=======
+
+      var searchField = this.DOMSearchField();
+
+      if (searchField.value == this.searchLabel) // clear "Search" term upon entry
+      {
+        searchField.value = '';
+        this.searchActive = true;
+      }
+>>>>>>> fe1d33e (doxygen files)
     }
     else if (!isActive) // directly remove the panel
     {
       this.DOMSearchBox().className = 'MSearchBoxInactive';
+<<<<<<< HEAD
       this.searchActive             = false;
       this.lastSearchValue          = ''
       this.lastResultsPage          = '';
       this.DOMSearchField().value   = '';
+=======
+      this.DOMSearchField().value   = this.searchLabel;
+      this.searchActive             = false;
+      this.lastSearchValue          = ''
+      this.lastResultsPage          = '';
+>>>>>>> fe1d33e (doxygen files)
     }
   }
 }
@@ -636,7 +712,11 @@ function SearchResults(name)
         }
         else // return focus to search field
         {
+<<<<<<< HEAD
            document.getElementById("MSearchField").focus();
+=======
+           parent.document.getElementById("MSearchField").focus();
+>>>>>>> fe1d33e (doxygen files)
         }
       }
       else if (this.lastKey==40) // Down
@@ -666,8 +746,13 @@ function SearchResults(name)
       }
       else if (this.lastKey==27) // Escape
       {
+<<<<<<< HEAD
         searchBox.CloseResultsWindow();
         document.getElementById("MSearchField").focus();
+=======
+        parent.searchBox.CloseResultsWindow();
+        parent.document.getElementById("MSearchField").focus();
+>>>>>>> fe1d33e (doxygen files)
       }
       else if (this.lastKey==13) // Enter
       {
@@ -709,8 +794,13 @@ function SearchResults(name)
       }
       else if (this.lastKey==27) // Escape
       {
+<<<<<<< HEAD
         searchBox.CloseResultsWindow();
         document.getElementById("MSearchField").focus();
+=======
+        parent.searchBox.CloseResultsWindow();
+        parent.document.getElementById("MSearchField").focus();
+>>>>>>> fe1d33e (doxygen files)
       }
       else if (this.lastKey==13) // Enter
       {
@@ -733,10 +823,16 @@ function setClassAttr(elem,attr)
   elem.setAttribute('className',attr);
 }
 
+<<<<<<< HEAD
 function createResults(resultsPath)
 {
   var results = document.getElementById("SRResults");
   results.innerHTML = '';
+=======
+function createResults()
+{
+  var results = document.getElementById("SRResults");
+>>>>>>> fe1d33e (doxygen files)
   for (var e=0; e<searchData.length; e++)
   {
     var id = searchData[e][0];
@@ -753,16 +849,24 @@ function createResults(resultsPath)
     srEntry.appendChild(srLink);
     if (searchData[e][1].length==2) // single result
     {
+<<<<<<< HEAD
       srLink.setAttribute('href',resultsPath+searchData[e][1][1][0]);
       srLink.setAttribute('onclick','searchBox.CloseResultsWindow()');
+=======
+      srLink.setAttribute('href',searchData[e][1][1][0]);
+      srLink.setAttribute('onclick','parent.searchBox.CloseResultsWindow()');
+>>>>>>> fe1d33e (doxygen files)
       if (searchData[e][1][1][1])
       {
        srLink.setAttribute('target','_parent');
       }
+<<<<<<< HEAD
       else
       {
        srLink.setAttribute('target','_blank');
       }
+=======
+>>>>>>> fe1d33e (doxygen files)
       var srScope = document.createElement('span');
       setClassAttr(srScope,'SRScope');
       srScope.innerHTML = searchData[e][1][1][2];
@@ -779,16 +883,24 @@ function createResults(resultsPath)
         srChild.setAttribute('id','Item'+e+'_c'+c);
         setKeyActions(srChild,'return searchResults.NavChild(event,'+e+','+c+')');
         setClassAttr(srChild,'SRScope');
+<<<<<<< HEAD
         srChild.setAttribute('href',resultsPath+searchData[e][1][c+1][0]);
         srChild.setAttribute('onclick','searchBox.CloseResultsWindow()');
+=======
+        srChild.setAttribute('href',searchData[e][1][c+1][0]);
+        srChild.setAttribute('onclick','parent.searchBox.CloseResultsWindow()');
+>>>>>>> fe1d33e (doxygen files)
         if (searchData[e][1][c+1][1])
         {
          srChild.setAttribute('target','_parent');
         }
+<<<<<<< HEAD
         else
         {
          srChild.setAttribute('target','_blank');
         }
+=======
+>>>>>>> fe1d33e (doxygen files)
         srChild.innerHTML = searchData[e][1][c+1][2];
         srChildren.appendChild(srChild);
       }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* The standard CSS for doxygen 1.9.6*/
 
 html {
@@ -334,10 +335,21 @@ body, table, div, p, dl {
 	font-size: 14px;
 	font-family: var(--font-family-normal);
 	line-height: 22px;
+=======
+/* The standard CSS for doxygen 1.9.2 */
+
+body, table, div, p, dl {
+	font: 400 14px/22px Roboto,sans-serif;
+}
+
+p.reference, p.definition {
+	font: 400 14px/22px Roboto,sans-serif;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 /* @group Heading Levels */
 
+<<<<<<< HEAD
 .title {
 	font-weight: 400;
 	font-size: 14px;
@@ -348,13 +360,28 @@ body, table, div, p, dl {
 	margin: 10px 2px;
 }
 
+=======
+>>>>>>> fe1d33e (doxygen files)
 h1.groupheader {
 	font-size: 150%;
 }
 
+<<<<<<< HEAD
 h2.groupheader {
 	border-bottom: 1px solid var(--group-header-separator-color);
 	color: var(--group-header-color);
+=======
+.title {
+	font: 400 14px/28px Roboto,sans-serif;
+	font-size: 150%;
+	font-weight: bold;
+	margin: 10px 2px;
+}
+
+h2.groupheader {
+	border-bottom: 1px solid #879ECB;
+	color: #354C7B;
+>>>>>>> fe1d33e (doxygen files)
 	font-size: 150%;
 	font-weight: normal;
 	margin-top: 1.75em;
@@ -377,13 +404,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
+<<<<<<< HEAD
 	text-shadow: 0 0 15px var(--glow-color);
+=======
+	text-shadow: 0 0 15px cyan;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 dt {
 	font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+ul.multicol {
+	-moz-column-gap: 1em;
+	-webkit-column-gap: 1em;
+	column-gap: 1em;
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-count: 3;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 p.startli, p.startdd {
 	margin-top: 2px;
 }
@@ -435,6 +478,10 @@ h3.version {
 }
 
 div.navtab {
+<<<<<<< HEAD
+=======
+	border-right: 1px solid #A3B4D7;
+>>>>>>> fe1d33e (doxygen files)
 	padding-right: 15px;
 	text-align: right;
 	line-height: 110%;
@@ -448,17 +495,27 @@ td.navtab {
 	padding-right: 6px;
 	padding-left: 6px;
 }
+<<<<<<< HEAD
 
 td.navtabHL {
 	background-image: var(--nav-gradient-active-image);
+=======
+td.navtabHL {
+	background-image: url('tab_a.png');
+>>>>>>> fe1d33e (doxygen files)
 	background-repeat:repeat-x;
 	padding-right: 6px;
 	padding-left: 6px;
 }
 
 td.navtabHL a, td.navtabHL a:visited {
+<<<<<<< HEAD
 	color: var(--nav-text-hover-color);
 	text-shadow: var(--nav-text-hover-shadow);
+=======
+	color: #fff;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 1.0);
+>>>>>>> fe1d33e (doxygen files)
 }
 
 a.navtab {
@@ -470,7 +527,11 @@ div.qindex{
 	width: 100%;
 	line-height: 140%;
 	font-size: 130%;
+<<<<<<< HEAD
 	color: var(--index-separator-color);
+=======
+	color: #A0A0A0;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 dt.alphachar{
@@ -479,7 +540,11 @@ dt.alphachar{
 }
 
 .alphachar a{
+<<<<<<< HEAD
 	color: var(--index-header-color);
+=======
+	color: black;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .alphachar a:hover, .alphachar a:visited{
@@ -498,12 +563,17 @@ dt.alphachar{
 	line-height: 1.15em;
 }
 
+<<<<<<< HEAD
 .classindex dl.even {
 	background-color: var(--index-even-item-bg-color);
 }
 
 .classindex dl.odd {
 	background-color: var(--index-odd-item-bg-color);
+=======
+.classindex dl.odd {
+	background-color: #F8F9FC;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 @media(min-width: 1120px) {
@@ -522,19 +592,34 @@ dt.alphachar{
 /* @group Link Styling */
 
 a {
+<<<<<<< HEAD
 	color: var(--page-link-color);
+=======
+	color: #3D578C;
+>>>>>>> fe1d33e (doxygen files)
 	font-weight: normal;
 	text-decoration: none;
 }
 
 .contents a:visited {
+<<<<<<< HEAD
 	color: var(--page-visited-link-color);
+=======
+	color: #4665A2;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 a:hover {
 	text-decoration: underline;
 }
 
+<<<<<<< HEAD
+=======
+.contents a.qindexHL:visited {
+        color: #FFFFFF;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 a.el {
 	font-weight: bold;
 }
@@ -543,11 +628,19 @@ a.elRef {
 }
 
 a.code, a.code:visited, a.line, a.line:visited {
+<<<<<<< HEAD
 	color: var(--code-link-color);
 }
 
 a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
 	color: var(--code-external-link-color);
+=======
+	color: #4665A2; 
+}
+
+a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
+	color: #4665A2; 
+>>>>>>> fe1d33e (doxygen files)
 }
 
 a.code.hl_class { /* style for links to class names in code snippets */ }
@@ -584,6 +677,7 @@ dl.el {
 }
 
 ul {
+<<<<<<< HEAD
   overflow: visible;
 }
 
@@ -595,6 +689,9 @@ ul.multicol {
         -webkit-column-count: 3;
         column-count: 3;
         list-style-type: none;
+=======
+  overflow: hidden; /*Fixed: list item bullets overlap floating elements*/
+>>>>>>> fe1d33e (doxygen files)
 }
 
 #side-nav ul {
@@ -613,20 +710,30 @@ ul.multicol {
 }
 
 pre.fragment {
+<<<<<<< HEAD
         border: 1px solid var(--fragment-border-color);
         background-color: var(--fragment-background-color);
 	color: var(--fragment-foreground-color);
+=======
+        border: 1px solid #C4CFE5;
+        background-color: #FBFCFD;
+>>>>>>> fe1d33e (doxygen files)
         padding: 4px 6px;
         margin: 4px 8px 4px 2px;
         overflow: auto;
         word-wrap: break-word;
         font-size:  9pt;
         line-height: 125%;
+<<<<<<< HEAD
         font-family: var(--font-family-monospace);
+=======
+        font-family: monospace, fixed;
+>>>>>>> fe1d33e (doxygen files)
         font-size: 105%;
 }
 
 div.fragment {
+<<<<<<< HEAD
 	padding: 0 0 1px 0; /*Fixed: last line underline overlap border*/
 	margin: 4px 8px 4px 2px;
 	color: var(--fragment-foreground-color);
@@ -636,6 +743,16 @@ div.fragment {
 
 div.line {
 	font-family: var(--font-family-monospace);
+=======
+  padding: 0 0 1px 0; /*Fixed: last line underline overlap border*/
+  margin: 4px 8px 4px 2px;
+	background-color: #FBFCFD;
+	border: 1px solid #C4CFE5;
+}
+
+div.line {
+	font-family: monospace, fixed;
+>>>>>>> fe1d33e (doxygen files)
         font-size: 13px;
 	min-height: 13px;
 	line-height: 1.0;
@@ -667,8 +784,13 @@ div.line:after {
 }
 
 div.line.glow {
+<<<<<<< HEAD
 	background-color: var(--glow-color);
 	box-shadow: 0 0 10px var(--glow-color);
+=======
+	background-color: cyan;
+	box-shadow: 0 0 10px cyan;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 
@@ -676,6 +798,7 @@ span.lineno {
 	padding-right: 4px;
         margin-right: 9px;
 	text-align: right;
+<<<<<<< HEAD
 	border-right: 2px solid var(--fragment-lineno-border-color);
 	color: var(--fragment-lineno-foreground-color);
 	background-color: var(--fragment-lineno-background-color);
@@ -689,6 +812,18 @@ span.lineno a, span.lineno a:visited {
 span.lineno a:hover {
 	color: var(--fragment-lineno-link-hover-fg-color);
 	background-color: var(--fragment-lineno-link-hover-bg-color);
+=======
+	border-right: 2px solid #0F0;
+	background-color: #E8E8E8;
+        white-space: pre;
+}
+span.lineno a {
+	background-color: #D8D8D8;
+}
+
+span.lineno a:hover {
+	background-color: #C8C8C8;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .lineno {
@@ -700,6 +835,27 @@ span.lineno a:hover {
 	user-select: none;
 }
 
+<<<<<<< HEAD
+=======
+div.ah, span.ah {
+	background-color: black;
+	font-weight: bold;
+	color: #FFFFFF;
+	margin-bottom: 3px;
+	margin-top: 3px;
+	padding: 0.2em;
+	border: solid thin #333;
+	border-radius: 0.5em;
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	box-shadow: 2px 2px 3px #999;
+	-webkit-box-shadow: 2px 2px 3px #999;
+	-moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#000),color-stop(0.3, #444));
+	background-image: -moz-linear-gradient(center top, #eee 0%, #444 40%, #000 110%);
+}
+
+>>>>>>> fe1d33e (doxygen files)
 div.classindex ul {
         list-style: none;
         padding-left: 0;
@@ -721,7 +877,12 @@ div.groupText {
 }
 
 body {
+<<<<<<< HEAD
 	color: var(--page-foreground-color);
+=======
+	background-color: white;
+	color: black;
+>>>>>>> fe1d33e (doxygen files)
         margin: 0;
 }
 
@@ -731,6 +892,7 @@ div.contents {
 	margin-right: 8px;
 }
 
+<<<<<<< HEAD
 p.formulaDsp {
 	text-align: center;
 }
@@ -740,6 +902,31 @@ img.dark-mode-visible {
 }
 img.light-mode-visible {
 	display: none;
+=======
+td.indexkey {
+	background-color: #EBEFF6;
+	font-weight: bold;
+	border: 1px solid #C4CFE5;
+	margin: 2px 0px 2px 0;
+	padding: 2px 10px;
+        white-space: nowrap;
+        vertical-align: top;
+}
+
+td.indexvalue {
+	background-color: #EBEFF6;
+	border: 1px solid #C4CFE5;
+	padding: 2px 10px;
+	margin: 2px 0px;
+}
+
+tr.memlist {
+	background-color: #EEF1F7;
+}
+
+p.formulaDsp {
+	text-align: center;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 img.formulaDsp {
@@ -769,11 +956,18 @@ address.footer {
 img.footer {
 	border: 0px;
 	vertical-align: middle;
+<<<<<<< HEAD
 	width: var(--footer-logo-width);
 }
 
 .compoundTemplParams {
 	color: var(--memdecl-template-color);
+=======
+}
+
+.compoundTemplParams {
+	color: #4665A2;
+>>>>>>> fe1d33e (doxygen files)
 	font-size: 80%;
 	line-height: 120%;
 }
@@ -781,6 +975,7 @@ img.footer {
 /* @group Code Colorization */
 
 span.keyword {
+<<<<<<< HEAD
 	color: var(--code-keyword-color);
 }
 
@@ -827,12 +1022,91 @@ span.vhdllogic {
 blockquote {
         background-color: var(--blockquote-background-color);
         border-left: 2px solid var(--blockquote-border-color);
+=======
+	color: #008000
+}
+
+span.keywordtype {
+	color: #604020
+}
+
+span.keywordflow {
+	color: #e08000
+}
+
+span.comment {
+	color: #800000
+}
+
+span.preprocessor {
+	color: #806020
+}
+
+span.stringliteral {
+	color: #002080
+}
+
+span.charliteral {
+	color: #008080
+}
+
+span.vhdldigit { 
+	color: #ff00ff 
+}
+
+span.vhdlchar { 
+	color: #000000 
+}
+
+span.vhdlkeyword { 
+	color: #700070 
+}
+
+span.vhdllogic { 
+	color: #ff0000 
+}
+
+blockquote {
+        background-color: #F7F8FB;
+        border-left: 2px solid #9CAFD4;
+>>>>>>> fe1d33e (doxygen files)
         margin: 0 24px 0 4px;
         padding: 0 12px 0 16px;
 }
 
+<<<<<<< HEAD
 /* @end */
 
+=======
+blockquote.DocNodeRTL {
+   border-left: 0;
+   border-right: 2px solid #9CAFD4;
+   margin: 0 4px 0 24px;
+   padding: 0 16px 0 12px;
+}
+
+/* @end */
+
+/*
+.search {
+	color: #003399;
+	font-weight: bold;
+}
+
+form.search {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+input.search {
+	font-size: 75%;
+	color: #000080;
+	font-weight: normal;
+	background-color: #e8eef2;
+}
+*/
+
+>>>>>>> fe1d33e (doxygen files)
 td.tiny {
 	font-size: 75%;
 }
@@ -840,19 +1114,31 @@ td.tiny {
 .dirtab {
 	padding: 4px;
 	border-collapse: collapse;
+<<<<<<< HEAD
 	border: 1px solid var(--table-cell-border-color);
 }
 
 th.dirtab {
 	background-color: var(--table-header-background-color);
 	color: var(--table-header-foreground-color);
+=======
+	border: 1px solid #A3B4D7;
+}
+
+th.dirtab {
+	background: #EBEFF6;
+>>>>>>> fe1d33e (doxygen files)
 	font-weight: bold;
 }
 
 hr {
 	height: 0px;
 	border: none;
+<<<<<<< HEAD
 	border-top: 1px solid var(--separator-color);
+=======
+	border-top: 1px solid #4A6AAA;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 hr.footer {
@@ -880,14 +1166,23 @@ table.memberdecls {
 }
 
 .memberdecls td.glow, .fieldtable tr.glow {
+<<<<<<< HEAD
 	background-color: var(--glow-color);
 	box-shadow: 0 0 15px var(--glow-color);
+=======
+	background-color: cyan;
+	box-shadow: 0 0 15px cyan;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .mdescLeft, .mdescRight,
 .memItemLeft, .memItemRight,
 .memTemplItemLeft, .memTemplItemRight, .memTemplParams {
+<<<<<<< HEAD
 	background-color: var(--memdecl-background-color);
+=======
+	background-color: #F9FAFC;
+>>>>>>> fe1d33e (doxygen files)
 	border: none;
 	margin: 4px;
 	padding: 1px 0 0 8px;
@@ -895,11 +1190,19 @@ table.memberdecls {
 
 .mdescLeft, .mdescRight {
 	padding: 0px 8px 4px 8px;
+<<<<<<< HEAD
 	color: var(--memdecl-foreground-color);
 }
 
 .memSeparator {
         border-bottom: 1px solid var(--memdecl-separator-color);
+=======
+	color: #555;
+}
+
+.memSeparator {
+        border-bottom: 1px solid #DEE4F0;
+>>>>>>> fe1d33e (doxygen files)
         line-height: 1px;
         margin: 0px;
         padding: 0px;
@@ -914,7 +1217,11 @@ table.memberdecls {
 }
 
 .memTemplParams {
+<<<<<<< HEAD
 	color: var(--memdecl-template-color);
+=======
+	color: #4665A2;
+>>>>>>> fe1d33e (doxygen files)
         white-space: nowrap;
 	font-size: 80%;
 }
@@ -927,6 +1234,7 @@ table.memberdecls {
 
 .memtitle {
 	padding: 8px;
+<<<<<<< HEAD
 	border-top: 1px solid var(--memdef-border-color);
 	border-left: 1px solid var(--memdef-border-color);
 	border-right: 1px solid var(--memdef-border-color);
@@ -936,6 +1244,17 @@ table.memberdecls {
 	background-image: var(--memdef-title-gradient-image);
 	background-repeat: repeat-x;
 	background-color: var(--memdef-title-background-color);
+=======
+	border-top: 1px solid #A8B8D9;
+	border-left: 1px solid #A8B8D9;
+	border-right: 1px solid #A8B8D9;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	margin-bottom: -1px;
+	background-image: url('nav_f.png');
+	background-repeat: repeat-x;
+	background-color: #E2E8F2;
+>>>>>>> fe1d33e (doxygen files)
 	line-height: 1.25;
 	font-weight: 300;
 	float:left;
@@ -950,11 +1269,27 @@ table.memberdecls {
 
 .memtemplate {
 	font-size: 80%;
+<<<<<<< HEAD
 	color: var(--memdef-template-color);
+=======
+	color: #4665A2;
+>>>>>>> fe1d33e (doxygen files)
 	font-weight: normal;
 	margin-left: 9px;
 }
 
+<<<<<<< HEAD
+=======
+.memnav {
+	background-color: #EBEFF6;
+	border: 1px solid #A3B4D7;
+	text-align: center;
+	margin: 2px;
+	margin-right: 15px;
+	padding: 2px;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 .mempage {
 	width: 100%;
 }
@@ -973,7 +1308,11 @@ table.memberdecls {
 }
 
 .memitem.glow {
+<<<<<<< HEAD
          box-shadow: 0 0 15px var(--glow-color);
+=======
+         box-shadow: 0 0 15px cyan;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .memname {
@@ -986,6 +1325,7 @@ table.memberdecls {
 }
 
 .memproto, dl.reflist dt {
+<<<<<<< HEAD
         border-top: 1px solid var(--memdef-border-color);
         border-left: 1px solid var(--memdef-border-color);
         border-right: 1px solid var(--memdef-border-color);
@@ -1000,10 +1340,35 @@ table.memberdecls {
 
 .overload {
         font-family: var(--font-family-monospace);
+=======
+        border-top: 1px solid #A8B8D9;
+        border-left: 1px solid #A8B8D9;
+        border-right: 1px solid #A8B8D9;
+        padding: 6px 0px 6px 0px;
+        color: #253555;
+        font-weight: bold;
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+        background-color: #DFE5F1;
+        /* opera specific markup */
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        border-top-right-radius: 4px;
+        /* firefox specific markup */
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px;
+        -moz-border-radius-topright: 4px;
+        /* webkit specific markup */
+        -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+        -webkit-border-top-right-radius: 4px;
+
+}
+
+.overload {
+        font-family: "courier new",courier,monospace;
+>>>>>>> fe1d33e (doxygen files)
 	font-size: 65%;
 }
 
 .memdoc, dl.reflist dd {
+<<<<<<< HEAD
         border-bottom: 1px solid var(--memdef-border-color);
         border-left: 1px solid var(--memdef-border-color);
         border-right: 1px solid var(--memdef-border-color);
@@ -1012,6 +1377,17 @@ table.memberdecls {
         background-image:url('nav_g.png');
         background-repeat:repeat-x;
         background-color: var(--memdef-doc-background-color);
+=======
+        border-bottom: 1px solid #A8B8D9;      
+        border-left: 1px solid #A8B8D9;      
+        border-right: 1px solid #A8B8D9; 
+        padding: 6px 10px 2px 10px;
+        background-color: #FBFCFD;
+        border-top-width: 0;
+        background-image:url('nav_g.png');
+        background-repeat:repeat-x;
+        background-color: #FFFFFF;
+>>>>>>> fe1d33e (doxygen files)
         /* opera specific markup */
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
@@ -1044,7 +1420,11 @@ dl.reflist dd {
 }
 
 .paramname {
+<<<<<<< HEAD
 	color: var(--memdef-param-name-color);
+=======
+	color: #602020;
+>>>>>>> fe1d33e (doxygen files)
 	white-space: nowrap;
 }
 .paramname em {
@@ -1057,12 +1437,17 @@ dl.reflist dd {
 .params, .retval, .exception, .tparams {
         margin-left: 0px;
         padding-left: 0px;
+<<<<<<< HEAD
 }
+=======
+}       
+>>>>>>> fe1d33e (doxygen files)
 
 .params .paramname, .retval .paramname, .tparams .paramname, .exception .paramname {
         font-weight: bold;
         vertical-align: top;
 }
+<<<<<<< HEAD
 
 .params .paramtype, .tparams .paramtype {
         font-style: italic;
@@ -1071,6 +1456,16 @@ dl.reflist dd {
 
 .params .paramdir, .tparams .paramdir {
         font-family: var(--font-family-monospace);
+=======
+        
+.params .paramtype, .tparams .paramtype {
+        font-style: italic;
+        vertical-align: top;
+}       
+        
+.params .paramdir, .tparams .paramdir {
+        font-family: "courier new",courier,monospace;
+>>>>>>> fe1d33e (doxygen files)
         vertical-align: top;
 }
 
@@ -1094,6 +1489,7 @@ span.mlabels {
 }
 
 span.mlabel {
+<<<<<<< HEAD
         background-color: var(--label-background-color);
         border-top:1px solid var(--label-left-top-border-color);
         border-left:1px solid var(--label-left-top-border-color);
@@ -1101,6 +1497,15 @@ span.mlabel {
         border-bottom:1px solid var(--label-right-bottom-border-color);
 	text-shadow: none;
 	color: var(--label-foreground-color);
+=======
+        background-color: #728DC1;
+        border-top:1px solid #5373B4;
+        border-left:1px solid #5373B4;
+        border-right:1px solid #C4CFE5;
+        border-bottom:1px solid #C4CFE5;
+	text-shadow: none;
+	color: white;
+>>>>>>> fe1d33e (doxygen files)
 	margin-right: 4px;
 	padding: 2px 3px;
 	border-radius: 3px;
@@ -1117,8 +1522,13 @@ span.mlabel {
 
 div.directory {
         margin: 10px 0px;
+<<<<<<< HEAD
         border-top: 1px solid var(--directory-separator-color);
         border-bottom: 1px solid var(--directory-separator-color);
+=======
+        border-top: 1px solid #9CAFD4;
+        border-bottom: 1px solid #9CAFD4;
+>>>>>>> fe1d33e (doxygen files)
         width: 100%;
 }
 
@@ -1154,6 +1564,7 @@ div.directory {
 	border-left: 1px solid rgba(0,0,0,0.05);
 }
 
+<<<<<<< HEAD
 .directory tr.odd {
 	padding-left: 6px;
 	background-color: var(--index-odd-item-bg-color);
@@ -1162,6 +1573,11 @@ div.directory {
 .directory tr.even {
 	padding-left: 6px;
 	background-color: var(--index-even-item-bg-color);
+=======
+.directory tr.even {
+	padding-left: 6px;
+	background-color: #F7F8FB;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .directory img {
@@ -1179,11 +1595,19 @@ div.directory {
         cursor: pointer;
         padding-left: 2px;
         padding-right: 2px;
+<<<<<<< HEAD
 	color: var(--page-link-color);
 }
 
 .arrow {
     color: var(--nav-arrow-color);
+=======
+	color: #3D578C;
+}
+
+.arrow {
+    color: #9CAFD4;
+>>>>>>> fe1d33e (doxygen files)
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
@@ -1197,15 +1621,24 @@ div.directory {
 }
 
 .icon {
+<<<<<<< HEAD
     font-family: var(--font-family-icon);
     line-height: normal;
+=======
+    font-family: Arial, Helvetica;
+>>>>>>> fe1d33e (doxygen files)
     font-weight: bold;
     font-size: 12px;
     height: 14px;
     width: 16px;
     display: inline-block;
+<<<<<<< HEAD
     background-color: var(--icon-background-color);
     color: var(--icon-foreground-color);
+=======
+    background-color: #728DC1;
+    color: white;
+>>>>>>> fe1d33e (doxygen files)
     text-align: center;
     border-radius: 4px;
     margin-left: 2px;
@@ -1244,13 +1677,24 @@ div.directory {
     width: 24px;
     height: 18px;
     margin-bottom: 4px;
+<<<<<<< HEAD
     background-image:var(--icon-doc-image);
+=======
+    background-image:url('doc.png');
+>>>>>>> fe1d33e (doxygen files)
     background-position: 0px -4px;
     background-repeat: repeat-y;
     vertical-align:top;
     display: inline-block;
 }
 
+<<<<<<< HEAD
+=======
+table.directory {
+    font: 400 14px Roboto,sans-serif;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 /* @end */
 
 div.dynheader {
@@ -1265,7 +1709,11 @@ div.dynheader {
 
 address {
 	font-style: normal;
+<<<<<<< HEAD
 	color: var(--footer-foreground-color);
+=======
+	color: #2A3D61;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 table.doxtable caption {
@@ -1279,23 +1727,44 @@ table.doxtable {
 }
 
 table.doxtable td, table.doxtable th {
+<<<<<<< HEAD
 	border: 1px solid var(--table-cell-border-color);
+=======
+	border: 1px solid #2D4068;
+>>>>>>> fe1d33e (doxygen files)
 	padding: 3px 7px 2px;
 }
 
 table.doxtable th {
+<<<<<<< HEAD
 	background-color: var(--table-header-background-color);
 	color: var(--table-header-foreground-color);
+=======
+	background-color: #374F7F;
+	color: #FFFFFF;
+>>>>>>> fe1d33e (doxygen files)
 	font-size: 110%;
 	padding-bottom: 4px;
 	padding-top: 5px;
 }
 
 table.fieldtable {
+<<<<<<< HEAD
         margin-bottom: 10px;
         border: 1px solid var(--memdef-border-color);
         border-spacing: 0px;
         border-radius: 4px;
+=======
+        /*width: 100%;*/
+        margin-bottom: 10px;
+        border: 1px solid #A8B8D9;
+        border-spacing: 0px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 2px;
+        -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+>>>>>>> fe1d33e (doxygen files)
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
@@ -1305,8 +1774,13 @@ table.fieldtable {
 
 .fieldtable td.fieldtype, .fieldtable td.fieldname {
         white-space: nowrap;
+<<<<<<< HEAD
         border-right: 1px solid var(--memdef-border-color);
         border-bottom: 1px solid var(--memdef-border-color);
+=======
+        border-right: 1px solid #A8B8D9;
+        border-bottom: 1px solid #A8B8D9;
+>>>>>>> fe1d33e (doxygen files)
         vertical-align: top;
 }
 
@@ -1315,13 +1789,23 @@ table.fieldtable {
 }
 
 .fieldtable td.fielddoc {
+<<<<<<< HEAD
         border-bottom: 1px solid var(--memdef-border-color);
+=======
+        border-bottom: 1px solid #A8B8D9;
+        /*width: 100%;*/
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .fieldtable td.fielddoc p:first-child {
         margin-top: 0px;
+<<<<<<< HEAD
 }
 
+=======
+}       
+        
+>>>>>>> fe1d33e (doxygen files)
 .fieldtable td.fielddoc p:last-child {
         margin-bottom: 2px;
 }
@@ -1331,18 +1815,36 @@ table.fieldtable {
 }
 
 .fieldtable th {
+<<<<<<< HEAD
         background-image: var(--memdef-title-gradient-image);
         background-repeat:repeat-x;
         background-color: var(--memdef-title-background-color);
         font-size: 90%;
         color: var(--memdef-proto-text-color);
+=======
+        background-image:url('nav_f.png');
+        background-repeat:repeat-x;
+        background-color: #E2E8F2;
+        font-size: 90%;
+        color: #253555;
+>>>>>>> fe1d33e (doxygen files)
         padding-bottom: 4px;
         padding-top: 5px;
         text-align:left;
         font-weight: 400;
+<<<<<<< HEAD
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
         border-bottom: 1px solid var(--memdef-border-color);
+=======
+        -moz-border-radius-topleft: 4px;
+        -moz-border-radius-topright: 4px;
+        -webkit-border-top-left-radius: 4px;
+        -webkit-border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom: 1px solid #A8B8D9;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 
@@ -1350,7 +1852,11 @@ table.fieldtable {
 	top: 0px;
 	left: 10px;
 	height: 36px;
+<<<<<<< HEAD
 	background-image: var(--nav-gradient-image);
+=======
+	background-image: url('tab_b.png');
+>>>>>>> fe1d33e (doxygen files)
 	z-index: 101;
 	overflow: hidden;
 	font-size: 13px;
@@ -1359,13 +1865,22 @@ table.fieldtable {
 .navpath ul
 {
 	font-size: 11px;
+<<<<<<< HEAD
 	background-image: var(--nav-gradient-image);
+=======
+	background-image:url('tab_b.png');
+>>>>>>> fe1d33e (doxygen files)
 	background-repeat:repeat-x;
 	background-position: 0 -5px;
 	height:30px;
 	line-height:30px;
+<<<<<<< HEAD
 	color:var(--nav-text-normal-color);
 	border:solid 1px var(--nav-breadcrumb-border-color);
+=======
+	color:#8AA0CC;
+	border:solid 1px #C2CDE4;
+>>>>>>> fe1d33e (doxygen files)
 	overflow:hidden;
 	margin:0px;
 	padding:0px;
@@ -1377,10 +1892,17 @@ table.fieldtable {
 	float:left;
 	padding-left:10px;
 	padding-right:15px;
+<<<<<<< HEAD
 	background-image:var(--nav-breadcrumb-image);
 	background-repeat:no-repeat;
 	background-position:right;
 	color: var(--nav-foreground-color);
+=======
+	background-image:url('bc_s.png');
+	background-repeat:no-repeat;
+	background-position:right;
+	color:#364D7C;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .navpath li.navelem a
@@ -1389,16 +1911,27 @@ table.fieldtable {
 	display:block;
 	text-decoration: none;
 	outline: none;
+<<<<<<< HEAD
 	color: var(--nav-text-normal-color);
 	font-family: var(--font-family-nav);
 	text-shadow: var(--nav-text-normal-shadow);
 	text-decoration: none;
+=======
+	color: #283A5D;
+	font-family: 'Lucida Grande',Geneva,Helvetica,Arial,sans-serif;
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+	text-decoration: none;        
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .navpath li.navelem a:hover
 {
+<<<<<<< HEAD
 	color: var(--nav-text-hover-color);
 	text-shadow: var(--nav-text-hover-shadow);
+=======
+	color:#6884BD;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .navpath li.footer
@@ -1410,7 +1943,11 @@ table.fieldtable {
         background-image:none;
         background-repeat:no-repeat;
         background-position:right;
+<<<<<<< HEAD
         color: var(--footer-foreground-color);
+=======
+        color:#364D7C;
+>>>>>>> fe1d33e (doxygen files)
         font-size: 8pt;
 }
 
@@ -1422,7 +1959,11 @@ div.summary
 	padding-right: 5px;
 	width: 50%;
 	text-align: right;
+<<<<<<< HEAD
 }
+=======
+}       
+>>>>>>> fe1d33e (doxygen files)
 
 div.summary a
 {
@@ -1437,7 +1978,11 @@ table.classindex
         margin-right: 3%;
         width: 94%;
         border: 0;
+<<<<<<< HEAD
         border-spacing: 0;
+=======
+        border-spacing: 0; 
+>>>>>>> fe1d33e (doxygen files)
         padding: 0;
 }
 
@@ -1455,11 +2000,19 @@ div.ingroups a
 
 div.header
 {
+<<<<<<< HEAD
         background-image: var(--header-gradient-image);
         background-repeat:repeat-x;
 	background-color: var(--header-background-color);
 	margin:  0px;
 	border-bottom: 1px solid var(--header-separator-color);
+=======
+        background-image:url('nav_h.png');
+        background-repeat:repeat-x;
+	background-color: #F9FAFC;
+	margin:  0px;
+	border-bottom: 1px solid #C4CFE5;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 div.headertitle
@@ -1482,6 +2035,14 @@ dl.section {
 	padding-left: 0px;
 }
 
+<<<<<<< HEAD
+=======
+dl.section.DocNodeRTL {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 dl.note {
   margin-left: -7px;
   padding-left: 3px;
@@ -1489,6 +2050,19 @@ dl.note {
   border-color: #D0C000;
 }
 
+<<<<<<< HEAD
+=======
+dl.note.DocNodeRTL {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+  margin-right: -7px;
+  padding-right: 3px;
+  border-right: 4px solid;
+  border-color: #D0C000;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 dl.warning, dl.attention {
   margin-left: -7px;
   padding-left: 3px;
@@ -1496,6 +2070,19 @@ dl.warning, dl.attention {
   border-color: #FF0000;
 }
 
+<<<<<<< HEAD
+=======
+dl.warning.DocNodeRTL, dl.attention.DocNodeRTL {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+  margin-right: -7px;
+  padding-right: 3px;
+  border-right: 4px solid;
+  border-color: #FF0000;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 dl.pre, dl.post, dl.invariant {
   margin-left: -7px;
   padding-left: 3px;
@@ -1503,6 +2090,19 @@ dl.pre, dl.post, dl.invariant {
   border-color: #00D000;
 }
 
+<<<<<<< HEAD
+=======
+dl.pre.DocNodeRTL, dl.post.DocNodeRTL, dl.invariant.DocNodeRTL {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+  margin-right: -7px;
+  padding-right: 3px;
+  border-right: 4px solid;
+  border-color: #00D000;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 dl.deprecated {
   margin-left: -7px;
   padding-left: 3px;
@@ -1510,6 +2110,19 @@ dl.deprecated {
   border-color: #505050;
 }
 
+<<<<<<< HEAD
+=======
+dl.deprecated.DocNodeRTL {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+  margin-right: -7px;
+  padding-right: 3px;
+  border-right: 4px solid;
+  border-color: #505050;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 dl.todo {
   margin-left: -7px;
   padding-left: 3px;
@@ -1517,6 +2130,19 @@ dl.todo {
   border-color: #00C0E0;
 }
 
+<<<<<<< HEAD
+=======
+dl.todo.DocNodeRTL {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+  margin-right: -7px;
+  padding-right: 3px;
+  border-right: 4px solid;
+  border-color: #00C0E0;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 dl.test {
   margin-left: -7px;
   padding-left: 3px;
@@ -1524,6 +2150,19 @@ dl.test {
   border-color: #3030E0;
 }
 
+<<<<<<< HEAD
+=======
+dl.test.DocNodeRTL {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+  margin-right: -7px;
+  padding-right: 3px;
+  border-right: 4px solid;
+  border-color: #3030E0;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 dl.bug {
   margin-left: -7px;
   padding-left: 3px;
@@ -1531,16 +2170,32 @@ dl.bug {
   border-color: #C08050;
 }
 
+<<<<<<< HEAD
+=======
+dl.bug.DocNodeRTL {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+  margin-right: -7px;
+  padding-right: 3px;
+  border-right: 4px solid;
+  border-color: #C08050;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 dl.section dd {
 	margin-bottom: 6px;
 }
 
 
+<<<<<<< HEAD
 #projectrow
 {
 	height: 56px;
 }
 
+=======
+>>>>>>> fe1d33e (doxygen files)
 #projectlogo
 {
 	text-align: center;
@@ -1556,11 +2211,15 @@ dl.section dd {
 #projectalign
 {
         vertical-align: middle;
+<<<<<<< HEAD
         padding-left: 0.5em;
+=======
+>>>>>>> fe1d33e (doxygen files)
 }
 
 #projectname
 {
+<<<<<<< HEAD
 	font-size: 200%;
 	font-family: var(--font-family-title);
 	margin: 0px;
@@ -1571,14 +2230,28 @@ dl.section dd {
 {
 	font-size: 90%;
         font-family: var(--font-family-title);
+=======
+	font: 200% Tahoma, Arial,sans-serif;
+	margin: 0px;
+	padding: 2px 0px;
+}
+    
+#projectbrief
+{
+	font: 90% Tahoma, Arial,sans-serif;
+>>>>>>> fe1d33e (doxygen files)
 	margin: 0px;
 	padding: 0px;
 }
 
 #projectnumber
 {
+<<<<<<< HEAD
 	font-size: 50%;
 	font-family: 50% var(--font-family-title);
+=======
+	font: 50% Tahoma, Arial,sans-serif;
+>>>>>>> fe1d33e (doxygen files)
 	margin: 0px;
 	padding: 0px;
 }
@@ -1588,8 +2261,12 @@ dl.section dd {
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
+<<<<<<< HEAD
 	border-bottom: 1px solid var(--title-separator-color);
 	background-color: var(--title-background-color);
+=======
+	border-bottom: 1px solid #5373B4;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .image
@@ -1622,12 +2299,24 @@ dl.section dd {
 	font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+div.zoom
+{
+	border: 1px solid #90A5CE;
+}
+
+>>>>>>> fe1d33e (doxygen files)
 dl.citelist {
         margin-bottom:50px;
 }
 
 dl.citelist dt {
+<<<<<<< HEAD
         color:var(--citation-label-color);
+=======
+        color:#334975;
+>>>>>>> fe1d33e (doxygen files)
         float:left;
         font-weight:bold;
         margin-right:10px;
@@ -1643,8 +2332,13 @@ dl.citelist dd {
 
 div.toc {
         padding: 14px 25px;
+<<<<<<< HEAD
         background-color: var(--toc-background-color);
         border: 1px solid var(--toc-border-color);
+=======
+        background-color: #F4F6FA;
+        border: 1px solid #D8DFEE;
+>>>>>>> fe1d33e (doxygen files)
         border-radius: 7px 7px 7px 7px;
         float: right;
         height: auto;
@@ -1652,17 +2346,40 @@ div.toc {
         width: 200px;
 }
 
+<<<<<<< HEAD
 div.toc li {
         background: url("bdwn.png") no-repeat scroll 0 5px transparent;
         font: 10px/1.2 var(--font-family-toc);
+=======
+.PageDocRTL-title div.toc {
+  float: left !important;
+  text-align: right;
+}
+
+div.toc li {
+        background: url("bdwn.png") no-repeat scroll 0 5px transparent;
+        font: 10px/1.2 Verdana,DejaVu Sans,Geneva,sans-serif;
+>>>>>>> fe1d33e (doxygen files)
         margin-top: 5px;
         padding-left: 10px;
         padding-top: 2px;
 }
 
+<<<<<<< HEAD
 div.toc h3 {
         font: bold 12px/1.2 var(--font-family-toc);
 	color: var(--toc-header-color);
+=======
+.PageDocRTL-title div.toc li {
+  background-position-x: right !important;
+  padding-left: 0 !important;
+  padding-right: 10px;
+}
+
+div.toc h3 {
+        font: bold 12px/1.2 Arial,FreeSans,sans-serif;
+	color: #4665A2;
+>>>>>>> fe1d33e (doxygen files)
         border-bottom: 0 none;
         margin: 0;
 }
@@ -1671,7 +2388,11 @@ div.toc ul {
         list-style: none outside none;
         border: medium none;
         padding: 0px;
+<<<<<<< HEAD
 }
+=======
+}       
+>>>>>>> fe1d33e (doxygen files)
 
 div.toc li.level1 {
         margin-left: 0px;
@@ -1695,13 +2416,38 @@ span.emoji {
          */
 }
 
+<<<<<<< HEAD
 span.obfuscator {
   display: none;
+=======
+.PageDocRTL-title div.toc li.level1 {
+  margin-left: 0 !important;
+  margin-right: 0;
+}
+
+.PageDocRTL-title div.toc li.level2 {
+  margin-left: 0 !important;
+  margin-right: 15px;
+}
+
+.PageDocRTL-title div.toc li.level3 {
+  margin-left: 0 !important;
+  margin-right: 30px;
+}
+
+.PageDocRTL-title div.toc li.level4 {
+  margin-left: 0 !important;
+  margin-right: 45px;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 .inherit_header {
         font-weight: bold;
+<<<<<<< HEAD
         color: var(--inherit-header-color);
+=======
+        color: gray;
+>>>>>>> fe1d33e (doxygen files)
         cursor: pointer;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -1733,12 +2479,20 @@ tr.heading h2 {
 
 #powerTip {
 	cursor: default;
+<<<<<<< HEAD
 	/*white-space: nowrap;*/
         color: var(--tooltip-foreground-color);
 	background-color: var(--tooltip-background-color);
 	border: 1px solid var(--tooltip-border-color);
 	border-radius: 4px 4px 4px 4px;
 	box-shadow: var(--tooltip-shadow);
+=======
+	white-space: nowrap;
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 1px 1px 7px gray;
+>>>>>>> fe1d33e (doxygen files)
 	display: none;
 	font-size: smaller;
 	max-width: 80%;
@@ -1749,7 +2503,11 @@ tr.heading h2 {
 }
 
 #powerTip div.ttdoc {
+<<<<<<< HEAD
         color: var(--tooltip-doc-color);
+=======
+        color: grey;
+>>>>>>> fe1d33e (doxygen files)
 	font-style: italic;
 }
 
@@ -1757,24 +2515,35 @@ tr.heading h2 {
         font-weight: bold;
 }
 
+<<<<<<< HEAD
 #powerTip a {
 	color: var(--tooltip-link-color);
 }
 
+=======
+>>>>>>> fe1d33e (doxygen files)
 #powerTip div.ttname {
         font-weight: bold;
 }
 
 #powerTip div.ttdeci {
+<<<<<<< HEAD
         color: var(--tooltip-declaration-color);
+=======
+        color: #006318;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 #powerTip div {
         margin: 0px;
         padding: 0px;
+<<<<<<< HEAD
         font-size: 12px;
        	font-family: var(--font-family-tooltip);
 	line-height: 16px;
+=======
+        font: 12px/16px Roboto,sans-serif;
+>>>>>>> fe1d33e (doxygen files)
 }
 
 #powerTip:before, #powerTip:after {
@@ -1819,12 +2588,21 @@ tr.heading h2 {
 }
 
 #powerTip.n:after, #powerTip.ne:after, #powerTip.nw:after {
+<<<<<<< HEAD
 	border-top-color: var(--tooltip-background-color);
 	border-width: 10px;
 	margin: 0px -10px;
 }
 #powerTip.n:before, #powerTip.ne:before, #powerTip.nw:before {
 	border-top-color: var(--tooltip-border-color);
+=======
+	border-top-color: #FFFFFF;
+	border-width: 10px;
+	margin: 0px -10px;
+}
+#powerTip.n:before {
+	border-top-color: #808080;
+>>>>>>> fe1d33e (doxygen files)
 	border-width: 11px;
 	margin: 0px -11px;
 }
@@ -1847,13 +2625,21 @@ tr.heading h2 {
 }
 
 #powerTip.s:after, #powerTip.se:after, #powerTip.sw:after {
+<<<<<<< HEAD
 	border-bottom-color: var(--tooltip-background-color);
+=======
+	border-bottom-color: #FFFFFF;
+>>>>>>> fe1d33e (doxygen files)
 	border-width: 10px;
 	margin: 0px -10px;
 }
 
 #powerTip.s:before, #powerTip.se:before, #powerTip.sw:before {
+<<<<<<< HEAD
 	border-bottom-color: var(--tooltip-border-color);
+=======
+	border-bottom-color: #808080;
+>>>>>>> fe1d33e (doxygen files)
 	border-width: 11px;
 	margin: 0px -11px;
 }
@@ -1874,13 +2660,21 @@ tr.heading h2 {
 	left: 100%;
 }
 #powerTip.e:after {
+<<<<<<< HEAD
 	border-left-color: var(--tooltip-border-color);
+=======
+	border-left-color: #FFFFFF;
+>>>>>>> fe1d33e (doxygen files)
 	border-width: 10px;
 	top: 50%;
 	margin-top: -10px;
 }
 #powerTip.e:before {
+<<<<<<< HEAD
 	border-left-color: var(--tooltip-border-color);
+=======
+	border-left-color: #808080;
+>>>>>>> fe1d33e (doxygen files)
 	border-width: 11px;
 	top: 50%;
 	margin-top: -11px;
@@ -1890,13 +2684,21 @@ tr.heading h2 {
 	right: 100%;
 }
 #powerTip.w:after {
+<<<<<<< HEAD
 	border-right-color: var(--tooltip-border-color);
+=======
+	border-right-color: #FFFFFF;
+>>>>>>> fe1d33e (doxygen files)
 	border-width: 10px;
 	top: 50%;
 	margin-top: -10px;
 }
 #powerTip.w:before {
+<<<<<<< HEAD
 	border-right-color: var(--tooltip-border-color);
+=======
+	border-right-color: #808080;
+>>>>>>> fe1d33e (doxygen files)
 	border-width: 11px;
 	top: 50%;
 	margin-top: -11px;
@@ -1930,7 +2732,11 @@ table.markdownTable {
 }
 
 table.markdownTable td, table.markdownTable th {
+<<<<<<< HEAD
 	border: 1px solid var(--table-cell-border-color);
+=======
+	border: 1px solid #2D4068;
+>>>>>>> fe1d33e (doxygen files)
 	padding: 3px 7px 2px;
 }
 
@@ -1938,8 +2744,13 @@ table.markdownTable tr {
 }
 
 th.markdownTableHeadLeft, th.markdownTableHeadRight, th.markdownTableHeadCenter, th.markdownTableHeadNone {
+<<<<<<< HEAD
 	background-color: var(--table-header-background-color);
 	color: var(--table-header-foreground-color);
+=======
+	background-color: #374F7F;
+	color: #FFFFFF;
+>>>>>>> fe1d33e (doxygen files)
 	font-size: 110%;
 	padding-bottom: 4px;
 	padding-top: 5px;
@@ -1957,9 +2768,38 @@ th.markdownTableHeadCenter, td.markdownTableBodyCenter {
 	text-align: center
 }
 
+<<<<<<< HEAD
 tt, code, kbd, samp
 {
   display: inline-block;
+=======
+.DocNodeRTL {
+  text-align: right;
+  direction: rtl;
+}
+
+.DocNodeLTR {
+  text-align: left;
+  direction: ltr;
+}
+
+table.DocNodeRTL {
+   width: auto;
+   margin-right: 0;
+   margin-left: auto;
+}
+
+table.DocNodeLTR {
+   width: auto;
+   margin-right: auto;
+   margin-left: 0;
+}
+
+tt, code, kbd, samp
+{
+  display: inline-block;
+  direction:ltr; 
+>>>>>>> fe1d33e (doxygen files)
 }
 /* @end */
 
@@ -1967,6 +2807,7 @@ u {
 	text-decoration: underline;
 }
 
+<<<<<<< HEAD
 details>summary {
   list-style-type: none;
 }
@@ -2005,3 +2846,5 @@ body {
         background-color: var(--scrollbar-background-color);
 }
 
+=======
+>>>>>>> fe1d33e (doxygen files)

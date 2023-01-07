@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<<<<<<< HEAD
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
   <compound refid="classannotate__data_1_1_annotate_data" kind="class"><name>annotate_data::AnnotateData</name>
     <member refid="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" kind="function"><name>annotate_data</name></member>
@@ -158,11 +159,83 @@
   <compound refid="namespacehygia_1_1parser_1_1_y_a_m_l__parser" kind="namespace"><name>hygia::parser::YAML_parser</name>
   </compound>
   <compound refid="____init_____8py" kind="file"><name>__init__.py</name>
+=======
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser" kind="class"><name>parser::feature_engineering_parser::FeatureEngineeringParser</name>
+    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a6444e713c32f068287280ff66d8e45f9" kind="function"><name>parse</name></member>
+    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a3c1fc41cba00cf9d663a5dd85bd49365" kind="function"><name>_parse_feature_engineering_configs</name></member>
+    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a45885972d2b20fce9ed4ec92db343bf4" kind="function"><name>_get_dataframe</name></member>
+    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a0679d43d692b709c02d4ab0f55672bb3" kind="function"><name>_get_features_details</name></member>
+    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a43218d1380171031cecf28cabf2ea9fe" kind="function"><name>_get_word_embedding_config</name></member>
+    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a4d09f5672b729cc629610f8560714527" kind="function"><name>_get_keyboard_smash_config</name></member>
+  </compound>
+  <compound refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash" kind="class"><name>data_pipeline::feature_engineering::key_smash::KeySmash</name>
+    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a21cb1a9e286356f32a6f783e961f6a46" kind="variable"><name>char_sets</name></member>
+    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a23bba8ab35ebb2bd0af52ea6596e4925" kind="function"><name>__init__</name></member>
+    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a3c0ca3e149360720f15327d78205e2f7" kind="function"><name>calculate_char_frequency_metric</name></member>
+    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a3428a01b9d0fa0e403334b15374d84d0" kind="function"><name>calculate_irregular_sequence_metric</name></member>
+    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a596e7af2462276dfa0f5a73898eec2a4" kind="function"><name>calculate_number_count_metric</name></member>
+  </compound>
+  <compound refid="classparser_1_1model__parser_1_1_model_parser" kind="class"><name>parser::model_parser::ModelParser</name>
+    <member refid="classparser_1_1model__parser_1_1_model_parser_1aba7b8a605e0d321c591633b092861699" kind="variable"><name>columns_alias</name></member>
+    <member refid="classparser_1_1model__parser_1_1_model_parser_1ad164aff94b2ff7cbe357a97d58734a09" kind="variable"><name>default_keyboard_smash_values</name></member>
+    <member refid="classparser_1_1model__parser_1_1_model_parser_1a416260ece9beca7d897eec76762d9b2b" kind="function"><name>__init__</name></member>
+    <member refid="classparser_1_1model__parser_1_1_model_parser_1a6eacbfbf440e6a79e6356375e623a9dc" kind="function"><name>parse</name></member>
+    <member refid="classparser_1_1model__parser_1_1_model_parser_1a694f81471abc207995b17a47d041e9ae" kind="function"><name>get_random_forest_address_config</name></member>
+    <member refid="classparser_1_1model__parser_1_1_model_parser_1af46e8c838f3a13db4c576a011076a036" kind="function"><name>get_columns</name></member>
+    <member refid="classparser_1_1model__parser_1_1_model_parser_1a76dda884e6d3a6bbcac1782ff2fe120d" kind="function"><name>get_thresholds</name></member>
+    <member refid="classparser_1_1model__parser_1_1_model_parser_1a3b85c606ffe0670782f2b87911338da2" kind="function"><name>get_keyboard_smash_default_thresholds</name></member>
+    <member refid="classparser_1_1model__parser_1_1_model_parser_1a6267210c4850b549f5fc90f3a90e7912" kind="function"><name>_parse_modal_configs</name></member>
+  </compound>
+  <compound refid="classparser_1_1parser__base_1_1_parser_base" kind="class"><name>parser::parser_base::ParserBase</name>
+    <member refid="classparser_1_1parser__base_1_1_parser_base_1a4f3b278ff54c422767e66c78a7bb24d6" kind="variable"><name>filepath</name></member>
+    <member refid="classparser_1_1parser__base_1_1_parser_base_1a2ccc68acea8b4677c1761e39d9aeb058" kind="function"><name>__init__</name></member>
+    <member refid="classparser_1_1parser__base_1_1_parser_base_1a5d88e7661694746fee4816141582c3a7" kind="function"><name>_try_get</name></member>
+    <member refid="classparser_1_1parser__base_1_1_parser_base_1a2eafe46a0dfd547f102a6afcee176311" kind="function"><name>_get</name></member>
+  </compound>
+  <compound refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding" kind="class"><name>data_pipeline::feature_engineering::word_embedding::WordEmbedding</name>
+    <member refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a9f80ebd1ebd4388302cd3e19e56916ed" kind="variable"><name>bpl</name></member>
+    <member refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a10817fded0539110daef964d8bf1bd8a" kind="function"><name>__init__</name></member>
+    <member refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1abf75033d7367dcc2ce77151091b48342" kind="function"><name>get_embedding</name></member>
+  </compound>
+  <compound refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser" kind="class"><name>parser::YAML_parser::YAMLParser</name>
+    <member refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a8ec75ddaa9abd26784d69ccefbd8f90a" kind="function"><name>parse</name></member>
+    <member refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a54e76ebb98b2649f328c7b887dfa8107" kind="function"><name>_parse_yaml</name></member>
+  </compound>
+  <compound refid="namespacedata__pipeline" kind="namespace"><name>data_pipeline</name>
+  </compound>
+  <compound refid="namespacedata__pipeline_1_1feature__engineering" kind="namespace"><name>data_pipeline::feature_engineering</name>
+  </compound>
+  <compound refid="namespacedata__pipeline_1_1feature__engineering_1_1key__smash" kind="namespace"><name>data_pipeline::feature_engineering::key_smash</name>
+  </compound>
+  <compound refid="namespacedata__pipeline_1_1feature__engineering_1_1word__embedding" kind="namespace"><name>data_pipeline::feature_engineering::word_embedding</name>
+  </compound>
+  <compound refid="namespacedata__pipeline_1_1pre__processing" kind="namespace"><name>data_pipeline::pre_processing</name>
+  </compound>
+  <compound refid="namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns" kind="namespace"><name>data_pipeline::pre_processing::concatenate_columns</name>
+    <member refid="concatenate__columns_8py_1a1b50d24e7adef5a0c638431ac5047bdf" kind="function"><name>get_concatenated_column</name></member>
+  </compound>
+  <compound refid="namespacemain" kind="namespace"><name>main</name>
+    <member refid="main_8py_1a6fba68047248af0a15cec69214a0d569" kind="function"><name>get_config</name></member>
+  </compound>
+  <compound refid="namespaceparser" kind="namespace"><name>parser</name>
+  </compound>
+  <compound refid="namespaceparser_1_1const" kind="namespace"><name>parser::const</name>
+  </compound>
+  <compound refid="namespaceparser_1_1feature__engineering__parser" kind="namespace"><name>parser::feature_engineering_parser</name>
+  </compound>
+  <compound refid="namespaceparser_1_1model__parser" kind="namespace"><name>parser::model_parser</name>
+  </compound>
+  <compound refid="namespaceparser_1_1parser__base" kind="namespace"><name>parser::parser_base</name>
+  </compound>
+  <compound refid="namespaceparser_1_1_y_a_m_l__parser" kind="namespace"><name>parser::YAML_parser</name>
+>>>>>>> fe1d33e (doxygen files)
   </compound>
   <compound refid="data__pipeline_2____init_____8py" kind="file"><name>__init__.py</name>
   </compound>
   <compound refid="data__pipeline_2feature__engineering_2____init_____8py" kind="file"><name>__init__.py</name>
   </compound>
+<<<<<<< HEAD
   <compound refid="data__pipeline_2model_2____init_____8py" kind="file"><name>__init__.py</name>
   </compound>
   <compound refid="data__pipeline_2pre__process__data_2____init_____8py" kind="file"><name>__init__.py</name>
@@ -189,6 +262,20 @@
   </compound>
   <compound refid="annotate__data__parser_8py" kind="file"><name>annotate_data_parser.py</name>
   </compound>
+=======
+  <compound refid="data__pipeline_2pre__processing_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="parser_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="key__smash_8py" kind="file"><name>key_smash.py</name>
+  </compound>
+  <compound refid="word__embedding_8py" kind="file"><name>word_embedding.py</name>
+  </compound>
+  <compound refid="concatenate__columns_8py" kind="file"><name>concatenate_columns.py</name>
+  </compound>
+  <compound refid="main_8py" kind="file"><name>main.py</name>
+  </compound>
+>>>>>>> fe1d33e (doxygen files)
   <compound refid="const_8py" kind="file"><name>const.py</name>
   </compound>
   <compound refid="feature__engineering__parser_8py" kind="file"><name>feature_engineering_parser.py</name>
@@ -197,6 +284,7 @@
   </compound>
   <compound refid="parser__base_8py" kind="file"><name>parser_base.py</name>
   </compound>
+<<<<<<< HEAD
   <compound refid="pre__processing__parser_8py" kind="file"><name>pre_processing_parser.py</name>
   </compound>
   <compound refid="_y_a_m_l__parser_8py" kind="file"><name>YAML_parser.py</name>
@@ -214,5 +302,18 @@
   <compound refid="dir_3836cc05125af4c9824ab70f348a3ea5" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/parser</name>
   </compound>
   <compound refid="dir_58e6109ac17f9a85dc40764e86627f6a" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data</name>
+=======
+  <compound refid="_y_a_m_l__parser_8py" kind="file"><name>YAML_parser.py</name>
+  </compound>
+  <compound refid="dir_d8011c2d3002aeb7fe29b60ec5b6cceb" kind="dir"><name>/Users/carla/git/Playground/src/data_pipeline</name>
+  </compound>
+  <compound refid="dir_3f5f7729d78c36242303c059ac997ea8" kind="dir"><name>/Users/carla/git/Playground/src/data_pipeline/feature_engineering</name>
+  </compound>
+  <compound refid="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir"><name>/Users/carla/git/Playground/src/parser</name>
+  </compound>
+  <compound refid="dir_01d8c85d3e0193d6b57221e32ef52c37" kind="dir"><name>/Users/carla/git/Playground/src/data_pipeline/pre_processing</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/Users/carla/git/Playground/src</name>
+>>>>>>> fe1d33e (doxygen files)
   </compound>
 </doxygenindex>

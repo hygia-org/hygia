@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_3f5f7729d78c36242303c059ac997ea8" kind="dir">
+    <compoundname>/Users/carla/git/Playground/src/data_pipeline/feature_engineering</compoundname>
+    <innerfile refid="data__pipeline_2feature__engineering_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="key__smash_8py">key_smash.py</innerfile>
+    <innerfile refid="word__embedding_8py">word_embedding.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/carla/git/Playground/src/data_pipeline/feature_engineering/"/>
+  </compounddef>
+</doxygen>

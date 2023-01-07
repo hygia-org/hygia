@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding" kind="class" language="Python" prot="public">
+    <compoundname>data_pipeline::feature_engineering::word_embedding::WordEmbedding</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a9f80ebd1ebd4388302cd3e19e56916ed" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>data_pipeline.feature_engineering.word_embedding.WordEmbedding::bpl</definition>
+        <argsstring></argsstring>
+        <name>bpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/carla/git/Playground/src/data_pipeline/feature_engineering/word_embedding.py" line="15" column="1" bodyfile="/Users/carla/git/Playground/src/data_pipeline/feature_engineering/word_embedding.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a10817fded0539110daef964d8bf1bd8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__</definition>
+        <argsstring>(self, lang, dimensions)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>lang</type>
+          <defname>lang</defname>
+        </param>
+        <param>
+          <type>dimensions</type>
+          <defname>dimensions</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize a word embedding object using the BytePairLanguage model.
+
+Parameters
+----------
+lang: str
+    The language to use for the word embedding (default is &quot;es&quot;)
+dimensions: str
+    The number of dimensions for the word embedding vectors (default is 25)
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/carla/git/Playground/src/data_pipeline/feature_engineering/word_embedding.py" line="5" column="1" bodyfile="/Users/carla/git/Playground/src/data_pipeline/feature_engineering/word_embedding.py" bodystart="5" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1abf75033d7367dcc2ce77151091b48342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def data_pipeline.feature_engineering.word_embedding.WordEmbedding.get_embedding</definition>
+        <argsstring>(self, text)</argsstring>
+        <name>get_embedding</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>text</type>
+          <defname>text</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Get the word embedding vector for a given text.
+
+Parameters
+----------
+text: str
+    The string to be processed
+
+Returns
+----------
+arr[float]
+    A word embedding vector for the given text
+
+Examples
+--------
+&gt;&gt;&gt; get_embedding(&quot;This is a text&quot;, &quot;es&quot;, 25)
+[ 0.06799883  0.17547965  0.47599664  0.16108984 -0.1360625  -0.10632467
+-0.10654568 -0.09805    -0.33004168 -0.33528003 -0.23304085  0.36661038
+-0.5797167   0.53252834  0.30276018 -0.01584417  0.85087484  0.14121284
+0.74862367 -0.33011952  0.015432    0.02694534  0.10118082 -0.34017918
+-0.14560167]
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/carla/git/Playground/src/data_pipeline/feature_engineering/word_embedding.py" line="17" column="1" bodyfile="/Users/carla/git/Playground/src/data_pipeline/feature_engineering/word_embedding.py" bodystart="17" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/carla/git/Playground/src/data_pipeline/feature_engineering/word_embedding.py" line="4" column="1" bodyfile="/Users/carla/git/Playground/src/data_pipeline/feature_engineering/word_embedding.py" bodystart="4" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a10817fded0539110daef964d8bf1bd8a" prot="public" virt="non-virtual"><scope>data_pipeline::feature_engineering::word_embedding::WordEmbedding</scope><name>__init__</name></member>
+      <member refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a9f80ebd1ebd4388302cd3e19e56916ed" prot="public" virt="non-virtual"><scope>data_pipeline::feature_engineering::word_embedding::WordEmbedding</scope><name>bpl</name></member>
+      <member refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1abf75033d7367dcc2ce77151091b48342" prot="public" virt="non-virtual"><scope>data_pipeline::feature_engineering::word_embedding::WordEmbedding</scope><name>get_embedding</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

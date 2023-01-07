@@ -12,9 +12,16 @@
 #
 # import os
 # import sys
-# sys.path.insert(0, os.path.abspath('.'))
+# 
 
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath('/Users/carla/git/Playground/docs/xml'))
+sys.path.insert(0, os.path.abspath('/usr/local/lib/python3.10/site-packages'))
+sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('..'))
+sys.path.append("/home/carla/docproj/ext/breathe/")
 # -- Project information -----------------------------------------------------
 
 project = 'Hygia'
@@ -22,7 +29,7 @@ copyright = '2023, Lappis'
 author = 'Lappis'
 
 import sphinx_rtd_theme
-
+import breathe
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,6 +39,7 @@ import sphinx_rtd_theme
 # ones.
 extensions = [
     'sphinx_rtd_theme',
+    'breathe'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -63,3 +71,4 @@ html_theme_options = {
 html_theme_path = ["_themes", ]
 
 
+breathe_projects = { "teste": "/Users/carla/git/Playground/docs/xml/" }

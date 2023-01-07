@@ -27,14 +27,13 @@ With `Hygia`, you can configure your data pipeline, customize the operations exe
 
 
 
-
 .. toctree::
    :maxdepth: 2
    :hidden:
    :titlesonly:
    
    user_guide/index
-
+   doxygen/index
 
 
 Indices and tables

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="concatenate__columns_8py" kind="file" language="Python">
+    <compoundname>concatenate_columns.py</compoundname>
+    <innernamespace refid="namespacedata__pipeline">data_pipeline</innernamespace>
+    <innernamespace refid="namespacedata__pipeline_1_1pre__processing">data_pipeline::pre_processing</innernamespace>
+    <innernamespace refid="namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns">data_pipeline::pre_processing::concatenate_columns</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pandas<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>DataFrame</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">get_concatenated_column(csv,<sp/>columns,<sp/>column_name):</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>if(type(columns)<sp/>==<sp/>str):</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>csv[column_name]<sp/>=<sp/>csv[columns]</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DataFrame(csv[column_name])</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>value<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>columns:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(not(column_name<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>csv)):</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>csv[column_name]<sp/>=<sp/>csv[value].astype(str)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>csv[column_name]<sp/>=<sp/>csv[column_name]<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"><sp/>+<sp/>csv[value].astype(str)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DataFrame(csv[column_name])</highlight></codeline>
+    </programlisting>
+    <location file="/Users/carla/git/Playground/src/data_pipeline/pre_processing/concatenate_columns.py"/>
+  </compounddef>
+</doxygen>
