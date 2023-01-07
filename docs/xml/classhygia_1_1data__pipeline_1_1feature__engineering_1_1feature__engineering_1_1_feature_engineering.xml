@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering" kind="class" language="Python" prot="public">
+    <compoundname>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2bd145aad20dc0e4ea9e189dbd1bb915" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering::key_smash</definition>
+        <argsstring></argsstring>
+        <name>key_smash</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.key_smash</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" line="42" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2da3933aa33b0658bd43357765cbd97f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering::word_embedding</definition>
+        <argsstring></argsstring>
+        <name>word_embedding</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.word_embedding</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" line="43" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a11a1b00797fe5ad47ae8eb116b895b92" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering::regex</definition>
+        <argsstring></argsstring>
+        <name>regex</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.regex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" line="44" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a33f8c5028f3fee8359def47641fdc736" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__</definition>
+        <argsstring>(self, str lang=&apos;es&apos;, int dimensions=25, str model=&apos;bytepair&apos;)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>lang</declname>
+          <defval>&apos;es&apos;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dimensions</declname>
+          <defval>25</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>model</declname>
+          <defval>&apos;bytepair&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize the FeatureEngineering class.
+
+:param lang: The language of the text to be processed. (default &apos;es&apos;)
+:type lang: str
+:param dimensions: The number of dimensions of the word embedding vectors. (default 25)
+:type dimensions: int
+:param model: The word embedding model to be used. (default &apos;bytepair&apos;)
+:type model: str
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" line="25" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" bodystart="25" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a6557b5c4dc573fcf0f8454da44c1536f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pd.DataFrame</type>
+        <definition> pd.DataFrame hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.extract_features</definition>
+        <argsstring>(self, pd.DataFrame df, str text_column)</argsstring>
+        <name>extract_features</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.extract_features</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pd.DataFrame</type>
+          <declname>df</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text_column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Extract key smashing and word embedding features from a given dataframe and column.
+
+:param df: Dataframe to extract features from.
+:type df: pandas.DataFrame
+:param text_column: Name of the column in the dataframe that contains the text data to extract features from.
+:type text_column: str
+:param normalize: Indicates whether to normalize the feature columns. Default is True.
+:type normalize: bool, optional
+
+:return: The input dataframe with additional columns for key smashing and word embedding features.
+:rtype: pandas.DataFrame
+
+Examples
+--------
+Use this class like this:
+
+.. code-block:: python
+
+    fe = FeatureEngineering()
+    df = fe.extract_features(df, &quot;text_column&quot;)
+    print(df)
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" line="46" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" bodystart="46" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A class for extracting key smashing and word embedding features from text data.
+This class combines the functionality of the KeySmash and WordEmbedding classes
+to extract key smashing and word embedding features from a given text column in a dataframe.
+
+Examples
+--------
+Use this class like this:
+
+.. code-block:: python
+
+    feature_engineer = FeatureEngineering()
+    df = feature_engineer.extract_features(df, &quot;text_column&quot;)
+    print(df)
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" line="8" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" bodystart="8" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a33f8c5028f3fee8359def47641fdc736" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a6557b5c4dc573fcf0f8454da44c1536f" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>extract_features</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2bd145aad20dc0e4ea9e189dbd1bb915" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>key_smash</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a11a1b00797fe5ad47ae8eb116b895b92" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>regex</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2da3933aa33b0658bd43357765cbd97f" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>word_embedding</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

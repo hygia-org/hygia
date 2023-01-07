@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex" kind="class" language="Python" prot="public">
+    <compoundname>hygia::data_pipeline::feature_engineering::regex::Regex</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4ebb9444dc8e77ed8adabf6e22aee251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_dell</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>contains_exactly_the_word_dell</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_dell</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="4" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aacc74035576c545b1d4d905f2f1e3742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_test</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>contains_exactly_the_word_test</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_test</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="8" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab220adb6350bdbc9c40d3b5a8e57cac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.only_numbers</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>only_numbers</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.only_numbers</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="12" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5cdd86f4e05bb41b8ec1f9de60b7e4d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.only_special_characters</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>only_special_characters</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.only_special_characters</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="16" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.contains_email</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>contains_email</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.contains_email</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="20" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a6d48e296af51cfcab0a7a144987ba88e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.contains_url</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>contains_url</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.contains_url</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="24" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.contains_date</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>contains_date</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.contains_date</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="28" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aa3c0dc74955a6e79196552cb081e34ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.contains_invalid_words</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>contains_invalid_words</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.contains_invalid_words</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="32" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ad5645622b440996ae37006ef8e26d7db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.is_substring_of_column_name</definition>
+        <argsstring>(self, str text, str column_name)</argsstring>
+        <name>is_substring_of_column_name</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.is_substring_of_column_name</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>column_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="36" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab9a9fb59c02dd27f8596776c4f52c526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.only_one_char</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>only_one_char</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.only_one_char</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="39" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a09ffaff6cfd795ecb3b21d54d97e8f27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.only_one_word</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>only_one_word</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.only_one_word</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="42" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a10f1616ba55b300afe424accf081d9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.only_white_spaces</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>only_white_spaces</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.only_white_spaces</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="45" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a0a749fa9c131a0e1e54f4eedb915c658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.empty</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>empty</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.empty</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="48" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5ffdae262d81e5f433d66bc44d6e006c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pd.DataFrame</type>
+        <definition> pd.DataFrame hygia.data_pipeline.feature_engineering.regex.Regex.extract_regex_features</definition>
+        <argsstring>(self, pd.DataFrame df, str column_name)</argsstring>
+        <name>extract_regex_features</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.extract_regex_features</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pd.DataFrame</type>
+          <declname>df</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>column_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="51" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="51" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="3" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="3" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_date</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_email</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4ebb9444dc8e77ed8adabf6e22aee251" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_exactly_the_word_dell</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aacc74035576c545b1d4d905f2f1e3742" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_exactly_the_word_test</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aa3c0dc74955a6e79196552cb081e34ce" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_invalid_words</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a6d48e296af51cfcab0a7a144987ba88e" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_url</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a0a749fa9c131a0e1e54f4eedb915c658" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>empty</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5ffdae262d81e5f433d66bc44d6e006c" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>extract_regex_features</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ad5645622b440996ae37006ef8e26d7db" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>is_substring_of_column_name</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab220adb6350bdbc9c40d3b5a8e57cac3" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>only_numbers</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab9a9fb59c02dd27f8596776c4f52c526" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>only_one_char</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a09ffaff6cfd795ecb3b21d54d97e8f27" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>only_one_word</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5cdd86f4e05bb41b8ec1f9de60b7e4d1" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>only_special_characters</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a10f1616ba55b300afe424accf081d9cf" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>only_white_spaces</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

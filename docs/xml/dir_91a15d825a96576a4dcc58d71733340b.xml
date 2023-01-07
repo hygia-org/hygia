@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_91a15d825a96576a4dcc58d71733340b" kind="dir">
+    <compoundname>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data</compoundname>
+    <innerfile refid="annotate__data_8py">annotate_data.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/"/>
+  </compounddef>
+</doxygen>

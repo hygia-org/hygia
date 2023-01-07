@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
+  <compound refid="classannotate__data_1_1_annotate_data" kind="class"><name>annotate_data::AnnotateData</name>
+    <member refid="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" kind="function"><name>annotate_data</name></member>
+  </compound>
+  <compound refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser" kind="class"><name>hygia::parser::annotate_data_parser::AnnotateDataParser</name>
+    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1a295a5ff884a5dae3dce3db97e072f5f6" kind="variable"><name>default_thresholds</name></member>
+    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1abd36a7481422b974f8f05ab95d2b7166" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1aa1c3704ddf5df831432b7a6e70386f2b" kind="function"><name>parse</name></member>
+    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1a622d5fdd2daa6083331263792b79bdaa" kind="function"><name>get_thresholds</name></member>
+    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1a599222de1ef411ec72d7bdf645c5c40c" kind="function"><name>_parse_annotate_data_configs</name></member>
+  </compound>
+  <compound refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data" kind="class"><name>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</name>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a91aca0028f24813d2eed9b26f7406d4f" kind="variable"><name>country_zipcode_df</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a663159ea8e556da4e70de1005d68def7" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1ada49b52ac86bd4f33771524b6a01d808" kind="function"><name>validate_zipcode</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a49dee300d063cf789362e19869b64ff0" kind="function"><name>validate_zipcodes</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a44556356984e09090a5a3c47259f9beb" kind="function"><name>augment_data</name></member>
+  </compound>
+  <compound refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering" kind="class"><name>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</name>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2bd145aad20dc0e4ea9e189dbd1bb915" kind="variable"><name>key_smash</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2da3933aa33b0658bd43357765cbd97f" kind="variable"><name>word_embedding</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a11a1b00797fe5ad47ae8eb116b895b92" kind="variable"><name>regex</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a33f8c5028f3fee8359def47641fdc736" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a6557b5c4dc573fcf0f8454da44c1536f" kind="function"><name>extract_features</name></member>
+  </compound>
+  <compound refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser" kind="class"><name>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</name>
+    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1af0e9a86e7edeec6e31825b29e3ed1dee" kind="variable"><name>columns_alias</name></member>
+    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a274bce55a70c7e2be6e2b0c62dbf2f3d" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a008bc671bdc8817f3f005b005a570b72" kind="function"><name>parse</name></member>
+    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a52bcec6fb77b320fe51f58c8a38854ca" kind="function"><name>_parse_feature_engineering_configs</name></member>
+    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1afc4943959986ea43d18f79d0ba2c525f" kind="function"><name>_get_features_details</name></member>
+    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a33a1de2427ac001fe7c9fd86fe54916a" kind="function"><name>_get_word_embedding_config</name></member>
+    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a5ae3a664f141127aace27bf2de7f1a90" kind="function"><name>_get_keyboard_smash_config</name></member>
+  </compound>
+  <compound refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash" kind="class"><name>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</name>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1abaf990cf994cfa58ac61d7188e9db461" kind="variable"><name>char_sets</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a65214ed127cf6a6491b1f249618e626d" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a682baee004b60c551f63c877a3270b3a" kind="function"><name>average_of_char_count_squared</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a02080ee2e117a12c68b2749b5946734e" kind="function"><name>count_sequence_squared</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a43cd9f4f2e7bbb1797eea22d0c545f67" kind="function"><name>ratio_of_numeric_digits_squared</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e" kind="function"><name>extract_key_smash_features</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1afc42a4b6aa51c24fad51e85f0c269fd2" kind="function"><name>_normalize_column</name></member>
+  </compound>
+  <compound refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser" kind="class"><name>hygia::parser::model_parser::ModelParser</name>
+    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1af4591965f26b87408e9456e5df60c47f" kind="variable"><name>columns_alias</name></member>
+    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a1c543ce6662c8294c152f3942993085c" kind="variable"><name>default_keyboard_smash_values</name></member>
+    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a35a0f19cbf8c93482801f9950d45ac6c" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a8ea35d5d55f047e6a0069759a8fb29d1" kind="function"><name>parse</name></member>
+    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1aa0a997c83ff675a7aa0a5582eeb5a7b7" kind="function"><name>get_random_forest_address_config</name></member>
+    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a54d2d16ade58e3a31888f42412c69340" kind="function"><name>get_columns</name></member>
+    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a940df2320f3a2d8cc7c5ee10171b9f0b" kind="function"><name>get_thresholds</name></member>
+    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1ab0bf714e8421246f13bfc07e1e4441d3" kind="function"><name>_parse_modal_configs</name></member>
+  </compound>
+  <compound refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" kind="class"><name>hygia::parser::parser_base::ParserBase</name>
+    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a5b18a6ee35a95ec5f2c92c547a0816f6" kind="variable"><name>filepath</name></member>
+    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a202cb7e0b981b3107240f9d3a569459b" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1aacfbc15ddface2c8ae0987c3fc9b0c8a" kind="function"><name>_try_get</name></member>
+    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a4736702678fe167b50f858b06a68f20f" kind="function"><name>_has_column_on_df</name></member>
+    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1ac49ca507386e9d9cb8a8246696070235" kind="function"><name>_get</name></member>
+  </compound>
+  <compound refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data" kind="class"><name>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</name>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1aa918dadaa5fad237dfabbbcb95933376" kind="function"><name>concatenate_columns</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0f373aa2c3685df2291a25aab0473707" kind="function"><name>handle_nulls</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a6c4c76f8e3ed9460bba760086cd9e2c4" kind="function"><name>pre_process_data</name></member>
+  </compound>
+  <compound refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser" kind="class"><name>hygia::parser::pre_processing_parser::PreProcessingParser</name>
+    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a815cbdb2483ef87911c44fe661e26c2d" kind="variable"><name>columns_name</name></member>
+    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1aa55b29e8583465be0d550bd191151227" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a4308214645ae23c94e6d391a6230349c" kind="function"><name>parse</name></member>
+    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1acb982c6ad677b3c994e1ad0b47c106ed" kind="function"><name>_parse_pre_processing_configs</name></member>
+    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1ae1d78066abfe59fe8620a3a377f89db1" kind="function"><name>_get_dataframe</name></member>
+  </compound>
+  <compound refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model" kind="class"><name>hygia::data_pipeline::model::random_forest::RandomForestModel</name>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a41a98e36844137b7486aa925a998f2c3" kind="variable"><name>model</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a5e7f43eeb0068f2d7f7f365434f3abc5" kind="variable"><name>n_estimators</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5dd6d72a32285fd8e86219a8fdf71ec" kind="variable"><name>max_depth</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5ab8b176adb170adad2175c5685163c" kind="variable"><name>random_state</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a3ce808991033e28ec22836b3dfc138fb" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf7a38d78b4b8100bec3034415cf958e" kind="function"><name>train_and_get_scores</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a4f97ea337bcc807954c6d68758d91a91" kind="function"><name>predict</name></member>
+  </compound>
+  <compound refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex" kind="class"><name>hygia::data_pipeline::feature_engineering::regex::Regex</name>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4ebb9444dc8e77ed8adabf6e22aee251" kind="function"><name>contains_exactly_the_word_dell</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aacc74035576c545b1d4d905f2f1e3742" kind="function"><name>contains_exactly_the_word_test</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab220adb6350bdbc9c40d3b5a8e57cac3" kind="function"><name>only_numbers</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5cdd86f4e05bb41b8ec1f9de60b7e4d1" kind="function"><name>only_special_characters</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f" kind="function"><name>contains_email</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a6d48e296af51cfcab0a7a144987ba88e" kind="function"><name>contains_url</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474" kind="function"><name>contains_date</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aa3c0dc74955a6e79196552cb081e34ce" kind="function"><name>contains_invalid_words</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ad5645622b440996ae37006ef8e26d7db" kind="function"><name>is_substring_of_column_name</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab9a9fb59c02dd27f8596776c4f52c526" kind="function"><name>only_one_char</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a09ffaff6cfd795ecb3b21d54d97e8f27" kind="function"><name>only_one_word</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a10f1616ba55b300afe424accf081d9cf" kind="function"><name>only_white_spaces</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a0a749fa9c131a0e1e54f4eedb915c658" kind="function"><name>empty</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5ffdae262d81e5f433d66bc44d6e006c" kind="function"><name>extract_regex_features</name></member>
+  </compound>
+  <compound refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding" kind="class"><name>hygia::data_pipeline::feature_engineering::word_embedding::WordEmbedding</name>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1aa4cd2a933690feb70d025e32739c9362" kind="variable"><name>lang</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a3827a074c2147ffccaada75c74cdf522" kind="variable"><name>dimensions</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a91e57b13006bd6e8917f07dafcbe0463" kind="variable"><name>model</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a6f1775d462dc90ecbb099d5290a9dfc8" kind="variable"><name>word_embedding_model</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a882b4ba550a9356baeb85964848bb5ac" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1aae76996dafce64d3701891e860e8a145" kind="function"><name>get_embedding</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1afda634858dcca07e27b954023e854972" kind="function"><name>extract_word_embedding_features</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1ab615ccc3b82284f7877e30370ce3fb8e" kind="function"><name>_load_model</name></member>
+  </compound>
+  <compound refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser" kind="class"><name>hygia::parser::YAML_parser::YAMLParser</name>
+    <member refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a494843eb50e2f520a10b53c3da2ec7a0" kind="function"><name>parse</name></member>
+    <member refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a4cfa6de5abae01bf2243a4df73c150f6" kind="function"><name>_parse_yaml</name></member>
+  </compound>
+  <compound refid="namespaceannotate__data" kind="namespace"><name>annotate_data</name>
+  </compound>
+  <compound refid="namespacehygia" kind="namespace"><name>hygia</name>
+    <member refid="____init_____8py_1a9dce4973d0f4a4b058d41a32d8bb26ad" kind="variable"><name>__all__</name></member>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline" kind="namespace"><name>hygia::data_pipeline</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1feature__engineering" kind="namespace"><name>hygia::data_pipeline::feature_engineering</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering" kind="namespace"><name>hygia::data_pipeline::feature_engineering::feature_engineering</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash" kind="namespace"><name>hygia::data_pipeline::feature_engineering::key_smash</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1feature__engineering_1_1regex" kind="namespace"><name>hygia::data_pipeline::feature_engineering::regex</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding" kind="namespace"><name>hygia::data_pipeline::feature_engineering::word_embedding</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1model" kind="namespace"><name>hygia::data_pipeline::model</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1model_1_1random__forest" kind="namespace"><name>hygia::data_pipeline::model::random_forest</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1pre__process__data" kind="namespace"><name>hygia::data_pipeline::pre_process_data</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data" kind="namespace"><name>hygia::data_pipeline::pre_process_data::augment_data</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data" kind="namespace"><name>hygia::data_pipeline::pre_process_data::pre_process_data</name>
+  </compound>
+  <compound refid="namespacehygia_1_1main" kind="namespace"><name>hygia::main</name>
+    <member refid="main_8py_1ac4c1470ae0fe116f19c0bd1cc6875979" kind="function"><name>run_with_config</name></member>
+  </compound>
+  <compound refid="namespacehygia_1_1parser" kind="namespace"><name>hygia::parser</name>
+  </compound>
+  <compound refid="namespacehygia_1_1parser_1_1annotate__data__parser" kind="namespace"><name>hygia::parser::annotate_data_parser</name>
+  </compound>
+  <compound refid="namespacehygia_1_1parser_1_1const" kind="namespace"><name>hygia::parser::const</name>
+    <member refid="const_8py_1a6992e4606f2295e4e80019a474522393" kind="variable"><name>model_type</name></member>
+  </compound>
+  <compound refid="namespacehygia_1_1parser_1_1feature__engineering__parser" kind="namespace"><name>hygia::parser::feature_engineering_parser</name>
+  </compound>
+  <compound refid="namespacehygia_1_1parser_1_1model__parser" kind="namespace"><name>hygia::parser::model_parser</name>
+  </compound>
+  <compound refid="namespacehygia_1_1parser_1_1parser__base" kind="namespace"><name>hygia::parser::parser_base</name>
+  </compound>
+  <compound refid="namespacehygia_1_1parser_1_1pre__processing__parser" kind="namespace"><name>hygia::parser::pre_processing_parser</name>
+  </compound>
+  <compound refid="namespacehygia_1_1parser_1_1_y_a_m_l__parser" kind="namespace"><name>hygia::parser::YAML_parser</name>
+  </compound>
+  <compound refid="____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="data__pipeline_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="data__pipeline_2feature__engineering_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="data__pipeline_2model_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="data__pipeline_2pre__process__data_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="parser_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="annotate__data_8py" kind="file"><name>annotate_data.py</name>
+  </compound>
+  <compound refid="feature__engineering_8py" kind="file"><name>feature_engineering.py</name>
+  </compound>
+  <compound refid="key__smash_8py" kind="file"><name>key_smash.py</name>
+  </compound>
+  <compound refid="regex_8py" kind="file"><name>regex.py</name>
+  </compound>
+  <compound refid="word__embedding_8py" kind="file"><name>word_embedding.py</name>
+  </compound>
+  <compound refid="random__forest_8py" kind="file"><name>random_forest.py</name>
+  </compound>
+  <compound refid="augment__data_8py" kind="file"><name>augment_data.py</name>
+  </compound>
+  <compound refid="pre__process__data_8py" kind="file"><name>pre_process_data.py</name>
+  </compound>
+  <compound refid="main_8py" kind="file"><name>main.py</name>
+  </compound>
+  <compound refid="annotate__data__parser_8py" kind="file"><name>annotate_data_parser.py</name>
+  </compound>
+  <compound refid="const_8py" kind="file"><name>const.py</name>
+  </compound>
+  <compound refid="feature__engineering__parser_8py" kind="file"><name>feature_engineering_parser.py</name>
+  </compound>
+  <compound refid="model__parser_8py" kind="file"><name>model_parser.py</name>
+  </compound>
+  <compound refid="parser__base_8py" kind="file"><name>parser_base.py</name>
+  </compound>
+  <compound refid="pre__processing__parser_8py" kind="file"><name>pre_processing_parser.py</name>
+  </compound>
+  <compound refid="_y_a_m_l__parser_8py" kind="file"><name>YAML_parser.py</name>
+  </compound>
+  <compound refid="dir_91a15d825a96576a4dcc58d71733340b" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data</name>
+  </compound>
+  <compound refid="dir_70dcd5b75320c8bd61e96866e72ecc25" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline</name>
+  </compound>
+  <compound refid="dir_0d5961b63244dbb5decf45bc05eaa7c3" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering</name>
+  </compound>
+  <compound refid="dir_6eee28b6f6c823bd37508cabbb2cbccd" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia</name>
+  </compound>
+  <compound refid="dir_0eb1b5a43b0c8c28bb004ec4540a601a" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model</name>
+  </compound>
+  <compound refid="dir_3836cc05125af4c9824ab70f348a3ea5" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/parser</name>
+  </compound>
+  <compound refid="dir_58e6109ac17f9a85dc40764e86627f6a" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data</name>
+  </compound>
+</doxygenindex>

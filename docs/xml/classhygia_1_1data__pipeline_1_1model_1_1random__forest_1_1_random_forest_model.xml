@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model" kind="class" language="Python" prot="public">
+    <compoundname>hygia::data_pipeline::model::random_forest::RandomForestModel</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a41a98e36844137b7486aa925a998f2c3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.model.random_forest.RandomForestModel::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <qualifiedname>hygia.data_pipeline.model.random_forest.RandomForestModel.model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="14" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a5e7f43eeb0068f2d7f7f365434f3abc5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.model.random_forest.RandomForestModel::n_estimators</definition>
+        <argsstring></argsstring>
+        <name>n_estimators</name>
+        <qualifiedname>hygia.data_pipeline.model.random_forest.RandomForestModel.n_estimators</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="19" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5dd6d72a32285fd8e86219a8fdf71ec" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.model.random_forest.RandomForestModel::max_depth</definition>
+        <argsstring></argsstring>
+        <name>max_depth</name>
+        <qualifiedname>hygia.data_pipeline.model.random_forest.RandomForestModel.max_depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="20" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5ab8b176adb170adad2175c5685163c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.model.random_forest.RandomForestModel::random_state</definition>
+        <argsstring></argsstring>
+        <name>random_state</name>
+        <qualifiedname>hygia.data_pipeline.model.random_forest.RandomForestModel.random_state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="21" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a3ce808991033e28ec22836b3dfc138fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.model.random_forest.RandomForestModel.__init__</definition>
+        <argsstring>(self, model_file=None, n_estimators=100, max_depth=None, random_state=0)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>hygia.data_pipeline.model.random_forest.RandomForestModel.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>model_file</type>
+          <defname>model_file</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>n_estimators</type>
+          <defname>n_estimators</defname>
+          <defval>100</defval>
+        </param>
+        <param>
+          <type>max_depth</type>
+          <defname>max_depth</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>random_state</type>
+          <defname>random_state</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="13" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="13" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf7a38d78b4b8100bec3034415cf958e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.model.random_forest.RandomForestModel.train_and_get_scores</definition>
+        <argsstring>(self, df, concatened_column_name, all_features_columns, test_size=0.3)</argsstring>
+        <name>train_and_get_scores</name>
+        <qualifiedname>hygia.data_pipeline.model.random_forest.RandomForestModel.train_and_get_scores</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>df</type>
+          <defname>df</defname>
+        </param>
+        <param>
+          <type>concatened_column_name</type>
+          <defname>concatened_column_name</defname>
+        </param>
+        <param>
+          <type>all_features_columns</type>
+          <defname>all_features_columns</defname>
+        </param>
+        <param>
+          <type>test_size</type>
+          <defname>test_size</defname>
+          <defval>0.3</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="24" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="24" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a4f97ea337bcc807954c6d68758d91a91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.model.random_forest.RandomForestModel.predict</definition>
+        <argsstring>(self, X)</argsstring>
+        <name>predict</name>
+        <qualifiedname>hygia.data_pipeline.model.random_forest.RandomForestModel.predict</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="68" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="68" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="12" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="12" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a3ce808991033e28ec22836b3dfc138fb" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::model::random_forest::RandomForestModel</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5dd6d72a32285fd8e86219a8fdf71ec" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::model::random_forest::RandomForestModel</scope><name>max_depth</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a41a98e36844137b7486aa925a998f2c3" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::model::random_forest::RandomForestModel</scope><name>model</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a5e7f43eeb0068f2d7f7f365434f3abc5" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::model::random_forest::RandomForestModel</scope><name>n_estimators</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a4f97ea337bcc807954c6d68758d91a91" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::model::random_forest::RandomForestModel</scope><name>predict</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5ab8b176adb170adad2175c5685163c" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::model::random_forest::RandomForestModel</scope><name>random_state</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf7a38d78b4b8100bec3034415cf958e" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::model::random_forest::RandomForestModel</scope><name>train_and_get_scores</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser" kind="class" language="Python" prot="public">
+    <compoundname>hygia::parser::YAML_parser::YAMLParser</compoundname>
+    <basecompoundref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" prot="public" virt="non-virtual">hygia.parser.parser_base.ParserBase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a494843eb50e2f520a10b53c3da2ec7a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.YAML_parser.YAMLParser.parse</definition>
+        <argsstring>(self)</argsstring>
+        <name>parse</name>
+        <qualifiedname>hygia.parser.YAML_parser.YAMLParser.parse</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/YAML_parser.py" line="7" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/YAML_parser.py" bodystart="7" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a4cfa6de5abae01bf2243a4df73c150f6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.YAML_parser.YAMLParser._parse_yaml</definition>
+        <argsstring>(self)</argsstring>
+        <name>_parse_yaml</name>
+        <qualifiedname>hygia.parser.YAML_parser.YAMLParser._parse_yaml</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/YAML_parser.py" line="10" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/YAML_parser.py" bodystart="10" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hygia.parser.YAML_parser.YAMLParser</label>
+        <link refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hygia.parser.parser_base.ParserBase</label>
+        <link refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hygia.parser.YAML_parser.YAMLParser</label>
+        <link refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hygia.parser.parser_base.ParserBase</label>
+        <link refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/YAML_parser.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/YAML_parser.py" bodystart="5" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a4cfa6de5abae01bf2243a4df73c150f6" prot="protected" virt="non-virtual"><scope>hygia::parser::YAML_parser::YAMLParser</scope><name>_parse_yaml</name></member>
+      <member refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a494843eb50e2f520a10b53c3da2ec7a0" prot="public" virt="non-virtual"><scope>hygia::parser::YAML_parser::YAMLParser</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

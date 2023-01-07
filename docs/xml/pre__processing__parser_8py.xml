@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="pre__processing__parser_8py" kind="file" language="Python">
+    <compoundname>pre_processing_parser.py</compoundname>
+    <innerclass refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser" prot="public">hygia::parser::pre_processing_parser::PreProcessingParser</innerclass>
+    <innernamespace refid="namespacehygia">hygia</innernamespace>
+    <innernamespace refid="namespacehygia_1_1parser">hygia::parser</innernamespace>
+    <innernamespace refid="namespacehygia_1_1parser_1_1pre__processing__parser">hygia::parser::pre_processing_parser</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacehygia_1_1parser_1_1parser__base" kindref="compound">hygia.parser.parser_base</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ParserBase</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser" kindref="compound">PreProcessingParser</ref>(<ref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" kindref="compound">ParserBase</ref>):</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>columns_name):</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a815cbdb2483ef87911c44fe661e26c2d" kindref="member">columns_name</ref><sp/>=<sp/>columns_name</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">parse(self,<sp/>data:<sp/>list):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1acb982c6ad677b3c994e1ad0b47c106ed" kindref="member">_parse_pre_processing_configs</ref>(data)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">_parse_pre_processing_configs(self,<sp/>data:<sp/>list):</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(</highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>data):<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aliases<sp/>=<sp/>self.<ref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1aacfbc15ddface2c8ae0987c3fc9b0c8a" kindref="member">_try_get</ref>(data,<sp/></highlight><highlight class="stringliteral">&apos;aliases&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1ae1d78066abfe59fe8620a3a377f89db1" kindref="member">_get_dataframe</ref>(aliases)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>aliases,<sp/>self.<ref refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a815cbdb2483ef87911c44fe661e26c2d" kindref="member">columns_name</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">_get_dataframe(self,<sp/>aliases:<sp/>dict):</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(</highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>aliases):<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>alias<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>aliases:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>key<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>alias.keys():</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(</highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>self.<ref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a4736702678fe167b50f858b06a68f20f" kindref="member">_has_column_on_df</ref>(self.<ref refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a815cbdb2483ef87911c44fe661e26c2d" kindref="member">columns_name</ref>,<sp/>alias)):</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a815cbdb2483ef87911c44fe661e26c2d" kindref="member">columns_name</ref>.append(key)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py"/>
+  </compounddef>
+</doxygen>

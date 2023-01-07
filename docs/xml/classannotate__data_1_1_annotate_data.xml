@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classannotate__data_1_1_annotate_data" kind="class" language="Python" prot="public">
+    <compoundname>annotate_data::AnnotateData</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def annotate_data.AnnotateData.annotate_data</definition>
+        <argsstring>(self, df, concatened_column_name, ks_thresholds)</argsstring>
+        <name>annotate_data</name>
+        <qualifiedname>annotate_data.AnnotateData.annotate_data</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>df</type>
+          <defname>df</defname>
+        </param>
+        <param>
+          <type>concatened_column_name</type>
+          <defname>concatened_column_name</defname>
+        </param>
+        <param>
+          <type>ks_thresholds</type>
+          <defname>ks_thresholds</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" line="6" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" bodystart="6" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" bodystart="4" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" prot="public" virt="non-virtual"><scope>annotate_data::AnnotateData</scope><name>annotate_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

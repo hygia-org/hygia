@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash" kind="class" language="Python" prot="public">
+    <compoundname>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1abaf990cf994cfa58ac61d7188e9db461" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.feature_engineering.key_smash.KeySmash::char_sets</definition>
+        <argsstring></argsstring>
+        <name>char_sets</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.key_smash.KeySmash.char_sets</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="24" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a65214ed127cf6a6491b1f249618e626d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.feature_engineering.key_smash.KeySmash.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.key_smash.KeySmash.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="23" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a682baee004b60c551f63c877a3270b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition> float hygia.data_pipeline.feature_engineering.key_smash.KeySmash.average_of_char_count_squared</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>average_of_char_count_squared</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.key_smash.KeySmash.average_of_char_count_squared</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>The function takes a string text as input and splits it into words.
+For each word, it counts the number of occurrences of each character in the word, squares those counts, and then sums them.
+It then divides the sum by the length of the word and appends the result to a list words_results.
+Finally, it returns the mean of the words_results list, if the list is not empty, otherwise it returns 0.
+
+:param text: The text to use for the calculation.
+:type text: str
+:return: The calculated Char Frequency Metric.
+:rtype: float
+
+Examples
+--------
+Use this function like this:
+
+.. code-block:: python
+
+    key_smash = KeySmash()
+
+    res = key_smash.average_of_char_count_squared(&quot;PUENTECILLA KM. 1.7&quot;)
+    print(res)
+    # Output: 1.121212121212121
+
+    res = key_smash.average_of_char_count_squared(&quot;ASDASD XXXX&quot;)
+    print(res)
+    # Output: 3.0
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="30" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="30" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a02080ee2e117a12c68b2749b5946734e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition> float hygia.data_pipeline.feature_engineering.key_smash.KeySmash.count_sequence_squared</definition>
+        <argsstring>(self, str text, str opt)</argsstring>
+        <name>count_sequence_squared</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.key_smash.KeySmash.count_sequence_squared</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This function takes a text and opt as input. It checks a set of characters, converts text to lowercase, iterates through characters,
+increments counter if finds a sequence of characters in set, if not it adds square of counter to a list, resets counter to 1.
+After iterating it returns sum of list divided by length of text.
+
+:param text: The text to use for the calculation.
+:type text: str
+:param opt: The type of characters to consider for the calculation, can be one of &apos;vowels&apos;, &apos;consonants&apos;, or &apos;special_characters&apos;.
+:type opt: str
+:return: The calculated Irregular Sequence Metric.
+:rtype: float
+
+Examples
+--------
+Use this function like this:
+
+.. code-block:: python
+
+    key_smash = KeySmash()
+
+    res = key_smash.count_sequence_squared(&quot;PUENTECILLA KM. 1.7&quot;, &quot;vowels&quot;)
+    print(res)
+    # Output: 0.21052631578947367
+
+    res = key_smash.count_sequence_squared(&quot;ASDASD XXXX&quot;, &quot;consonants&quot;)
+    print(res)
+    # Output: 2.1818181818181817
+
+    res = key_smash.count_sequence_squared(&quot;!@#$% ASDFGHJKL&quot;, &quot;special_characters&quot;)
+    print(res)
+    # Output: 1.5625
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="73" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="73" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a43cd9f4f2e7bbb1797eea22d0c545f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition> float hygia.data_pipeline.feature_engineering.key_smash.KeySmash.ratio_of_numeric_digits_squared</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>ratio_of_numeric_digits_squared</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.key_smash.KeySmash.ratio_of_numeric_digits_squared</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This function takes text as input, splits it into a list of words, initializes a variable to 0.
+It iterates through list of words, checking if each word contains both numeric digits and non-numeric characters.
+If yes, it counts number of numeric digits, squares it and adds to variable.
+It returns the value of that variable divided by length of original text, if the list is empty it returns 0.
+
+:param text: The text to extract the metric from.
+:type text: str
+:return: The calculated Number Count Metric.
+:rtype: float
+
+Examples
+--------
+Use this function like this:
+
+.. code-block:: python
+
+    key_smash = KeySmash()
+    
+    res = key_smash.ratio_of_numeric_digits_squared(&quot;ABC 123 !@#&quot;)
+    print(res)
+    # Output: 0.0
+
+    res = key_smash.ratio_of_numeric_digits_squared(&quot;ABC123 !@#&quot;)
+    print(res)
+    # Output: 0.9
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="124" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="124" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pd.DataFrame</type>
+        <definition> pd.DataFrame hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features</definition>
+        <argsstring>(self, pd.DataFrame df, str column_name, bool normalize=False)</argsstring>
+        <name>extract_key_smash_features</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pd.DataFrame</type>
+          <declname>df</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>column_name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>normalize</declname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Extract key smash features from a given dataframe and column.
+
+:param df: Dataframe to extract key smash features from.
+:type df: pandas.DataFrame
+:param column_name: Name of the column in the dataframe that contains the text data to extract features from.
+:type column_name: str
+:param normalize: Indicates whether to normalize the key smash feature columns. Default is True.
+:type normalize: bool, optional
+
+:return: The input dataframe with additional columns for key smash features: &apos;irregular_sequence_vowels&apos;, &apos;irregular_sequence_consonants&apos;, &apos;irregular_sequence_special_characters&apos;, &apos;number_count_metric&apos;, &apos;char_frequency_metric&apos;
+:rtype: pandas.DataFrame
+
+Examples
+--------
+Use this function like this:
+
+.. code-block:: python
+
+    import pandas as pd
+    key_smash = KeySmash()
+    df = pd.DataFrame({&quot;text_column&quot;: [&quot;abcdefgh&quot;, &quot;ijklmnop&quot;, &quot;qrstuvwxyz&quot;]})
+    df = key_smash.extract_key_smash_features(df, &quot;text_column&quot;, normalize=False)
+    print(df.head())
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="180" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="180" bodyend="222"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1afc42a4b6aa51c24fad51e85f0c269fd2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pd.DataFrame</type>
+        <definition> pd.DataFrame hygia.data_pipeline.feature_engineering.key_smash.KeySmash._normalize_column</definition>
+        <argsstring>(self, pd.DataFrame df, str column)</argsstring>
+        <name>_normalize_column</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.key_smash.KeySmash._normalize_column</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pd.DataFrame</type>
+          <declname>df</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Normalize a given column in a dataframe.
+
+:param df: Dataframe to normalize the column in.
+:type df: pandas.DataFrame
+:param column: Name of the column to be normalized.
+:type column: str
+
+:return: The input dataframe with the normalized column.
+:rtype: pandas.DataFrame
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="165" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="165" bodyend="179"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A class for calculating metrics to indicate key smashing behavior in a text.
+
+Key smashing is the act of typing on a keyboard in a rapid and uncontrolled manner,
+often resulting in a series of random characters being entered into a document or text field.
+
+Examples
+--------
+Use this class like this:
+
+.. code-block:: python
+
+    key_smash = KeySmash()
+    df = key_smash.extract_key_smash_features(df, &quot;text_column&quot;)
+    print(df)
+</verbatim> </para>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="5" bodyend="222"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a65214ed127cf6a6491b1f249618e626d" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1afc42a4b6aa51c24fad51e85f0c269fd2" prot="protected" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>_normalize_column</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a682baee004b60c551f63c877a3270b3a" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>average_of_char_count_squared</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1abaf990cf994cfa58ac61d7188e9db461" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>char_sets</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a02080ee2e117a12c68b2749b5946734e" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>count_sequence_squared</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>extract_key_smash_features</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a43cd9f4f2e7bbb1797eea22d0c545f67" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>ratio_of_numeric_digits_squared</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

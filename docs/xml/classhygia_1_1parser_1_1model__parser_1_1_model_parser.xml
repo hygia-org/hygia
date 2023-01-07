@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1parser_1_1model__parser_1_1_model_parser" kind="class" language="Python" prot="public">
+    <compoundname>hygia::parser::model_parser::ModelParser</compoundname>
+    <basecompoundref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" prot="public" virt="non-virtual">hygia.parser.parser_base.ParserBase</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1af4591965f26b87408e9456e5df60c47f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.parser.model_parser.ModelParser::columns_alias</definition>
+        <argsstring></argsstring>
+        <name>columns_alias</name>
+        <qualifiedname>hygia.parser.model_parser.ModelParser.columns_alias</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" line="7" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a1c543ce6662c8294c152f3942993085c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.parser.model_parser.ModelParser::default_keyboard_smash_values</definition>
+        <argsstring></argsstring>
+        <name>default_keyboard_smash_values</name>
+        <qualifiedname>hygia.parser.model_parser.ModelParser.default_keyboard_smash_values</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" line="8" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a35a0f19cbf8c93482801f9950d45ac6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.model_parser.ModelParser.__init__</definition>
+        <argsstring>(self, columns_alias)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>hygia.parser.model_parser.ModelParser.__init__</qualifiedname>
+        <reimplements refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a202cb7e0b981b3107240f9d3a569459b">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>columns_alias</type>
+          <defname>columns_alias</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" line="6" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" bodystart="6" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a8ea35d5d55f047e6a0069759a8fb29d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.model_parser.ModelParser.parse</definition>
+        <argsstring>(self, list data)</argsstring>
+        <name>parse</name>
+        <qualifiedname>hygia.parser.model_parser.ModelParser.parse</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" line="16" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1aa0a997c83ff675a7aa0a5582eeb5a7b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.model_parser.ModelParser.get_random_forest_address_config</definition>
+        <argsstring>(self, list model)</argsstring>
+        <name>get_random_forest_address_config</name>
+        <qualifiedname>hygia.parser.model_parser.ModelParser.get_random_forest_address_config</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" line="27" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" bodystart="27" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a54d2d16ade58e3a31888f42412c69340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.model_parser.ModelParser.get_columns</definition>
+        <argsstring>(self, input)</argsstring>
+        <name>get_columns</name>
+        <qualifiedname>hygia.parser.model_parser.ModelParser.get_columns</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>input</type>
+          <defname>input</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" line="50" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" bodystart="50" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a940df2320f3a2d8cc7c5ee10171b9f0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.model_parser.ModelParser.get_thresholds</definition>
+        <argsstring>(self, input)</argsstring>
+        <name>get_thresholds</name>
+        <qualifiedname>hygia.parser.model_parser.ModelParser.get_thresholds</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>input</type>
+          <defname>input</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" line="59" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" bodystart="59" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1ab0bf714e8421246f13bfc07e1e4441d3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.model_parser.ModelParser._parse_modal_configs</definition>
+        <argsstring>(self, list data)</argsstring>
+        <name>_parse_modal_configs</name>
+        <qualifiedname>hygia.parser.model_parser.ModelParser._parse_modal_configs</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" line="19" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" bodystart="19" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hygia.parser.model_parser.ModelParser</label>
+        <link refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hygia.parser.parser_base.ParserBase</label>
+        <link refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hygia.parser.model_parser.ModelParser</label>
+        <link refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hygia.parser.parser_base.ParserBase</label>
+        <link refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/model_parser.py" bodystart="4" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a35a0f19cbf8c93482801f9950d45ac6c" prot="public" virt="non-virtual"><scope>hygia::parser::model_parser::ModelParser</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1ab0bf714e8421246f13bfc07e1e4441d3" prot="protected" virt="non-virtual"><scope>hygia::parser::model_parser::ModelParser</scope><name>_parse_modal_configs</name></member>
+      <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1af4591965f26b87408e9456e5df60c47f" prot="public" virt="non-virtual"><scope>hygia::parser::model_parser::ModelParser</scope><name>columns_alias</name></member>
+      <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a1c543ce6662c8294c152f3942993085c" prot="public" virt="non-virtual"><scope>hygia::parser::model_parser::ModelParser</scope><name>default_keyboard_smash_values</name></member>
+      <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a54d2d16ade58e3a31888f42412c69340" prot="public" virt="non-virtual"><scope>hygia::parser::model_parser::ModelParser</scope><name>get_columns</name></member>
+      <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1aa0a997c83ff675a7aa0a5582eeb5a7b7" prot="public" virt="non-virtual"><scope>hygia::parser::model_parser::ModelParser</scope><name>get_random_forest_address_config</name></member>
+      <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a940df2320f3a2d8cc7c5ee10171b9f0b" prot="public" virt="non-virtual"><scope>hygia::parser::model_parser::ModelParser</scope><name>get_thresholds</name></member>
+      <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a8ea35d5d55f047e6a0069759a8fb29d1" prot="public" virt="non-virtual"><scope>hygia::parser::model_parser::ModelParser</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

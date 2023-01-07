@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data" kind="class" language="Python" prot="public">
+    <compoundname>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1aa918dadaa5fad237dfabbbcb95933376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.concatenate_columns</definition>
+        <argsstring>(self, df, columns, concatenated_column_name)</argsstring>
+        <name>concatenate_columns</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.concatenate_columns</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>df</type>
+          <defname>df</defname>
+        </param>
+        <param>
+          <type>columns</type>
+          <defname>columns</defname>
+        </param>
+        <param>
+          <type>concatenated_column_name</type>
+          <defname>concatenated_column_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="5" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0f373aa2c3685df2291a25aab0473707" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_nulls</definition>
+        <argsstring>(self, df, column_name)</argsstring>
+        <name>handle_nulls</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_nulls</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>df</type>
+          <defname>df</defname>
+        </param>
+        <param>
+          <type>column_name</type>
+          <defname>column_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="11" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a6c4c76f8e3ed9460bba760086cd9e2c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data</definition>
+        <argsstring>(self, df, columns_to_concat=None, column_name=None)</argsstring>
+        <name>pre_process_data</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>df</type>
+          <defname>df</defname>
+        </param>
+        <param>
+          <type>columns_to_concat</type>
+          <defname>columns_to_concat</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>column_name</type>
+          <defname>column_name</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="17" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="17" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="4" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1aa918dadaa5fad237dfabbbcb95933376" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>concatenate_columns</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0f373aa2c3685df2291a25aab0473707" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>handle_nulls</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a6c4c76f8e3ed9460bba760086cd9e2c4" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>pre_process_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
