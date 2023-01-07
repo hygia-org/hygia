@@ -61,9 +61,6 @@ urllib3 = "1.26.13"
 whatlies = "0.7.0"
 zipp = "3.11.0"
 
-[tool.poetry.scripts]
-my_package_cli = 'akira.teste:return_ola_mundo_string'
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
