@@ -1,6 +1,24 @@
-# Playground
+# Hygia: A powerful Python ML playground toolkit
 
-### Instaling Requirements
+## What is it?
+
+Hygia is a Python package that provides fast, flexible, and expressive data pipeline configuration through a YAML file to make working with Machine Learning data easy and intuitive. It consists of helping developers and users to register, organize, compare and share all their ML model metadata in a single place, facilitating the generation of requirements in the ETL (Extract, Transform and Load) process. Thus, the migration can be scaled, automated, and accelerated for similar contexts.
+
+## Main Features
+
+- Configure data pipeline through a YAML file
+- Execute through command line or python import
+- Pack the solution into a Python's Package Manager 
+- Visualize results in customized dashboards
+- Test on different databases
+
+## Where to get it
+
+The source code is currently hosted on GitHub at: ```https://github.com/PDA-FGA```
+
+
+
+## Installation from sources
 
 ```
 python -m venv env
