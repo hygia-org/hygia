@@ -1,4 +1,6 @@
-# Hygia: A powerful Python ML playground toolkit
+![IMAGE](./assets/img/horizontal_logo.PNG)
+
+# A powerful Python ML playground toolkit
 
 ## What is it?
 
@@ -15,8 +17,6 @@ Hygia is a Python package that provides fast, flexible, and expressive data pipe
 ## Where to get it
 
 The source code is currently hosted on GitHub at: ```https://github.com/PDA-FGA```
-
-
 
 ## Installation from sources
 
