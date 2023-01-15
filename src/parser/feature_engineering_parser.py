@@ -15,6 +15,8 @@ class FeatureEngineeringParser(ParserBase):
         for inputs in data:
             input = self._try_get(inputs, 'input')
             
+            columns = self._try_get(input, 'columns')
+            
             # features
             word_embedding, keyboard_smash = self._get_features_details(self._try_get(input, 'features'))
             data_lang, dimensions = self._get_word_embedding_config(word_embedding, self.columns_alias)
@@ -25,6 +27,7 @@ class FeatureEngineeringParser(ParserBase):
             else: enabled_features['word_embedding'] = True
             
             configs.append({ 
+                'columns': columns,
                 'data_lang': data_lang, 
                 'dimensions': dimensions, 
                 'enabled_features': enabled_features

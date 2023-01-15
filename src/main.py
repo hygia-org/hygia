@@ -7,6 +7,7 @@ from parser.pre_processing_parser import PreProcessingParser
 from data_pipeline.pre_processing.concatenate_columns import concatenate_columns
 
 from parser.feature_engineering_parser import FeatureEngineeringParser
+from data_pipeline.feature_engineering.key_smash import KeySmash
 
 # from parser.model_parser import ModelParser
 
@@ -17,8 +18,12 @@ if __name__ != "__main__":
     
 def get_config():
     initialParser = YAMLParser
+    
     preProcessingParser = PreProcessingParser
+    
     featureEngineringParser = FeatureEngineeringParser
+    keySmash = KeySmash
+    
     # modelParser = ModelParser
     
     for file in os.listdir('src/yamls'):
@@ -33,6 +38,9 @@ def get_config():
             df = concatenate_columns(df, columns_set)
     
             features_configs = featureEngineringParser(columns_name).parse(config['feature_engineering'])
+            for config in features_configs:
+                for column in config['columns']:
+                    df = keySmash().extract_key_smash_features(df, column)
             
             # model_configs = modelParser(columns_set_alias).parse(config['model'])
             # del config['model']
