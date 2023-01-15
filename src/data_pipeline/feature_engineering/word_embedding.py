@@ -84,7 +84,7 @@ class WordEmbedding:
         """
         return self.word_embedding_model[text].vector
 
-    def extract_word_embedding_features(self, df: pd.DataFrame, column_name: str, normalize: bool = True) -> pd.DataFrame:
+    def extract_word_embedding_features(self, df: pd.DataFrame, column_name: str, normalize: bool = False) -> pd.DataFrame:
         """
         Extract word embedding features from a given dataframe and column.
 
