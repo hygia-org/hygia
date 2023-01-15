@@ -6,7 +6,8 @@ from parser.YAML_parser import YAMLParser
 from parser.pre_processing_parser import PreProcessingParser
 from data_pipeline.pre_processing.concatenate_columns import concatenate_columns
 
-# from parser.feature_engineering_parser import FeatureEngineeringParser
+from parser.feature_engineering_parser import FeatureEngineeringParser
+
 # from parser.model_parser import ModelParser
 
 # from data_pipeline.model.random_forest import RandomForestAddress
@@ -17,7 +18,7 @@ if __name__ != "__main__":
 def get_config():
     initialParser = YAMLParser
     preProcessingParser = PreProcessingParser
-    # featureEngineringParser = FeatureEngineeringParser
+    featureEngineringParser = FeatureEngineeringParser
     # modelParser = ModelParser
     
     for file in os.listdir('src/yamls'):
@@ -31,16 +32,18 @@ def get_config():
             columns_set, columns_name = preProcessingParser(columns_name).parse(config['pre_processing'])
             df = concatenate_columns(df, columns_set)
     
-            # features_configs, columns_set_alias = featureEngineringParser(filepath).parse(config['feature_engineering'])
-            # del config['feature_engineering']
+            features_configs = featureEngineringParser(columns_name).parse(config['feature_engineering'])
             
             # model_configs = modelParser(columns_set_alias).parse(config['model'])
             # del config['model']
             
             # for feature_config in features_configs:
+            
+        del config['pre_processing']
+        del config['feature_engineering']
         
         print("FEATURES")
-        print(df)
+        print(features_configs)
         print(3*'\n')
         print(20*'-')
         print(3*'\n')

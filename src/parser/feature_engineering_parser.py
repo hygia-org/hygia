@@ -1,7 +1,10 @@
 from parser.parser_base import ParserBase
 
 class FeatureEngineeringParser(ParserBase):
-
+    
+    def __init__(self, columns_alias):
+        self.columns_alias = columns_alias
+        
     def parse(self, data: list):
         return self._parse_feature_engineering_configs(data)
         
@@ -9,17 +12,12 @@ class FeatureEngineeringParser(ParserBase):
         if(not data): return
         
         configs = []
-        columns_set_alias = []
         for inputs in data:
             input = self._try_get(inputs, 'input')
             
-            # columns
-            columns_set, columns_alias = self._get_dataframe(self._try_get(input, 'columns'))
-            columns_set_alias = columns_alias + columns_set_alias
-            
             # features
             word_embedding, keyboard_smash = self._get_features_details(self._try_get(input, 'features'))
-            data_lang, dimensions = self._get_word_embedding_config(word_embedding, columns_set_alias)
+            data_lang, dimensions = self._get_word_embedding_config(word_embedding, self.columns_alias)
             
             # Enabled features
             enabled_features = keyboard_smash
@@ -27,26 +25,13 @@ class FeatureEngineeringParser(ParserBase):
             else: enabled_features['word_embedding'] = True
             
             configs.append({ 
-                'columns_alias': columns_alias, 
-                'columns_set': columns_set, 
                 'data_lang': data_lang, 
                 'dimensions': dimensions, 
                 'enabled_features': enabled_features
             })
             
-        return configs, columns_set_alias
+        return configs
             
-    def _get_dataframe(self, columns: dict):
-        if(not columns): return 
-        
-        columns_alias = []
-        
-        for column in columns:
-            for key in column.keys():
-                columns_alias.append(key)
-                
-        return columns, columns_alias
-
     def _get_features_details(self, features: dict):
         if(not features): return
         
