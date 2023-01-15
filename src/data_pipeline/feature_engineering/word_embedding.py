@@ -12,6 +12,7 @@ class WordEmbedding:
         dimensions: str
             The number of dimensions for the word embedding vectors (default is 25)
         """
+        self.dimensions = dimensions
         self.bpl = BytePairLanguage(lang=lang, dim=dimensions) 
         
     def get_embedding(self, text):
@@ -37,3 +38,22 @@ class WordEmbedding:
         -0.14560167]
         """
         return self.bpl[text].vector
+    
+    def extract_word_embedding_features(self, df, column_name, normalize=True):
+        """
+        Extract word embedding features from a given dataframe and column.
+
+        :param df: Dataframe to extract word embedding features from.
+        :type df: pandas.DataFrame
+        :param column_name: Name of the column in the dataframe that contains the text data to extract features from.
+        :type column_name: str
+        :param normalize: Indicates whether to normalize the word embedding feature columns. Default is True.
+        :type normalize: bool, optional
+        
+        :return: The input dataframe with additional columns for word embedding features.
+        :rtype: pandas.DataFrame
+        """
+        for i in range(self.dimensions):
+            df[i] = df['alias_concat'].fillna('').apply(lambda x: self.get_embedding(x)[i])
+        
+        return df
