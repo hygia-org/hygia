@@ -4,7 +4,7 @@ import pandas as pd
 from parser.YAML_parser import YAMLParser
 
 from parser.pre_processing_parser import PreProcessingParser
-from data_pipeline.pre_processing.concatenate_columns import concatenate_columns
+from data_pipeline.pre_process_data.pre_process_data import PreProcessData
 
 from parser.feature_engineering_parser import FeatureEngineeringParser
 from data_pipeline.feature_engineering.feature_engineering import FeatureEngineering
@@ -19,8 +19,9 @@ def get_config(yaml_path: str):
     initialParser = YAMLParser
     
     preProcessingParser = PreProcessingParser
+    preProcessData = PreProcessData
     
-    featureEngineringParser = FeatureEngineeringParser
+    featureEngineeringParser = FeatureEngineeringParser
     featureEngineering = FeatureEngineering
     
     modelParser = ModelParser
@@ -29,16 +30,22 @@ def get_config(yaml_path: str):
     config = initialParser(yaml_path).parse()
     
     for data in config['data_path']:
+        # Load csv
         separator = config['separator']
         engine = config['engine']
         encoding = config['encoding']
-        df = pd.read_csv(data, sep=separator, engine=engine, encoding=encoding, nrows=10000)
+        df = pd.read_csv(data, sep=separator, engine=engine, encoding=encoding, nrows=100000)
         
+        # Pre processing
         columns_name = list(df.columns)
+        
         columns_set, columns_name = preProcessingParser(columns_name).parse(config['pre_processing'])
-        df = concatenate_columns(df, columns_set)
-
-        features_configs, columns_alias = featureEngineringParser(columns_name).parse(config['feature_engineering'])
+        for columns in columns_set:       
+            for key, value in columns.items():
+                df = preProcessData().pre_process_data(df, value, key)
+        
+        # Feature engineering
+        features_configs, columns_alias = featureEngineeringParser(columns_name).parse(config['feature_engineering'])
         for feature_config in features_configs:
             feature_columns = feature_config['columns']
             
@@ -47,10 +54,11 @@ def get_config(yaml_path: str):
                 dimensions = feature_config['dimensions'][column]
                 df = featureEngineering(lang=lang, dimensions=dimensions).extract_features(df, column)
                 
+        # Model
         model_configs = modelParser(columns_alias).parse(config['model'])
         for model_config in model_configs:
             model_columns = model_config['columns']
-            
+
             for column in model_columns:
                 featured_df = df.loc[:, df.columns.str.endswith(column)]
                 df[f'prediction_{column}'] = randomForestModel(model_file='data/RandomForest_Ksmash_WordEmbedding.model').predict(featured_df.iloc[:,-30:])

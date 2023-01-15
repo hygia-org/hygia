@@ -11,17 +11,17 @@ dag:
 
   pre_processing:
     aliases:
-      - foo_1: ['STREET_ADDRESS_1', 'STREET_ADDRESS_2']
+      - street: ['STREET_ADDRESS_1', 'STREET_ADDRESS_2']
 
   feature_engineering:
     - input:
         columns:
-          - 'foo_1'
+          - 'street'
           - 'STREET_ADDRESS_1'
         features:
           word_embedding:
             data_lang: 'es'
-            foo_1:
+            street:
               dimensions: 25
 
   model:
@@ -30,12 +30,12 @@ dag:
           type: 'address'
           columns:
             - 'STREET_ADDRESS_1'
-            - 'foo_1'
+            - 'street'
           thresholds:
             test_size: 0.3
             n_estimators: 100
             keyboard_smash:
-              foo_1:
+              street:
                 ksmash_sequence_vowels: 1.00
                 ksmash_sequence_consonants: 1.999
                 ksmash_sequence_special_characters: 2.2499
