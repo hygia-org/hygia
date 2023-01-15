@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Custom paths
+data/MX_ADDRESSES_1_2MI.csv

@@ -128,3 +128,34 @@ class KeySmash:
 
             return calc_num_line / len(' '.join(text_list))
         return 0
+    
+    def extract_key_smash_features(self, df, column_name, normalize=True):
+        """
+        Extract key smash features from a given dataframe and column.
+
+        :param df: Dataframe to extract key smash features from.
+        :type df: pandas.DataFrame
+        :param column_name: Name of the column in the dataframe that contains the text data to extract features from.
+        :type column_name: str
+        :param normalize: Indicates whether to normalize the key smash feature columns. Default is True.
+        :type normalize: bool, optional
+        
+        :return: The input dataframe with additional columns for key smash features: 'irregular_sequence_vowels', 'irregular_sequence_consonants', 'irregular_sequence_special_characters', 'number_count_metric', 'char_frequency_metric'
+        :rtype: pandas.DataFrame
+        """
+        df['irregular_sequence_vowels'] = df[column_name].fillna('').apply(lambda x: self.calculate_irregular_sequence_metric(x, 'vowels'))
+        df['irregular_sequence_consonants'] = df[column_name].fillna('').apply(lambda x: self.calculate_irregular_sequence_metric(x, 'consonants'))
+        df['irregular_sequence_special_characters'] = df[column_name].fillna('').apply(lambda x: self.calculate_irregular_sequence_metric(x, 'special_characters'))
+        df['number_count_metric'] = df[column_name].fillna('').apply(lambda x: self.calculate_number_count_metric(x))
+        df['char_frequency_metric'] = df[column_name].fillna('').apply(lambda x: self.calculate_char_frequency_metric(x))
+        
+        if normalize:
+            key_smash_columns = ['irregular_sequence_vowels',
+                            'irregular_sequence_consonants',
+                            'irregular_sequence_special_characters',
+                            'number_count_metric',
+                            'char_frequency_metric']
+            for column in key_smash_columns:
+                df[column] = self.__normalize_column(df, column)
+        
+        return df
