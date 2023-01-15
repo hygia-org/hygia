@@ -6,11 +6,15 @@ dag:
     - 'data/data_example2.csv'
   output_folder: 'output'
 
+  pre_processing:
+    columns:
+      - foo_1: ['NUMBER', 'ADDRESS', 'ZIPCODE']
+
   feature_engineering:
     - input:
         columns:
-          - foo_1: ['NUMBER', 'ADDRESS', 'ZIPCODE']
-          - foo_2: 'NUMBER'
+          - 'foo_1'
+          - 'NUMBER'
         features:
           word_embedding:
             data_lang: 'es'
@@ -19,7 +23,7 @@ dag:
 
     - input:
         columns:
-          - foo_2: 'NUMBER'
+          - 'NUMBER'
         features:
           word_embedding: 'off'
           keyboard_smash:
