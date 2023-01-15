@@ -111,11 +111,11 @@ class WordEmbedding:
         """
         
         for i in range(self.dimensions):
-            df[f'feature_we_{i}'] = df[column_name].fillna('').apply(lambda x: self.get_embedding(x)[i])
+            df[f'feature_we_{i}_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.get_embedding(x)[i])
 
         if normalize:
             for i in range(self.dimensions):
-                df[f'feature_we_{i}'] = (df[f'feature_we_{i}'] - df[f'feature_we_{i}'].min()) / (df[f'feature_we_{i}'].max() - df[f'feature_we_{i}'].min())
+                df[f'feature_we_{i}_{column_name}'] = (df[f'feature_we_{i}_{column_name}'] - df[f'feature_we_{i}_{column_name}'].min()) / (df[f'feature_we_{i}_{column_name}'].max() - df[f'feature_we_{i}_{column_name}'].min())
         
         return df
         

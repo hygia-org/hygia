@@ -5,9 +5,6 @@ def concatenate_columns(df: pd.DataFrame, columns_set: list):
         for key, values in columns.items():
             for value in values:
                 if(not key in df):
-                    print(value)
-                    print(key)
-                    print(df)
                     df[key] = df[value].astype(str)
                     continue
                 

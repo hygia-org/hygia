@@ -12,10 +12,12 @@ class FeatureEngineeringParser(ParserBase):
         if(not data): return
         
         configs = []
+        columns_set = []
         for inputs in data:
             input = self._try_get(inputs, 'input')
             
             columns = self._try_get(input, 'columns')
+            columns_set = columns_set + columns
             
             # features
             word_embedding, keyboard_smash = self._get_features_details(self._try_get(input, 'features'))
@@ -33,7 +35,7 @@ class FeatureEngineeringParser(ParserBase):
                 'enabled_features': enabled_features
             })
             
-        return configs
+        return configs, columns_set
             
     def _get_features_details(self, features: dict):
         if(not features): return

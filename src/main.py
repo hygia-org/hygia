@@ -11,10 +11,11 @@ from data_pipeline.feature_engineering.feature_engineering import FeatureEnginee
 
 from parser.model_parser import ModelParser
 from data_pipeline.model.random_forest import RandomForestModel
+
 if __name__ != "__main__":
     exit()   
     
-def get_config():
+def get_config(yaml_path: str):
     initialParser = YAMLParser
     
     preProcessingParser = PreProcessingParser
@@ -24,44 +25,45 @@ def get_config():
     
     modelParser = ModelParser
     randomForestModel = RandomForestModel
+
+    config = initialParser(yaml_path).parse()
     
-    for file in os.listdir('src/yamls'):
-        filepath = os.path.join('src/yamls', file)
-        config = initialParser(filepath).parse()
+    for data in config['data_path']:
+        separator = config['separator']
+        engine = config['engine']
+        encoding = config['encoding']
+        df = pd.read_csv(data, sep=separator, engine=engine, encoding=encoding, nrows=10000)
         
-        for data in config['data_path']:
-            df = pd.read_csv(data, sep = '¨', engine = 'python', encoding = 'utf-8', nrows = 10000)
-            columns_name = list(df.columns)
+        columns_name = list(df.columns)
+        columns_set, columns_name = preProcessingParser(columns_name).parse(config['pre_processing'])
+        df = concatenate_columns(df, columns_set)
+
+        features_configs, columns_alias = featureEngineringParser(columns_name).parse(config['feature_engineering'])
+        for feature_config in features_configs:
+            feature_columns = feature_config['columns']
             
-            columns_set, columns_name = preProcessingParser(columns_name).parse(config['pre_processing'])
-            df = concatenate_columns(df, columns_set)
-    
-            features_configs = featureEngineringParser(columns_name).parse(config['feature_engineering'])
-            for feature_config in features_configs:
-                for column in feature_config['columns']:
-                    # lang = feature_config['data_lang']
-                    # dimensions = feature_config['dimensions'][column]
-                    
-                    feature_df = featureEngineering().extract_features(df, column)
-                    df[f'prediction_{column}'] = randomForestModel(model_file='data/RandomForest_Ksmash_WordEmbedding.model').predict(feature_df.iloc[:,-30:])
+            for column in feature_columns:
+                lang = feature_config['data_lang']
+                dimensions = feature_config['dimensions'][column]
+                df = featureEngineering(lang=lang, dimensions=dimensions).extract_features(df, column)
+                
+        model_configs = modelParser(columns_alias).parse(config['model'])
+        for model_config in model_configs:
+            model_columns = model_config['columns']
+            
+            for column in model_columns:
+                featured_df = df.loc[:, df.columns.str.endswith(column)]
+                df[f'prediction_{column}'] = randomForestModel(model_file='data/RandomForest_Ksmash_WordEmbedding.model').predict(featured_df.iloc[:,-30:])
             
         del config['pre_processing']
         del config['feature_engineering']
         del config['model']
-            
         
         print(3*'\n')
         print(20*'-')
-        print(3*'\n')
-        print("FEATURES")
-        print(df[df['prediction_foo_1'] == 0][['foo_1', 'prediction_foo_1']])
-        print(3*'\n')
+        print("Result")
+        print(df.loc[:, df.columns.str.startswith('prediction_')])
         print(20*'-')
         print(3*'\n')
-        print(columns_name)
-    
-    # IF 
-    # rfa = RandomForestAddress('data_paths', model_configs, features_configs)
-    # rfa.run()
          
-get_config()
+get_config('src/yamls/basic_example.yaml')

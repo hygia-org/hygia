@@ -30,16 +30,15 @@ class ModelParser(ParserBase):
         for inputs in model:
             input = self._try_get(inputs, 'input', 'The inputs should be specified')
             type = self._try_get(input, 'type')
-            
         
             if (type == model_type['ADDRESS']):
-                columns_set_alias = self.get_columns(input)
-                keyboard_smash, n_estimators, test_size = self.get_thresholds(input, columns_set_alias)
+                columns = self.get_columns(input)
+                keyboard_smash, n_estimators, test_size = self.get_thresholds(input, columns)
                 
                 configs.append({
                     'model': 'keyboard_smash',
                     'type': model_type['ADDRESS'],
-                    'columns_set_alias': columns_set_alias,
+                    'columns': columns,
                     'keyboard_smash': keyboard_smash,
                     'n_estimators': n_estimators,
                     'test_size': test_size
@@ -48,37 +47,37 @@ class ModelParser(ParserBase):
         return configs
             
     def get_columns(self, input):
-        columns_set_alias = self._try_get(input, 'columns')
+        columns_set = self._try_get(input, 'columns')
 
-        for alias in columns_set_alias:
+        for alias in columns_set:
             if(not(alias in self.columns_alias)):
                 raise ValueError(f'`{alias}` column not match with the available columns')
         
-        return columns_set_alias
+        return columns_set
         
-    def get_thresholds(self, input, columns_set_alias):
+    def get_thresholds(self, input, columns_alias):
         thresholds = self._try_get(input, 'thresholds')
         
         test_size = self._get(thresholds, 'test_size', 0.3)
         n_estimators = self._get(thresholds, 'n_estimators', 100)
         
-        keyboard_smash_default = self.get_keyboard_smash_default_thresholds(columns_set_alias)
+        keyboard_smash_default = self.get_keyboard_smash_default_thresholds(columns_alias)
         keyboard_smash = self._get(thresholds, 'keyboard_smash', keyboard_smash_default)
             
         for key in keyboard_smash.keys():
-            if(not(key in columns_set_alias)):
+            if(not(key in columns_alias)):
                 raise ValueError(f'`{key}` key not match with the available columns')
             
-        for alias in columns_set_alias:
+        for alias in columns_alias:
             if(not(alias in keyboard_smash.keys())):
-                keyboard_smash.append({alias: self.default_keyboard_smash_values})
+                keyboard_smash[alias] = self.default_keyboard_smash_values
                 
         return keyboard_smash, n_estimators, test_size
     
-    def get_keyboard_smash_default_thresholds(self, columns_set_alias):
+    def get_keyboard_smash_default_thresholds(self, columns_alias):
         default_config = []
         
-        for alias in columns_set_alias:
+        for alias in columns_alias:
             default_config.append({alias: self.default_keyboard_smash_values})
             
         return default_config

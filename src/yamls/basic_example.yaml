@@ -1,9 +1,13 @@
 dag:
   id: basic_example
   description: DAG de teste
+  output_folder: 'output'
   data_path:
     - 'data/AI_LATA_ADDRESS_MEX_modificado.csv'
-  output_folder: 'output' # não está sendo utilizado
+  data_config:
+    separator: '¨'
+    engine: 'python'
+    encoding: 'utf-8'
 
   pre_processing:
     aliases:
@@ -13,6 +17,7 @@ dag:
     - input:
         columns:
           - 'foo_1'
+          - 'STREET_ADDRESS_1'
         features:
           word_embedding:
             data_lang: 'es'
@@ -23,7 +28,8 @@ dag:
     random_forest:
       - input:
           type: 'address'
-          columns: # Isso daqui nao está mais fazendo sentido
+          columns:
+            - 'STREET_ADDRESS_1'
             - 'foo_1'
           thresholds:
             test_size: 0.3
