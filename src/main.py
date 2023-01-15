@@ -38,8 +38,11 @@ def get_config():
             df = concatenate_columns(df, columns_set)
     
             features_configs = featureEngineringParser(columns_name).parse(config['feature_engineering'])
-            for feature in features_configs:
-                for column in feature['columns']:
+            for feature_config in features_configs:
+                for column in feature_config['columns']:
+                    # lang = feature_config['data_lang']
+                    # dimensions = feature_config['dimensions'][column]
+                    
                     df = featureEngineering().extract_features(df, column)
                     
             
@@ -52,7 +55,7 @@ def get_config():
         print(20*'-')
         print(3*'\n')
         print("FEATURES")
-        print(df)
+        print(features_configs)
         print(3*'\n')
         print(20*'-')
         print(3*'\n')

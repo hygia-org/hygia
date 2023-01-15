@@ -19,7 +19,7 @@ dag:
           word_embedding:
             data_lang: 'es'
             foo_1:
-              dimensions: 23
+              dimensions: 25
 
     - input:
         columns:
