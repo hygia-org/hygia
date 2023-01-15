@@ -11,24 +11,16 @@ class PreProcessingParser(ParserBase):
     def _parse_pre_processing_configs(self, data: list):
         if(not data): return
         
-        columns = self._try_get(data, 'columns')
-        columns_alias = self._get_dataframe(columns)
+        aliases = self._try_get(data, 'aliases')
+        self._get_dataframe(aliases)
         
-        
-        for alias in columns_alias:   
-            if(not self._has_column_on_df(self.columns_name, alias)):
-                self.columns_name.append(alias)
-        
-        return columns, self.columns_name
+        return aliases, self.columns_name
     
-    def _get_dataframe(self, columns: dict):
-        if(not columns): return 
+    def _get_dataframe(self, aliases: dict):
+        if(not aliases): return 
         
-        columns_alias = []
-        
-        for column in columns:
-            for key in column.keys():
-                columns_alias.append(key)
+        for alias in aliases:
+            for key in alias.keys():
+                if(not self._has_column_on_df(self.columns_name, alias)):
+                    self.columns_name.append(key)
                 
-        return columns_alias
-

@@ -7,7 +7,7 @@ dag:
   output_folder: 'output'
 
   pre_processing:
-    columns:
+    aliases:
       - foo_1: ['NUMBER', 'ADDRESS', 'ZIPCODE']
 
   feature_engineering:
