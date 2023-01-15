@@ -2,28 +2,38 @@ dag:
   id: basic_example
   description: DAG de teste
   data_path:
-    - 'data/AI_LATA_ADDRESS_MEX_modificado.csv'
-  output_folder: 'output' # não está sendo utilizado
+    - 'data/data_example.csv'
+    - 'data/data_example2.csv'
+  output_folder: 'output'
 
   pre_processing:
     aliases:
-      - foo_1: ['STREET_ADDRESS_1', 'STREET_ADDRESS_2']
+      - foo_1: ['NUMBER', 'ADDRESS', 'ZIPCODE']
 
   feature_engineering:
     - input:
         columns:
           - 'foo_1'
+          - 'ADDRESS'
         features:
           word_embedding:
             data_lang: 'es'
             foo_1:
               dimensions: 25
 
+    - input:
+        columns:
+          - 'ADDRESS'
+        features:
+          word_embedding: 'off'
+          keyboard_smash:
+            ksmash_sequence_vowels: 'off'
+
   model:
     random_forest:
       - input:
           type: 'address'
-          columns: # Isso daqui nao está mais fazendo sentido
+          columns:
             - 'foo_1'
           thresholds:
             test_size: 0.3
