@@ -14,7 +14,7 @@ dag:
     - input:
         columns:
           - 'foo_1'
-          - 'NUMBER'
+          - 'ADDRESS'
         features:
           word_embedding:
             data_lang: 'es'
@@ -23,7 +23,7 @@ dag:
 
     - input:
         columns:
-          - 'NUMBER'
+          - 'ADDRESS'
         features:
           word_embedding: 'off'
           keyboard_smash:

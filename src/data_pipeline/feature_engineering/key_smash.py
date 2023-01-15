@@ -200,18 +200,18 @@ class KeySmash:
             df = key_smash.extract_key_smash_features(df, "text_column", normalize=False)
             print(df.head())
         """
-        df['feature_ks_count_sequence_squared_vowels'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'vowels'))
-        df['feature_ks_count_sequence_squared_consonants'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'consonants'))
-        df['feature_ks_count_sequence_squared_special_characters'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'special_characters'))
-        df['feature_ks_ratio_of_numeric_digits_squared'] = df[column_name].fillna('').apply(lambda x: self.ratio_of_numeric_digits_squared(x))
-        df['feature_ks_average_of_char_count_squared'] = df[column_name].fillna('').apply(lambda x: self.average_of_char_count_squared(x))
+        df[f'feature_ks_count_sequence_squared_vowels_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'vowels'))
+        df[f'feature_ks_count_sequence_squared_consonants_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'consonants'))
+        df[f'feature_ks_count_sequence_squared_special_characters_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'special_characters'))
+        df[f'feature_ks_ratio_of_numeric_digits_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.ratio_of_numeric_digits_squared(x))
+        df[f'feature_ks_average_of_char_count_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.average_of_char_count_squared(x))
         
         if normalize:
-            key_smash_columns = ['feature_ks_count_sequence_squared_vowels',
-                            'feature_ks_count_sequence_squared_consonants',
-                            'feature_ks_count_sequence_squared_special_characters',
-                            'feature_ks_ratio_of_numeric_digits_squared',
-                            'feature_ks_average_of_char_count_squared']
+            key_smash_columns = [f'feature_ks_count_sequence_squared_vowels_{column_name}',
+                                f'feature_ks_count_sequence_squared_consonants_{column_name}',
+                                f'feature_ks_count_sequence_squared_special_characters_{column_name}',
+                                f'feature_ks_ratio_of_numeric_digits_squared_{column_name}',
+                                f'feature_ks_average_of_char_count_squared_{column_name}']
             for column in key_smash_columns:
                 df[column] = self._normalize_column(df, column)
         

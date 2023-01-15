@@ -38,20 +38,21 @@ def get_config():
             df = concatenate_columns(df, columns_set)
     
             features_configs = featureEngineringParser(columns_name).parse(config['feature_engineering'])
-            for config in features_configs:
-                for column in config['columns']:
+            for feature in features_configs:
+                for column in feature['columns']:
                     df = featureEngineering().extract_features(df, column)
+                    
             
             # model_configs = modelParser(columns_set_alias).parse(config['model'])
             # del config['model']
             
             # for feature_config in features_configs:
-            
-        del config['pre_processing']
-        del config['feature_engineering']
         
+        print(3*'\n')
+        print(20*'-')
+        print(3*'\n')
         print("FEATURES")
-        print(features_configs)
+        print(df)
         print(3*'\n')
         print(20*'-')
         print(3*'\n')
