@@ -171,9 +171,7 @@ class KeySmash:
         :return: The input dataframe with the normalized column.
         :rtype: pandas.DataFrame
         """
-        max_value = df[column].abs().max()
-        if max_value != 0.0:
-            df[column] = df
+        return df[column]  / df[column].abs().max() if df[column].abs().max() != 0.0 else 0.0
 
     
     def extract_key_smash_features(self, df:pd.DataFrame, column_name:str, normalize:bool=True) -> pd.DataFrame:
