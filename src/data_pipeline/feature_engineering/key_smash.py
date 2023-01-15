@@ -14,8 +14,8 @@ class KeySmash:
 
     .. code-block:: python
 
-        keysmash = KeySmash()
-        df = keysmash.extract_key_smash_features(df, "text_column")
+        key_smash = KeySmash()
+        df = key_smash.extract_key_smash_features(df, "text_column")
         print(df)
     """
     
@@ -43,12 +43,14 @@ class KeySmash:
         Use this function like this:
 
         .. code-block:: python
+        
+            key_smash = KeySmash()
 
-            res = average_of_char_count_squared("PUENTECILLA KM. 1.7")
+            res = key_smash.average_of_char_count_squared("PUENTECILLA KM. 1.7")
             print(res)
             # Output: 1.121212121212121
 
-            res = average_of_char_count_squared("ASDASD XXXX")
+            res = key_smash.average_of_char_count_squared("ASDASD XXXX")
             print(res)
             # Output: 3.0
         """
@@ -83,16 +85,18 @@ class KeySmash:
         Use this function like this:
 
         .. code-block:: python
+        
+            key_smash = KeySmash()
 
-            res = count_sequence_squared("PUENTECILLA KM. 1.7", "vowels")
+            res = key_smash.count_sequence_squared("PUENTECILLA KM. 1.7", "vowels")
             print(res)
             # Output: 0.21052631578947367
 
-            res = count_sequence_squared("ASDASD XXXX", "consonants")
+            res = key_smash.count_sequence_squared("ASDASD XXXX", "consonants")
             print(res)
             # Output: 2.1818181818181817
 
-            res = count_sequence_squared("!@#$% ASDFGHJKL", "special_characters")
+            res = key_smash.count_sequence_squared("!@#$% ASDFGHJKL", "special_characters")
             print(res)
             # Output: 1.5625
         """
@@ -133,11 +137,13 @@ class KeySmash:
 
         .. code-block:: python
 
-            res = ratio_of_numeric_digits_squared("ABC 123 !@#")
+            key_smash = KeySmash()
+            
+            res = key_smash.ratio_of_numeric_digits_squared("ABC 123 !@#")
             print(res)
             # Output: 0.0
 
-            res = ratio_of_numeric_digits_squared("ABC123 !@#")
+            res = key_smash.ratio_of_numeric_digits_squared("ABC123 !@#")
             print(res)
             # Output: 0.9
         """
@@ -191,9 +197,9 @@ class KeySmash:
         .. code-block:: python
 
             import pandas as pd
-            keysmash = KeySmash()
+            key_smash = KeySmash()
             df = pd.DataFrame({"text_column": ["abcdefgh", "ijklmnop", "qrstuvwxyz"]})
-            df = keysmash.extract_key_smash_features(df, "text_column", normalize=False)
+            df = key_smash.extract_key_smash_features(df, "text_column", normalize=False)
             print(df.head())
         """
         df['feature_ks_count_sequence_squared_vowels'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'vowels'))
