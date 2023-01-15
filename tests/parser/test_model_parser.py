@@ -1,6 +1,6 @@
 import pytest
 
-from src.parser.model_parser import ModelParser
+from parser.model_parser import ModelParser
 
 class TestParser():
     

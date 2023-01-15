@@ -1,6 +1,6 @@
 import pytest
 
-from src.parser.feature_engineering_parser import FeatureEngineeringParser
+from parser.feature_engineering_parser import FeatureEngineeringParser
 
 class TestFeatureEngineeringParser():
     
