@@ -32,9 +32,9 @@ class TestKeySmash:
         df = pd.DataFrame({"text_column": ["abcdefgh", "ijklmnop", "qrstuvwxyz"]})
         result = self.key_smash.extract_key_smash_features(df, "text_column", normalize=False)
 
-        assert 'feature_ks_count_sequence_squared_vowels' in result.columns
-        assert 'feature_ks_count_sequence_squared_consonants' in result.columns
-        assert 'feature_ks_count_sequence_squared_special_characters' in result.columns
-        assert 'feature_ks_ratio_of_numeric_digits_squared' in result.columns
-        assert 'feature_ks_average_of_char_count_squared' in result.columns
+        assert 'feature_ks_count_sequence_squared_vowels_text_column' in result.columns
+        assert 'feature_ks_count_sequence_squared_consonants_text_column' in result.columns
+        assert 'feature_ks_count_sequence_squared_special_characters_text_column' in result.columns
+        assert 'feature_ks_ratio_of_numeric_digits_squared_text_column' in result.columns
+        assert 'feature_ks_average_of_char_count_squared_text_column' in result.columns
         assert result.shape[1] == 6 # Ensure no extra columns are added

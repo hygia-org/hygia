@@ -1,5 +1,5 @@
-from data_pipeline.feature_engineering.key_smash import KeySmash
-from data_pipeline.feature_engineering.word_embedding import WordEmbedding
+from src.data_pipeline.feature_engineering.key_smash import KeySmash
+from src.data_pipeline.feature_engineering.word_embedding import WordEmbedding
 import pandas as pd
 
 class FeatureEngineering:

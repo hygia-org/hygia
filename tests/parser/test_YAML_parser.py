@@ -1,5 +1,5 @@
 
-from parser.YAML_parser import YAMLParser
+from src.parser.YAML_parser import YAMLParser
 
 class TestYamlParser():
 

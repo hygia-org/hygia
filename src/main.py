@@ -34,7 +34,7 @@ def get_config(yaml_path: str):
         separator = config['separator']
         engine = config['engine']
         encoding = config['encoding']
-        df = pd.read_csv(data, sep=separator, engine=engine, encoding=encoding, nrows=100000)
+        df = pd.read_csv(data, sep=separator, engine=engine, encoding=encoding, nrows=100_000)
         
         # Pre processing
         columns_name = list(df.columns)
