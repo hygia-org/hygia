@@ -5,8 +5,8 @@ from src.parser.feature_engineering_parser import FeatureEngineeringParser
 class TestFeatureEngineeringParser():
     
     def setup_method(self):
-        self.feature_engineering_data = [{'input': {'columns': [{'foo_1': ['NUMBER', 'ADDRESS', 'ZIPCODE']}, {'foo_2': 'NUMBER'}], 'features': {'word_embedding': {'data_lang': 'es', 'foo_1': {'dimensions': 23}}}}}]
-        self.parser = FeatureEngineeringParser()
+        self.feature_engineering_data = [{'input': {'columns': ['foo_1', 'foo_2'], 'features': {'word_embedding': {'data_lang': 'es', 'foo_1': {'dimensions': 23}}}}}]
+        self.parser = FeatureEngineeringParser(['NUMBER', 'ADDRESS', 'ZIPCODE', 'foo_1', 'foo_2'])
 
     def test_parser_feature_engineering(self):
         features_config, columns_set_alias = self.parser.parse(self.feature_engineering_data)
@@ -14,8 +14,7 @@ class TestFeatureEngineeringParser():
         
         assert ['foo_1', 'foo_2'] == columns_set_alias
         
-        assert 'columns_alias' in default_case
-        assert 'columns_set' in default_case
+        assert 'columns' in default_case
         assert 'enabled_features' in default_case
         
         assert 'data_lang' in default_case
@@ -23,13 +22,6 @@ class TestFeatureEngineeringParser():
 
         assert 'dimensions' in default_case
         assert type(default_case['dimensions']) == dict
-        
-    def test_get_dataframe(self):
-        data = self.feature_engineering_data[0]
-        columns_set, columns_set_alias = self.parser._get_dataframe(data['input']['columns'])
-        
-        assert 'foo_1' in columns_set[0].keys()
-        assert 'foo_2' in columns_set_alias
         
     def test_get_features_details(self):
         data = self.feature_engineering_data[0]

@@ -1,39 +1,121 @@
-from whatlies.language import BytePairLanguage
+from typing import List, Any
 import numpy as np
+from whatlies.language import BytePairLanguage
+# from whatlies.language import FastText
+# from whatlies.language import Word2Vec
+# from whatlies.language import Glove
+# from whatlies.language import BagOfWords
+import pandas as pd
 
 class WordEmbedding:
-    def __init__(self, lang, dimensions):
-        """Initialize a word embedding object using the BytePairLanguage model.
+    """
+    A class for generating word embeddings from text data.
+    Word embeddings are numerical representations of text data that capture the context and meaning of words within a sentence or document.
 
-        Parameters
-        ----------
-        lang: str
-            The language to use for the word embedding (default is "es")
-        dimensions: str
-            The number of dimensions for the word embedding vectors (default is 25)
+    Examples
+    --------
+    Use this class like this:
+
+    .. code-block:: python
+
+        word_embedding = WordEmbedding()
+        df = word_embedding.extract_word_embedding_features(df, "text_column")
+        print(df)
+    """
+
+    def __init__(self, lang: str = 'es', dimensions: int = 25, model: str = 'bytepair'):
         """
-        self.bpl = BytePairLanguage(lang=lang, dim=dimensions) 
+        Initialize the WordEmbedding class.
+
+        :param lang: The language of the text to be processed. (default 'es')
+        :type lang: str
+        :param dimensions: The number of dimensions of the word embedding vectors. (default 25)
+        :type dimensions: int
+        :param model: The word embedding model to be used. (default 'bytepair')
+        :type model: str
+        """
+        self.lang = lang
+        self.dimensions = dimensions
+        self.model = model
+        self.word_embedding_model = self._load_model()
+
+    def _load_model(self) -> Any:
+        """
+        Load the word embedding model.
+
+        :return: The loaded word embedding model.
+        :rtype: Any
+        """
+        if self.model == 'bytepair':
+            return BytePairLanguage(lang=self.lang, dim=self.dimensions)
+        elif self.model == 'fasttext':
+            raise NotImplementedError
+        elif self.model == 'word2vec':
+            raise NotImplementedError
+        elif self.model == 'glove':
+            raise NotImplementedError
+        elif self.model == 'bagofwords':
+            raise NotImplementedError
+        else:
+            raise ValueError
         
-    def get_embedding(self, text):
-        """Get the word embedding vector for a given text.
+    def get_embedding(self, text: str) -> np.ndarray:
+        """
+        Get the word embedding vector for a given text.
 
-        Parameters
-        ----------
-        text: str
-            The string to be processed
-
-        Returns
-        ----------
-        arr[float]
-            A word embedding vector for the given text
+        :param text: The text to be processed.
+        :type text: str
+        :return: A word embedding vector for the given text.
+        :rtype: np.ndarray
         
         Examples
         --------
-        >>> get_embedding("This is a text", "es", 25)
-        [ 0.06799883  0.17547965  0.47599664  0.16108984 -0.1360625  -0.10632467
-        -0.10654568 -0.09805    -0.33004168 -0.33528003 -0.23304085  0.36661038
-        -0.5797167   0.53252834  0.30276018 -0.01584417  0.85087484  0.14121284
-        0.74862367 -0.33011952  0.015432    0.02694534  0.10118082 -0.34017918
-        -0.14560167]
+        Use this function like this:
+        .. code-block:: python
+
+        word_embedding = WordEmbedding()
+        embedding = word_embedding.get_embedding("This is a sample text.")
+        print(embedding)
+        # Output: [0.1, 0.2, ..., 0.3] (a list of float values representing the word embedding vector)
+
+        embedding = word_embedding.get_embedding("Another sample text.")
+        print(embedding)
+        # Output: [0.5, 0.6, ..., 0.7] (a list of float values representing the word embedding vector)
         """
-        return self.bpl[text].vector
+        return self.word_embedding_model[text].vector
+
+    def extract_word_embedding_features(self, df: pd.DataFrame, column_name: str, normalize: bool = False) -> pd.DataFrame:
+        """
+        Extract word embedding features from a given dataframe and column.
+
+        :param df: Dataframe to extract word embedding features from.
+        :type df: pandas.DataFrame
+        :param column_name: Name of the column in the dataframe that contains the text data to extract features from.
+        :type column_name: str
+        :param normalize: Indicates whether to normalize the word embedding feature columns. Default is True.
+        :type normalize: bool, optional
+
+        :return: The input dataframe with additional columns for word embedding features.
+        :rtype: pandas.DataFrame
+
+        Examples
+        --------
+        Use this class like this:
+
+        .. code-block:: python
+
+            word_embedding = WordEmbedding()
+            df = pd.DataFrame({"text_column": ["abcdefgh", "ijklmnop", "qrstuvwxyz"]})
+            df = word_embedding.extract_features(df, "text_column", normalize=False)
+            print(df.head())
+        """
+        
+        for i in range(self.dimensions):
+            df[f'feature_we_{i}_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.get_embedding(x)[i] if len(x) > 0 else 0.0)
+
+        if normalize:
+            for i in range(self.dimensions):
+                df[f'feature_we_{i}_{column_name}'] = (df[f'feature_we_{i}_{column_name}'] - df[f'feature_we_{i}_{column_name}'].min()) / (df[f'feature_we_{i}_{column_name}'].max() - df[f'feature_we_{i}_{column_name}'].min())
+        
+        return df
+        
