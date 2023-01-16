@@ -1,11 +1,11 @@
 import pytest
 
-from src.parser.model_parser import ModelParser
+from hygia.parser.model_parser import ModelParser
 
 class TestParser():
     
     def setup_method(self):
-        self.model_data = {'random_forest': [{'input': {'type': 'address', 'columns': ['foo_1'], 'thresholds': {'test_size': 0.3, 'n_estimators': 100, 'keyboard_smash': {'foo_1': {'ksmash_sequence_vowels': 1.0, 'ksmash_sequence_consonants': 1.999, 'ksmash_sequence_special_characters': 2.2499, 'ksmash_numbers': 2.9, 'ksmash_char_frequence': 2.78}}}}}]}
+        self.model_data = {'random_forest': [{'input': {'trained_model_file': '../mock/RandomForest_Ksmash_WordEmbedding.model', 'type': 'address', 'columns': ['foo_1'], 'thresholds': {'test_size': 0.3, 'n_estimators': 100, 'keyboard_smash': {'foo_1': {'ksmash_sequence_vowels': 1.0, 'ksmash_sequence_consonants': 1.999, 'ksmash_sequence_special_characters': 2.2499, 'ksmash_numbers': 2.9, 'ksmash_char_frequence': 2.78}}}}}]}
         self.parser = ModelParser(['NUMBER', 'ADDRESS', 'ZIPCODE', 'foo_1', 'foo_2'])
         
     def test_parser_model(self):

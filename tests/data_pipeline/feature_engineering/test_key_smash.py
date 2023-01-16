@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from src.data_pipeline.feature_engineering.key_smash import KeySmash
+from hygia import KeySmash
 
 class TestKeySmash:
     

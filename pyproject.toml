@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hygia"
-version = "0.1.0"
+version = "0.1.3"
 description = "A short description of the package."
 license = "MIT"
 authors = [
@@ -9,7 +9,8 @@ authors = [
 readme = "README.md"
 repository = "https://github.com/PDA-FGA/Playground"
 keywords = ["packaging", "poetry"]
-packages = [{include = "hygia", from = "src"}]
+packages = [{ include = "hygia" }]
+exclude = ["hygia/parser", "hygia/data_pipeline", "hygia/main.py"]
 
 [tool.poetry.dependencies]
 python = "^3.8"

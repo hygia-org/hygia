@@ -1,5 +1,5 @@
-from src.parser.parser_base import ParserBase
-from src.parser.const import model_type
+from hygia.parser.parser_base import ParserBase
+from hygia.parser.const import model_type
 
 class ModelParser(ParserBase):
     
@@ -26,10 +26,11 @@ class ModelParser(ParserBase):
                 
     def get_random_forest_address_config(self, model: list):
         configs = []
-        
+
         for inputs in model:
             input = self._try_get(inputs, 'input', 'The inputs should be specified')
             type = self._try_get(input, 'type')
+            trained_model_file = self._try_get(input, 'trained_model_file', 'Trained model should be provided')
         
             if (type == model_type['ADDRESS']):
                 columns = self.get_columns(input)
@@ -37,6 +38,7 @@ class ModelParser(ParserBase):
                 
                 configs.append({
                     'model': 'keyboard_smash',
+                    'trained_model_file': trained_model_file,
                     'type': model_type['ADDRESS'],
                     'columns': columns,
                     'keyboard_smash': keyboard_smash,
