@@ -1,4 +1,4 @@
-from src.parser.parser_base import ParserBase
+from hygia.parser.parser_base import ParserBase
 
 class PreProcessingParser(ParserBase):
     

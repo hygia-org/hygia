@@ -2,7 +2,8 @@ import pytest
 import pandas as pd
 import numpy as np
 from whatlies.language import BytePairLanguage
-from src.data_pipeline.feature_engineering.word_embedding import WordEmbedding
+
+from hygia import WordEmbedding
 
 class TestWordEmbedding:
 

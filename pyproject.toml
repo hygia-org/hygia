@@ -9,7 +9,8 @@ authors = [
 readme = "README.md"
 repository = "https://github.com/PDA-FGA/Playground"
 keywords = ["packaging", "poetry"]
-packages = [{include = "hygia", from = "src"}]
+packages = [{ include = "hygia" }]
+exclude = ["hygia/parser", "hygia/data_pipeline", "hygia/main.py"]
 
 [tool.poetry.dependencies]
 python = "^3.8"

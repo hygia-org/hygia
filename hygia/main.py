@@ -1,30 +1,19 @@
 import os
 import pandas as pd
 
-from parser.YAML_parser import YAMLParser
+from hygia import PreProcessData
+from hygia import FeatureEngineering
+from hygia import RandomForestModel
 
-from parser.pre_processing_parser import PreProcessingParser
-from data_pipeline.pre_process_data.pre_process_data import PreProcessData
+from hygia.parser.model_parser import ModelParser
+from hygia.parser.YAML_parser import YAMLParser
+from hygia.parser.pre_processing_parser import PreProcessingParser
+from hygia.parser.feature_engineering_parser import FeatureEngineeringParser
 
-from parser.feature_engineering_parser import FeatureEngineeringParser
-from data_pipeline.feature_engineering.feature_engineering import FeatureEngineering
-
-from parser.model_parser import ModelParser
-from data_pipeline.model.random_forest import RandomForestModel
-
-if __name__ != "__main__":
-    exit()   
-
-def get_config():
-    initialParser = YAMLParser
-    featureEngineringParser = FeatureEngineeringParser
-    modelParser = ModelParser
-
-    for file in os.listdir('config'):
-        filepath = os.path.join('config', file)
-        config = initialParser(filepath).parse()
+# if __name__ != "__main__":
+#     exit()   
     
-def get_config(yaml_path: str):
+def run_with_config(yaml_path: str):
     initialParser = YAMLParser
     
     preProcessingParser = PreProcessingParser
@@ -43,7 +32,7 @@ def get_config(yaml_path: str):
         separator = config['separator']
         engine = config['engine']
         encoding = config['encoding']
-        df = pd.read_csv(data, sep=separator, engine=engine, encoding=encoding, nrows=100_000)
+        df = pd.read_csv(data, sep=separator, engine=engine, encoding=encoding, nrows=10_000)
         
         # Pre processing
         columns_name = list(df.columns)
@@ -83,4 +72,3 @@ def get_config(yaml_path: str):
         print(20*'-')
         print(3*'\n')
          
-get_config('config/default_config.yaml')
