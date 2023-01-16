@@ -1,6 +1,10 @@
 ![IMAGE](./assets/img/horizontal_logo.PNG)
 
 # A powerful Python ML playground toolkit
+[![PyPI Latest Release](https://img.shields.io/pypi/v/hygia.svg)](https://pypi.org/project/hygia/)
+[![Package Status](https://img.shields.io/pypi/status/hygia.svg)](https://pypi.org/project/hygia/)
+[![License](https://img.shields.io/pypi/l/hygia.svg)](https://github.com/PDA-FGA/Playground/blob/main/LICENSE)
+[![Coverage](https://codecov.io/github/PDA-FGA/Playground/coverage.svg?branch=main)](https://codecov.io/gh/PDA-FGA/Playground)
 
 ## What is it?
 
