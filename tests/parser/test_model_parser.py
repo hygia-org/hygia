@@ -6,7 +6,7 @@ class TestParser():
     
     def setup_method(self):
         self.model_data = {'random_forest': [{'input': {'type': 'address', 'columns': ['foo_1'], 'thresholds': {'test_size': 0.3, 'n_estimators': 100, 'keyboard_smash': {'foo_1': {'ksmash_sequence_vowels': 1.0, 'ksmash_sequence_consonants': 1.999, 'ksmash_sequence_special_characters': 2.2499, 'ksmash_numbers': 2.9, 'ksmash_char_frequence': 2.78}}}}}]}
-        self.parser = ModelParser(['foo_2', 'foo_1', 'foo_2'])
+        self.parser = ModelParser(['NUMBER', 'ADDRESS', 'ZIPCODE', 'foo_1', 'foo_2'])
         
     def test_parser_model(self):
         configs = self.parser.parse(self.model_data)
@@ -18,8 +18,8 @@ class TestParser():
         assert 'type' in default_case
         assert default_case['type'] == 'address'
         
-        assert 'columns_set_alias' in default_case
-        assert 'foo_1' in default_case['columns_set_alias']
+        assert 'columns' in default_case
+        assert 'foo_1' in default_case['columns']
         
         assert 'n_estimators' in default_case
         assert default_case['n_estimators'] == 100
@@ -39,8 +39,8 @@ class TestParser():
         assert 'type' in test_case
         assert test_case['type'] == 'address'
         
-        assert 'columns_set_alias' in test_case
-        assert 'foo_1' in test_case['columns_set_alias']
+        assert 'columns' in test_case
+        assert 'foo_1' in test_case['columns']
         
         assert 'n_estimators' in test_case
         assert test_case['n_estimators'] == 100

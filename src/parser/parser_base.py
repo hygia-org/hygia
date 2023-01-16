@@ -15,6 +15,9 @@ class ParserBase():
             error_msg = f'Error in file {file_name}: {error_msg}'
             raise ValueError(error_msg)
         
+    def _has_column_on_df(self, df_columns_alias: list, column_alias: str):
+        return column_alias in df_columns_alias
+        
     def _get(self, variable: dict, field, default_value):
         try:
             return variable[field]

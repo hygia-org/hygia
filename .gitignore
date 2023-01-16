@@ -130,3 +130,9 @@ dmypy.json
 
 # Poetry settings
 poetry.lock
+
+# DS Store
+.DS_Store
+
+# Custom paths
+data/MX_ADDRESSES_1_2MI.csv

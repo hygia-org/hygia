@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  postgres:
+    container_name: "postgres"
+    image: postgres
+    env_file:
+      - ./config/postgres_exemple.env
+    volumes:
+      - postgres_volume:/var/lib/postgresql/data/
+      - ./config/postgres/:/docker-entrypoint-initdb.d/
+      
+  metabase:
+    container_name: "metabase"
+    image: metabase/metabase
+    env_file:
+      - ./config/metabase_database_exemple.env
+    ports:
+      - 3000:3000
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    env_file:
+      - ./config/mongo_exemple.env
+    volumes:
+      - mongo-db:/data/db
+
+volumes:
+  postgres_volume:
+  mongo-db:
+
+networks:
+  default:
+    external:
+      name: metabase
