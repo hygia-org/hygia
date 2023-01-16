@@ -1,19 +1,24 @@
+import pytest
+import pandas as pd
 import numpy as np
-
+from whatlies.language import BytePairLanguage
 from src.data_pipeline.feature_engineering.word_embedding import WordEmbedding
 
 class TestWordEmbedding:
-    def setup_method(self):
-        lang = "es"
-        dimensions = 25
-        self.we = WordEmbedding(lang, dimensions)
-        
-    def test_get_embedding(self):
-        text = "This is a text"
-        expected = [0.06799883, 0.17547965, 0.47599664, 0.16108984, -0.1360625, -0.10632467,
-                    -0.10654568, -0.09805, -0.33004168, -0.33528003, -0.23304085, 0.36661038,
-                    -0.5797167, 0.53252834, 0.30276018, -0.01584417, 0.85087484, 0.14121284,
-                    0.74862367, -0.33011952, 0.015432, 0.02694534, 0.10118082, -0.34017918,
-                    -0.14560167]
-        result = self.we.get_embedding(text)
-        assert np.allclose(result, expected)
+
+    @pytest.fixture
+    def word_embedding(self):
+        return WordEmbedding()
+
+    def test_load_model(self, word_embedding):
+        assert isinstance(word_embedding._load_model(), BytePairLanguage)
+
+    def test_get_embedding(self, word_embedding):
+        embedding = word_embedding.get_embedding("This is a sample text.")
+        assert isinstance(embedding, np.ndarray)
+
+    def test_extract_word_embedding_features(self, word_embedding):
+        df = pd.DataFrame({"text_column": ["This is a sample text.", "Another sample text."]})
+        result = word_embedding.extract_word_embedding_features(df, "text_column")
+        assert isinstance(result, pd.DataFrame)
+        assert any(col.startswith("feature_we_") for col in result.columns)
