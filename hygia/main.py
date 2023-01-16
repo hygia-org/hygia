@@ -56,19 +56,15 @@ def run_with_config(yaml_path: str):
         model_configs = modelParser(columns_alias).parse(config['model'])
         for model_config in model_configs:
             model_columns = model_config['columns']
-
+            trained_model_file = model_config['trained_model_file']
+            
             for column in model_columns:
                 featured_df = df.loc[:, df.columns.str.endswith(column)]
-                df[f'prediction_{column}'] = randomForestModel(model_file='data/RandomForest_Ksmash_WordEmbedding.model').predict(featured_df.iloc[:,-30:])
+                df[f'prediction_{column}'] = randomForestModel(model_file=trained_model_file).predict(featured_df.iloc[:,-30:])
             
         del config['pre_processing']
         del config['feature_engineering']
         del config['model']
         
-        print(3*'\n')
-        print(20*'-')
-        print("Result")
-        print(df.loc[:, df.columns.str.startswith('prediction_')])
-        print(20*'-')
-        print(3*'\n')
+        return df.loc[:, df.columns.str.startswith('prediction_')]
          

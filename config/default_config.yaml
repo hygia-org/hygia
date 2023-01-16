@@ -3,7 +3,7 @@ dag:
   description: DAG de teste
   output_folder: 'output'
   data_path:
-    - 'data/AI_LATA_ADDRESS_MEX_modificado.csv'
+    - '../data/AI_LATA_ADDRESS_MEX_modificado.csv'
   data_config:
     separator: '¨'
     engine: 'python'
@@ -27,6 +27,7 @@ dag:
   model:
     random_forest:
       - input:
+          trained_model_file: '../data/RandomForest_Ksmash_WordEmbedding.model'
           type: 'address'
           columns:
             - 'STREET_ADDRESS_1'
