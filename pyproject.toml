@@ -13,6 +13,7 @@ packages = [{ include = "hygia" }]
 exclude = ["hygia/parser", "hygia/data_pipeline", "hygia/main.py"]
 
 [tool.poetry.dependencies]
+python = "^3.8"
 altair = "4.2.0"
 attrs = "22.2.0"
 bpemb = "0.3.4"
