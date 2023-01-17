@@ -10,7 +10,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: install poetry  by snok
+      - name: set up python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+
+      - name: install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: install poetry by snok
         uses: snok/install-poetry@v1
         with:
           version: 1.1.12
