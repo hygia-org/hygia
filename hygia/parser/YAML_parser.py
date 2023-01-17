@@ -17,8 +17,10 @@ class YAMLParser(ParserBase):
         separator = self._get(data_config, 'separator', '¨')
         engine = self._get(data_config, 'engine', 'python')
         encoding = self._get(data_config, 'encoding', 'utf-8')
+        nrows = self._get(data_config, 'nrows', 10000)
 
         initial_parser = {
+            "nrows": nrows,
             "engine": engine,
             "encoding": encoding,
             "separator": separator,
