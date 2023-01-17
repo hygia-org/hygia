@@ -1,10 +1,14 @@
-![IMAGE](./assets/img/horizontal_logo.PNG)
+<p align="center">
+    <img src="./assets/img/horizontal_logo.PNG" alt="hygia-logo" style="width:300px;"/>
+</p>
 
 # A powerful Python ML playground toolkit
+
 [![PyPI Latest Release](https://img.shields.io/pypi/v/hygia.svg)](https://pypi.org/project/hygia/)
-[![Package Status](https://img.shields.io/pypi/status/hygia.svg)](https://pypi.org/project/hygia/)
 [![License](https://img.shields.io/pypi/l/hygia.svg)](https://github.com/PDA-FGA/Playground/blob/main/LICENSE)
 [![Coverage](https://codecov.io/github/PDA-FGA/Playground/coverage.svg?branch=main)](https://codecov.io/gh/PDA-FGA/Playground)
+
+<!-- [![Package Status](https://img.shields.io/pypi/status/hygia.svg)](https://pypi.org/project/hygia/) -->
 
 ## What is it?
 
@@ -14,13 +18,13 @@ Hygia is a Python package that provides fast, flexible, and expressive data pipe
 
 - Configure data pipeline through a YAML file
 - Execute through command line or python import
-- Pack the solution into a Python's Package Manager 
+- Pack the solution into a Python's Package Manager
 - Visualize results in customized dashboards
 - Test on different databases
 
 ## Where to get it
 
-The source code is currently hosted on GitHub at: ```https://github.com/PDA-FGA```
+The source code is currently hosted on GitHub at: `https://github.com/PDA-FGA`
 
 ## Installation from sources
 
@@ -30,10 +34,10 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
-### Running
+### Boilerplate
 
 ```
-python src/main.py
+examples/hygia_boilerplate.ipynb
 ```
 
 ### Testing
@@ -42,82 +46,26 @@ python src/main.py
 pytest --cov
 ```
 
-### Metabase
-
-The metabase will help us visualize and monitor data processing, feature engineering and model monitoring, accompanying us throughout the cycle.
-
-| Keywords  | Description |
-|-----------|-------------|
-|   CSV     | A CSV file is a plain text file that stores table and spreadsheet information. CSV files can be easily imported and exported using programs that store data in tables.|
-| Collection| A collection is a grouping of MongoDB documents. Documents within a collection can have different fields. A collection is the equivalent of a table in a relational database system.|
-|  Database | A database stores one or more collections of documents.|
-| Mongo| It is a NoSQL database developed by MongoDB Inc. MongoDB database is built to store a huge amount of data and also perform fast.|
-
-**Environment check**
-
-Check if docker exists, if not then [install it](https://docs.docker.com/engine/install/ubuntu/) 
-```docker -v ```
-
-Check if docker-compose exists, if not then [install it](https://docs.docker.com/compose/install/) 
-```docker-compose -v ```
-
-when running the first time create the network 
-
-```make network```
-
-**Run metabase local**
-
-In the root folder, run the command
-
-```make up```
-
-**Loading data into a non-relational database**
-
-This command is used to load the .csv file into the local database, where it is necessary to pass the file path, database and collection as an argument
-
-- path = .csv file path
-- database = database name
-- collection = collection name
-
-exemple:
-
-
-```make migrate path=data/data_example.csv database=general  collection=order```
-
-
-
-**Connect the database to the metabase**
-
-- step 1: Open localhost:3000
-- step 2: Click Admin setting
-- step 3: Click Database
-- step 4: Add database authentication data
-
-![](https://raw.githubusercontent.com/francisco1code/Files/main/a.gif)
-
-**Exemple mongo connect metabase**
-|  metabase  | credential  |
-|------------|-------------|
-|    host    |  mongo  |
-|dabase_name | use the name you define in make migrate|
-|    user    |   lappis    |
-|  password  |   lappis    |
-
-
 ### Documentation
 
 We used sphinx to write the documentation
 
 To run locally, you need to install sphinx:
 
-```pip install sphinx```
+```
+pip install sphinx
+```
 
 Then install the theme used:
 
-```pip install pydata-sphinx-theme```
+```
+pip install pydata-sphinx-theme
+```
 
 And Run the project
 
-```sphinx-build -b html source ./``` 
+```
+sphinx-build -b html source ./
+```
 
 And open the index.html
