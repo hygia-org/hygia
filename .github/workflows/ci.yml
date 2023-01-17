@@ -34,7 +34,7 @@ jobs:
           pip install -r requirements-dev.txt
 
       - name: run tests
-        run: pytest --cov
+        run: pytest --covg
 
       - name: cache poetry install
         uses: actions/cache@v2
@@ -43,7 +43,7 @@ jobs:
           key: poetry-1.1.12-0
 
       - name: poetry install by snok
-      - uses: snok/install-poetry@v1
+        uses: snok/install-poetry@v1
         with:
           version: 1.1.12
           virtualenvs-create: true
@@ -57,8 +57,8 @@ jobs:
           key: pydeps-${{ hashFiles('**/poetry.lock') }}
 
       - name: poetry install dependencies
-        - run: poetry install --no-interaction --no-root
-          if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: poetry install --no-interaction --no-root
+        if: steps.cache-deps.outputs.cache-hit != 'true'
 
       - name: upload coverage to Codecov
         uses: codecov/codecov-action@v3
