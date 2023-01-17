@@ -44,10 +44,6 @@ jobs:
 
       - name: install poetry by snok
         uses: snok/install-poetry@v1
-        with:
-          version: 1.1.12
-          virtualenvs-create: true
-          virtualenvs-in-project: true
 
       - name: cache poetry dependencies
         id: cache-deps
