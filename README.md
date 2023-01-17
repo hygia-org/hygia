@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./assets/img/horizontal_logo.PNG" alt="hygia-logo" style="width:300px;"/>
+    <img src="./assets/img/horizontal_logo.PNG" alt="hygia-logo" style="width:500px;"/>
 </p>
 
 # A powerful Python ML playground toolkit
