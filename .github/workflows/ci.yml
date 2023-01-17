@@ -23,17 +23,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: SET UP PYTHON
+      - name: set up python
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: INSTALL DEPENDENCIES
+      - name: install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
 
-      - name: RUN TESTS
+      - name: run tests
         run: pytest --cov
 
       - name: cache poetry install
@@ -42,23 +42,23 @@ jobs:
           path: ~/.local
           key: poetry-1.1.12-0
 
+      - name: poetry install by snok
       - uses: snok/install-poetry@v1
         with:
           version: 1.1.12
           virtualenvs-create: true
           virtualenvs-in-project: true
 
-      - name: cache deps
+      - name: cache poetry dependencies
         id: cache-deps
         uses: actions/cache@v2
         with:
           path: .venv
           key: pydeps-${{ hashFiles('**/poetry.lock') }}
 
-      - run: poetry install --no-interaction --no-root
-        if: steps.cache-deps.outputs.cache-hit != 'true'
+      - name: poetry install dependencies
+        - run: poetry install --no-interaction --no-root
+          if: steps.cache-deps.outputs.cache-hit != 'true'
 
-      - run: poetry install --no-interaction
-
-      - name: Upload coverage to Codecov
+      - name: upload coverage to Codecov
         uses: codecov/codecov-action@v3
