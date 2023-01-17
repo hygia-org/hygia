@@ -24,7 +24,7 @@ Hygia is a Python package that provides fast, flexible, and expressive data pipe
 
 ## Where to get it
 
-The source code is currently hosted on GitHub at: `https://github.com/PDA-FGA`
+The source code is currently hosted on GitHub at: `https://github.com/hygia-org`
 
 ## Installation from sources
 
