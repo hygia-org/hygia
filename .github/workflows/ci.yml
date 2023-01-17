@@ -34,7 +34,7 @@ jobs:
           pip install -r requirements-dev.txt
 
       - name: run tests
-        run: pytest --covg
+        run: pytest --cov
 
       - name: cache poetry install
         uses: actions/cache@v2
