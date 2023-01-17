@@ -8,6 +8,7 @@ dag:
     separator: '¨'
     engine: 'python'
     encoding: 'utf-8'
+    nrows: 100000
 
   pre_processing:
     aliases:

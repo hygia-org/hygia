@@ -9,9 +9,6 @@ from hygia.parser.model_parser import ModelParser
 from hygia.parser.YAML_parser import YAMLParser
 from hygia.parser.pre_processing_parser import PreProcessingParser
 from hygia.parser.feature_engineering_parser import FeatureEngineeringParser
-
-# if __name__ != "__main__":
-#     exit()   
     
 def run_with_config(yaml_path: str):
     initialParser = YAMLParser
@@ -30,10 +27,13 @@ def run_with_config(yaml_path: str):
     for data in config['data_path']:
         # Load csv
         separator = config['separator']
-        engine = config['engine']
         encoding = config['encoding']
-        df = pd.read_csv(data, sep=separator, engine=engine, encoding=encoding, nrows=10_000)
+        engine = config['engine']
+        nrows = config['nrows']
+        df = pd.read_csv(data, sep=separator, engine=engine, encoding=encoding, nrows=nrows)
         
+        results = pd.DataFrame()
+            
         # Pre processing
         columns_name = list(df.columns)
         
@@ -59,12 +59,12 @@ def run_with_config(yaml_path: str):
             trained_model_file = model_config['trained_model_file']
             
             for column in model_columns:
+                results[column] = df[column]
                 featured_df = df.loc[:, df.columns.str.endswith(column)]
-                df[f'prediction_{column}'] = randomForestModel(model_file=trained_model_file).predict(featured_df.iloc[:,-30:])
+                results[f'prediction_{column}'] = randomForestModel(model_file=trained_model_file).predict(featured_df.iloc[:,-30:])
             
         del config['pre_processing']
         del config['feature_engineering']
         del config['model']
         
-        return df.loc[:, df.columns.str.startswith('prediction_')]
-         
+        return results
