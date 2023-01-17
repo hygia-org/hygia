@@ -20,23 +20,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
 
-      - name: build and publish to pypi
-        uses: JRubics/poetry-publish@v1.16
-        with:
-          python_version: '3.9'
-          pypi_token: ${{ secrets.PYPI_TOKEN }}
+      - name: install poetry by snok
+        uses: snok/install-poetry@v1
 
-      # - name: install poetry by snok
-      #   uses: snok/install-poetry@v1
+      - name: poetry install dependencies
+        run: poetry install --no-interaction --no-root
 
-      # - name: poetry install dependencies
-      #   run: poetry install --no-interaction --no-root
+      - name: poetry build
+        run: poetry build
 
-      # - name: poetry build
-      #   run: poetry build
-
-      # - name: poetry config
-      #   run: poetry config ${{ secrets.PYPI_TOKEN }}
-
-      # - name: poetry publish
-      #   run: poetry publish
+      - name: poetry publish
+        run: poetry publish -u ${{ secrets.PYPI_USER }} -p ${{ secrets.PYPI_PASSWORD }}
