@@ -27,18 +27,18 @@ class Regex:
         # pattern = r'(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])'
         return bool(re.search(pattern, text, re.IGNORECASE))
     
-    def contains_date(self, text:str):
+    def contains_date(self, text:str) -> bool:
         pattern = r'(?P<month>\d{1,2})[\/|\.|-](?P<day>\d{1,2})[\/|\.|-](?P<year>\d{4})'
         return bool(re.search(pattern, text, re.IGNORECASE))
     
-    def contains_invalid_words(self, text:str):
+    def contains_invalid_words(self, text:str) -> bool:
         pattern = r'\b(null|undefined|dummy)\b'
         return bool(re.search(pattern, text, re.IGNORECASE))
     
-    def only_white_spaces(self, text:str):
+    def only_white_spaces(self, text:str) -> bool:
         return not text.strip()
     
-    def empty(self, text:str):
+    def empty(self, text:str) -> bool:
         return text == ''
     
     def extract_regex_features(self, df:pd.DataFrame, column_name:str) -> pd.DataFrame:
