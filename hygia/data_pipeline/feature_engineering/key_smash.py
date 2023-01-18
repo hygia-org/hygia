@@ -101,7 +101,7 @@ class KeySmash:
             # Output: 1.5625
         """
         count_sequence = 1
-        sequence_regex = []
+        sequences = []
 
         text = text.lower()
         char_set = self.char_sets[opt]
@@ -111,13 +111,13 @@ class KeySmash:
                 count_sequence += 1
             else:
                 if count_sequence > 1:
-                    sequence_regex.append(count_sequence ** 2)
+                    sequences.append(count_sequence ** 2)
                     count_sequence = 1
 
         if count_sequence > 1:
-            sequence_regex.append(count_sequence ** 2)
+            sequences.append(count_sequence ** 2)
 
-        return sum(sequence_regex) / len(text)
+        return sum(sequences) / len(text)
     
     def ratio_of_numeric_digits_squared(self, text:str) -> float:
         """

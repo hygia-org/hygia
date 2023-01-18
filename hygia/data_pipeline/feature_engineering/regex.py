@@ -1,6 +1,5 @@
 import re
 import pandas as pd
-
 class Regex:
     def contains_exactly_the_word_dell(self, text:str) -> bool:
         pattern = r'\bdell\b'
