@@ -31,7 +31,7 @@ The source code is currently hosted on GitHub at: `https://github.com/hygia-org`
 ```
 python -m venv env
 source env/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 ### Boilerplate
