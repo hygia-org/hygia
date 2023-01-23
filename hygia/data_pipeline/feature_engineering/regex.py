@@ -22,8 +22,7 @@ class Regex:
         return bool(re.search(pattern, text, re.IGNORECASE))
     
     def contains_url(self, text:str) -> bool:
-        pattern = r'[(http|ftp|https):\/\/]?([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])'
-        # pattern = r'(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])'
+        pattern = r'(?:https?:\/\/)?(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
         return bool(re.search(pattern, text, re.IGNORECASE))
     
     def contains_date(self, text:str) -> bool:
@@ -34,8 +33,17 @@ class Regex:
         pattern = r'\b(null|undefined|dummy)\b'
         return bool(re.search(pattern, text, re.IGNORECASE))
     
+    def is_substring_of_column_name(self, text:str, column_name:str) -> bool:
+        return text.lower() in column_name.lower()
+    
+    def only_one_char(self, text:str) -> bool:
+        return len(text.strip()) == 1
+
+    def only_one_word(self, text:str) -> bool:
+        return len(text.strip().split()) == 1
+    
     def only_white_spaces(self, text:str) -> bool:
-        return not text.strip()
+        return text != '' and not text.strip()
     
     def empty(self, text:str) -> bool:
         return text == ''
@@ -55,6 +63,6 @@ class Regex:
 
         ]
         for regex_feature in regex_features:
-            df[f'{regex_feature.__name__}_{column_name}'] = df[column_name].apply(lambda x: regex_feature(x))
+            df[f'feature_re_{regex_feature.__name__}_{column_name}'] = df[column_name].apply(lambda x: regex_feature(x, column_name))
         return df
     

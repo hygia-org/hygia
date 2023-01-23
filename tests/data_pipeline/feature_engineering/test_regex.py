@@ -54,15 +54,36 @@ class TestRegex:
         assert self.regex.contains_invalid_words("A EXAMPLE") == False
         assert self.regex.contains_invalid_words("") == False
     
+    def test_is_substring_of_column_name(self):
+        assert self.regex.is_substring_of_column_name("STREET_ADDRESS_1", "concat_STREET_ADDRESS_1_STREET_ADDRESS_2") == True
+        assert self.regex.is_substring_of_column_name("STREET", "concat_STREET_ADDRESS_1_STREET_ADDRESS_2") == True
+        assert self.regex.is_substring_of_column_name("123 STREET", "concat_STREET_ADDRESS_1_STREET_ADDRESS_2") == False
+    
+    def test_only_one_char(self):
+        assert self.regex.only_one_char("a") == True
+        assert self.regex.only_one_char(" ") == False
+        assert self.regex.only_one_char("  ") == False
+        assert self.regex.only_one_char(" a ") == True
+        assert self.regex.only_one_char("") == False
+        
+    def test_only_one_word(self):
+        assert self.regex.only_one_word("a") == True
+        assert self.regex.only_one_word("word") == True
+        assert self.regex.only_one_word("word ") == True
+        assert self.regex.only_one_word(" word") == True
+        assert self.regex.only_one_word("  word  ") == True
+        assert self.regex.only_one_word("") == False
+    
     def test_only_white_spaces(self):
         assert self.regex.only_white_spaces("\t\t") == True
         assert self.regex.only_white_spaces("\t") == True
         assert self.regex.only_white_spaces(" ") == True
         assert self.regex.only_white_spaces("    ") == True
-        assert self.regex.only_white_spaces("") == True
+        assert self.regex.only_white_spaces("") == False
         assert self.regex.only_white_spaces("EXAMPLE") == False
         assert self.regex.only_white_spaces("EXAMPLE 1") == False
         
     def test_empty(self):
         assert self.regex.empty("") == True
         assert self.regex.empty("EXAMPLE") == False
+    
