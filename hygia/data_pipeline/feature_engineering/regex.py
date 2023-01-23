@@ -58,11 +58,12 @@ class Regex:
             self.contains_url,
             self.contains_date,
             self.contains_invalid_words,
+            self.is_substring_of_column_name,
+            self.only_one_char,
             self.only_white_spaces,
             self.empty
-
         ]
         for regex_feature in regex_features:
-            df[f'feature_re_{regex_feature.__name__}_{column_name}'] = df[column_name].apply(lambda x: regex_feature(x, column_name))
+            df[f'feature_re_{regex_feature.__name__}_{column_name}'] = df[column_name].apply(lambda x: regex_feature(x) if regex_feature.__code__.co_argcount == 2 else regex_feature(x, column_name))
         return df
     
