@@ -1,6 +1,6 @@
 import pandas as pd
 
-class EnrichData:
+class AugmentData:
     """
     Zipcode:
         validations based on zipocde data from this website:
@@ -39,7 +39,7 @@ class EnrichData:
         return df_aux[[validated_column]]
     
     
-    def enrich_data(self, df:pd.DataFrame, zipcode_column_name:str) -> pd.DataFrame:
+    def augment_data(self, df:pd.DataFrame, zipcode_column_name:str) -> pd.DataFrame:
         df = pd.concat([df, self.validate_zipcodes(df, zipcode_column_name)], axis=1)
         return df
     
