@@ -33,7 +33,15 @@ class TestRegex:
         
     def test_contains_url(self):
         assert self.regex.contains_url("HTTPS://WWW.EXAMPLE.COM") == True
+        assert self.regex.contains_url("ABC HTTPS://WWW.EXAMPLE.COM") == True
+        assert self.regex.contains_url("ABC HTTPS://WWW.EXAMPLE.COM 123") == True
+        assert self.regex.contains_url("HTTPS://WWW.EXAMPLE.COM 123") == True
         assert self.regex.contains_url("WWW.EXAMPLE.COM") == True
+        assert self.regex.contains_url("ABC WWW.EXAMPLE.COM") == True
+        assert self.regex.contains_url("ABC WWW.EXAMPLE.COM 123") == True
+        assert self.regex.contains_url("WWW.EXAMPLE.COM 123") == True
+        assert self.regex.contains_url("KM 298.8 CHETUMAL") == False
+        assert self.regex.contains_url("PUENTECILLA KM. 1.7") == False
         assert self.regex.contains_url("") == False
         
     def test_contains_date(self):
@@ -41,6 +49,8 @@ class TestRegex:
         assert self.regex.contains_date("01-01-2021") == True
         assert self.regex.contains_date("01.01.2021") == True
         assert self.regex.contains_date("2021/01/01") == False
+        assert self.regex.contains_date("EDIF-11-1-1307") == False
+        assert self.regex.contains_date("LAGUNA 375-1-1001") == False
         assert self.regex.contains_date("") == False
         
     def test_contains_invalid_words(self):

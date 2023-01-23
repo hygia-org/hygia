@@ -1,5 +1,6 @@
 from statistics import mean
 import pandas as pd
+import re
 
 class KeySmash:
     """
@@ -54,6 +55,8 @@ class KeySmash:
             print(res)
             # Output: 3.0
         """
+        text = text.lower()
+        text = re.sub(r'\s', ' ', text)
         words_results = []
         words = text.split(' ')
         for word in words:
@@ -100,10 +103,9 @@ class KeySmash:
             print(res)
             # Output: 1.5625
         """
+        text = text.lower()
         count_sequence = 1
         sequences = []
-
-        text = text.lower()
         char_set = self.char_sets[opt]
 
         for i in range(len(text) - 1):
@@ -147,6 +149,7 @@ class KeySmash:
             print(res)
             # Output: 0.9
         """
+        text = text.lower()
         text_list = text.split()
         num_of_numeric_digits = 0
 
@@ -174,7 +177,7 @@ class KeySmash:
         return df[column]  / df[column].abs().max() if df[column].abs().max() != 0.0 else 0.0
 
     
-    def extract_key_smash_features(self, df:pd.DataFrame, column_name:str, normalize:bool=True) -> pd.DataFrame:
+    def extract_key_smash_features(self, df:pd.DataFrame, column_name:str, normalize:bool=False) -> pd.DataFrame:
         """
         Extract key smash features from a given dataframe and column.
 

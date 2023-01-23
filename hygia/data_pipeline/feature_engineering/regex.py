@@ -22,11 +22,11 @@ class Regex:
         return bool(re.search(pattern, text, re.IGNORECASE))
     
     def contains_url(self, text:str) -> bool:
-        pattern = r'(?:https?:\/\/)?(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
+        pattern = r'\b(https?:\/\/|www\.)[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
         return bool(re.search(pattern, text, re.IGNORECASE))
     
     def contains_date(self, text:str) -> bool:
-        pattern = r'(?P<month>\d{1,2})[\/|\.|-](?P<day>\d{1,2})[\/|\.|-](?P<year>\d{4})'
+        pattern = r'^(?P<day>\d{1,2})(?:-|\.|/)(?P<month>\d{1,2})(?:-|\.|/)(?P<year>\d{4})$'
         return bool(re.search(pattern, text, re.IGNORECASE))
     
     def contains_invalid_words(self, text:str) -> bool:

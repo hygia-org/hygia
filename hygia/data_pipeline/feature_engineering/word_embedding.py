@@ -110,8 +110,10 @@ class WordEmbedding:
             print(df.head())
         """
         
+        feature_we_tmp = df[column_name].fillna('').apply(lambda x: self.get_embedding(x) if len(x.strip().split()) > 0 else [0.0] * self.dimensions)
+        
         for i in range(self.dimensions):
-            df[f'feature_we_{i}_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.get_embedding(x)[i] if len(x) > 0 else 0.0)
+            df[f'feature_we_{i}_{column_name}'] = feature_we_tmp.apply(lambda x: x[i])
 
         if normalize:
             for i in range(self.dimensions):
