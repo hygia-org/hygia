@@ -33,6 +33,7 @@ class TestRegex:
         
     def test_contains_url(self):
         assert self.regex.contains_url("HTTPS://WWW.EXAMPLE.COM") == True
+        assert self.regex.contains_url("HTTP://WWW.EXAMPLE.COM") == True
         assert self.regex.contains_url("ABC HTTPS://WWW.EXAMPLE.COM") == True
         assert self.regex.contains_url("ABC HTTPS://WWW.EXAMPLE.COM 123") == True
         assert self.regex.contains_url("HTTPS://WWW.EXAMPLE.COM 123") == True
