@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Hygia's documentation!
+Welcome to Hygia's documentation
 =================================
 
 `Hygia` is an open source, MIT-licensed library providing high-performance,
