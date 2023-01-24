@@ -1,7 +1,10 @@
 import pickle
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
+from sklearn.metrics import precision_score
 import pandas as pd
 
 class RandomForestModel:
@@ -33,8 +36,20 @@ class RandomForestModel:
     
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size)
     clf.fit(X_train,y_train)
-    scores = cross_val_score(clf, X, y, cv=5)
-    return clf, scores
+    y_pred = clf.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    precision = precision_score(y_test, y_pred)
+    recall = recall_score(y_test, y_pred)
+    f1 = f1_score(y_test, y_pred)
+    
+    scores = {
+      'accuracy': accuracy,
+      'precision': precision,
+      'recall': recall,
+      'f1': f1,
+    }
+    
+    return clf, scores 
   
   def predict(self, X):
     return self.model.predict(X)
