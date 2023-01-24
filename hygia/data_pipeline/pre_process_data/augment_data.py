@@ -17,6 +17,8 @@ class AugmentData:
         country_mappings = {
             # TODO document list of supported countries
             # TODO implement only numbers validation in zipcode
+            'BRAZIL': {'code': 'BR', 'zipcode_file': continent_files['south_america'], 'length':7, 'only_numbers':True},
+            'US': {'code': 'US', 'zipcode_file': continent_files['north_america'], 'length':5, 'only_numbers':True},
             'MEXICO': {'code': 'MX', 'zipcode_file': continent_files['north_america'], 'length':5, 'only_numbers':True},
         }
         country_code = country_mappings[country]['code']
