@@ -61,8 +61,8 @@ class TestRegex:
         assert self.regex.contains_invalid_words("A UNDEFINED") == True
         assert self.regex.contains_invalid_words("DUMMY") == True
         assert self.regex.contains_invalid_words("A DUMMY") == True
-        assert self.regex.contains_invalid_words("EXAMPLE") == False
-        assert self.regex.contains_invalid_words("A EXAMPLE") == False
+        assert self.regex.contains_invalid_words("ABC") == False
+        assert self.regex.contains_invalid_words("A ABC") == False
         assert self.regex.contains_invalid_words("") == False
     
     def test_is_substring_of_column_name(self):
