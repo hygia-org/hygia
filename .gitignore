@@ -140,3 +140,5 @@ data/tmp/*
 docs/html
 docs/xml
 docs/searchindex.js
+docs/objects.inv
+docs/.doctrees
