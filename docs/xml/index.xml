@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
   <compound refid="classannotate__data_1_1_annotate_data" kind="class"><name>annotate_data::AnnotateData</name>
     <member refid="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" kind="function"><name>annotate_data</name></member>
@@ -161,6 +162,9 @@
   <compound refid="____init_____8py" kind="file"><name>__init__.py</name>
 =======
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+=======
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   <compound refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser" kind="class"><name>parser::feature_engineering_parser::FeatureEngineeringParser</name>
     <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a6444e713c32f068287280ff66d8e45f9" kind="function"><name>parse</name></member>
     <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a3c1fc41cba00cf9d663a5dd85bd49365" kind="function"><name>_parse_feature_engineering_configs</name></member>
@@ -305,15 +309,19 @@
 =======
   <compound refid="_y_a_m_l__parser_8py" kind="file"><name>YAML_parser.py</name>
   </compound>
-  <compound refid="dir_d8011c2d3002aeb7fe29b60ec5b6cceb" kind="dir"><name>/Users/carla/git/Playground/src/data_pipeline</name>
+  <compound refid="dir_d8011c2d3002aeb7fe29b60ec5b6cceb" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline</name>
   </compound>
-  <compound refid="dir_3f5f7729d78c36242303c059ac997ea8" kind="dir"><name>/Users/carla/git/Playground/src/data_pipeline/feature_engineering</name>
+  <compound refid="dir_3f5f7729d78c36242303c059ac997ea8" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline/feature_engineering</name>
   </compound>
-  <compound refid="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir"><name>/Users/carla/git/Playground/src/parser</name>
+  <compound refid="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src/parser</name>
   </compound>
-  <compound refid="dir_01d8c85d3e0193d6b57221e32ef52c37" kind="dir"><name>/Users/carla/git/Playground/src/data_pipeline/pre_processing</name>
+  <compound refid="dir_01d8c85d3e0193d6b57221e32ef52c37" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline/pre_processing</name>
   </compound>
+<<<<<<< HEAD
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/Users/carla/git/Playground/src</name>
 >>>>>>> fe1d33e (doxygen files)
+=======
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src</name>
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   </compound>
 </doxygenindex>

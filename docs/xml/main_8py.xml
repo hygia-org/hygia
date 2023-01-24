@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="main_8py" kind="file" language="Python">
     <compoundname>main.py</compoundname>
@@ -7,6 +8,9 @@
     <innernamespace refid="namespacehygia_1_1main">hygia::main</innernamespace>
 =======
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+=======
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   <compounddef id="main_8py" kind="file" language="Python">
     <compoundname>main.py</compoundname>
     <innernamespace refid="namespacemain">main</innernamespace>
@@ -165,7 +169,11 @@
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="32"><highlight class="normal">get_config()</highlight></codeline>
     </programlisting>
+<<<<<<< HEAD
     <location file="/Users/carla/git/Playground/src/main.py"/>
 >>>>>>> fe1d33e (doxygen files)
+=======
+    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/main.py"/>
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   </compounddef>
 </doxygen>

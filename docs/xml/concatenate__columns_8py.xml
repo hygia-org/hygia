@@ -1,9 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="concatenate__columns_8py" kind="file" language="Python">
     <compoundname>concatenate_columns.py</compoundname>
-    <innernamespace refid="namespacedata__pipeline">data_pipeline</innernamespace>
-    <innernamespace refid="namespacedata__pipeline_1_1pre__processing">data_pipeline::pre_processing</innernamespace>
     <innernamespace refid="namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns">data_pipeline::pre_processing::concatenate_columns</innernamespace>
     <briefdescription>
     </briefdescription>
@@ -26,6 +24,6 @@
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>DataFrame(csv[column_name])</highlight></codeline>
     </programlisting>
-    <location file="/Users/carla/git/Playground/src/data_pipeline/pre_processing/concatenate_columns.py"/>
+    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline/pre_processing/concatenate_columns.py"/>
   </compounddef>
 </doxygen>

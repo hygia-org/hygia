@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="_y_a_m_l__parser_8py" kind="file" language="Python">
     <compoundname>YAML_parser.py</compoundname>
@@ -9,10 +10,12 @@
     <innernamespace refid="namespacehygia_1_1parser_1_1_y_a_m_l__parser">hygia::parser::YAML_parser</innernamespace>
 =======
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+=======
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   <compounddef id="_y_a_m_l__parser_8py" kind="file" language="Python">
     <compoundname>YAML_parser.py</compoundname>
     <innerclass refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser" prot="public">parser::YAML_parser::YAMLParser</innerclass>
-    <innernamespace refid="namespaceparser">parser</innernamespace>
     <innernamespace refid="namespaceparser_1_1_y_a_m_l__parser">parser::YAML_parser</innernamespace>
 >>>>>>> fe1d33e (doxygen files)
     <briefdescription>
@@ -66,7 +69,7 @@
 <codeline lineno="5" refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser" kindref="compound">YAMLParser</ref>(ParserBase):</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">parse(self):</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a54e76ebb98b2649f328c7b887dfa8107" kindref="member">_parse_yaml</ref>_parse_yaml()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a54e76ebb98b2649f328c7b887dfa8107" kindref="member">_parse_yaml</ref>()</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">_parse_yaml(self):</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(self.filepath,<sp/></highlight><highlight class="stringliteral">&apos;r&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>file:</highlight></codeline>
@@ -85,7 +88,11 @@
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>initial_parser</highlight></codeline>
     </programlisting>
+<<<<<<< HEAD
     <location file="/Users/carla/git/Playground/src/parser/YAML_parser.py"/>
 >>>>>>> fe1d33e (doxygen files)
+=======
+    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/YAML_parser.py"/>
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   </compounddef>
 </doxygen>

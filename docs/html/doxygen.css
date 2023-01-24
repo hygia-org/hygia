@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* The standard CSS for doxygen 1.9.6*/
 
 html {
@@ -337,6 +338,9 @@ body, table, div, p, dl {
 	line-height: 22px;
 =======
 /* The standard CSS for doxygen 1.9.2 */
+=======
+/* The standard CSS for doxygen 1.8.17 */
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 
 body, table, div, p, dl {
 	font: 400 14px/22px Roboto,sans-serif;
@@ -431,7 +435,7 @@ p.startli, p.startdd {
 	margin-top: 2px;
 }
 
-th p.starttd, th p.intertd, th p.endtd {
+th p.starttd, p.intertd, p.endtd {
         font-size: 100%;
         font-weight: 700;
 }
@@ -468,16 +472,28 @@ caption {
 }
 
 span.legend {
-	font-size: 70%;
-	text-align: center;
+        font-size: 70%;
+        text-align: center;
 }
 
 h3.version {
-	font-size: 90%;
+        font-size: 90%;
+        text-align: center;
+}
+
+div.qindex, div.navtab{
+	background-color: #EBEFF6;
+	border: 1px solid #A3B4D7;
 	text-align: center;
 }
 
+div.qindex, div.navpath {
+	width: 100%;
+	line-height: 140%;
+}
+
 div.navtab {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 	border-right: 1px solid #A3B4D7;
@@ -589,6 +605,11 @@ dt.alphachar{
 }
 
 
+=======
+	margin-right: 15px;
+}
+
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 /* @group Link Styling */
 
 a {
@@ -614,7 +635,21 @@ a:hover {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+a.qindex {
+	font-weight: bold;
+}
+
+a.qindexHL {
+	font-weight: bold;
+	background-color: #9CAFD4;
+	color: #FFFFFF;
+	border: 1px double #869DCA;
+}
+
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 .contents a.qindexHL:visited {
         color: #FFFFFF;
 }
@@ -642,33 +677,6 @@ a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
 	color: #4665A2; 
 >>>>>>> fe1d33e (doxygen files)
 }
-
-a.code.hl_class { /* style for links to class names in code snippets */ }
-a.code.hl_struct { /* style for links to struct names in code snippets */ }
-a.code.hl_union { /* style for links to union names in code snippets */ }
-a.code.hl_interface { /* style for links to interface names in code snippets */ }
-a.code.hl_protocol { /* style for links to protocol names in code snippets */ }
-a.code.hl_category { /* style for links to category names in code snippets */ }
-a.code.hl_exception { /* style for links to exception names in code snippets */ }
-a.code.hl_service { /* style for links to service names in code snippets */ }
-a.code.hl_singleton { /* style for links to singleton names in code snippets */ }
-a.code.hl_concept { /* style for links to concept names in code snippets */ }
-a.code.hl_namespace { /* style for links to namespace names in code snippets */ }
-a.code.hl_package { /* style for links to package names in code snippets */ }
-a.code.hl_define { /* style for links to macro names in code snippets */ }
-a.code.hl_function { /* style for links to function names in code snippets */ }
-a.code.hl_variable { /* style for links to variable names in code snippets */ }
-a.code.hl_typedef { /* style for links to typedef names in code snippets */ }
-a.code.hl_enumvalue { /* style for links to enum value names in code snippets */ }
-a.code.hl_enumeration { /* style for links to enumeration names in code snippets */ }
-a.code.hl_signal { /* style for links to Qt signal names in code snippets */ }
-a.code.hl_slot { /* style for links to Qt slot names in code snippets */ }
-a.code.hl_friend { /* style for links to friend names in code snippets */ }
-a.code.hl_dcop { /* style for links to KDE3 DCOP names in code snippets */ }
-a.code.hl_property { /* style for links to property names in code snippets */ }
-a.code.hl_event { /* style for links to event names in code snippets */ }
-a.code.hl_sequence { /* style for links to sequence names in code snippets */ }
-a.code.hl_dictionary { /* style for links to dictionary names in code snippets */ }
 
 /* @end */
 
@@ -796,7 +804,6 @@ div.line.glow {
 
 span.lineno {
 	padding-right: 4px;
-        margin-right: 9px;
 	text-align: right;
 <<<<<<< HEAD
 	border-right: 2px solid var(--fragment-lineno-border-color);
@@ -965,6 +972,7 @@ img.footer {
 =======
 }
 
+<<<<<<< HEAD
 .compoundTemplParams {
 	color: #4665A2;
 >>>>>>> fe1d33e (doxygen files)
@@ -972,6 +980,8 @@ img.footer {
 	line-height: 120%;
 }
 
+=======
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 /* @group Code Colorization */
 
 span.keyword {
@@ -2220,6 +2230,7 @@ dl.section dd {
 #projectname
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	font-size: 200%;
 	font-family: var(--font-family-title);
 	margin: 0px;
@@ -2232,14 +2243,21 @@ dl.section dd {
         font-family: var(--font-family-title);
 =======
 	font: 200% Tahoma, Arial,sans-serif;
+=======
+	font: 300% Tahoma, Arial,sans-serif;
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 	margin: 0px;
 	padding: 2px 0px;
 }
     
 #projectbrief
 {
+<<<<<<< HEAD
 	font: 90% Tahoma, Arial,sans-serif;
 >>>>>>> fe1d33e (doxygen files)
+=======
+	font: 120% Tahoma, Arial,sans-serif;
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 	margin: 0px;
 	padding: 0px;
 }
@@ -2321,12 +2339,10 @@ dl.citelist dt {
         font-weight:bold;
         margin-right:10px;
         padding:5px;
-        text-align:right;
-        width:52px;
 }
 
 dl.citelist dd {
-        margin:2px 0 2px 72px;
+        margin:2px 0;
         padding:5px 0;
 }
 
@@ -2410,6 +2426,7 @@ div.toc li.level4 {
         margin-left: 45px;
 }
 
+<<<<<<< HEAD
 span.emoji {
         /* font family used at the site: https://unicode.org/emoji/charts/full-emoji-list.html
          * font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;
@@ -2420,6 +2437,8 @@ span.emoji {
 span.obfuscator {
   display: none;
 =======
+=======
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 .PageDocRTL-title div.toc li.level1 {
   margin-left: 0 !important;
   margin-right: 0;
@@ -2724,6 +2743,47 @@ tr.heading h2 {
 }
 
 /* @group Markdown */
+
+/*
+table.markdownTable {
+	border-collapse:collapse;
+        margin-top: 4px;
+        margin-bottom: 4px;
+}
+
+table.markdownTable td, table.markdownTable th {
+	border: 1px solid #2D4068;
+	padding: 3px 7px 2px;
+}
+
+table.markdownTableHead tr {
+}
+
+table.markdownTableBodyLeft td, table.markdownTable th {
+	border: 1px solid #2D4068;
+	padding: 3px 7px 2px;
+}
+
+th.markdownTableHeadLeft th.markdownTableHeadRight th.markdownTableHeadCenter th.markdownTableHeadNone {
+	background-color: #374F7F;
+	color: #FFFFFF;
+	font-size: 110%;
+	padding-bottom: 4px;
+	padding-top: 5px;
+}
+
+th.markdownTableHeadLeft {
+	text-align: left
+}
+
+th.markdownTableHeadRight {
+	text-align: right
+}
+
+th.markdownTableHeadCenter {
+	text-align: center
+}
+*/
 
 table.markdownTable {
 	border-collapse:collapse;

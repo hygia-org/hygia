@@ -32,22 +32,40 @@ dark-mode-toggle {
 =======
 /*---------------- Search Box */
 
+#FSearchBox {
+    float: left;
+}
+
 #MSearchBox {
     white-space : nowrap;
+<<<<<<< HEAD
     background: white;
     border-radius: 0.65em;
     box-shadow: inset 0.5px 0.5px 3px 0px #555;
 >>>>>>> fe1d33e (doxygen files)
+=======
+    float: none;
+    margin-top: 8px;
+    right: 0px;
+    width: 170px;
+    height: 24px;
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
     z-index: 102;
 }
 
-#MSearchBox .left {
-    display: inline-block;
-    vertical-align: middle;
-    height: 1.4em;
+#MSearchBox .left
+{
+    display:block;
+    position:absolute;
+    left:10px;
+    width:20px;
+    height:19px;
+    background:url('search_l.png') no-repeat;
+    background-position:right;
 }
 
 #MSearchSelect {
+<<<<<<< HEAD
     display: inline-block;
     vertical-align: middle;
 <<<<<<< HEAD
@@ -73,18 +91,30 @@ dark-mode-toggle {
     height: 19px;
     padding: 0 0 0 0.3em;
     margin: 0;
+=======
+    display:block;
+    position:absolute;
+    width:20px;
+    height:19px;
+}
+
+.left #MSearchSelect {
+    left:4px;
+}
+
+.right #MSearchSelect {
+    right:5px;
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 }
 
 >>>>>>> fe1d33e (doxygen files)
 #MSearchField {
-    display: inline-block;
-    vertical-align: middle;
-    width: 7.5em;
-    height: 19px;
-    margin: 0 0.15em;
-    padding: 0;
-    line-height: 1em;
+    display:block;
+    position:absolute;
+    height:19px;
+    background:url('search_m.png') repeat-x;
     border:none;
+<<<<<<< HEAD
 <<<<<<< HEAD
     color: var(--search-foreground-color);
     outline: none;
@@ -94,36 +124,44 @@ dark-mode-toggle {
     outline: none;
     font-family: Arial, Verdana, sans-serif;
 >>>>>>> fe1d33e (doxygen files)
+=======
+    width:115px;
+    margin-left:20px;
+    padding-left:4px;
+    color: #909090;
+    outline: none;
+    font: 9pt Arial, Verdana, sans-serif;
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
     -webkit-border-radius: 0px;
-    border-radius: 0px;
-    background: none;
 }
 
-@media(hover: none) {
-    /* to avoid zooming on iOS */
-    #MSearchField {
-        font-size: 16px;
-    }
+#FSearchBox #MSearchField {
+    margin-left:15px;
 }
 
 #MSearchBox .right {
-    display: inline-block;
-    vertical-align: middle;
-    width: 1.4em;
-    height: 1.4em;
+    display:block;
+    position:absolute;
+    right:10px;
+    top:8px;
+    width:20px;
+    height:19px;
+    background:url('search_r.png') no-repeat;
+    background-position:left;
 }
 
 #MSearchClose {
     display: none;
-    font-size: inherit;
+    position: absolute;
+    top: 4px;
     background : none;
     border: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px 4px 0px 0px;
+    padding: 0px 0px;
     outline: none;
-
 }
 
+<<<<<<< HEAD
 #MSearchCloseImg {
 <<<<<<< HEAD
 =======
@@ -131,6 +169,14 @@ dark-mode-toggle {
 >>>>>>> fe1d33e (doxygen files)
     padding: 0.3em;
     margin: 0;
+=======
+.left #MSearchClose {
+    left: 6px;
+}
+
+.right #MSearchClose {
+    right: 2px;
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 }
 
 .MSearchBoxActive #MSearchField {
@@ -143,6 +189,7 @@ dark-mode-toggle {
     color: #000000;
 }
 
+<<<<<<< HEAD
 #main-menu > li:last-child {
     /* This <li> object is the parent of the search bar */
     display: flex;
@@ -153,6 +200,8 @@ dark-mode-toggle {
 }
 >>>>>>> fe1d33e (doxygen files)
 
+=======
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 /*---------------- Search filter selection */
 
 #MSearchSelectWindow {
@@ -240,7 +289,7 @@ a.SelectItem:hover {
 /*---------------- Search results window */
 
 iframe#MSearchResults {
-    /*width: 60ex;*/
+    width: 60ex;
     height: 15em;
 }
 
@@ -337,10 +386,13 @@ a.SRScope:focus, a.SRScope:active {
 span.SRScope {
     padding-left: 4px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-family: var(--font-family-search);
 =======
     font-family: Arial, Verdana, sans-serif;
 >>>>>>> fe1d33e (doxygen files)
+=======
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 }
 
 .SRPage .SRStatus {
@@ -348,17 +400,20 @@ span.SRScope {
     font-size: 8pt;
     font-style: italic;
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-family: var(--font-family-search);
 =======
     font-family: Arial, Verdana, sans-serif;
 >>>>>>> fe1d33e (doxygen files)
+=======
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 }
 
 .SRResult {
     display: none;
 }
 
-div.searchresults {
+DIV.searchresults {
     margin-left: 10px;
     margin-right: 10px;
 }

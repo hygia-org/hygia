@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
-    <compoundname>/Users/carla/git/Playground/src</compoundname>
-    <innerdir refid="dir_d8011c2d3002aeb7fe29b60ec5b6cceb">/Users/carla/git/Playground/src/data_pipeline</innerdir>
-    <innerdir refid="dir_6cd8491d143eb218b70983dbdb3c58bc">/Users/carla/git/Playground/src/parser</innerdir>
+    <compoundname>/home/user/Documentos/Lappis/PDA/hygia/src</compoundname>
+    <innerdir refid="dir_d8011c2d3002aeb7fe29b60ec5b6cceb">/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline</innerdir>
+    <innerdir refid="dir_6cd8491d143eb218b70983dbdb3c58bc">/home/user/Documentos/Lappis/PDA/hygia/src/parser</innerdir>
     <innerfile refid="main_8py">main.py</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/carla/git/Playground/src/"/>
+    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/"/>
   </compounddef>
 </doxygen>

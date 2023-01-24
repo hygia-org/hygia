@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir">
-    <compoundname>/Users/carla/git/Playground/src/parser</compoundname>
+    <compoundname>/home/user/Documentos/Lappis/PDA/hygia/src/parser</compoundname>
     <innerfile refid="parser_2____init_____8py">__init__.py</innerfile>
     <innerfile refid="const_8py">const.py</innerfile>
     <innerfile refid="feature__engineering__parser_8py">feature_engineering_parser.py</innerfile>
@@ -12,6 +12,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/carla/git/Playground/src/parser/"/>
+    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/"/>
   </compounddef>
 </doxygen>

@@ -17,7 +17,7 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('/Users/carla/git/Playground/docs/xml'))
+sys.path.insert(0, os.path.abspath('../xml'))
 sys.path.insert(0, os.path.abspath('/usr/local/lib/python3.10/site-packages'))
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
@@ -71,4 +71,4 @@ html_theme_options = {
 html_theme_path = ["_themes", ]
 
 
-breathe_projects = { "teste": "/Users/carla/git/Playground/docs/xml/" }
+breathe_projects = { "teste": "../xml" }

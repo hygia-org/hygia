@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="feature__engineering__parser_8py" kind="file" language="Python">
     <compoundname>feature_engineering_parser.py</compoundname>
@@ -9,10 +10,12 @@
     <innernamespace refid="namespacehygia_1_1parser_1_1feature__engineering__parser">hygia::parser::feature_engineering_parser</innernamespace>
 =======
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+=======
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   <compounddef id="feature__engineering__parser_8py" kind="file" language="Python">
     <compoundname>feature_engineering_parser.py</compoundname>
     <innerclass refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser" prot="public">parser::feature_engineering_parser::FeatureEngineeringParser</innerclass>
-    <innernamespace refid="namespaceparser">parser</innernamespace>
     <innernamespace refid="namespaceparser_1_1feature__engineering__parser">parser::feature_engineering_parser</innernamespace>
 >>>>>>> fe1d33e (doxygen files)
     <briefdescription>
@@ -115,7 +118,7 @@
 <codeline lineno="3" refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser" kindref="compound">FeatureEngineeringParser</ref>(ParserBase):</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">parse(self,<sp/>data:<sp/>list):</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a3c1fc41cba00cf9d663a5dd85bd49365" kindref="member">_parse_feature_engineering_configs</ref>_parse_feature_engineering_configs(data)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a3c1fc41cba00cf9d663a5dd85bd49365" kindref="member">_parse_feature_engineering_configs</ref>(data)</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">_parse_feature_engineering_configs(self,<sp/>data:<sp/>list):</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(</highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>data):<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"></highlight></codeline>
@@ -126,12 +129,12 @@
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input<sp/>=<sp/>self._try_get(inputs,<sp/></highlight><highlight class="stringliteral">&apos;input&apos;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>columns</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>columns_set,<sp/>columns_alias<sp/>=<sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a45885972d2b20fce9ed4ec92db343bf4" kindref="member">_get_dataframe</ref>_get_dataframe(self._try_get(input,<sp/></highlight><highlight class="stringliteral">&apos;columns&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>columns_set,<sp/>columns_alias<sp/>=<sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a45885972d2b20fce9ed4ec92db343bf4" kindref="member">_get_dataframe</ref>(self._try_get(input,<sp/></highlight><highlight class="stringliteral">&apos;columns&apos;</highlight><highlight class="normal">))</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>columns_set_alias<sp/>=<sp/>columns_alias<sp/>+<sp/>columns_set_alias</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>features</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>word_embedding,<sp/>keyboard_smash<sp/>=<sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a0679d43d692b709c02d4ab0f55672bb3" kindref="member">_get_features_details</ref>_get_features_details(self._try_get(input,<sp/></highlight><highlight class="stringliteral">&apos;features&apos;</highlight><highlight class="normal">))</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_lang,<sp/>dimensions<sp/>=<sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a43218d1380171031cecf28cabf2ea9fe" kindref="member">_get_word_embedding_config</ref>_get_word_embedding_config(word_embedding,<sp/>columns_set_alias)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>word_embedding,<sp/>keyboard_smash<sp/>=<sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a0679d43d692b709c02d4ab0f55672bb3" kindref="member">_get_features_details</ref>(self._try_get(input,<sp/></highlight><highlight class="stringliteral">&apos;features&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_lang,<sp/>dimensions<sp/>=<sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a43218d1380171031cecf28cabf2ea9fe" kindref="member">_get_word_embedding_config</ref>(word_embedding,<sp/>columns_set_alias)</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Enabled<sp/>features</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled_features<sp/>=<sp/>keyboard_smash</highlight></codeline>
@@ -165,7 +168,7 @@
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>word_embedding<sp/>=<sp/>self._try_get(features,<sp/></highlight><highlight class="stringliteral">&apos;word_embedding&apos;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(word_embedding<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;off&apos;</highlight><highlight class="normal">):<sp/>word_embedding<sp/>=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyboard_smash<sp/>=<sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a4d09f5672b729cc629610f8560714527" kindref="member">_get_keyboard_smash_config</ref>_get_keyboard_smash_config(features)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>keyboard_smash<sp/>=<sp/>self.<ref refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a4d09f5672b729cc629610f8560714527" kindref="member">_get_keyboard_smash_config</ref>(features)</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>word_embedding,<sp/>keyboard_smash</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -207,7 +210,11 @@
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>keyboard_smash_default_value<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
     </programlisting>
+<<<<<<< HEAD
     <location file="/Users/carla/git/Playground/src/parser/feature_engineering_parser.py"/>
 >>>>>>> fe1d33e (doxygen files)
+=======
+    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py"/>
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   </compounddef>
 </doxygen>

@@ -1,26 +1,25 @@
 /*
- @licstart  The following is the entire license notice for the JavaScript code in this file.
+ @licstart  The following is the entire license notice for the
+ JavaScript code in this file.
 
- The MIT License (MIT)
+ Copyright (C) 1997-2017 by Dimitri van Heesch
 
- Copyright (C) 1997-2020 by Dimitri van Heesch
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
 
- Permission is hereby granted, free of charge, to any person obtaining a copy of this software
- and associated documentation files (the "Software"), to deal in the Software without restriction,
- including without limitation the rights to use, copy, modify, merge, publish, distribute,
- sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
 
- The above copyright notice and this permission notice shall be included in all copies or
- substantial portions of the Software.
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
- BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
- @licend  The above is the entire license notice for the JavaScript code in this file
+ @licend  The above is the entire license notice
+ for the JavaScript code in this file
  */
 function convertToId(search)
 {
@@ -86,13 +85,16 @@ var searchResults = new SearchResults("searchResults");
    resultPath - path to use for external files
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 function SearchBox(name, resultsPath, extension)
 =======
 function SearchBox(name, resultsPath, label, extension)
 >>>>>>> fe1d33e (doxygen files)
+=======
+function SearchBox(name, resultsPath, inFrame, label)
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 {
   if (!name || !resultsPath) {  alert("Missing parameters to SearchBox."); }
-  if (!extension || extension == "") { extension = ".html"; }
 
   // ---------- Instance variables
   this.name                  = name;
@@ -106,10 +108,15 @@ function SearchBox(name, resultsPath, label, extension)
   this.searchIndex           = 0;
   this.searchActive          = false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   this.searchLabel           = label;
 >>>>>>> fe1d33e (doxygen files)
   this.extension             = extension;
+=======
+  this.insideFrame           = inFrame;
+  this.searchLabel           = label;
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 
   // ----------- DOM Elements
 
@@ -147,14 +154,30 @@ function SearchBox(name, resultsPath, label, extension)
     var searchSelectWindow = this.DOMSearchSelectWindow();
     var searchField        = this.DOMSearchSelect();
 
-    var left = getXPos(searchField);
-    var top  = getYPos(searchField);
-    top += searchField.offsetHeight;
+    if (this.insideFrame)
+    {
+      var left = getXPos(searchField);
+      var top  = getYPos(searchField);
+      left += searchField.offsetWidth + 6;
+      top += searchField.offsetHeight;
 
-    // show search selection popup
-    searchSelectWindow.style.display='block';
-    searchSelectWindow.style.left =  left + 'px';
-    searchSelectWindow.style.top  =  top  + 'px';
+      // show search selection popup
+      searchSelectWindow.style.display='block';
+      left -= searchSelectWindow.offsetWidth;
+      searchSelectWindow.style.left =  left + 'px';
+      searchSelectWindow.style.top  =  top  + 'px';
+    }
+    else
+    {
+      var left = getXPos(searchField);
+      var top  = getYPos(searchField);
+      top += searchField.offsetHeight;
+
+      // show search selection popup
+      searchSelectWindow.style.display='block';
+      searchSelectWindow.style.left =  left + 'px';
+      searchSelectWindow.style.top  =  top  + 'px';
+    }
 
     // stop selection hide timer
     if (this.hideTimeout)
@@ -198,14 +221,19 @@ function SearchBox(name, resultsPath, label, extension)
         }
         return;
       }
-      else
+      else if (window.frames.MSearchResults.searchResults)
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
         var elem = searchResults.NavNext(0);
         if (elem) elem.focus();
 =======
         window.frames.MSearchResults.postMessage("take_focus", "*");
 >>>>>>> fe1d33e (doxygen files)
+=======
+        var elem = window.frames.MSearchResults.searchResults.NavNext(0);
+        if (elem) elem.focus();
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
       }
     }
     else if (e.keyCode==27) // Escape out of the search field
@@ -354,6 +382,7 @@ function SearchBox(name, resultsPath, label, extension)
     {
        var hexCode=idx.toString(16);
 <<<<<<< HEAD
+<<<<<<< HEAD
        jsFile = this.resultsPath + indexSectionNames[this.searchIndex] + '_' + hexCode + '.js';
     }
 
@@ -410,12 +439,15 @@ function SearchBox(name, resultsPath, label, extension)
     this.lastSearchValue = searchValue;
 =======
        resultsPage = this.resultsPath + '/' + indexSectionNames[this.searchIndex] + '_' + hexCode + this.extension;
+=======
+       resultsPage = this.resultsPath + '/' + indexSectionNames[this.searchIndex] + '_' + hexCode + '.html';
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
        resultsPageWithSearch = resultsPage+'?'+escape(searchValue);
        hasResultsPage = true;
     }
     else // nothing available for this search term
     {
-       resultsPage = this.resultsPath + '/nomatches' + this.extension;
+       resultsPage = this.resultsPath + '/nomatches.html';
        resultsPageWithSearch = resultsPage;
        hasResultsPage = false;
     }
@@ -426,19 +458,26 @@ function SearchBox(name, resultsPath, label, extension)
     if (domPopupSearchResultsWindow.style.display!='block')
     {
        var domSearchBox = this.DOMSearchBox();
-       this.DOMSearchClose().style.display = 'inline-block';
-       var domPopupSearchResults = this.DOMPopupSearchResults();
-       var left = getXPos(domSearchBox) + 150; // domSearchBox.offsetWidth;
-       var top  = getYPos(domSearchBox) + 20;  // domSearchBox.offsetHeight + 1;
-       domPopupSearchResultsWindow.style.display = 'block';
-       left -= domPopupSearchResults.offsetWidth;
-       var maxWidth = document.body.clientWidth;
-       var width = 400;
-       if (left<10) left=10;
-       if (width+left+8>maxWidth) width=maxWidth-left-8;
-       domPopupSearchResultsWindow.style.top     = top  + 'px';
-       domPopupSearchResultsWindow.style.left    = left + 'px';
-       domPopupSearchResultsWindow.style.width   = width + 'px';
+       this.DOMSearchClose().style.display = 'inline';
+       if (this.insideFrame)
+       {
+         var domPopupSearchResults = this.DOMPopupSearchResults();
+         domPopupSearchResultsWindow.style.position = 'relative';
+         domPopupSearchResultsWindow.style.display  = 'block';
+         var width = document.body.clientWidth - 8; // the -8 is for IE :-(
+         domPopupSearchResultsWindow.style.width    = width + 'px';
+         domPopupSearchResults.style.width          = width + 'px';
+       }
+       else
+       {
+         var domPopupSearchResults = this.DOMPopupSearchResults();
+         var left = getXPos(domSearchBox) + 150; // domSearchBox.offsetWidth;
+         var top  = getYPos(domSearchBox) + 20;  // domSearchBox.offsetHeight + 1;
+         domPopupSearchResultsWindow.style.display = 'block';
+         left -= domPopupSearchResults.offsetWidth;
+         domPopupSearchResultsWindow.style.top     = top  + 'px';
+         domPopupSearchResultsWindow.style.left    = left + 'px';
+       }
     }
 
     this.lastSearchValue = searchValue;
@@ -506,12 +545,12 @@ function SearchResults(name)
 
       while (element && element!=parentElement)
       {
-        if (element.nodeName.toLowerCase() == 'div' && element.className == 'SRChildren')
+        if (element.nodeName == 'DIV' && element.className == 'SRChildren')
         {
           return element;
         }
 
-        if (element.nodeName.toLowerCase() == 'div' && element.hasChildNodes())
+        if (element.nodeName == 'DIV' && element.hasChildNodes())
         {
            element = element.firstChild;
         }
@@ -854,8 +893,11 @@ function createResults()
       srLink.setAttribute('onclick','searchBox.CloseResultsWindow()');
 =======
       srLink.setAttribute('href',searchData[e][1][1][0]);
+<<<<<<< HEAD
       srLink.setAttribute('onclick','parent.searchBox.CloseResultsWindow()');
 >>>>>>> fe1d33e (doxygen files)
+=======
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
       if (searchData[e][1][1][1])
       {
        srLink.setAttribute('target','_parent');
@@ -888,8 +930,11 @@ function createResults()
         srChild.setAttribute('onclick','searchBox.CloseResultsWindow()');
 =======
         srChild.setAttribute('href',searchData[e][1][c+1][0]);
+<<<<<<< HEAD
         srChild.setAttribute('onclick','parent.searchBox.CloseResultsWindow()');
 >>>>>>> fe1d33e (doxygen files)
+=======
+>>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
         if (searchData[e][1][c+1][1])
         {
          srChild.setAttribute('target','_parent');
