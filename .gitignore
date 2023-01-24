@@ -135,4 +135,4 @@ poetry.lock
 .DS_Store
 
 # Custom paths
-data/MX_ADDRESSES_1_2MI.csv
+data/tmp/*

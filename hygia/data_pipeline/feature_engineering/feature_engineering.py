@@ -1,5 +1,6 @@
 from hygia.data_pipeline.feature_engineering.key_smash import KeySmash
 from hygia.data_pipeline.feature_engineering.word_embedding import WordEmbedding
+from hygia.data_pipeline.feature_engineering.regex import Regex
 import pandas as pd
 
 class FeatureEngineering:
@@ -32,6 +33,7 @@ class FeatureEngineering:
         """
         self.key_smash = KeySmash()
         self.word_embedding = WordEmbedding(lang=lang, dimensions=dimensions, model=model)
+        self.regex = Regex()
 
     def extract_features(self, df: pd.DataFrame, text_column: str) -> pd.DataFrame:
         """
@@ -59,4 +61,5 @@ class FeatureEngineering:
         """
         df = self.key_smash.extract_key_smash_features(df, text_column)
         df = self.word_embedding.extract_word_embedding_features(df, text_column)
+        df = self.regex.extract_regex_features(df, text_column)
         return df
