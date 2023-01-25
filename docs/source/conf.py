@@ -28,7 +28,7 @@ project = 'Hygia'
 copyright = '2023, Lappis'
 author = 'Lappis'
 
-import sphinx_rtd_theme
+# import sphinx_rtd_theme
 import breathe
 
 
@@ -38,7 +38,7 @@ import breathe
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx_rtd_theme',
+    # 'sphinx_rtd_theme',
     'breathe'
 ]
 

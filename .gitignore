@@ -143,3 +143,7 @@ docs/searchindex.js
 docs/objects.inv
 docs/.doctrees
 docs/.buildinfo
+docs/*.html
+docs/doxygen/*.html
+docs/user_guide/*.html
+
