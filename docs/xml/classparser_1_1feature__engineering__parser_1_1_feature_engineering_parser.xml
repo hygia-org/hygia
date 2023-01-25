@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser" kind="class" language="Python" prot="public">
+    <compoundname>parser::feature_engineering_parser::FeatureEngineeringParser</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ParserBase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a6444e713c32f068287280ff66d8e45f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def parser.feature_engineering_parser.FeatureEngineeringParser.parse</definition>
+        <argsstring>(self, list data)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" line="5" column="1" bodyfile="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" bodystart="5" bodyend="7"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a3c1fc41cba00cf9d663a5dd85bd49365" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def parser.feature_engineering_parser.FeatureEngineeringParser._parse_feature_engineering_configs</definition>
+        <argsstring>(self, list data)</argsstring>
+        <name>_parse_feature_engineering_configs</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" line="8" column="1" bodyfile="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" bodystart="8" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a45885972d2b20fce9ed4ec92db343bf4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def parser.feature_engineering_parser.FeatureEngineeringParser._get_dataframe</definition>
+        <argsstring>(self, dict columns)</argsstring>
+        <name>_get_dataframe</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>dict</type>
+          <declname>columns</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" line="39" column="1" bodyfile="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" bodystart="39" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a0679d43d692b709c02d4ab0f55672bb3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def parser.feature_engineering_parser.FeatureEngineeringParser._get_features_details</definition>
+        <argsstring>(self, dict features)</argsstring>
+        <name>_get_features_details</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>dict</type>
+          <declname>features</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" line="50" column="1" bodyfile="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" bodystart="50" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a43218d1380171031cecf28cabf2ea9fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def parser.feature_engineering_parser.FeatureEngineeringParser._get_word_embedding_config</definition>
+        <argsstring>(self, dict feature, list columns_alias)</argsstring>
+        <name>_get_word_embedding_config</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>dict</type>
+          <declname>feature</declname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>columns_alias</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" line="60" column="1" bodyfile="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" bodystart="60" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a4d09f5672b729cc629610f8560714527" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def parser.feature_engineering_parser.FeatureEngineeringParser._get_keyboard_smash_config</definition>
+        <argsstring>(self, dict features)</argsstring>
+        <name>_get_keyboard_smash_config</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>dict</type>
+          <declname>features</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" line="80" column="1" bodyfile="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" bodystart="80" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>parser.feature_engineering_parser.FeatureEngineeringParser</label>
+        <link refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ParserBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>parser.feature_engineering_parser.FeatureEngineeringParser</label>
+        <link refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ParserBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" line="3" column="1" bodyfile="/home/user/Documentos/Lappis/PDA/hygia/src/parser/feature_engineering_parser.py" bodystart="3" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a45885972d2b20fce9ed4ec92db343bf4" prot="private" virt="non-virtual"><scope>parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>_get_dataframe</name></member>
+      <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a0679d43d692b709c02d4ab0f55672bb3" prot="private" virt="non-virtual"><scope>parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>_get_features_details</name></member>
+      <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a4d09f5672b729cc629610f8560714527" prot="private" virt="non-virtual"><scope>parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>_get_keyboard_smash_config</name></member>
+      <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a43218d1380171031cecf28cabf2ea9fe" prot="private" virt="non-virtual"><scope>parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>_get_word_embedding_config</name></member>
+      <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a3c1fc41cba00cf9d663a5dd85bd49365" prot="private" virt="non-virtual"><scope>parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>_parse_feature_engineering_configs</name></member>
+      <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a6444e713c32f068287280ff66d8e45f9" prot="public" virt="non-virtual"><scope>parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

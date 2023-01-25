@@ -10,7 +10,7 @@
 
 <!-- [![Package Status](https://img.shields.io/pypi/status/hygia.svg)](https://pypi.org/project/hygia/) -->
 
-## What is it?
+## About Hygia
 
 Hygia is a Python package that provides fast, flexible, and expressive data pipeline configuration through a YAML file to make working with Machine Learning data easy and intuitive. It consists of helping developers and users to register, organize, compare and share all their ML model metadata in a single place, facilitating the generation of requirements in the ETL (Extract, Transform and Load) process. Thus, the migration can be scaled, automated, and accelerated for similar contexts.
 
@@ -24,48 +24,16 @@ Hygia is a Python package that provides fast, flexible, and expressive data pipe
 
 ## Where to get it
 
-The source code is currently hosted on GitHub at: `https://github.com/hygia-org`
-
-## Installation from sources
+The source code is currently hosted on GitHub at: [https://github.com/hygia-org](https://github.com/hygia-org)
 
 ```
-python -m venv env
-source env/bin/activate
-pip install -r requirements-dev.txt
+# PyPi
+
+pip install hygia
 ```
 
-### Boilerplate
+## Documentation
 
-```
-examples/hygia_boilerplate.ipynb
-```
+The official documentation is on the [hygia page](https://hygia-org.github.io/hygia/)
 
-### Testing
-
-```
-pytest --cov
-```
-
-### Documentation
-
-We used sphinx to write the documentation
-
-To run locally, you need to install sphinx:
-
-```
-pip install sphinx
-```
-
-Then install the theme used:
-
-```
-pip install pydata-sphinx-theme
-```
-
-And Run the project
-
-```
-sphinx-build -b html source ./
-```
-
-And open the index.html
+## How to Contribute

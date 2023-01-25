@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacedata__pipeline" kind="namespace" language="Python">
+    <compoundname>data_pipeline</compoundname>
+    <innernamespace refid="namespacedata__pipeline_1_1feature__engineering">data_pipeline::feature_engineering</innernamespace>
+    <innernamespace refid="namespacedata__pipeline_1_1pre__processing">data_pipeline::pre_processing</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

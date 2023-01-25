@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="data__pipeline_2pre__processing_2____init_____8py" kind="file" language="Python">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="namespacedata__pipeline_1_1pre__processing">data_pipeline::pre_processing</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+    </programlisting>
+    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline/pre_processing/__init__.py"/>
+  </compounddef>
+</doxygen>
