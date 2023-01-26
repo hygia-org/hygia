@@ -42,8 +42,8 @@ dag:
           trained_model_file: '../data/RandomForest_Ksmash_WordEmbedding.model'
           type: 'address'
           columns:
-            - 'STREET_ADDRESS_1'
             - 'street'
+            - 'STREET_ADDRESS_1'
           thresholds:
             test_size: 0.3
             n_estimators: 100

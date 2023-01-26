@@ -16,7 +16,7 @@ def run_with_config(yaml_path: str):
     initialParser = YAMLParser
     
     preProcessingParser = PreProcessingParser
-    preProcessData = PreProcessData
+    preProcessData = PreProcessData()
     
     featureEngineeringParser = FeatureEngineeringParser
     featureEngineering = FeatureEngineering
@@ -49,7 +49,7 @@ def run_with_config(yaml_path: str):
         columns_set, columns_name = preProcessingParser(columns_name).parse(config['pre_processing'])
         for columns in columns_set:       
             for key, value in columns.items():
-                df = preProcessData().pre_process_data(df, value, key)
+                df = preProcessData.pre_process_data(df, value, key)
         
         # Feature engineering
         print(30*'-')
@@ -63,9 +63,9 @@ def run_with_config(yaml_path: str):
             
             for column in feature_columns:
                 dimensions = feature_config['dimensions'][column]
+                df = preProcessData.handle_nulls(df, column)
                 df = featureEngineering(lang=lang, dimensions=dimensions).extract_features(df, column)
         
-                
         # Annotate Data
         print(30*'-')
         print(f'{Back.WHITE }{Fore.BLACK}Running ANNOTATE DATA...{Back.BLACK }{Fore.WHITE}')
@@ -76,7 +76,7 @@ def run_with_config(yaml_path: str):
             columns = annotate_data_config['columns']
             for column in columns:       
                 thresholds = annotate_data_config['thresholds']
-                df = annotateData().annotate_data(df, column, thresholds)
+                df = annotateData().annotate_data(df, column, thresholds)  
             
         # Model
         print(30*'-')
@@ -88,15 +88,13 @@ def run_with_config(yaml_path: str):
             # trained_model_file = model_config['trained_model_file']
             
             for column in model_columns:
-                featured_df = df.loc[:, df.columns.str.endswith(column)]
-                features_columns = featured_df.iloc[:,-30:]
+                features_columns = [col for col in df if (col.startswith('feature_ks') or col.startswith('feature_we') or col.startswith('feature_re')) and col.endswith(column)]
                 
                 randomForest = randomForestModel()
-                
-                randomForest.train_and_get_scores(df, column, features_columns)
+                # randomForest.train_and_get_scores(df, column, features_columns)
                 
                 results[column] = df[column]
-                results[f'prediction_{column}'] = randomForest.predict(features_columns)
+                results[f'prediction_{column}'] = randomForest.predict(df[features_columns].values)
                 
                 if(config['output_folder']):
                     output_folder = config['output_folder']
