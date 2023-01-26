@@ -6,9 +6,14 @@ class PreProcessData:
         df[concatenated_column_name] = df[columns].astype(str).agg(' '.join, axis=1)
         return df
     
-    def pre_process_data(self, df, columns_to_concat, concatenated_column_name):
-        print(f'aliases indified: {Style.BRIGHT}{concatenated_column_name} -> {Style.NORMAL}{columns_to_concat}')
+    def handle_nulls(df, column_name):
+        return df[column_name].fillna('').astype(str)
+    
+    def pre_process_data(self, df, columns_to_concat=None, column_name=None):
+        print(f'aliases indified: {Style.BRIGHT}{column_name} -> {Style.NORMAL}{columns_to_concat}')
         
-        df = self.concatenate_columns(df, columns_to_concat, concatenated_column_name)
+        if column_name:
+            df = self.handle_nulls(df, column_name)
+        if columns_to_concat and column_name:
+            df = self.concatenate_columns(df, columns_to_concat, column_name)
         return df
-
