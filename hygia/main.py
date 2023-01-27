@@ -85,12 +85,12 @@ def run_with_config(yaml_path: str):
         model_configs = modelParser(columns_alias).parse(config['model'])
         for model_config in model_configs:
             model_columns = model_config['columns']
-            # trained_model_file = model_config['trained_model_file']
+            trained_model_file = model_config['trained_model_file']
             
             for column in model_columns:
                 features_columns = [col for col in df if (col.startswith('feature_ks') or col.startswith('feature_we') or col.startswith('feature_re')) and col.endswith(column)]
                 
-                randomForest = randomForestModel()
+                randomForest = randomForestModel(trained_model_file)
                 # randomForest.train_and_get_scores(df, column, features_columns)
                 
                 results[column] = df[column]

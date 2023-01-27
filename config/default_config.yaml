@@ -39,7 +39,7 @@ dag:
   model:
     random_forest:
       - input:
-          trained_model_file: '../data/RandomForest_Ksmash_WordEmbedding.model'
+          trained_model_file: '../data/models/RandomForest_Ksmash_WordEmbedding_Regex.pkl'
           type: 'address'
           columns:
             - 'street'
