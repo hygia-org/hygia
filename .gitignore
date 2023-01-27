@@ -146,4 +146,5 @@ docs/.buildinfo
 docs/*.html
 docs/doxygen/*.html
 docs/user_guide/*.html
+docs/_sources
 
