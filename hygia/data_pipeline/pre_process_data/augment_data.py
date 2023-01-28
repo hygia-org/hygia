@@ -15,7 +15,6 @@ class AugmentData:
             'south_america': 'zip_to_lat_lon_South America.pkl'
         }
         country_mappings = {
-            # TODO document list of supported countries
             # TODO implement only numbers validation in zipcode
             'BRAZIL': {'code': 'BR', 'zipcode_file': continent_files['south_america'], 'length':7, 'only_numbers':True},
             'US': {'code': 'US', 'zipcode_file': continent_files['north_america'], 'length':5, 'only_numbers':True},
@@ -33,13 +32,13 @@ class AugmentData:
         return text in self.country_zipcode_df['postal code'].values
     
     def validate_zipcodes(self, df:pd.DataFrame, zipcode_column_name:str) -> pd.DataFrame:
-        # TODO raise errors if zipcode_column_name not in df
+        if zipcode_column_name not in df:
+            return
         validated_column = f"{zipcode_column_name}_is_valid"
         indicator_column = f"{zipcode_column_name}_is_valid_indicator"
         df_aux = pd.merge(df, self.country_zipcode_df, how='left', left_on=zipcode_column_name, right_on='postal code', indicator=indicator_column)
         df_aux[validated_column] = df_aux[indicator_column] == 'both'
         return df_aux[[validated_column]]
-    
     
     def augment_data(self, df:pd.DataFrame, zipcode_column_name:str) -> pd.DataFrame:
         df = pd.concat([df, self.validate_zipcodes(df, zipcode_column_name)], axis=1)

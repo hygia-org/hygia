@@ -18,8 +18,9 @@ class Regex:
         return bool(re.search(pattern, text, re.IGNORECASE))
     
     def contains_email(self, text:str) -> bool:
-        pattern = r'\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b'
-        return bool(re.search(pattern, text, re.IGNORECASE))
+        pattern_1 = r'\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b'
+        pattern_2 = r'(GMAIL|HOTMAIL|YAHOO|OUTLOOK)'
+        return bool(re.search(pattern_1, text, re.IGNORECASE)) or bool(re.search(pattern_2, text, re.IGNORECASE)) 
     
     def contains_url(self, text:str) -> bool:
         pattern = r'\b(https?:\/\/|www\.)[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
@@ -29,7 +30,7 @@ class Regex:
         pattern = r'^(?P<day>\d{1,2})(?:-|\.|/)(?P<month>\d{1,2})(?:-|\.|/)(?P<year>\d{4})$'
         return bool(re.search(pattern, text, re.IGNORECASE))
     
-    def contains_invalid_words(self, text:str) -> bool:
+    def contains_exactly_invalid_words(self, text:str) -> bool:
         pattern = r'\b(null|undefined|dummy)\b'
         return bool(re.search(pattern, text, re.IGNORECASE))
     
@@ -57,7 +58,7 @@ class Regex:
             self.contains_email,
             self.contains_url,
             self.contains_date,
-            self.contains_invalid_words,
+            self.contains_exactly_invalid_words,
             self.is_substring_of_column_name,
             self.only_one_char,
             self.only_white_spaces,
