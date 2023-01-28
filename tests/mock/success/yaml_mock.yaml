@@ -8,6 +8,7 @@ dag:
     separator: '¨'
     engine: 'python'
     encoding: 'utf-8'
+    nrows: 100000
 
   pre_processing:
     aliases:
@@ -24,20 +25,25 @@ dag:
             street:
               dimensions: 25
 
+  annotate_data:
+    - input:
+        columns:
+          - 'street'
+        thresholds:
+          count_sequence_squared_vowels: 1.00
+          count_sequence_squared_consonants: 1.999
+          count_sequence_squared_special_characters: 2.2499
+          ratio_of_numeric_digits_squared: 2.9
+          average_of_char_count_squared: 2.78
+
   model:
     random_forest:
       - input:
+          trained_model_file: '../data/models'
           type: 'address'
           columns:
-            - 'STREET_ADDRESS_1'
             - 'street'
+            - 'STREET_ADDRESS_1'
           thresholds:
             test_size: 0.3
             n_estimators: 100
-            keyboard_smash:
-              street:
-                ksmash_sequence_vowels: 1.00
-                ksmash_sequence_consonants: 1.999
-                ksmash_sequence_special_characters: 2.2499
-                ksmash_numbers: 2.9
-                ksmash_char_frequence: 2.78

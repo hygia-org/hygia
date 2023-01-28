@@ -22,7 +22,7 @@ class AnnotateDataParser(ParserBase):
         for inputs in data:
             input = self._try_get(inputs, 'input')
             columns = self._try_get(input, 'columns')
-            thresholds = self._try_get(input, 'thresholds')
+            thresholds = self.get_thresholds(input)
             
             configs.append({
                         'columns': columns,
@@ -31,27 +31,11 @@ class AnnotateDataParser(ParserBase):
         
         return configs
     
-    def get_thresholds(self, input, columns_alias):
-        thresholds = self._try_get(input, 'thresholds')
-        
-        thresholds_default = self.get_default_thresholds(columns_alias)
-        thresholds = self._get(thresholds, 'thresholds', thresholds_default)
+    def get_thresholds(self, input=None):
+        thresholds = self._get(input, 'thresholds', self.default_thresholds)
             
-        for key in thresholds.keys():
-            if(not(key in columns_alias)):
-                raise ValueError(f'`{key}` key not match with the available columns')
-            
-        for alias in columns_alias:
-            if(not(alias in thresholds.keys())):
-                thresholds[alias] = self.default_thresholds
+        for key, alias in self.default_thresholds.items():
+            if(not(key in thresholds.keys())):
+                thresholds[key] = alias
                 
         return thresholds
-    
-    def get_default_thresholds(self, columns_alias):
-        default_config = []
-        
-        for alias in columns_alias:
-            default_config.append({alias: self.default_thresholds})
-            
-        return default_config
-        
