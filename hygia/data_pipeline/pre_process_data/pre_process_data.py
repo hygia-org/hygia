@@ -4,7 +4,7 @@ from colorama import Style
 class PreProcessData:
     def __init__(self, country:str='MEXICO') -> None:
         country_mappings = {
-            'MEXICO': {'code': 'MX', 'abbrevitations_file': '../data/dicts/mexico_abbreviations.csv'},
+            'MEXICO': {'code': 'MX', 'abbrevitations_file': 'data/dicts/mexico_abbreviations.csv'},
         }
         self.abbreviations_dict = {}
         with open(country_mappings[country]['abbrevitations_file'], 'r') as f:
