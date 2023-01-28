@@ -29,6 +29,7 @@ class YAMLParser(ParserBase):
             "data_path": self._try_get(dag, 'data_path'),
             "description": self._try_get(dag, 'description'),
             "output_folder": self._try_get(dag, 'output_folder'),
+            "annotate_data": self._try_get(dag, 'annotate_data'),
             "pre_processing": self._try_get(dag, 'pre_processing'),
             "feature_engineering": self._try_get(dag, 'feature_engineering'),
         }

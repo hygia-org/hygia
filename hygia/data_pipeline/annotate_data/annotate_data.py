@@ -1,8 +1,14 @@
 import pandas as pd
+from colorama import Fore, Style
 
 class AnnotateData:
 
     def annotate_data(self, df, concatened_column_name, ks_thresholds):
+        print(f'{Fore.YELLOW}running annotate data with configs below...{Fore.WHITE}')
+        
+        print(f'{Style.BRIGHT}thresholds -> {Style.NORMAL}{ks_thresholds}')
+        print(f'column -> {concatened_column_name}')
+        
         df['target'] = 'valid'
         
         ks_colummns = [col for col in df if col.startswith('feature_ks')]

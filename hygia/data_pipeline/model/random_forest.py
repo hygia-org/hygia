@@ -1,11 +1,13 @@
 import pickle
+import pandas as pd
+from colorama import Fore, Style
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import precision_score
-import pandas as pd
 
 class RandomForestModel:
   def __init__(self, model_file=None, n_estimators=100, max_depth=None, random_state=0):
@@ -19,7 +21,9 @@ class RandomForestModel:
       self.random_state = random_state
       self.model = RandomForestClassifier(n_estimators=self.n_estimators, max_depth=self.max_depth, random_state=self.random_state)
   
-  def train_and_get_scores(self, df, concatened_column_name, all_features_columns, test_size=0.3):
+  def train_and_get_scores(self, df, concatened_column_name, all_features_columns, test_size=0.3):    
+    print(f'{Fore.YELLOW}tranning model...{Fore.WHITE}')
+    
     df_not_duplicates = df.drop_duplicates(subset=[concatened_column_name])
     
     KEY_SMASH_COUNT = df_not_duplicates['target'].value_counts()['key_smash']
@@ -39,11 +43,18 @@ class RandomForestModel:
     clf.fit(X_train,y_train)
     
     y_pred = clf.predict(X_test)
+    print(f'{Fore.GREEN}done{Fore.WHITE}')
+    print(f'{Fore.YELLOW}get model score...{Fore.WHITE}')
     
     accuracy = accuracy_score(y_test, y_pred)
     precision = precision_score(y_test, y_pred)
     recall = recall_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred)
+    
+    print(f'{Style.BRIGHT}accuracy -> {Style.NORMAL}{accuracy}')
+    print(f'{Style.BRIGHT}precision -> {Style.NORMAL}{precision}')
+    print(f'{Style.BRIGHT}recall -> {Style.NORMAL}{recall}')
+    print(f'{Style.BRIGHT}f1 -> {Style.NORMAL}{f1}')
     
     scores = {
       'accuracy': accuracy,
@@ -55,5 +66,6 @@ class RandomForestModel:
     return clf, scores 
   
   def predict(self, X):
+    print(f'{Fore.YELLOW}running model...{Fore.WHITE}')
     return self.model.predict(X)
 
