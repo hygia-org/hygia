@@ -1,7 +1,9 @@
+import pandas as pd
+from colorama import Fore, Style
+
 from hygia.data_pipeline.feature_engineering.key_smash import KeySmash
 from hygia.data_pipeline.feature_engineering.word_embedding import WordEmbedding
 from hygia.data_pipeline.feature_engineering.regex import Regex
-import pandas as pd
 
 class FeatureEngineering:
     """
@@ -31,6 +33,12 @@ class FeatureEngineering:
         :param model: The word embedding model to be used. (default 'bytepair')
         :type model: str
         """
+        print(f'{Fore.YELLOW}running feature engineering with configs below...{Fore.WHITE}')
+        
+        print(f'{Style.BRIGHT}language -> {Style.NORMAL}{lang}')
+        print(f'{Style.BRIGHT}dimensions -> {Style.NORMAL}{dimensions}')
+        
+        
         self.key_smash = KeySmash()
         self.word_embedding = WordEmbedding(lang=lang, dimensions=dimensions, model=model)
         self.regex = Regex()
@@ -59,6 +67,8 @@ class FeatureEngineering:
             df = fe.extract_features(df, "text_column")
             print(df)
         """
+        print(f'extract features from -> {text_column}')
+        
         df = self.key_smash.extract_key_smash_features(df, text_column)
         df = self.word_embedding.extract_word_embedding_features(df, text_column)
         df = self.regex.extract_regex_features(df, text_column)

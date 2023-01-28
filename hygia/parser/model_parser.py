@@ -34,14 +34,13 @@ class ModelParser(ParserBase):
         
             if (type == model_type['ADDRESS']):
                 columns = self.get_columns(input)
-                keyboard_smash, n_estimators, test_size = self.get_thresholds(input, columns)
+                n_estimators, test_size = self.get_thresholds(input)
                 
                 configs.append({
                     'model': 'keyboard_smash',
                     'trained_model_file': trained_model_file,
                     'type': model_type['ADDRESS'],
                     'columns': columns,
-                    'keyboard_smash': keyboard_smash,
                     'n_estimators': n_estimators,
                     'test_size': test_size
                 })
@@ -57,30 +56,13 @@ class ModelParser(ParserBase):
         
         return columns_set
         
-    def get_thresholds(self, input, columns_alias):
+    def get_thresholds(self, input):
         thresholds = self._try_get(input, 'thresholds')
         
         test_size = self._get(thresholds, 'test_size', 0.3)
         n_estimators = self._get(thresholds, 'n_estimators', 100)
-        
-        keyboard_smash_default = self.get_keyboard_smash_default_thresholds(columns_alias)
-        keyboard_smash = self._get(thresholds, 'keyboard_smash', keyboard_smash_default)
-            
-        for key in keyboard_smash.keys():
-            if(not(key in columns_alias)):
-                raise ValueError(f'`{key}` key not match with the available columns')
-            
-        for alias in columns_alias:
-            if(not(alias in keyboard_smash.keys())):
-                keyboard_smash[alias] = self.default_keyboard_smash_values
                 
-        return keyboard_smash, n_estimators, test_size
+        return n_estimators, test_size
     
-    def get_keyboard_smash_default_thresholds(self, columns_alias):
-        default_config = []
-        
-        for alias in columns_alias:
-            default_config.append({alias: self.default_keyboard_smash_values})
-            
-        return default_config
+
     
