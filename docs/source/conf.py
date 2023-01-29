@@ -39,6 +39,7 @@ import breathe
 # ones.
 extensions = [
     # 'sphinx_rtd_theme',
+    'sphinx_panels',
     'breathe'
 ]
 

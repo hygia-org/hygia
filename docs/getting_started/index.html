@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
@@ -27,6 +27,9 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
@@ -35,16 +38,14 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started/index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Documentation" href="../doxygen/index.html" />
+    <link rel="next" title="User Guide" href="../user_guide/index.html" />
     <link rel="prev" title="Welcome to Hygia’s documentation" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="en">
+  <meta name="docsearch:language" content="None">
   </head>
   
   
@@ -118,6 +119,13 @@
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
                         Getting started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        User Guide
                       </a>
                     </li>
                 
@@ -206,6 +214,13 @@
                 
 
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../doxygen/index.html">
                         Documentation
                       </a>
@@ -274,21 +289,35 @@
             <article class="bd-article" role="main">
               
   <section id="getting-started">
-<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h1>
 <p>Hygia is a Python package that provides fast, flexible, and expressive data pipeline configuration
 through a YAML file to make working with Machine Learning data easy and intuitive. It consists of
 helping developers and users to register, organize, compare and share all their ML model metadata in
 a single place, facilitating the generation of requirements in the ETL (Extract, Transform and Load) process.
 Thus, the migration can be scaled, automated, and accelerated for similar contexts.</p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
-<section id="working-with-hygia">
-<h3>Working with Hygia?<a class="headerlink" href="#working-with-hygia" title="Permalink to this heading">#</a></h3>
-<p>For install Hygia lib</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">hygia</span></code></p>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-12 p-3 docutils">
+<div class="card w-100 shadow install-card docutils">
+<div class="card-header docutils">
+<p class="card-text">Working with Hygia?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">For install Hygia lib</p>
+</div>
+<div class="card-footer docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>hygia
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
-</section>
 </section>
 </section>
 
@@ -307,10 +336,10 @@ Thus, the migration can be scaled, automated, and accelerated for similar contex
           <p class="prev-next-title">Welcome to Hygia’s documentation</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="../doxygen/index.html" title="next page">
+  <a class='right-next' id="next-link" href="../user_guide/index.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Documentation</p>
+      <p class="prev-next-title">User Guide</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -334,13 +363,6 @@ Thus, the migration can be scaled, automated, and accelerated for similar contex
   <a class="reference internal nav-link" href="#installation">
    Installation
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#working-with-hygia">
-     Working with Hygia?
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -411,7 +433,7 @@ Thus, the migration can be scaled, automated, and accelerated for similar contex
   <div class="footer-item">
     
 <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
 
   </div>

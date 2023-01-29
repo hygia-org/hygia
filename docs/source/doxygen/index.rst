@@ -18,6 +18,7 @@ Documentation
    :maxdepth: 2
 
    getting_started/index
+   user_guide/index
 
 
 Indices and tables

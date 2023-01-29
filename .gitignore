@@ -145,6 +145,7 @@ docs/.doctrees
 docs/.buildinfo
 docs/_sources
 docs/_static/basic.css
+docs/_panels_static
 
 genindex.html
 search.html

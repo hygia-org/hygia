@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Getting started
+User Guide
 =================================
 
 
@@ -12,39 +12,3 @@ through a YAML file to make working with Machine Learning data easy and intuitiv
 helping developers and users to register, organize, compare and share all their ML model metadata in 
 a single place, facilitating the generation of requirements in the ETL (Extract, Transform and Load) process. 
 Thus, the migration can be scaled, automated, and accelerated for similar contexts.
-
-
-Installation
------------------
-
-.. panels::
-    :card: + install-card
-    :column: col-12 p-3
-
-
-    Working with Hygia?
-    ^^^^^^^^^^^^^^^^^^^
-
-    For install Hygia lib
-
-    ++++++++++++++++++++++
-
-    .. code-block:: bash
-
-        pip install hygia
-
-
-
-.. toctree::
-   :maxdepth: 2
-
-   user_guide/index
-
-
-
-.. Indices and tables
-   ==================
-
-   * :ref:`genindex`
-   * :ref:`modindex`
-   * :ref:`search`

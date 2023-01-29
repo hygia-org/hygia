@@ -76,6 +76,7 @@ This file allows you to define your pipeline and at the end, it provides a visua
    :titlesonly:
    
    getting_started/index
+   user_guide/index
    doxygen/index
 
 
