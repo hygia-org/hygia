@@ -7,8 +7,87 @@ User Guide
 =================================
 
 
-Hygia is a Python package that provides fast, flexible, and expressive data pipeline configuration 
-through a YAML file to make working with Machine Learning data easy and intuitive. It consists of 
-helping developers and users to register, organize, compare and share all their ML model metadata in 
-a single place, facilitating the generation of requirements in the ETL (Extract, Transform and Load) process. 
-Thus, the migration can be scaled, automated, and accelerated for similar contexts.
+Using YAML file
+-----------------
+
+Update the yaml file with your needed configs and run the notebook
+
+
+::
+
+   import hygia as hg
+
+   config_file = '../config/default_config.yaml'
+   result = hg.run_with_config(config_file)
+   result 
+
+
+Predict Example
+-----------------
+
+Imports and classes instanciations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+   import pandas as pd
+   import hygia as hg
+
+   pre_process_data = hg.PreProcessData()
+   feature_engineering = hg.FeatureEngineering()
+   rf_model = hg.RandomForestModel('../data/models/RandomForest_Ksmash_WordEmbedding_Regex.pkl')
+
+
+Load Data
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+   file_path = '../data/tmp/AI_LATA_ADDRESS_MEX_modificado.csv'
+   df = pd.read_csv(file_path, sep='¨', nrows=500_000, engine='python')
+
+
+Add new columns
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Concatenate address
+
+* All features columns
+
+  * Key Smash
+
+  * Regex
+
+  * Word Embedding
+
+::
+
+   concatened_column_name = 'concat_STREET_ADDRESS_1_STREET_ADDRESS_2'
+   df = pre_process_data.pre_process_data(df, ['STREET_ADDRESS_1', 'STREET_ADDRESS_2'], concatened_column_name)
+   df = feature_engineering.extract_features(df, concatened_column_name)
+
+
+Check new columns names
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+   ks_we_and_re_colummns = [col for col in df if col.startswith('feature_ks') or col.startswith('feature_we') or col.startswith('feature_re')]
+   ks_we_and_re_colummns
+
+
+Predict using pre-trained model
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+   df['prediction'] = rf_model.predict(df[ks_we_and_re_colummns].values)
+   df['prediction'].value_counts()
+
+
+Save predicted data
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+   df[['concat_STREET_ADDRESS_1_STREET_ADDRESS_2', 'prediction']].to_csv('data/tmp/prediction.csv')

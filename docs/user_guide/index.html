@@ -290,11 +290,76 @@
               
   <section id="user-guide">
 <h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">#</a></h1>
-<p>Hygia is a Python package that provides fast, flexible, and expressive data pipeline configuration
-through a YAML file to make working with Machine Learning data easy and intuitive. It consists of
-helping developers and users to register, organize, compare and share all their ML model metadata in
-a single place, facilitating the generation of requirements in the ETL (Extract, Transform and Load) process.
-Thus, the migration can be scaled, automated, and accelerated for similar contexts.</p>
+<section id="using-yaml-file">
+<h2>Using YAML file<a class="headerlink" href="#using-yaml-file" title="Permalink to this headline">#</a></h2>
+<p>Update the yaml file with your needed configs and run the notebook</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hygia</span> <span class="k">as</span> <span class="nn">hg</span>
+
+<span class="n">config_file</span> <span class="o">=</span> <span class="s1">&#39;../config/default_config.yaml&#39;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">run_with_config</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
+<span class="n">result</span>
+</pre></div>
+</div>
+</section>
+<section id="predict-example">
+<h2>Predict Example<a class="headerlink" href="#predict-example" title="Permalink to this headline">#</a></h2>
+<section id="imports-and-classes-instanciations">
+<h3>Imports and classes instanciations<a class="headerlink" href="#imports-and-classes-instanciations" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">hygia</span> <span class="k">as</span> <span class="nn">hg</span>
+
+<span class="n">pre_process_data</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">PreProcessData</span><span class="p">()</span>
+<span class="n">feature_engineering</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">FeatureEngineering</span><span class="p">()</span>
+<span class="n">rf_model</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">RandomForestModel</span><span class="p">(</span><span class="s1">&#39;../data/models/RandomForest_Ksmash_WordEmbedding_Regex.pkl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="load-data">
+<h3>Load Data<a class="headerlink" href="#load-data" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;../data/tmp/AI_LATA_ADDRESS_MEX_modificado.csv&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;¨&#39;</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">500_000</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="add-new-columns">
+<h3>Add new columns<a class="headerlink" href="#add-new-columns" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Concatenate address</p></li>
+<li><p>All features columns</p>
+<ul>
+<li><p>Key Smash</p></li>
+<li><p>Regex</p></li>
+<li><p>Word Embedding</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">concatened_column_name</span> <span class="o">=</span> <span class="s1">&#39;concat_STREET_ADDRESS_1_STREET_ADDRESS_2&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pre_process_data</span><span class="o">.</span><span class="n">pre_process_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;STREET_ADDRESS_1&#39;</span><span class="p">,</span> <span class="s1">&#39;STREET_ADDRESS_2&#39;</span><span class="p">],</span> <span class="n">concatened_column_name</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">feature_engineering</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">concatened_column_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="check-new-columns-names">
+<h3>Check new columns names<a class="headerlink" href="#check-new-columns-names" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ks_we_and_re_colummns</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span> <span class="k">if</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;feature_ks&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;feature_we&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;feature_re&#39;</span><span class="p">)]</span>
+<span class="n">ks_we_and_re_colummns</span>
+</pre></div>
+</div>
+</section>
+<section id="predict-using-pre-trained-model">
+<h3>Predict using pre-trained model<a class="headerlink" href="#predict-using-pre-trained-model" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;prediction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rf_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">ks_we_and_re_colummns</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;prediction&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="save-predicted-data">
+<h3>Save predicted data<a class="headerlink" href="#save-predicted-data" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;concat_STREET_ADDRESS_1_STREET_ADDRESS_2&#39;</span><span class="p">,</span> <span class="s1">&#39;prediction&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/tmp/prediction.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
 
@@ -328,6 +393,60 @@ Thus, the migration can be scaled, automated, and accelerated for similar contex
           
             <div class="bd-sidebar-secondary bd-toc">
               
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-yaml-file">
+   Using YAML file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#predict-example">
+   Predict Example
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imports-and-classes-instanciations">
+     Imports and classes instanciations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-data">
+     Load Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-new-columns">
+     Add new columns
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#check-new-columns-names">
+     Check new columns names
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#predict-using-pre-trained-model">
+     Predict using pre-trained model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-predicted-data">
+     Save predicted data
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
 <div class="toc-item">
   
 <div id="searchbox"></div>
