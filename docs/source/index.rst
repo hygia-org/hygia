@@ -53,7 +53,7 @@ With `Hygia`, you can configure your data pipeline, customize the operations exe
    :hidden:
    :titlesonly:
    
-   user_guide/index
+   getting_started/index
    doxygen/index
 
 
