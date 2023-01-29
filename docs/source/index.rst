@@ -79,9 +79,11 @@ This file allows you to define your pipeline and at the end, it provides a visua
    doxygen/index
 
 
-Indices and tables
-==================
+..
+  Indices and tables
+  ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+  * :ref:`genindex`
+  * :ref:`modindex`
+  * :ref:`search`
+..

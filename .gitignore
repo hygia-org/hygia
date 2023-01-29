@@ -146,6 +146,8 @@ docs/.buildinfo
 docs/doxygen/*.html
 docs/getting_started/
 docs/_sources
+docs/_static/basic.css
+
 genindex.html
 search.html
 
