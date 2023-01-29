@@ -1,0 +1,1348 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Documentation &#8212; Hygia  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'doxygen/index';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Getting started" href="../getting_started/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+    <p class="title logo__title">Hygia  documentation</p>
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Documentation
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Documentation
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item"><nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">
+      Indices
+  </p>
+  <ul class="indices-link">
+    <li class="toctree-l1"><a class="reference internal" href="../genindex.html" accesskey="I">General Index</a></li>
+  </ul>
+</nav>
+    </div>
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="target" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser"></span><span class="sig-name descname"><span class="pre">parser.feature_engineering_parser.FeatureEngineeringParser</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">ParserBase</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="parse">
+<span class="target" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a6444e713c32f068287280ff66d8e45f9"></span><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span> <span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parse" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="parse_feature_engineering_configs">
+<span class="target" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a3c1fc41cba00cf9d663a5dd85bd49365"></span><span class="sig-name descname"><span class="pre">_parse_feature_engineering_configs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span> <span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parse_feature_engineering_configs" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_dataframe">
+<span class="target" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a45885972d2b20fce9ed4ec92db343bf4"></span><span class="sig-name descname"><span class="pre">_get_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span> <span class="pre">columns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_dataframe" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_features_details">
+<span class="target" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a0679d43d692b709c02d4ab0f55672bb3"></span><span class="sig-name descname"><span class="pre">_get_features_details</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span> <span class="pre">features</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_features_details" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_word_embedding_config">
+<span class="target" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a43218d1380171031cecf28cabf2ea9fe"></span><span class="sig-name descname"><span class="pre">_get_word_embedding_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span> <span class="pre">feature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span> <span class="pre">columns_alias</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_word_embedding_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_keyboard_smash_config">
+<span class="target" id="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a4d09f5672b729cc629610f8560714527"></span><span class="sig-name descname"><span class="pre">_get_keyboard_smash_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span> <span class="pre">features</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_keyboard_smash_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.key_smash.KeySmash">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">KeySmash</span></span><a class="headerlink" href="#data_pipeline.feature_engineering.key_smash.KeySmash" title="Permalink to this definition">#</a></dt>
+<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="k">class</span> <span class="nc">for</span> <span class="n">calculating</span> <span class="n">metrics</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">key</span> <span class="n">smashing</span> <span class="n">behavior</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">text</span><span class="o">.</span>
+
+<span class="n">Key</span> <span class="n">smashing</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">act</span> <span class="n">of</span> <span class="n">typing</span> <span class="n">on</span> <span class="n">a</span> <span class="n">keyboard</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">rapid</span> <span class="ow">and</span> <span class="n">uncontrolled</span> <span class="n">manner</span><span class="p">,</span>
+<span class="n">often</span> <span class="n">resulting</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">series</span> <span class="n">of</span> <span class="n">random</span> <span class="n">characters</span> <span class="n">being</span> <span class="n">entered</span> <span class="n">into</span> <span class="n">a</span> <span class="n">document</span> <span class="ow">or</span> <span class="n">text</span> <span class="n">field</span><span class="o">.</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.key_smash.KeySmash.__init__">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a23bba8ab35ebb2bd0af52ea6596e4925"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_pipeline.feature_engineering.key_smash.KeySmash.__init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.key_smash.KeySmash.calculate_char_frequency_metric">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a3c0ca3e149360720f15327d78205e2f7"></span><span class="sig-name descname"><span class="pre">calculate_char_frequency_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_pipeline.feature_engineering.key_smash.KeySmash.calculate_char_frequency_metric" title="Permalink to this definition">#</a></dt>
+<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Calculate</span> <span class="n">the</span> <span class="n">Char</span> <span class="n">Frequency</span> <span class="n">Metric</span><span class="o">.</span>
+
+<span class="n">Parameters</span>
+<span class="o">----------</span>
+<span class="n">text</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">The</span> <span class="n">text</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="n">calculation</span><span class="o">.</span>
+    
+<span class="n">Returns</span>
+<span class="o">-------</span>
+<span class="nb">float</span>
+    <span class="n">Char</span> <span class="n">Frequency</span> <span class="n">Metric</span><span class="o">.</span>
+    
+<span class="n">Examples</span>
+<span class="o">--------</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">calculate_char_frequency_metric</span><span class="p">(</span><span class="s2">&quot;PUENTECILLA KM. 1.7&quot;</span><span class="p">)</span>
+<span class="mf">1.121212121212121</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">calculate_char_frequency_metric</span><span class="p">(</span><span class="s2">&quot;ASDASD XXXX&quot;</span><span class="p">)</span>
+<span class="mf">3.0</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.key_smash.KeySmash.calculate_irregular_sequence_metric">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a3428a01b9d0fa0e403334b15374d84d0"></span><span class="sig-name descname"><span class="pre">calculate_irregular_sequence_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_pipeline.feature_engineering.key_smash.KeySmash.calculate_irregular_sequence_metric" title="Permalink to this definition">#</a></dt>
+<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Calculate</span> <span class="n">the</span> <span class="n">Irregular</span> <span class="n">Sequence</span> <span class="n">Metric</span><span class="o">.</span>
+
+<span class="n">Parameters</span>
+<span class="o">----------</span>
+<span class="n">text</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">The</span> <span class="n">text</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="n">calculation</span><span class="o">.</span>
+<span class="n">opt</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">The</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">characters</span> <span class="n">to</span> <span class="n">consider</span> <span class="k">for</span> <span class="n">the</span> <span class="n">calculation</span><span class="p">,</span>
+    <span class="n">can</span> <span class="n">be</span> <span class="n">one</span> <span class="n">of</span> <span class="s1">&#39;vowels&#39;</span><span class="p">,</span> <span class="s1">&#39;consonants&#39;</span><span class="p">,</span> <span class="ow">or</span> <span class="s1">&#39;special_characters&#39;</span><span class="o">.</span>
+    
+<span class="n">Returns</span>
+<span class="o">-------</span>
+<span class="nb">float</span>
+    <span class="n">Irregular</span> <span class="n">Sequence</span> <span class="n">Metric</span><span class="o">.</span>
+    
+<span class="n">Examples</span>
+<span class="o">--------</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">calculate_irregular_sequence_metric</span><span class="p">(</span><span class="s2">&quot;PUENTECILLA KM. 1.7&quot;</span><span class="p">,</span> <span class="s2">&quot;vowels&quot;</span><span class="p">)</span>
+<span class="mf">0.21052631578947367</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">calculate_irregular_sequence_metric</span><span class="p">(</span><span class="s2">&quot;ASDASD XXXX&quot;</span><span class="p">,</span> <span class="s2">&quot;consonants&quot;</span><span class="p">)</span>
+<span class="mf">2.1818181818181817</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">calculate_irregular_sequence_metric</span><span class="p">(</span><span class="s2">&quot;!@#$% ASDFGHJKL&quot;</span><span class="p">,</span> <span class="s2">&quot;special_characters&quot;</span><span class="p">)</span>
+<span class="mf">1.5625</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.key_smash.KeySmash.calculate_number_count_metric">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a596e7af2462276dfa0f5a73898eec2a4"></span><span class="sig-name descname"><span class="pre">calculate_number_count_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_pipeline.feature_engineering.key_smash.KeySmash.calculate_number_count_metric" title="Permalink to this definition">#</a></dt>
+<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Calculate</span> <span class="n">the</span> <span class="n">Number</span> <span class="n">Count</span> <span class="n">Metric</span><span class="o">.</span>
+
+<span class="n">Parameters</span>
+<span class="o">----------</span>
+<span class="n">text</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">The</span> <span class="n">text</span> <span class="n">field</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="n">calculation</span><span class="o">.</span>
+    
+<span class="n">Returns</span>
+<span class="o">-------</span>
+<span class="nb">float</span>
+    <span class="n">Number</span> <span class="n">Count</span> <span class="n">Metric</span><span class="o">.</span>
+    
+<span class="n">Examples</span>
+<span class="o">--------</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">calculate_number_count_metric</span><span class="p">(</span><span class="s2">&quot;ABC 123 !@#&quot;</span><span class="p">)</span>
+<span class="mf">0.0</span> 
+<span class="o">&gt;&gt;&gt;</span> <span class="n">calculate_number_count_metric</span><span class="p">(</span><span class="s2">&quot;ABC123 !@#&quot;</span><span class="p">)</span>
+<span class="mf">0.9</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.key_smash.KeySmash.char_sets">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a21cb1a9e286356f32a6f783e961f6a46"></span><span class="sig-name descname"><span class="pre">char_sets</span></span><a class="headerlink" href="#data_pipeline.feature_engineering.key_smash.KeySmash.char_sets" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser"></span><span class="sig-name descname"><span class="pre">parser.model_parser.ModelParser</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">ParserBase</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="init__">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser_1a416260ece9beca7d897eec76762d9b2b"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_alias</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="id0">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser_1a6eacbfbf440e6a79e6356375e623a9dc"></span><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span> <span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_random_forest_address_config">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser_1a694f81471abc207995b17a47d041e9ae"></span><span class="sig-name descname"><span class="pre">get_random_forest_address_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span> <span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_random_forest_address_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_columns">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser_1af46e8c838f3a13db4c576a011076a036"></span><span class="sig-name descname"><span class="pre">get_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_columns" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_thresholds">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser_1a76dda884e6d3a6bbcac1782ff2fe120d"></span><span class="sig-name descname"><span class="pre">get_thresholds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_set_alias</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_thresholds" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="get_keyboard_smash_default_thresholds">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser_1a3b85c606ffe0670782f2b87911338da2"></span><span class="sig-name descname"><span class="pre">get_keyboard_smash_default_thresholds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_set_alias</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#get_keyboard_smash_default_thresholds" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="columns_alias">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser_1aba7b8a605e0d321c591633b092861699"></span><span class="sig-name descname"><span class="pre">columns_alias</span></span><a class="headerlink" href="#columns_alias" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="default_keyboard_smash_values">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser_1ad164aff94b2ff7cbe357a97d58734a09"></span><span class="sig-name descname"><span class="pre">default_keyboard_smash_values</span></span><a class="headerlink" href="#default_keyboard_smash_values" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="parse_modal_configs">
+<span class="target" id="classparser_1_1model__parser_1_1_model_parser_1a6267210c4850b549f5fc90f3a90e7912"></span><span class="sig-name descname"><span class="pre">_parse_modal_configs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span> <span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parse_modal_configs" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="parser.parser_base.ParserBase">
+<span class="target" id="classparser_1_1parser__base_1_1_parser_base"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ParserBase</span></span><a class="headerlink" href="#parser.parser_base.ParserBase" title="Permalink to this definition">#</a></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="parser.parser_base.ParserBase.__init__">
+<span class="target" id="classparser_1_1parser__base_1_1_parser_base_1a2ccc68acea8b4677c1761e39d9aeb058"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'src/yamls/config.yaml'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parser.parser_base.ParserBase.__init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="parser.parser_base.ParserBase.filepath">
+<span class="target" id="classparser_1_1parser__base_1_1_parser_base_1a4f3b278ff54c422767e66c78a7bb24d6"></span><span class="sig-name descname"><span class="pre">filepath</span></span><a class="headerlink" href="#parser.parser_base.ParserBase.filepath" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="parser.parser_base.ParserBase._try_get">
+<span class="target" id="classparser_1_1parser__base_1_1_parser_base_1a5d88e7661694746fee4816141582c3a7"></span><span class="sig-name descname"><span class="pre">_try_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span> <span class="pre">variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_msg=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parser.parser_base.ParserBase._try_get" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="parser.parser_base.ParserBase._get">
+<span class="target" id="classparser_1_1parser__base_1_1_parser_base_1a2eafe46a0dfd547f102a6afcee176311"></span><span class="sig-name descname"><span class="pre">_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dict</span> <span class="pre">variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parser.parser_base.ParserBase._get" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.word_embedding.WordEmbedding">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WordEmbedding</span></span><a class="headerlink" href="#data_pipeline.feature_engineering.word_embedding.WordEmbedding" title="Permalink to this definition">#</a></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a10817fded0539110daef964d8bf1bd8a"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimensions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Initialize</span> <span class="n">a</span> <span class="n">word</span> <span class="n">embedding</span> <span class="nb">object</span> <span class="n">using</span> <span class="n">the</span> <span class="n">BytePairLanguage</span> <span class="n">model</span><span class="o">.</span>
+
+<span class="n">Parameters</span>
+<span class="o">----------</span>
+<span class="n">lang</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">The</span> <span class="n">language</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="n">word</span> <span class="n">embedding</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="s2">&quot;es&quot;</span><span class="p">)</span>
+<span class="n">dimensions</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">dimensions</span> <span class="k">for</span> <span class="n">the</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">vectors</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="mi">25</span><span class="p">)</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.word_embedding.WordEmbedding.get_embedding">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1abf75033d7367dcc2ce77151091b48342"></span><span class="sig-name descname"><span class="pre">get_embedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_pipeline.feature_engineering.word_embedding.WordEmbedding.get_embedding" title="Permalink to this definition">#</a></dt>
+<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="n">the</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">vector</span> <span class="k">for</span> <span class="n">a</span> <span class="n">given</span> <span class="n">text</span><span class="o">.</span>
+
+<span class="n">Parameters</span>
+<span class="o">----------</span>
+<span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">The</span> <span class="n">string</span> <span class="n">to</span> <span class="n">be</span> <span class="n">processed</span>
+
+<span class="n">Returns</span>
+<span class="o">----------</span>
+<span class="n">arr</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
+    <span class="n">A</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">vector</span> <span class="k">for</span> <span class="n">the</span> <span class="n">given</span> <span class="n">text</span>
+
+<span class="n">Examples</span>
+<span class="o">--------</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">get_embedding</span><span class="p">(</span><span class="s2">&quot;This is a text&quot;</span><span class="p">,</span> <span class="s2">&quot;es&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="p">[</span> <span class="mf">0.06799883</span>  <span class="mf">0.17547965</span>  <span class="mf">0.47599664</span>  <span class="mf">0.16108984</span> <span class="o">-</span><span class="mf">0.1360625</span>  <span class="o">-</span><span class="mf">0.10632467</span>
+<span class="o">-</span><span class="mf">0.10654568</span> <span class="o">-</span><span class="mf">0.09805</span>    <span class="o">-</span><span class="mf">0.33004168</span> <span class="o">-</span><span class="mf">0.33528003</span> <span class="o">-</span><span class="mf">0.23304085</span>  <span class="mf">0.36661038</span>
+<span class="o">-</span><span class="mf">0.5797167</span>   <span class="mf">0.53252834</span>  <span class="mf">0.30276018</span> <span class="o">-</span><span class="mf">0.01584417</span>  <span class="mf">0.85087484</span>  <span class="mf">0.14121284</span>
+<span class="mf">0.74862367</span> <span class="o">-</span><span class="mf">0.33011952</span>  <span class="mf">0.015432</span>    <span class="mf">0.02694534</span>  <span class="mf">0.10118082</span> <span class="o">-</span><span class="mf">0.34017918</span>
+<span class="o">-</span><span class="mf">0.14560167</span><span class="p">]</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.word_embedding.WordEmbedding.bpl">
+<span class="target" id="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a9f80ebd1ebd4388302cd3e19e56916ed"></span><span class="sig-name descname"><span class="pre">bpl</span></span><a class="headerlink" href="#data_pipeline.feature_engineering.word_embedding.WordEmbedding.bpl" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py">
+<span class="target" id="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser"></span><span class="sig-name descname"><span class="pre">parser.YAML_parser.YAMLParser</span> <span class="pre">:</span> <span class="pre">public</span> <span class="pre">ParserBase</span></span></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="id1">
+<span class="target" id="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a8ec75ddaa9abd26784d69ccefbd8f90a"></span><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="parse_yaml">
+<span class="target" id="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a54e76ebb98b2649f328c7b887dfa8107"></span><span class="sig-name descname"><span class="pre">_parse_yaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parse_yaml" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_pipeline">
+<span class="target" id="namespacedata__pipeline"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">data_pipeline</span></span><a class="headerlink" href="#data_pipeline" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering">
+<span class="target" id="namespacedata__pipeline_1_1feature__engineering"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">feature_engineering</span></span><a class="headerlink" href="#data_pipeline.feature_engineering" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.key_smash">
+<span class="target" id="namespacedata__pipeline_1_1feature__engineering_1_1key__smash"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">key_smash</span></span><a class="headerlink" href="#data_pipeline.feature_engineering.key_smash" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_pipeline.feature_engineering.word_embedding">
+<span class="target" id="namespacedata__pipeline_1_1feature__engineering_1_1word__embedding"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">word_embedding</span></span><a class="headerlink" href="#data_pipeline.feature_engineering.word_embedding" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_pipeline.pre_processing">
+<span class="target" id="namespacedata__pipeline_1_1pre__processing"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">pre_processing</span></span><a class="headerlink" href="#data_pipeline.pre_processing" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="data_pipeline.pre_processing.concatenate_columns">
+<span class="target" id="namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">concatenate_columns</span></span><a class="headerlink" href="#data_pipeline.pre_processing.concatenate_columns" title="Permalink to this definition">#</a></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="data_pipeline.pre_processing.concatenate_columns.get_concatenated_column">
+<span class="target" id="concatenate__columns_8py_1a1b50d24e7adef5a0c638431ac5047bdf"></span><span class="sig-name descname"><span class="pre">get_concatenated_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#data_pipeline.pre_processing.concatenate_columns.get_concatenated_column" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="main">
+<span class="target" id="namespacemain"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">main</span></span><a class="headerlink" href="#main" title="Permalink to this definition">#</a></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="main.get_config">
+<span class="target" id="main_8py_1a6fba68047248af0a15cec69214a0d569"></span><span class="sig-name descname"><span class="pre">get_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.get_config" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="parser">
+<span class="target" id="namespaceparser"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">parser</span></span><a class="headerlink" href="#parser" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="parser.const">
+<span class="target" id="namespaceparser_1_1const"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">const</span></span><a class="headerlink" href="#parser.const" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="parser.feature_engineering_parser">
+<span class="target" id="namespaceparser_1_1feature__engineering__parser"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">feature_engineering_parser</span></span><a class="headerlink" href="#parser.feature_engineering_parser" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="parser.model_parser">
+<span class="target" id="namespaceparser_1_1model__parser"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">model_parser</span></span><a class="headerlink" href="#parser.model_parser" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="parser.parser_base">
+<span class="target" id="namespaceparser_1_1parser__base"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">parser_base</span></span><a class="headerlink" href="#parser.parser_base" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="parser.YAML_parser">
+<span class="target" id="namespaceparser_1_1_y_a_m_l__parser"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">YAML_parser</span></span><a class="headerlink" href="#parser.YAML_parser" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="data__pipeline_2____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="data__pipeline_2feature__engineering_2____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="data__pipeline_2pre__processing_2____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="parser_2____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="key__smash_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">key_smash.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="word__embedding_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">word_embedding.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="concatenate__columns_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">concatenate_columns.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="main_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">main.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="const_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">const.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="feature__engineering__parser_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">feature_engineering_parser.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="model__parser_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">model_parser.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="parser__base_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">parser_base.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="_y_a_m_l__parser_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">YAML_parser.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_d8011c2d3002aeb7fe29b60ec5b6cceb"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_3f5f7729d78c36242303c059ac997ea8"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline/feature_engineering</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_6cd8491d143eb218b70983dbdb3c58bc"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/home/user/Documentos/Lappis/PDA/hygia/src/parser</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_01d8c85d3e0193d6b57221e32ef52c37"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline/pre_processing</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_68267d1309a1af8e8297ef4c3efbcdba"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/home/user/Documentos/Lappis/PDA/hygia/src</span></span></dt>
+<dd></dd></dl>
+
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="../py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="../search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="../getting_started/index.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Getting started</p>
+      </div>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Documentation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parse">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       parse()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parse_feature_engineering_configs">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _parse_feature_engineering_configs()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get_dataframe">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _get_dataframe()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get_features_details">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _get_features_details()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get_word_embedding_config">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _get_word_embedding_config()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get_keyboard_smash_config">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _get_keyboard_smash_config()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.key_smash.KeySmash">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       data_pipeline.feature_engineering.key_smash.KeySmash
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.key_smash.KeySmash.__init__">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.feature_engineering.key_smash.KeySmash.__init__()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.key_smash.KeySmash.calculate_char_frequency_metric">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.feature_engineering.key_smash.KeySmash.calculate_char_frequency_metric()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.key_smash.KeySmash.calculate_irregular_sequence_metric">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.feature_engineering.key_smash.KeySmash.calculate_irregular_sequence_metric()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.key_smash.KeySmash.calculate_number_count_metric">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.feature_engineering.key_smash.KeySmash.calculate_number_count_metric()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.key_smash.KeySmash.char_sets">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.feature_engineering.key_smash.KeySmash.char_sets
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#init__">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       __init__()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id0">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       parse()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get_random_forest_address_config">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       get_random_forest_address_config()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get_columns">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       get_columns()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get_thresholds">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       get_thresholds()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get_keyboard_smash_default_thresholds">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       get_keyboard_smash_default_thresholds()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#columns_alias">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       columns_alias
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#default_keyboard_smash_values">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       default_keyboard_smash_values
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parse_modal_configs">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _parse_modal_configs()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parser.parser_base.ParserBase">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       parser.parser_base.ParserBase
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parser.parser_base.ParserBase.__init__">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         parser.parser_base.ParserBase.__init__()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parser.parser_base.ParserBase.filepath">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         parser.parser_base.ParserBase.filepath
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parser.parser_base.ParserBase._try_get">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         parser.parser_base.ParserBase._try_get()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parser.parser_base.ParserBase._get">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         parser.parser_base.ParserBase._get()
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.word_embedding.WordEmbedding">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       data_pipeline.feature_engineering.word_embedding.WordEmbedding
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.word_embedding.WordEmbedding.get_embedding">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.feature_engineering.word_embedding.WordEmbedding.get_embedding()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.word_embedding.WordEmbedding.bpl">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.feature_engineering.word_embedding.WordEmbedding.bpl
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       parse()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parse_yaml">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       _parse_yaml()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data_pipeline">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       data_pipeline
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.feature_engineering">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.feature_engineering
+        </span>
+       </code>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.key_smash">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data_pipeline.feature_engineering.key_smash
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#data_pipeline.feature_engineering.word_embedding">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data_pipeline.feature_engineering.word_embedding
+          </span>
+         </code>
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data_pipeline.pre_processing">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data_pipeline.pre_processing
+        </span>
+       </code>
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#data_pipeline.pre_processing.concatenate_columns">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data_pipeline.pre_processing.concatenate_columns
+          </span>
+         </code>
+        </a>
+        <ul class="nav section-nav flex-column">
+         <li class="toc-h5 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#data_pipeline.pre_processing.concatenate_columns.get_concatenated_column">
+           <code class="docutils literal notranslate">
+            <span class="pre">
+             data_pipeline.pre_processing.concatenate_columns.get_concatenated_column()
+            </span>
+           </code>
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#main">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       main
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#main.get_config">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         main.get_config()
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parser">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       parser
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parser.const">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         parser.const
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parser.feature_engineering_parser">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         parser.feature_engineering_parser
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parser.model_parser">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         parser.model_parser
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parser.parser_base">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         parser.parser_base
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#parser.YAML_parser">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         parser.YAML_parser
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indices-and-tables">
+   Indices and tables
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+<div class="tocsection sourcelink">
+    <a href="../_sources/doxygen/index.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+</div>
+
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2023, Lappis.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

@@ -143,8 +143,6 @@ docs/searchindex.js
 docs/objects.inv
 docs/.doctrees
 docs/.buildinfo
-docs/doxygen/*.html
-docs/getting_started/
 docs/_sources
 docs/_static/basic.css
 
