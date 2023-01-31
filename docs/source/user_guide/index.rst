@@ -6,7 +6,7 @@
 User Guide
 =================================
 
-A software user guide is a page that provides instructions and information on how to use Hylia Library.
+A user guide is a page that provides instructions and information on how to use Hylia Library.
 It may include information on features, settings, troubleshooting, and step-by-step procedures for performing specific tasks.
 The goal is to help users understand and effectively use the software.
 
