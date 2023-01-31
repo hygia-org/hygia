@@ -6,11 +6,21 @@
 User Guide
 =================================
 
+A software user guide is a page that provides instructions and information on how to use Hylia Library.
+It may include information on features, settings, troubleshooting, and step-by-step procedures for performing specific tasks.
+The goal is to help users understand and effectively use the software.
+
+.. note::
+   In the `Hygia repository <https://github.com/hygia-org/hygia>`_ there are some `boilerplates <https://github.com/hygia-org/hygia/tree/main/examples>`_ to guide learning and understanding the use Hygia features.
+
+
+To begin, we can see some of the library's features.
 
 Using YAML file
 -----------------
 
 Update the yaml file with your needed configs and run the notebook
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 ::
