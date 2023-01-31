@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Getting started
+Getting Started
 =================================
 
 
@@ -14,24 +14,36 @@ a single place, facilitating the generation of requirements in the ETL (Extract,
 Thus, the migration can be scaled, automated, and accelerated for similar contexts.
 
 
-Installation
------------------
+Installing from PyPI
+---------------------
 
 .. panels::
     :card: + install-card
     :column: col-12 p-3
 
 
-    Working with Hygia?
+    How Install Hygia?
     ^^^^^^^^^^^^^^^^^^^
+    Hygia can be found on `PyPi <https://pypi.org/project/hygia/>`_ for installation through pip:
 
-    For install Hygia lib
-
-    ++++++++++++++++++++++
 
     .. code-block:: bash
 
         pip install hygia
+
+    ++++++++++++++++++++++
+   
+    After installation, you can certify the installation through the commands:
+
+    .. code-block:: bash
+
+        pip freeze
+
+    or
+
+    .. code-block:: bash
+
+        pip show hygia
 
 
 
