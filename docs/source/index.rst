@@ -61,14 +61,6 @@ The main features are:
 - Organize and display experiments and model metadata however you want
 - Share and collaborate on experiment results and models across the org
 
-The Hygia library offers two options for usage: (1) Utilizing the available functions directly in your development 
-environment, such as a Jupyter Notebook. (2) Automating processes for different databases through a customizable .yaml file. 
-This file allows you to define your pipeline and at the end, it provides a visualization of the processed data.
-
-.. image:: _static/Frame4.png
-  :width: 1000
-  :alt: Alternative text
-
 
 .. toctree::
    :maxdepth: 2

@@ -14,7 +14,14 @@ The goal is to help users understand and effectively use the software.
    In the `Hygia repository <https://github.com/hygia-org/hygia>`_ there are some `boilerplates <https://github.com/hygia-org/hygia/tree/main/examples>`_ to guide learning and understanding the use Hygia features.
 
 
-To begin, we can see some of the library's features.
+The Hygia library offers two options for usage: (1) Utilizing the available functions directly in your development 
+environment, such as a Jupyter Notebook. (2) Automating processes for different databases through a customizable .yaml file. 
+This file allows you to define your pipeline and at the end, it provides a visualization of the processed data.
+
+.. image:: ../../_static/Frame4.png
+  :width: 1000
+  :alt: Alternative text
+
 
 Using YAML file
 -----------------
@@ -101,3 +108,4 @@ Save predicted data
 ::
 
    df[['concat_STREET_ADDRESS_1_STREET_ADDRESS_2', 'prediction']].to_csv('data/tmp/prediction.csv')
+
