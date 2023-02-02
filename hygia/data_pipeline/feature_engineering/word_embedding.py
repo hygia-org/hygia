@@ -6,6 +6,7 @@ from whatlies.language import BytePairLanguage
 # from whatlies.language import Glove
 # from whatlies.language import BagOfWords
 import pandas as pd
+import re
 
 class WordEmbedding:
     """
@@ -58,6 +59,10 @@ class WordEmbedding:
             raise NotImplementedError
         else:
             raise ValueError
+    
+    def _pre_embedding(self, text: str) -> str:
+        text = ' '.join(e for e in text.split() if e.isalpha() and len(e) >= 3 and not e.isspace())
+        return text
         
     def get_embedding(self, text: str) -> np.ndarray:
         """
@@ -82,8 +87,17 @@ class WordEmbedding:
         print(embedding)
         # Output: [0.5, 0.6, ..., 0.7] (a list of float values representing the word embedding vector)
         """
-        return self.word_embedding_model[text].vector
+        
+        empty_vector = [0.0] * self.dimensions
 
+        text = self._pre_embedding(text)
+        
+        # White space string
+        if len(text.strip().split()) == 0:
+            return empty_vector
+        
+        return self.word_embedding_model[text].vector
+    
     def extract_word_embedding_features(self, df: pd.DataFrame, column_name: str, normalize: bool = False) -> pd.DataFrame:
         """
         Extract word embedding features from a given dataframe and column.
@@ -110,7 +124,7 @@ class WordEmbedding:
             print(df.head())
         """
         
-        feature_we_tmp = df[column_name].fillna('').apply(lambda x: self.get_embedding(x) if len(x.strip().split()) > 0 else [0.0] * self.dimensions)
+        feature_we_tmp = df[column_name].fillna('').apply(lambda x: self.get_embedding(x))
         
         for i in range(self.dimensions):
             df[f'feature_we_{i}_{column_name}'] = feature_we_tmp.apply(lambda x: x[i])

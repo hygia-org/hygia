@@ -1,5 +1,3 @@
-import pytest
-import pandas as pd
 from hygia.data_pipeline.feature_engineering.regex import Regex
 
 class TestRegex:
@@ -28,6 +26,13 @@ class TestRegex:
         
     def test_contains_email(self):
         assert self.regex.contains_email("EXAMPLE@GMAIL.COM") == True
+        assert self.regex.contains_email("EXAMPLE@HOTMAIL.COM") == True
+        assert self.regex.contains_email("EXAMPLE@YAHOO.COM") == True
+        assert self.regex.contains_email("EXAMPLE@OUTLOOK.COM") == True
+        assert self.regex.contains_email("EXAMPLE@HOTMAIL.COM") == True
+        assert self.regex.contains_email("EXAMPLE@HOTMAILCOM") == True
+        assert self.regex.contains_email("EXAMPLEHOTMAILCOM") == True
+        assert self.regex.contains_email("EXAMPLEHOTMAIL.COM") == True
         assert self.regex.contains_email("EXAMPLE") == False
         assert self.regex.contains_email("") == False
         
@@ -54,16 +59,16 @@ class TestRegex:
         assert self.regex.contains_date("LAGUNA 375-1-1001") == False
         assert self.regex.contains_date("") == False
         
-    def test_contains_invalid_words(self):
-        assert self.regex.contains_invalid_words("NULL") == True
-        assert self.regex.contains_invalid_words("A NULL") == True
-        assert self.regex.contains_invalid_words("UNDEFINED") == True
-        assert self.regex.contains_invalid_words("A UNDEFINED") == True
-        assert self.regex.contains_invalid_words("DUMMY") == True
-        assert self.regex.contains_invalid_words("A DUMMY") == True
-        assert self.regex.contains_invalid_words("ABC") == False
-        assert self.regex.contains_invalid_words("A ABC") == False
-        assert self.regex.contains_invalid_words("") == False
+    def test_contains_exactly_invalid_words(self):
+        assert self.regex.contains_exactly_invalid_words("NULL") == True
+        assert self.regex.contains_exactly_invalid_words("A NULL") == True
+        assert self.regex.contains_exactly_invalid_words("UNDEFINED") == True
+        assert self.regex.contains_exactly_invalid_words("A UNDEFINED") == True
+        assert self.regex.contains_exactly_invalid_words("DUMMY") == True
+        assert self.regex.contains_exactly_invalid_words("A DUMMY") == True
+        assert self.regex.contains_exactly_invalid_words("ABC") == False
+        assert self.regex.contains_exactly_invalid_words("A ABC") == False
+        assert self.regex.contains_exactly_invalid_words("") == False
     
     def test_is_substring_of_column_name(self):
         assert self.regex.is_substring_of_column_name("STREET_ADDRESS_1", "concat_STREET_ADDRESS_1_STREET_ADDRESS_2") == True
