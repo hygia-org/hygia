@@ -33,7 +33,7 @@ class PreProcessData:
         df[column_name] = df[column_name].apply(lambda x: self._replace_abbreviation(x))
         return df
     
-    def pre_process_data(self, df, columns_to_concat=None, column_name=None, zipcode_columns=None):
+    def pre_process_data(self, df, columns_to_concat=None, column_name=None):
         
         if columns_to_concat and column_name:
             df = self.concatenate_columns(df, columns_to_concat, column_name)
