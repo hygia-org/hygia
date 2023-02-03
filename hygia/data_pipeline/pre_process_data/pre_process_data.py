@@ -2,12 +2,18 @@ import pandas as pd
 import re
 from colorama import Style
 class PreProcessData:
-    def __init__(self, country:str='MEXICO') -> None:
-        country_mappings = {
-            'MEXICO': {'code': 'MX', 'abbrevitations_file': 'data/dicts/mexico_abbreviations.csv'},
-        }
+    def __init__(self, country:str=None, abbreviations_file:str=None) -> None:
         self.abbreviations_dict = {}
-        with open(country_mappings[country]['abbrevitations_file'], 'r') as f:
+        if not country and not abbreviations_file:
+            return
+        country_mappings = {
+            'MEXICO': {'code': 'MX', 'abbrevitations_file': '../data/dicts/mexico_abbreviations.csv'},
+        }
+        if country:
+            abbreviations_file_path = country_mappings[country]['abbrevitations_file']
+        if abbreviations_file:
+            abbreviations_file_path = abbreviations_file
+        with open(abbreviations_file_path, 'r') as f:
             for line in f:
                 key, value = line.strip().split(',')
                 self.abbreviations_dict.update({key: value})
