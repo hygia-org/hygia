@@ -1,15 +1,23 @@
-from hygia.data_pipeline.pre_process_data.pre_process_data import PreProcessData
+import pytest
 
+from hygia.data_pipeline.pre_process_data.pre_process_data import PreProcessData
+from hygia.paths.paths import root_path
+
+@pytest.mark.parametrize("abbreviation, expected_replacement", [
+    ('NO', "NUMBER"),
+    ('no', "NUMBER"),
+    ('no123', "NUMBER123"),
+    ('no 123', "NUMBER 123"),
+    ('123 no', "123 NUMBER"),
+    ('not', "not"),
+    ('NOT', "NOT"),
+    ('ono', "ono")
+])
 class TestPreProcessData:
-    def setup_method(self):
-        self.pre_process_data = PreProcessData()
-    
-    def test_replace_abbreviation(self):
-        assert self.pre_process_data._replace_abbreviation("NO") == "NUMBER"
-        assert self.pre_process_data._replace_abbreviation("no") == "NUMBER"
-        assert self.pre_process_data._replace_abbreviation("no123") == "NUMBER123"
-        assert self.pre_process_data._replace_abbreviation("no 123") == "NUMBER 123"
-        assert self.pre_process_data._replace_abbreviation("123 no") == "123 NUMBER"
-        assert self.pre_process_data._replace_abbreviation("not") == "not"
-        assert self.pre_process_data._replace_abbreviation("NOT") == "NOT"
-        assert self.pre_process_data._replace_abbreviation("ono") == "ono"
+    def test_replace_abbreviation_coutry(self, abbreviation, expected_replacement):
+        pre_process_data = PreProcessData(country='MEXICO')
+        assert pre_process_data._replace_abbreviation(abbreviation) == expected_replacement
+        
+    def test_replace_abbreviation_abbreviations_file(self, abbreviation, expected_replacement):
+        pre_process_data = PreProcessData(abbreviations_file=root_path + '/data/dicts/mexico_abbreviations.csv')
+        assert pre_process_data._replace_abbreviation(abbreviation) == expected_replacement

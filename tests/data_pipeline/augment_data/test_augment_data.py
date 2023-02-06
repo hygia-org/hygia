@@ -14,7 +14,7 @@ from hygia.data_pipeline.augment_data.augment_data import AugmentData
 ])
 class TestAugmentData:
     def setup_method(self):
-        self.augment_data = AugmentData()
+        self.augment_data = AugmentData(country="MEXICO")
     
     def test_validate_zipcode(self, zipcode, expected):
         assert self.augment_data.validate_zipcode(zipcode) == expected

@@ -1,13 +1,15 @@
 import pandas as pd
 import re
 from colorama import Style
+from hygia.paths.paths import root_path
+
 class PreProcessData:
     def __init__(self, country:str=None, abbreviations_file:str=None) -> None:
         self.abbreviations_dict = {}
         if not country and not abbreviations_file:
             return
         country_mappings = {
-            'MEXICO': {'code': 'MX', 'abbrevitations_file': '../data/dicts/mexico_abbreviations.csv'},
+            'MEXICO': {'code': 'MX', 'abbrevitations_file': root_path + '/data/dicts/mexico_abbreviations.csv'},
         }
         if country:
             abbreviations_file_path = country_mappings[country]['abbrevitations_file']

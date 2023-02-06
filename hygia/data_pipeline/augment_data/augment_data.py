@@ -1,4 +1,5 @@
 import pandas as pd
+from hygia.paths.paths import root_path
 
 class AugmentData:
     """
@@ -22,7 +23,7 @@ class AugmentData:
         }
         country_code = country_mappings[country]['code']
         zipcode_file = country_mappings[country]['zipcode_file']
-        zipcode_df = pd.read_pickle(f"../data/zipcode/{zipcode_file}")
+        zipcode_df = pd.read_pickle(root_path + f"/data/zipcode/{zipcode_file}")
         country_zipcode_df_raw = zipcode_df[zipcode_df['country code']== country_code]
         if country_mappings[country]['length']:
             country_zipcode_df_raw['postal code'] = country_zipcode_df_raw['postal code'].astype(str).str.pad(country_mappings[country]['length'],fillchar='0')
