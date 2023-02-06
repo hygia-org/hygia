@@ -29,6 +29,9 @@ Now run the script to initialize the scripts.
 - setp 5: select postgres
 
 
+![db](https://raw.githubusercontent.com/francisco1code/Files/main/gif/db.gif)
+
+
 **Exemple postgres connect superset**
 | metabase | credential |
 |------------|-------------|
@@ -36,6 +39,20 @@ Now run the script to initialize the scripts.
 |dabase_name | superset|
 | user | superset |
 | password | superset |
+
+
+**Create dataset**
+
+![](https://raw.githubusercontent.com/francisco1code/Files/main/gif/dataset.gif)
+
+**Create chats**
+
+![](https://raw.githubusercontent.com/francisco1code/Files/main/gif/chat.gif)
+
+
+**Create Dashboard**
+
+![](https://raw.githubusercontent.com/francisco1code/Files/main/gif/dashboard.gif)
 
 
 
