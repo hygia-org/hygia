@@ -1,6 +1,6 @@
 import pandas as pd
 import pytest
-from hygia.data_pipeline.augment_data.augment_data import AugmentData
+from hygia import AugmentData
 
 @pytest.mark.parametrize("zipcode, expected", [
     ('20000', True),
