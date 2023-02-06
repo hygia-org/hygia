@@ -12,7 +12,9 @@ services:
       
   metabase:
     container_name: "metabase"
-    image: metabase/metabase
+    image: metabase/metabase-enterprise
+    environment:
+      - MB_ENABLE_ANONYMOUS_PUBLIC_WRITE=true  
     env_file:
       - ./config/metabase_database_exemple.env
     ports:
@@ -25,6 +27,16 @@ services:
       - ./config/mongo_exemple.env
     volumes:
       - mongo-db:/data/db
+
+  postgres1:
+    container_name: "postgres1"
+    image: postgres
+    env_file:
+      - ./config/postgres_exemple.env
+    volumes:
+      - postgres_volume:/var/lib/postgresql/data/
+      - ./config/postgres/:/docker-entrypoint-initdb.d/
+
 
 volumes:
   postgres_volume:

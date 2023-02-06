@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  db:
+    env_file: docker/.env
+    image: postgres:14
+    container_name: superset_db
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5432:5432"
+
+      
+  superset:
+    env_file: docker/.env
+    image: apache/superset
+    container_name: superset_app
+    ports:
+      - 8088:8088
+
+networks:
+  default:
+    external:
+      name: superset
+
+
