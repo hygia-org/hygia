@@ -21,6 +21,9 @@ class KeySmash:
     """
     
     def __init__(self):
+        """
+        Initialize the KeySmash class.
+        """
         self.char_sets = {
             "vowels": 'aeiouáéíóúãõ',
             "consonants": 'bcdfghjklmnñpqrstvwxyz',
