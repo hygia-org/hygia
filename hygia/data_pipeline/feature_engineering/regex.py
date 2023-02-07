@@ -7,10 +7,10 @@ class Regex:
         if not country and not context_words_file:
             return
         country_mappings = {
-            'MEXICO': {'context_words_file': root_path + '/data/dicts/mexico_context.csv.csv'},
+            'MEXICO': {'context_words_file': root_path + '/data/dicts/mexico_context.csv'},
         }
         if country:
-            context_words_file_path = country_mappings[country]['abbrevitations_file']
+            context_words_file_path = country_mappings[country]['context_words_file']
         if context_words_file:
             context_words_file_path = context_words_file
             

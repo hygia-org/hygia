@@ -10,7 +10,8 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import precision_score
 
 class RandomForestModel:
-  def __init__(self, model_file=None, normalization_absolutes_file=None ,n_estimators=100, max_depth=None, random_state=0):
+  def __init__(self, model_file=None, normalization_absolutes_file=None ,n_estimators=100, max_depth=None, random_state=0, normalize=True):
+    self.normalize = normalize
     self.model = None
     self.normalization_absolutes = None
     self.pre_trained = False
@@ -36,6 +37,8 @@ class RandomForestModel:
     self.normalization_absolutes = pd.DataFrame(absolutes_dict)
       
   def _normalization(self, df, features_columns_to_normalize, concatened_column_name):
+    if not self.normalize:
+      return df
     for features_column_to_normalize in features_columns_to_normalize:
       column_absolute_maximum = self.normalization_absolutes[features_column_to_normalize.replace(f"_{concatened_column_name}", '')].values[0]
       df[features_column_to_normalize] = df[features_column_to_normalize] / column_absolute_maximum
