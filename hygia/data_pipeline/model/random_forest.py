@@ -10,7 +10,25 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import precision_score
 
 class RandomForestModel:
+  """
+    This class presents the model Random Forest, allowing train and predict the model
+
+    Examples
+    --------
+    Use this class like this:
+
+    .. code-block:: python
+        new_rf_model = hg.RandomForestModel()
+        clf, scores = new_rf_model.train_and_get_scores(df, concatened_column_name, all_features_columns)
+        scores
+  """
   def __init__(self, model_file=None, normalization_absolutes_file=None ,n_estimators=100, max_depth=None, random_state=0, normalize=True):
+    """
+    Initialize the RandomForestModel class.
+    
+    :param model_file: Path to the model file
+    :type model_file: path
+    """
     self.normalize = normalize
     self.model = None
     self.normalization_absolutes = None
@@ -44,7 +62,19 @@ class RandomForestModel:
       df[features_column_to_normalize] = df[features_column_to_normalize] / column_absolute_maximum
     return df
   
-  def train_and_get_scores(self, df, concatened_column_name, all_features_columns, test_size=0.3):    
+  def train_and_get_scores(self, df, concatened_column_name, all_features_columns, test_size=0.3):
+    """
+    Train and get scores for the model execution.
+    
+    :param df: Dataframe with the data.
+    :type df: pandas.DataFrame
+
+    :param concatened_column_name: Column name
+    :type concatened_column_name: str
+
+    :param all_features_columns: List of all features column nales
+    :type all_features_columns: List
+    """    
     print(f'{Fore.YELLOW}tranning model...{Fore.WHITE}')
     
     # Droping Duplicates
@@ -94,8 +124,7 @@ class RandomForestModel:
       'f1': f1,
     }
     
-    return scores 
-  
+    return scores
   def predict(self, X, concatened_column_name):
     print(f'{Fore.YELLOW}running model...{Fore.WHITE}')
     
