@@ -112,11 +112,11 @@ class KeySmash:
             if text[i] in char_set and text[i + 1] in char_set:
                 count_sequence += 1
             else:
-                if count_sequence > 1:
+                if count_sequence > 2:
                     sequences.append(count_sequence ** 2)
                     count_sequence = 1
 
-        if count_sequence > 1:
+        if count_sequence > 2:
             sequences.append(count_sequence ** 2)
 
         return sum(sequences) / len(text)

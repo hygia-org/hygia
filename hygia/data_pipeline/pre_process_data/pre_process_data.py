@@ -31,10 +31,14 @@ class PreProcessData:
         
         df[column_name].fillna('').astype(str)
         return df
+
+    def handle_extra_spaces(self, df, column_name:str) -> str:
+        df[column_name] = df[column_name].apply(lambda x: ' '.join(x.split()))
+        return df
     
     def _replace_abbreviation(self, text:str) -> str:
         for abbreviation in self.abbreviations_dict:
-            text = ' '.join([re.sub(rf'(\b|(?<=[^a-zA-Z])){abbreviation}(\b|(?=[^a-zA-Z]))', self.abbreviations_dict[abbreviation], e, flags=re.IGNORECASE) for e in text.split()])
+            text = ' '.join([re.sub(rf'(\b|(?<=[^a-zA-Z])){abbreviation}(\.|\b|(?=[^a-zA-Z]))', self.abbreviations_dict[abbreviation], e, flags=re.IGNORECASE) for e in text.split()])
         return text
     
     def handle_abreviations(self, df, column_name):
@@ -48,6 +52,7 @@ class PreProcessData:
         
         if column_name and column_name in df.columns:
             df = self.handle_nulls(df, column_name)
+            df = self.handle_extra_spaces(df, column_name)
             df = self.handle_abreviations(df, column_name)
         
         return df
