@@ -109,3 +109,17 @@ Save predicted data
 
    df[['concat_STREET_ADDRESS_1_STREET_ADDRESS_2', 'prediction']].to_csv('data/tmp/prediction.csv')
 
+
+.. toctree::
+   :maxdepth: 2
+
+   getting_started/index
+   doxygen/index
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
