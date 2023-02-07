@@ -22,7 +22,7 @@ class FeatureEngineering:
         print(df)
     """
 
-    def __init__(self, lang: str = 'es', dimensions: int = 25, model: str = 'bytepair'):
+    def __init__(self, lang:str='es', dimensions:int=25, model:str='bytepair', country:str=None, context_words_file:str=None):
         """
         Initialize the FeatureEngineering class.
         
@@ -41,7 +41,7 @@ class FeatureEngineering:
         
         self.key_smash = KeySmash()
         self.word_embedding = WordEmbedding(lang=lang, dimensions=dimensions, model=model)
-        self.regex = Regex()
+        self.regex = Regex(country=country, context_words_file=context_words_file)
 
     def extract_features(self, df: pd.DataFrame, text_column: str) -> pd.DataFrame:
         """
