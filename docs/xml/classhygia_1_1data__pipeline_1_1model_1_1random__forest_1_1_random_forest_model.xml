@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="14" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="14" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="32" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a5e7f43eeb0068f2d7f7f365434f3abc5" prot="public" static="no" mutable="no">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="19" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="19" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="37" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5dd6d72a32285fd8e86219a8fdf71ec" prot="public" static="no" mutable="no">
         <type></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="20" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="20" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="38" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5ab8b176adb170adad2175c5685163c" prot="public" static="no" mutable="no">
         <type></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="21" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="21" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="39" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -94,10 +94,15 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Initialize the RandomForestModel class.
+
+:param model_file: Path to the model file
+:type model_file: path
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="13" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="13" bodyend="23"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="25" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="25" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf7a38d78b4b8100bec3034415cf958e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -129,10 +134,21 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Train and get scores for the model execution.
+
+:param df: Dataframe with the data.
+:type df: pandas.DataFrame
+
+:param concatened_column_name: Column name
+:type concatened_column_name: str
+
+:param all_features_columns: List of all features column nales
+:type all_features_columns: List
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="24" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="24" bodyend="67"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="42" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="42" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a4f97ea337bcc807954c6d68758d91a91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -151,17 +167,30 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Predict the model result
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="68" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="68" bodyend="72"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="97" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="97" bodyend="104"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para><verbatim>This class presents the model Random Forest, allowing train and predict the model
+
+Examples
+--------
+Use this class like this:
+
+.. code-block:: python
+    new_rf_model = hg.RandomForestModel()
+    clf, scores = new_rf_model.train_and_get_scores(df, concatened_column_name, all_features_columns)
+    scores
+</verbatim> </para>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="12" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="12" bodyend="72"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" line="12" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py" bodystart="12" bodyend="104"/>
     <listofallmembers>
       <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a3ce808991033e28ec22836b3dfc138fb" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::model::random_forest::RandomForestModel</scope><name>__init__</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5dd6d72a32285fd8e86219a8fdf71ec" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::model::random_forest::RandomForestModel</scope><name>max_depth</name></member>

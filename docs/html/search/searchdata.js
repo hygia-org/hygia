@@ -1,14 +1,8 @@
 var indexSectionsWithContent =
 {
-<<<<<<< HEAD
-  0: "_acefgkmprwy",
-  1: "afkmprwy",
-  2: "_acegr"
-=======
-  0: "_cfgkmpwy",
-  1: "fkmpwy",
-  2: "_cg"
->>>>>>> fe1d33e (doxygen files)
+  0: "_acefghikoprtvw",
+  1: "afkprw",
+  2: "_aceghioprtv"
 };
 
 var indexSectionNames =

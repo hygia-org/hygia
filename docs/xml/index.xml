@@ -1,16 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
   <compound refid="classannotate__data_1_1_annotate_data" kind="class"><name>annotate_data::AnnotateData</name>
     <member refid="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" kind="function"><name>annotate_data</name></member>
-  </compound>
-  <compound refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser" kind="class"><name>hygia::parser::annotate_data_parser::AnnotateDataParser</name>
-    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1a295a5ff884a5dae3dce3db97e072f5f6" kind="variable"><name>default_thresholds</name></member>
-    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1abd36a7481422b974f8f05ab95d2b7166" kind="function"><name>__init__</name></member>
-    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1aa1c3704ddf5df831432b7a6e70386f2b" kind="function"><name>parse</name></member>
-    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1a622d5fdd2daa6083331263792b79bdaa" kind="function"><name>get_thresholds</name></member>
-    <member refid="classhygia_1_1parser_1_1annotate__data__parser_1_1_annotate_data_parser_1a599222de1ef411ec72d7bdf645c5c40c" kind="function"><name>_parse_annotate_data_configs</name></member>
   </compound>
   <compound refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data" kind="class"><name>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</name>
     <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a91aca0028f24813d2eed9b26f7406d4f" kind="variable"><name>country_zipcode_df</name></member>
@@ -26,15 +17,6 @@
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a33f8c5028f3fee8359def47641fdc736" kind="function"><name>__init__</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a6557b5c4dc573fcf0f8454da44c1536f" kind="function"><name>extract_features</name></member>
   </compound>
-  <compound refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser" kind="class"><name>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</name>
-    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1af0e9a86e7edeec6e31825b29e3ed1dee" kind="variable"><name>columns_alias</name></member>
-    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a274bce55a70c7e2be6e2b0c62dbf2f3d" kind="function"><name>__init__</name></member>
-    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a008bc671bdc8817f3f005b005a570b72" kind="function"><name>parse</name></member>
-    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a52bcec6fb77b320fe51f58c8a38854ca" kind="function"><name>_parse_feature_engineering_configs</name></member>
-    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1afc4943959986ea43d18f79d0ba2c525f" kind="function"><name>_get_features_details</name></member>
-    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a33a1de2427ac001fe7c9fd86fe54916a" kind="function"><name>_get_word_embedding_config</name></member>
-    <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a5ae3a664f141127aace27bf2de7f1a90" kind="function"><name>_get_keyboard_smash_config</name></member>
-  </compound>
   <compound refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash" kind="class"><name>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</name>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1abaf990cf994cfa58ac61d7188e9db461" kind="variable"><name>char_sets</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a65214ed127cf6a6491b1f249618e626d" kind="function"><name>__init__</name></member>
@@ -44,34 +26,14 @@
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e" kind="function"><name>extract_key_smash_features</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1afc42a4b6aa51c24fad51e85f0c269fd2" kind="function"><name>_normalize_column</name></member>
   </compound>
-  <compound refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser" kind="class"><name>hygia::parser::model_parser::ModelParser</name>
-    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1af4591965f26b87408e9456e5df60c47f" kind="variable"><name>columns_alias</name></member>
-    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a1c543ce6662c8294c152f3942993085c" kind="variable"><name>default_keyboard_smash_values</name></member>
-    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a35a0f19cbf8c93482801f9950d45ac6c" kind="function"><name>__init__</name></member>
-    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a8ea35d5d55f047e6a0069759a8fb29d1" kind="function"><name>parse</name></member>
-    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1aa0a997c83ff675a7aa0a5582eeb5a7b7" kind="function"><name>get_random_forest_address_config</name></member>
-    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a54d2d16ade58e3a31888f42412c69340" kind="function"><name>get_columns</name></member>
-    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1a940df2320f3a2d8cc7c5ee10171b9f0b" kind="function"><name>get_thresholds</name></member>
-    <member refid="classhygia_1_1parser_1_1model__parser_1_1_model_parser_1ab0bf714e8421246f13bfc07e1e4441d3" kind="function"><name>_parse_modal_configs</name></member>
-  </compound>
-  <compound refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" kind="class"><name>hygia::parser::parser_base::ParserBase</name>
-    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a5b18a6ee35a95ec5f2c92c547a0816f6" kind="variable"><name>filepath</name></member>
-    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a202cb7e0b981b3107240f9d3a569459b" kind="function"><name>__init__</name></member>
-    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1aacfbc15ddface2c8ae0987c3fc9b0c8a" kind="function"><name>_try_get</name></member>
-    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a4736702678fe167b50f858b06a68f20f" kind="function"><name>_has_column_on_df</name></member>
-    <member refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1ac49ca507386e9d9cb8a8246696070235" kind="function"><name>_get</name></member>
-  </compound>
   <compound refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data" kind="class"><name>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</name>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a54c1b51a0b092d4c4cf4a575c7e9d682" kind="variable"><name>abbreviations_dict</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a56b7999a113fcad06e993e8aa28ce906" kind="function"><name>__init__</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1aa918dadaa5fad237dfabbbcb95933376" kind="function"><name>concatenate_columns</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0f373aa2c3685df2291a25aab0473707" kind="function"><name>handle_nulls</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a6c4c76f8e3ed9460bba760086cd9e2c4" kind="function"><name>pre_process_data</name></member>
-  </compound>
-  <compound refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser" kind="class"><name>hygia::parser::pre_processing_parser::PreProcessingParser</name>
-    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a815cbdb2483ef87911c44fe661e26c2d" kind="variable"><name>columns_name</name></member>
-    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1aa55b29e8583465be0d550bd191151227" kind="function"><name>__init__</name></member>
-    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a4308214645ae23c94e6d391a6230349c" kind="function"><name>parse</name></member>
-    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1acb982c6ad677b3c994e1ad0b47c106ed" kind="function"><name>_parse_pre_processing_configs</name></member>
-    <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1ae1d78066abfe59fe8620a3a377f89db1" kind="function"><name>_get_dataframe</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a5e81ba265ff8746bb5558901884f1160" kind="function"><name>handle_abreviations</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a9434e258aada55019b9a7cbd9a243bda" kind="function"><name>pre_process_data</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a08787d36f285f9d2709433982d8d4926" kind="function"><name>_replace_abbreviation</name></member>
   </compound>
   <compound refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model" kind="class"><name>hygia::data_pipeline::model::random_forest::RandomForestModel</name>
     <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a41a98e36844137b7486aa925a998f2c3" kind="variable"><name>model</name></member>
@@ -90,7 +52,7 @@
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f" kind="function"><name>contains_email</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a6d48e296af51cfcab0a7a144987ba88e" kind="function"><name>contains_url</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474" kind="function"><name>contains_date</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aa3c0dc74955a6e79196552cb081e34ce" kind="function"><name>contains_invalid_words</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a2dc27d664c7303c105542f109a5c1573" kind="function"><name>contains_exactly_invalid_words</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ad5645622b440996ae37006ef8e26d7db" kind="function"><name>is_substring_of_column_name</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab9a9fb59c02dd27f8596776c4f52c526" kind="function"><name>only_one_char</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a09ffaff6cfd795ecb3b21d54d97e8f27" kind="function"><name>only_one_word</name></member>
@@ -107,15 +69,11 @@
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1aae76996dafce64d3701891e860e8a145" kind="function"><name>get_embedding</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1afda634858dcca07e27b954023e854972" kind="function"><name>extract_word_embedding_features</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1ab615ccc3b82284f7877e30370ce3fb8e" kind="function"><name>_load_model</name></member>
-  </compound>
-  <compound refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser" kind="class"><name>hygia::parser::YAML_parser::YAMLParser</name>
-    <member refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a494843eb50e2f520a10b53c3da2ec7a0" kind="function"><name>parse</name></member>
-    <member refid="classhygia_1_1parser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a4cfa6de5abae01bf2243a4df73c150f6" kind="function"><name>_parse_yaml</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a4a28173984f0d56ea34834c3720f55b9" kind="function"><name>_pre_embedding</name></member>
   </compound>
   <compound refid="namespaceannotate__data" kind="namespace"><name>annotate_data</name>
   </compound>
   <compound refid="namespacehygia" kind="namespace"><name>hygia</name>
-    <member refid="____init_____8py_1a9dce4973d0f4a4b058d41a32d8bb26ad" kind="variable"><name>__all__</name></member>
   </compound>
   <compound refid="namespacehygia_1_1data__pipeline" kind="namespace"><name>hygia::data_pipeline</name>
   </compound>
@@ -139,112 +97,13 @@
   </compound>
   <compound refid="namespacehygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data" kind="namespace"><name>hygia::data_pipeline::pre_process_data::pre_process_data</name>
   </compound>
-  <compound refid="namespacehygia_1_1main" kind="namespace"><name>hygia::main</name>
-    <member refid="main_8py_1ac4c1470ae0fe116f19c0bd1cc6875979" kind="function"><name>run_with_config</name></member>
-  </compound>
-  <compound refid="namespacehygia_1_1parser" kind="namespace"><name>hygia::parser</name>
-  </compound>
-  <compound refid="namespacehygia_1_1parser_1_1annotate__data__parser" kind="namespace"><name>hygia::parser::annotate_data_parser</name>
-  </compound>
-  <compound refid="namespacehygia_1_1parser_1_1const" kind="namespace"><name>hygia::parser::const</name>
-    <member refid="const_8py_1a6992e4606f2295e4e80019a474522393" kind="variable"><name>model_type</name></member>
-  </compound>
-  <compound refid="namespacehygia_1_1parser_1_1feature__engineering__parser" kind="namespace"><name>hygia::parser::feature_engineering_parser</name>
-  </compound>
-  <compound refid="namespacehygia_1_1parser_1_1model__parser" kind="namespace"><name>hygia::parser::model_parser</name>
-  </compound>
-  <compound refid="namespacehygia_1_1parser_1_1parser__base" kind="namespace"><name>hygia::parser::parser_base</name>
-  </compound>
-  <compound refid="namespacehygia_1_1parser_1_1pre__processing__parser" kind="namespace"><name>hygia::parser::pre_processing_parser</name>
-  </compound>
-  <compound refid="namespacehygia_1_1parser_1_1_y_a_m_l__parser" kind="namespace"><name>hygia::parser::YAML_parser</name>
-  </compound>
   <compound refid="____init_____8py" kind="file"><name>__init__.py</name>
-=======
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
-=======
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
-  <compound refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser" kind="class"><name>parser::feature_engineering_parser::FeatureEngineeringParser</name>
-    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a6444e713c32f068287280ff66d8e45f9" kind="function"><name>parse</name></member>
-    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a3c1fc41cba00cf9d663a5dd85bd49365" kind="function"><name>_parse_feature_engineering_configs</name></member>
-    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a45885972d2b20fce9ed4ec92db343bf4" kind="function"><name>_get_dataframe</name></member>
-    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a0679d43d692b709c02d4ab0f55672bb3" kind="function"><name>_get_features_details</name></member>
-    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a43218d1380171031cecf28cabf2ea9fe" kind="function"><name>_get_word_embedding_config</name></member>
-    <member refid="classparser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a4d09f5672b729cc629610f8560714527" kind="function"><name>_get_keyboard_smash_config</name></member>
   </compound>
-  <compound refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash" kind="class"><name>data_pipeline::feature_engineering::key_smash::KeySmash</name>
-    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a21cb1a9e286356f32a6f783e961f6a46" kind="variable"><name>char_sets</name></member>
-    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a23bba8ab35ebb2bd0af52ea6596e4925" kind="function"><name>__init__</name></member>
-    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a3c0ca3e149360720f15327d78205e2f7" kind="function"><name>calculate_char_frequency_metric</name></member>
-    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a3428a01b9d0fa0e403334b15374d84d0" kind="function"><name>calculate_irregular_sequence_metric</name></member>
-    <member refid="classdata__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a596e7af2462276dfa0f5a73898eec2a4" kind="function"><name>calculate_number_count_metric</name></member>
+  <compound refid="feature__engineering_2____init_____8py" kind="file"><name>__init__.py</name>
   </compound>
-  <compound refid="classparser_1_1model__parser_1_1_model_parser" kind="class"><name>parser::model_parser::ModelParser</name>
-    <member refid="classparser_1_1model__parser_1_1_model_parser_1aba7b8a605e0d321c591633b092861699" kind="variable"><name>columns_alias</name></member>
-    <member refid="classparser_1_1model__parser_1_1_model_parser_1ad164aff94b2ff7cbe357a97d58734a09" kind="variable"><name>default_keyboard_smash_values</name></member>
-    <member refid="classparser_1_1model__parser_1_1_model_parser_1a416260ece9beca7d897eec76762d9b2b" kind="function"><name>__init__</name></member>
-    <member refid="classparser_1_1model__parser_1_1_model_parser_1a6eacbfbf440e6a79e6356375e623a9dc" kind="function"><name>parse</name></member>
-    <member refid="classparser_1_1model__parser_1_1_model_parser_1a694f81471abc207995b17a47d041e9ae" kind="function"><name>get_random_forest_address_config</name></member>
-    <member refid="classparser_1_1model__parser_1_1_model_parser_1af46e8c838f3a13db4c576a011076a036" kind="function"><name>get_columns</name></member>
-    <member refid="classparser_1_1model__parser_1_1_model_parser_1a76dda884e6d3a6bbcac1782ff2fe120d" kind="function"><name>get_thresholds</name></member>
-    <member refid="classparser_1_1model__parser_1_1_model_parser_1a3b85c606ffe0670782f2b87911338da2" kind="function"><name>get_keyboard_smash_default_thresholds</name></member>
-    <member refid="classparser_1_1model__parser_1_1_model_parser_1a6267210c4850b549f5fc90f3a90e7912" kind="function"><name>_parse_modal_configs</name></member>
+  <compound refid="model_2____init_____8py" kind="file"><name>__init__.py</name>
   </compound>
-  <compound refid="classparser_1_1parser__base_1_1_parser_base" kind="class"><name>parser::parser_base::ParserBase</name>
-    <member refid="classparser_1_1parser__base_1_1_parser_base_1a4f3b278ff54c422767e66c78a7bb24d6" kind="variable"><name>filepath</name></member>
-    <member refid="classparser_1_1parser__base_1_1_parser_base_1a2ccc68acea8b4677c1761e39d9aeb058" kind="function"><name>__init__</name></member>
-    <member refid="classparser_1_1parser__base_1_1_parser_base_1a5d88e7661694746fee4816141582c3a7" kind="function"><name>_try_get</name></member>
-    <member refid="classparser_1_1parser__base_1_1_parser_base_1a2eafe46a0dfd547f102a6afcee176311" kind="function"><name>_get</name></member>
-  </compound>
-  <compound refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding" kind="class"><name>data_pipeline::feature_engineering::word_embedding::WordEmbedding</name>
-    <member refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a9f80ebd1ebd4388302cd3e19e56916ed" kind="variable"><name>bpl</name></member>
-    <member refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a10817fded0539110daef964d8bf1bd8a" kind="function"><name>__init__</name></member>
-    <member refid="classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1abf75033d7367dcc2ce77151091b48342" kind="function"><name>get_embedding</name></member>
-  </compound>
-  <compound refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser" kind="class"><name>parser::YAML_parser::YAMLParser</name>
-    <member refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a8ec75ddaa9abd26784d69ccefbd8f90a" kind="function"><name>parse</name></member>
-    <member refid="classparser_1_1_y_a_m_l__parser_1_1_y_a_m_l_parser_1a54e76ebb98b2649f328c7b887dfa8107" kind="function"><name>_parse_yaml</name></member>
-  </compound>
-  <compound refid="namespacedata__pipeline" kind="namespace"><name>data_pipeline</name>
-  </compound>
-  <compound refid="namespacedata__pipeline_1_1feature__engineering" kind="namespace"><name>data_pipeline::feature_engineering</name>
-  </compound>
-  <compound refid="namespacedata__pipeline_1_1feature__engineering_1_1key__smash" kind="namespace"><name>data_pipeline::feature_engineering::key_smash</name>
-  </compound>
-  <compound refid="namespacedata__pipeline_1_1feature__engineering_1_1word__embedding" kind="namespace"><name>data_pipeline::feature_engineering::word_embedding</name>
-  </compound>
-  <compound refid="namespacedata__pipeline_1_1pre__processing" kind="namespace"><name>data_pipeline::pre_processing</name>
-  </compound>
-  <compound refid="namespacedata__pipeline_1_1pre__processing_1_1concatenate__columns" kind="namespace"><name>data_pipeline::pre_processing::concatenate_columns</name>
-    <member refid="concatenate__columns_8py_1a1b50d24e7adef5a0c638431ac5047bdf" kind="function"><name>get_concatenated_column</name></member>
-  </compound>
-  <compound refid="namespacemain" kind="namespace"><name>main</name>
-    <member refid="main_8py_1a6fba68047248af0a15cec69214a0d569" kind="function"><name>get_config</name></member>
-  </compound>
-  <compound refid="namespaceparser" kind="namespace"><name>parser</name>
-  </compound>
-  <compound refid="namespaceparser_1_1const" kind="namespace"><name>parser::const</name>
-  </compound>
-  <compound refid="namespaceparser_1_1feature__engineering__parser" kind="namespace"><name>parser::feature_engineering_parser</name>
-  </compound>
-  <compound refid="namespaceparser_1_1model__parser" kind="namespace"><name>parser::model_parser</name>
-  </compound>
-  <compound refid="namespaceparser_1_1parser__base" kind="namespace"><name>parser::parser_base</name>
-  </compound>
-  <compound refid="namespaceparser_1_1_y_a_m_l__parser" kind="namespace"><name>parser::YAML_parser</name>
->>>>>>> fe1d33e (doxygen files)
-  </compound>
-  <compound refid="data__pipeline_2____init_____8py" kind="file"><name>__init__.py</name>
-  </compound>
-  <compound refid="data__pipeline_2feature__engineering_2____init_____8py" kind="file"><name>__init__.py</name>
-  </compound>
-<<<<<<< HEAD
-  <compound refid="data__pipeline_2model_2____init_____8py" kind="file"><name>__init__.py</name>
-  </compound>
-  <compound refid="data__pipeline_2pre__process__data_2____init_____8py" kind="file"><name>__init__.py</name>
-  </compound>
-  <compound refid="parser_2____init_____8py" kind="file"><name>__init__.py</name>
+  <compound refid="pre__process__data_2____init_____8py" kind="file"><name>__init__.py</name>
   </compound>
   <compound refid="annotate__data_8py" kind="file"><name>annotate_data.py</name>
   </compound>
@@ -262,37 +121,6 @@
   </compound>
   <compound refid="pre__process__data_8py" kind="file"><name>pre_process_data.py</name>
   </compound>
-  <compound refid="main_8py" kind="file"><name>main.py</name>
-  </compound>
-  <compound refid="annotate__data__parser_8py" kind="file"><name>annotate_data_parser.py</name>
-  </compound>
-=======
-  <compound refid="data__pipeline_2pre__processing_2____init_____8py" kind="file"><name>__init__.py</name>
-  </compound>
-  <compound refid="parser_2____init_____8py" kind="file"><name>__init__.py</name>
-  </compound>
-  <compound refid="key__smash_8py" kind="file"><name>key_smash.py</name>
-  </compound>
-  <compound refid="word__embedding_8py" kind="file"><name>word_embedding.py</name>
-  </compound>
-  <compound refid="concatenate__columns_8py" kind="file"><name>concatenate_columns.py</name>
-  </compound>
-  <compound refid="main_8py" kind="file"><name>main.py</name>
-  </compound>
->>>>>>> fe1d33e (doxygen files)
-  <compound refid="const_8py" kind="file"><name>const.py</name>
-  </compound>
-  <compound refid="feature__engineering__parser_8py" kind="file"><name>feature_engineering_parser.py</name>
-  </compound>
-  <compound refid="model__parser_8py" kind="file"><name>model_parser.py</name>
-  </compound>
-  <compound refid="parser__base_8py" kind="file"><name>parser_base.py</name>
-  </compound>
-<<<<<<< HEAD
-  <compound refid="pre__processing__parser_8py" kind="file"><name>pre_processing_parser.py</name>
-  </compound>
-  <compound refid="_y_a_m_l__parser_8py" kind="file"><name>YAML_parser.py</name>
-  </compound>
   <compound refid="dir_91a15d825a96576a4dcc58d71733340b" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data</name>
   </compound>
   <compound refid="dir_70dcd5b75320c8bd61e96866e72ecc25" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline</name>
@@ -303,25 +131,6 @@
   </compound>
   <compound refid="dir_0eb1b5a43b0c8c28bb004ec4540a601a" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model</name>
   </compound>
-  <compound refid="dir_3836cc05125af4c9824ab70f348a3ea5" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/parser</name>
-  </compound>
   <compound refid="dir_58e6109ac17f9a85dc40764e86627f6a" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data</name>
-=======
-  <compound refid="_y_a_m_l__parser_8py" kind="file"><name>YAML_parser.py</name>
-  </compound>
-  <compound refid="dir_d8011c2d3002aeb7fe29b60ec5b6cceb" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline</name>
-  </compound>
-  <compound refid="dir_3f5f7729d78c36242303c059ac997ea8" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline/feature_engineering</name>
-  </compound>
-  <compound refid="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src/parser</name>
-  </compound>
-  <compound refid="dir_01d8c85d3e0193d6b57221e32ef52c37" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src/data_pipeline/pre_processing</name>
-  </compound>
-<<<<<<< HEAD
-  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/Users/carla/git/Playground/src</name>
->>>>>>> fe1d33e (doxygen files)
-=======
-  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/home/user/Documentos/Lappis/PDA/hygia/src</name>
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   </compound>
 </doxygenindex>

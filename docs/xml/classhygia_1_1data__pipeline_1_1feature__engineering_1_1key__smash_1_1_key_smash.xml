@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="24" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="24" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="27" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="27" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -32,10 +32,12 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Initialize the KeySmash class.
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="23" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="23" bodyend="29"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="23" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="23" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a682baee004b60c551f63c877a3270b3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -83,7 +85,7 @@ Use this function like this:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="30" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="30" bodyend="72"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="33" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="33" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a02080ee2e117a12c68b2749b5946734e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -140,7 +142,7 @@ Use this function like this:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="73" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="73" bodyend="123"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="76" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="76" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a43cd9f4f2e7bbb1797eea22d0c545f67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -188,7 +190,7 @@ Use this function like this:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="124" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="124" bodyend="164"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="127" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="127" bodyend="167"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pd.DataFrame</type>
@@ -243,7 +245,7 @@ Use this function like this:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="180" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="180" bodyend="222"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="183" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="183" bodyend="225"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -281,7 +283,7 @@ Use this function like this:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="165" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="165" bodyend="179"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="168" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="168" bodyend="182"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -303,7 +305,7 @@ Use this class like this:
     print(df)
 </verbatim> </para>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="5" bodyend="222"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="5" bodyend="225"/>
     <listofallmembers>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a65214ed127cf6a6491b1f249618e626d" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>__init__</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1afc42a4b6aa51c24fad51e85f0c269fd2" prot="protected" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>_normalize_column</name></member>

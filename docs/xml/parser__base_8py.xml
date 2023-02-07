@@ -1,6 +1,4 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="parser__base_8py" kind="file" language="Python">
     <compoundname>parser_base.py</compoundname>
@@ -8,16 +6,6 @@
     <innernamespace refid="namespacehygia">hygia</innernamespace>
     <innernamespace refid="namespacehygia_1_1parser">hygia::parser</innernamespace>
     <innernamespace refid="namespacehygia_1_1parser_1_1parser__base">hygia::parser::parser_base</innernamespace>
-=======
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
-=======
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
-  <compounddef id="parser__base_8py" kind="file" language="Python">
-    <compoundname>parser_base.py</compoundname>
-    <innerclass refid="classparser_1_1parser__base_1_1_parser_base" prot="public">parser::parser_base::ParserBase</innerclass>
-    <innernamespace refid="namespaceparser_1_1parser__base">parser::parser_base</innernamespace>
->>>>>>> fe1d33e (doxygen files)
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -25,21 +13,10 @@
     <programlisting>
 <codeline lineno="1"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<<<<<<< HEAD
 <codeline lineno="3" refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" kindref="compound">ParserBase</ref>():</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>filepath<sp/>=<sp/>&apos;src/yamls/config.yaml&apos;):</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a5b18a6ee35a95ec5f2c92c547a0816f6" kindref="member">filepath</ref><sp/>=<sp/>filepath</highlight></codeline>
-=======
-<codeline lineno="3" refid="classparser_1_1parser__base_1_1_parser_base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classparser_1_1parser__base_1_1_parser_base" kindref="compound">ParserBase</ref>():</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">__init__(self,<sp/>filepath<sp/>=<sp/>&apos;src/yamls/config.yaml&apos;):</highlight></codeline>
-<<<<<<< HEAD
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classparser_1_1parser__base_1_1_parser_base_1a4f3b278ff54c422767e66c78a7bb24d6" kindref="member">filepath</ref>filepath<sp/>=<sp/>filepath</highlight></codeline>
->>>>>>> fe1d33e (doxygen files)
-=======
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classparser_1_1parser__base_1_1_parser_base_1a4f3b278ff54c422767e66c78a7bb24d6" kindref="member">filepath</ref><sp/>=<sp/>filepath</highlight></codeline>
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">_try_get(self,<sp/>variable:<sp/>dict,<sp/>field,<sp/>error_msg=</highlight><highlight class="keywordtype">None</highlight><highlight class="normal">):</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
@@ -47,8 +24,6 @@
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal"><sp/>KeyError:</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>error_msg:</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error_msg<sp/>=<sp/>f</highlight><highlight class="stringliteral">&apos;the<sp/>field<sp/>`{field}`<sp/>is<sp/>required.&apos;</highlight><highlight class="normal"></highlight></codeline>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file_name<sp/>=<sp/>self.<ref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a5b18a6ee35a95ec5f2c92c547a0816f6" kindref="member">filepath</ref>.split(</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">)[-1]</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error_msg<sp/>=<sp/>f</highlight><highlight class="stringliteral">&apos;Error<sp/>in<sp/>file<sp/>{file_name}:<sp/>{error_msg}&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>ValueError(error_msg)</highlight></codeline>
@@ -63,25 +38,5 @@
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>default_value</highlight></codeline>
     </programlisting>
     <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/parser_base.py"/>
-=======
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file_name<sp/>=<sp/>self.<ref refid="classparser_1_1parser__base_1_1_parser_base_1a4f3b278ff54c422767e66c78a7bb24d6" kindref="member">filepath</ref>filepath.split(</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">)[-1]</highlight></codeline>
-=======
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file_name<sp/>=<sp/>self.<ref refid="classparser_1_1parser__base_1_1_parser_base_1a4f3b278ff54c422767e66c78a7bb24d6" kindref="member">filepath</ref>.split(</highlight><highlight class="stringliteral">&apos;/&apos;</highlight><highlight class="normal">)[-1]</highlight></codeline>
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error_msg<sp/>=<sp/>f</highlight><highlight class="stringliteral">&apos;Error<sp/>in<sp/>file<sp/>{file_name}:<sp/>{error_msg}&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>ValueError(error_msg)</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">_get(self,<sp/>variable:<sp/>dict,<sp/>field,<sp/>default_value):</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>variable[field]</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">except</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>default_value</highlight></codeline>
-    </programlisting>
-<<<<<<< HEAD
-    <location file="/Users/carla/git/Playground/src/parser/parser_base.py"/>
->>>>>>> fe1d33e (doxygen files)
-=======
-    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/parser_base.py"/>
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   </compounddef>
 </doxygen>

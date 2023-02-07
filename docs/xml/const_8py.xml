@@ -1,21 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="const_8py" kind="file" language="Python">
     <compoundname>const.py</compoundname>
     <innernamespace refid="namespacehygia">hygia</innernamespace>
     <innernamespace refid="namespacehygia_1_1parser">hygia::parser</innernamespace>
     <innernamespace refid="namespacehygia_1_1parser_1_1const">hygia::parser::const</innernamespace>
-=======
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
-=======
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
-  <compounddef id="const_8py" kind="file" language="Python">
-    <compoundname>const.py</compoundname>
-    <innernamespace refid="namespaceparser_1_1const">parser::const</innernamespace>
->>>>>>> fe1d33e (doxygen files)
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -25,14 +14,6 @@
 <codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;ADDRESS&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;address&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/const.py"/>
-=======
-    <location file="/Users/carla/git/Playground/src/parser/const.py"/>
->>>>>>> fe1d33e (doxygen files)
-=======
-    <location file="/home/user/Documentos/Lappis/PDA/hygia/src/parser/const.py"/>
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
   </compounddef>
 </doxygen>

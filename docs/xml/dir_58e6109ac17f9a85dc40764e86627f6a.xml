@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="dir_58e6109ac17f9a85dc40764e86627f6a" kind="dir">
     <compoundname>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data</compoundname>
-    <innerfile refid="data__pipeline_2pre__process__data_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="pre__process__data_2____init_____8py">__init__.py</innerfile>
     <innerfile refid="augment__data_8py">augment_data.py</innerfile>
     <innerfile refid="pre__process__data_8py">pre_process_data.py</innerfile>
     <briefdescription>

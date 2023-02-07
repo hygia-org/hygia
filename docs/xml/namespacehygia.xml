@@ -3,39 +3,10 @@
   <compounddef id="namespacehygia" kind="namespace" language="Python">
     <compoundname>hygia</compoundname>
     <innernamespace refid="namespacehygia_1_1data__pipeline">hygia::data_pipeline</innernamespace>
-    <innernamespace refid="namespacehygia_1_1main">hygia::main</innernamespace>
-    <innernamespace refid="namespacehygia_1_1parser">hygia::parser</innernamespace>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="____init_____8py_1a9dce4973d0f4a4b058d41a32d8bb26ad" prot="private" static="no" mutable="no">
-        <type>list</type>
-        <definition>list hygia.__all__</definition>
-        <argsstring></argsstring>
-        <name>__all__</name>
-        <qualifiedname>hygia.__all__</qualifiedname>
-        <initializer>=  [
-    &quot;FeatureEngineering&quot;,
-    &quot;KeySmash&quot;,
-    &quot;WordEmbedding&quot;,
-    &quot;Regex&quot;,
-    &quot;RandomForestModel&quot;,
-    &quot;PreProcessData&quot;,
-    &quot;AnnotateData&quot;,
-    &quot;AugmentData&quot;,
-    &quot;run_with_config&quot;
-]</initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/__init__.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/__init__.py" bodystart="11" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/__init__.py" line="1" column="1"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

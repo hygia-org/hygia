@@ -83,14 +83,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3ce808991033e28ec22836b3dfc138fb"><td class="memItemLeft" align="right" valign="top"><a id="a3ce808991033e28ec22836b3dfc138fb" name="a3ce808991033e28ec22836b3dfc138fb"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, model_file=None, n_estimators=100, max_depth=None, random_state=0)</td></tr>
+<tr class="memitem:a3ce808991033e28ec22836b3dfc138fb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#a3ce808991033e28ec22836b3dfc138fb">__init__</a> (self, model_file=None, n_estimators=100, max_depth=None, random_state=0)</td></tr>
 <tr class="separator:a3ce808991033e28ec22836b3dfc138fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf7a38d78b4b8100bec3034415cf958e"><td class="memItemLeft" align="right" valign="top"><a id="acf7a38d78b4b8100bec3034415cf958e" name="acf7a38d78b4b8100bec3034415cf958e"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>train_and_get_scores</b> (self, df, concatened_column_name, all_features_columns, test_size=0.3)</td></tr>
+<tr class="memitem:acf7a38d78b4b8100bec3034415cf958e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#acf7a38d78b4b8100bec3034415cf958e">train_and_get_scores</a> (self, df, concatened_column_name, all_features_columns, test_size=0.3)</td></tr>
 <tr class="separator:acf7a38d78b4b8100bec3034415cf958e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f97ea337bcc807954c6d68758d91a91"><td class="memItemLeft" align="right" valign="top"><a id="a4f97ea337bcc807954c6d68758d91a91" name="a4f97ea337bcc807954c6d68758d91a91"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>predict</b> (self, X)</td></tr>
+<tr class="memitem:a4f97ea337bcc807954c6d68758d91a91"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#a4f97ea337bcc807954c6d68758d91a91">predict</a> (self, X)</td></tr>
 <tr class="separator:a4f97ea337bcc807954c6d68758d91a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -108,6 +105,154 @@ Public Attributes</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>random_state</b></td></tr>
 <tr class="separator:ae5ab8b176adb170adad2175c5685163c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">This class presents the model Random Forest, allowing train and predict the model
+
+Examples
+--------
+Use this class like this:
+
+.. code-block:: python
+    new_rf_model = hg.RandomForestModel()
+    clf, scores = new_rf_model.train_and_get_scores(df, concatened_column_name, all_features_columns)
+    scores
+</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3ce808991033e28ec22836b3dfc138fb" name="a3ce808991033e28ec22836b3dfc138fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce808991033e28ec22836b3dfc138fb">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def hygia.data_pipeline.model.random_forest.RandomForestModel.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>model_file</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>n_estimators</em> = <code>100</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>max_depth</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>random_state</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Initialize the RandomForestModel class.
+
+:param model_file: Path to the model file
+:type model_file: path
+</pre> 
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4f97ea337bcc807954c6d68758d91a91" name="a4f97ea337bcc807954c6d68758d91a91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f97ea337bcc807954c6d68758d91a91">&#9670;&#160;</a></span>predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def hygia.data_pipeline.model.random_forest.RandomForestModel.predict </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>X</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Predict the model result
+</pre> 
+</div>
+</div>
+<a id="acf7a38d78b4b8100bec3034415cf958e" name="acf7a38d78b4b8100bec3034415cf958e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7a38d78b4b8100bec3034415cf958e">&#9670;&#160;</a></span>train_and_get_scores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def hygia.data_pipeline.model.random_forest.RandomForestModel.train_and_get_scores </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>df</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>concatened_column_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>all_features_columns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>test_size</em> = <code>0.3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Train and get scores for the model execution.
+
+:param df: Dataframe with the data.
+:type df: pandas.DataFrame
+
+:param concatened_column_name: Column name
+:type concatened_column_name: str
+
+:param all_features_columns: List of all features column nales
+:type all_features_columns: List
+</pre> 
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/random_forest.py</li>
 </ul>

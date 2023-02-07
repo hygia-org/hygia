@@ -1,25 +1,26 @@
 /*
- @licstart  The following is the entire license notice for the
- JavaScript code in this file.
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
 
- Copyright (C) 1997-2017 by Dimitri van Heesch
+ The MIT License (MIT)
 
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+ Copyright (C) 1997-2020 by Dimitri van Heesch
 
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
- You should have received a copy of the GNU General Public License along
- with this program; if not, write to the Free Software Foundation, Inc.,
- 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
 
- @licend  The above is the entire license notice
- for the JavaScript code in this file
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
  */
 function convertToId(search)
 {
@@ -72,11 +73,8 @@ function getYPos(item)
   return y;
 }
 
-<<<<<<< HEAD
 var searchResults = new SearchResults("searchResults");
 
-=======
->>>>>>> fe1d33e (doxygen files)
 /* A class handling everything associated with the search panel.
 
    Parameters:
@@ -84,17 +82,10 @@ var searchResults = new SearchResults("searchResults");
           storing this instance.  Is needed to be able to set timeouts.
    resultPath - path to use for external files
 */
-<<<<<<< HEAD
-<<<<<<< HEAD
 function SearchBox(name, resultsPath, extension)
-=======
-function SearchBox(name, resultsPath, label, extension)
->>>>>>> fe1d33e (doxygen files)
-=======
-function SearchBox(name, resultsPath, inFrame, label)
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 {
   if (!name || !resultsPath) {  alert("Missing parameters to SearchBox."); }
+  if (!extension || extension == "") { extension = ".html"; }
 
   // ---------- Instance variables
   this.name                  = name;
@@ -107,16 +98,7 @@ function SearchBox(name, resultsPath, inFrame, label)
   this.hideTimeout           = 0;
   this.searchIndex           = 0;
   this.searchActive          = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  this.searchLabel           = label;
->>>>>>> fe1d33e (doxygen files)
   this.extension             = extension;
-=======
-  this.insideFrame           = inFrame;
-  this.searchLabel           = label;
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
 
   // ----------- DOM Elements
 
@@ -154,30 +136,14 @@ function SearchBox(name, resultsPath, inFrame, label)
     var searchSelectWindow = this.DOMSearchSelectWindow();
     var searchField        = this.DOMSearchSelect();
 
-    if (this.insideFrame)
-    {
-      var left = getXPos(searchField);
-      var top  = getYPos(searchField);
-      left += searchField.offsetWidth + 6;
-      top += searchField.offsetHeight;
+    var left = getXPos(searchField);
+    var top  = getYPos(searchField);
+    top += searchField.offsetHeight;
 
-      // show search selection popup
-      searchSelectWindow.style.display='block';
-      left -= searchSelectWindow.offsetWidth;
-      searchSelectWindow.style.left =  left + 'px';
-      searchSelectWindow.style.top  =  top  + 'px';
-    }
-    else
-    {
-      var left = getXPos(searchField);
-      var top  = getYPos(searchField);
-      top += searchField.offsetHeight;
-
-      // show search selection popup
-      searchSelectWindow.style.display='block';
-      searchSelectWindow.style.left =  left + 'px';
-      searchSelectWindow.style.top  =  top  + 'px';
-    }
+    // show search selection popup
+    searchSelectWindow.style.display='block';
+    searchSelectWindow.style.left =  left + 'px';
+    searchSelectWindow.style.top  =  top  + 'px';
 
     // stop selection hide timer
     if (this.hideTimeout)
@@ -221,19 +187,10 @@ function SearchBox(name, resultsPath, inFrame, label)
         }
         return;
       }
-      else if (window.frames.MSearchResults.searchResults)
+      else
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
         var elem = searchResults.NavNext(0);
         if (elem) elem.focus();
-=======
-        window.frames.MSearchResults.postMessage("take_focus", "*");
->>>>>>> fe1d33e (doxygen files)
-=======
-        var elem = window.frames.MSearchResults.searchResults.NavNext(0);
-        if (elem) elem.focus();
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
       }
     }
     else if (e.keyCode==27) // Escape out of the search field
@@ -369,20 +326,12 @@ function SearchBox(name, resultsPath, inFrame, label)
       idxChar = searchValue.substr(0, 2);
     }
 
-<<<<<<< HEAD
     var jsFile;
-=======
-    var resultsPage;
-    var resultsPageWithSearch;
-    var hasResultsPage;
->>>>>>> fe1d33e (doxygen files)
 
     var idx = indexSectionsWithContent[this.searchIndex].indexOf(idxChar);
     if (idx!=-1)
     {
        var hexCode=idx.toString(16);
-<<<<<<< HEAD
-<<<<<<< HEAD
        jsFile = this.resultsPath + indexSectionNames[this.searchIndex] + '_' + hexCode + '.js';
     }
 
@@ -437,52 +386,6 @@ function SearchBox(name, resultsPath, inFrame, label)
     }
 
     this.lastSearchValue = searchValue;
-=======
-       resultsPage = this.resultsPath + '/' + indexSectionNames[this.searchIndex] + '_' + hexCode + this.extension;
-=======
-       resultsPage = this.resultsPath + '/' + indexSectionNames[this.searchIndex] + '_' + hexCode + '.html';
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
-       resultsPageWithSearch = resultsPage+'?'+escape(searchValue);
-       hasResultsPage = true;
-    }
-    else // nothing available for this search term
-    {
-       resultsPage = this.resultsPath + '/nomatches.html';
-       resultsPageWithSearch = resultsPage;
-       hasResultsPage = false;
-    }
-
-    window.frames.MSearchResults.location = resultsPageWithSearch;
-    var domPopupSearchResultsWindow = this.DOMPopupSearchResultsWindow();
-
-    if (domPopupSearchResultsWindow.style.display!='block')
-    {
-       var domSearchBox = this.DOMSearchBox();
-       this.DOMSearchClose().style.display = 'inline';
-       if (this.insideFrame)
-       {
-         var domPopupSearchResults = this.DOMPopupSearchResults();
-         domPopupSearchResultsWindow.style.position = 'relative';
-         domPopupSearchResultsWindow.style.display  = 'block';
-         var width = document.body.clientWidth - 8; // the -8 is for IE :-(
-         domPopupSearchResultsWindow.style.width    = width + 'px';
-         domPopupSearchResults.style.width          = width + 'px';
-       }
-       else
-       {
-         var domPopupSearchResults = this.DOMPopupSearchResults();
-         var left = getXPos(domSearchBox) + 150; // domSearchBox.offsetWidth;
-         var top  = getYPos(domSearchBox) + 20;  // domSearchBox.offsetHeight + 1;
-         domPopupSearchResultsWindow.style.display = 'block';
-         left -= domPopupSearchResults.offsetWidth;
-         domPopupSearchResultsWindow.style.top     = top  + 'px';
-         domPopupSearchResultsWindow.style.left    = left + 'px';
-       }
-    }
-
-    this.lastSearchValue = searchValue;
-    this.lastResultsPage = resultsPage;
->>>>>>> fe1d33e (doxygen files)
   }
 
   // -------- Activation Functions
@@ -496,33 +399,15 @@ function SearchBox(name, resultsPath, inFrame, label)
        )
     {
       this.DOMSearchBox().className = 'MSearchBoxActive';
-<<<<<<< HEAD
       this.searchActive = true;
-=======
-
-      var searchField = this.DOMSearchField();
-
-      if (searchField.value == this.searchLabel) // clear "Search" term upon entry
-      {
-        searchField.value = '';
-        this.searchActive = true;
-      }
->>>>>>> fe1d33e (doxygen files)
     }
     else if (!isActive) // directly remove the panel
     {
       this.DOMSearchBox().className = 'MSearchBoxInactive';
-<<<<<<< HEAD
       this.searchActive             = false;
       this.lastSearchValue          = ''
       this.lastResultsPage          = '';
       this.DOMSearchField().value   = '';
-=======
-      this.DOMSearchField().value   = this.searchLabel;
-      this.searchActive             = false;
-      this.lastSearchValue          = ''
-      this.lastResultsPage          = '';
->>>>>>> fe1d33e (doxygen files)
     }
   }
 }
@@ -545,12 +430,12 @@ function SearchResults(name)
 
       while (element && element!=parentElement)
       {
-        if (element.nodeName == 'DIV' && element.className == 'SRChildren')
+        if (element.nodeName.toLowerCase() == 'div' && element.className == 'SRChildren')
         {
           return element;
         }
 
-        if (element.nodeName == 'DIV' && element.hasChildNodes())
+        if (element.nodeName.toLowerCase() == 'div' && element.hasChildNodes())
         {
            element = element.firstChild;
         }
@@ -751,11 +636,7 @@ function SearchResults(name)
         }
         else // return focus to search field
         {
-<<<<<<< HEAD
            document.getElementById("MSearchField").focus();
-=======
-           parent.document.getElementById("MSearchField").focus();
->>>>>>> fe1d33e (doxygen files)
         }
       }
       else if (this.lastKey==40) // Down
@@ -785,13 +666,8 @@ function SearchResults(name)
       }
       else if (this.lastKey==27) // Escape
       {
-<<<<<<< HEAD
         searchBox.CloseResultsWindow();
         document.getElementById("MSearchField").focus();
-=======
-        parent.searchBox.CloseResultsWindow();
-        parent.document.getElementById("MSearchField").focus();
->>>>>>> fe1d33e (doxygen files)
       }
       else if (this.lastKey==13) // Enter
       {
@@ -833,13 +709,8 @@ function SearchResults(name)
       }
       else if (this.lastKey==27) // Escape
       {
-<<<<<<< HEAD
         searchBox.CloseResultsWindow();
         document.getElementById("MSearchField").focus();
-=======
-        parent.searchBox.CloseResultsWindow();
-        parent.document.getElementById("MSearchField").focus();
->>>>>>> fe1d33e (doxygen files)
       }
       else if (this.lastKey==13) // Enter
       {
@@ -862,16 +733,10 @@ function setClassAttr(elem,attr)
   elem.setAttribute('className',attr);
 }
 
-<<<<<<< HEAD
 function createResults(resultsPath)
 {
   var results = document.getElementById("SRResults");
   results.innerHTML = '';
-=======
-function createResults()
-{
-  var results = document.getElementById("SRResults");
->>>>>>> fe1d33e (doxygen files)
   for (var e=0; e<searchData.length; e++)
   {
     var id = searchData[e][0];
@@ -888,27 +753,16 @@ function createResults()
     srEntry.appendChild(srLink);
     if (searchData[e][1].length==2) // single result
     {
-<<<<<<< HEAD
       srLink.setAttribute('href',resultsPath+searchData[e][1][1][0]);
       srLink.setAttribute('onclick','searchBox.CloseResultsWindow()');
-=======
-      srLink.setAttribute('href',searchData[e][1][1][0]);
-<<<<<<< HEAD
-      srLink.setAttribute('onclick','parent.searchBox.CloseResultsWindow()');
->>>>>>> fe1d33e (doxygen files)
-=======
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
       if (searchData[e][1][1][1])
       {
        srLink.setAttribute('target','_parent');
       }
-<<<<<<< HEAD
       else
       {
        srLink.setAttribute('target','_blank');
       }
-=======
->>>>>>> fe1d33e (doxygen files)
       var srScope = document.createElement('span');
       setClassAttr(srScope,'SRScope');
       srScope.innerHTML = searchData[e][1][1][2];
@@ -925,27 +779,16 @@ function createResults()
         srChild.setAttribute('id','Item'+e+'_c'+c);
         setKeyActions(srChild,'return searchResults.NavChild(event,'+e+','+c+')');
         setClassAttr(srChild,'SRScope');
-<<<<<<< HEAD
         srChild.setAttribute('href',resultsPath+searchData[e][1][c+1][0]);
         srChild.setAttribute('onclick','searchBox.CloseResultsWindow()');
-=======
-        srChild.setAttribute('href',searchData[e][1][c+1][0]);
-<<<<<<< HEAD
-        srChild.setAttribute('onclick','parent.searchBox.CloseResultsWindow()');
->>>>>>> fe1d33e (doxygen files)
-=======
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
         if (searchData[e][1][c+1][1])
         {
          srChild.setAttribute('target','_parent');
         }
-<<<<<<< HEAD
         else
         {
          srChild.setAttribute('target','_blank');
         }
-=======
->>>>>>> fe1d33e (doxygen files)
         srChild.innerHTML = searchData[e][1][c+1][2];
         srChildren.appendChild(srChild);
       }

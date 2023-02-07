@@ -2,7 +2,51 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data" kind="class" language="Python" prot="public">
     <compoundname>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a54c1b51a0b092d4c4cf4a575c7e9d682" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData::abbreviations_dict</definition>
+        <argsstring></argsstring>
+        <name>abbreviations_dict</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.abbreviations_dict</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="30" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a56b7999a113fcad06e993e8aa28ce906" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__</definition>
+        <argsstring>(self, str country=&apos;MEXICO&apos;)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>country</declname>
+          <defval>&apos;MEXICO&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize the PreProcessData class.
+
+:param country: Zipcode list of the region or country used.
+:type country: str
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="19" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="19" bodyend="35"/>
+      </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1aa918dadaa5fad237dfabbbcb95933376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.concatenate_columns</definition>
@@ -28,10 +72,23 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Function that concatenates two columns and saves in a new one, whose name is informed by the user.
+
+:param df: Dataframe.
+:type df: pandas.DataFrame
+
+:param columns: List of columns
+:type columns: List
+
+:param concatenated_column_name: Name of the new column
+:type concatenated_column_name: str
+
+:return: Return the columns concatenated
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="5" bodyend="10"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="36" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="36" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0f373aa2c3685df2291a25aab0473707" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -54,15 +111,57 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Handle null values
+
+:param df: Dataframe
+:type df: pandas.DataFrame
+
+:param column_name: Column name to check
+:type column_name: str
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="11" bodyend="16"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="57" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="57" bodyend="71"/>
       </memberdef>
-      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a6c4c76f8e3ed9460bba760086cd9e2c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a5e81ba265ff8746bb5558901884f1160" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_abreviations</definition>
+        <argsstring>(self, df, column_name)</argsstring>
+        <name>handle_abreviations</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_abreviations</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>df</type>
+          <defname>df</defname>
+        </param>
+        <param>
+          <type>column_name</type>
+          <defname>column_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Handles abbreviations in the dataframe
+
+:param df: Dataframe
+:type df: DataFrame
+
+:param column_name: Column name to check
+:type column_name: str
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="83" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="83" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a9434e258aada55019b9a7cbd9a243bda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data</definition>
-        <argsstring>(self, df, columns_to_concat=None, column_name=None)</argsstring>
+        <argsstring>(self, df, columns_to_concat=None, column_name=None, zipcode_columns=None)</argsstring>
         <name>pre_process_data</name>
         <qualifiedname>hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data</qualifiedname>
         <param>
@@ -83,24 +182,89 @@
           <defname>column_name</defname>
           <defval>None</defval>
         </param>
+        <param>
+          <type>zipcode_columns</type>
+          <defname>zipcode_columns</defname>
+          <defval>None</defval>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Função que reune todos preprocessamentos implementados (concatenar colunas, handle with nulls and abreviations)
+
+:param df: Dataframe
+:type df: DataFrame
+
+:param columns_to_concat: List of columns
+:type columns_to_concat: List
+
+:param column_name: Column name to check
+:type column_name: str
+
+:return: The input dataframe with additional columns
+:rtype: pandas.DataFrame
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="17" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="17" bodyend="26"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="97" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="97" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a08787d36f285f9d2709433982d8d4926" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData._replace_abbreviation</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>_replace_abbreviation</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData._replace_abbreviation</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Function that identifies abbreviations and according to the dictionary changes the names
+
+:param text: Text to be analyzed
+:type text: str
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="72" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="72" bodyend="82"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para><verbatim>This class presents a series of functions that help in data pre-processing.
+As concatenate columns, replace abbreviation, and etc.
+
+
+Examples
+--------
+Use this class like this:
+
+.. code-block:: python
+    pre_process_data = hg.PreProcessData()
+    df = pre_process_data.pre_process_data(df, [&apos;COLUMN_1&apos;, &apos;COLUMN_2&apos;], concatened_column_name)
+    print(df)
+</verbatim> </para>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="4" bodyend="26"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/pre_process_data.py" bodystart="4" bodyend="122"/>
     <listofallmembers>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a56b7999a113fcad06e993e8aa28ce906" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a08787d36f285f9d2709433982d8d4926" prot="protected" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>_replace_abbreviation</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a54c1b51a0b092d4c4cf4a575c7e9d682" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>abbreviations_dict</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1aa918dadaa5fad237dfabbbcb95933376" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>concatenate_columns</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a5e81ba265ff8746bb5558901884f1160" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>handle_abreviations</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0f373aa2c3685df2291a25aab0473707" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>handle_nulls</name></member>
-      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a6c4c76f8e3ed9460bba760086cd9e2c4" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>pre_process_data</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a9434e258aada55019b9a7cbd9a243bda" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</scope><name>pre_process_data</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -1,14 +1,7 @@
 var searchData=
 [
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ['_5f_5finit_5f_5f_0',['__init__',['../classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering.html#a33f8c5028f3fee8359def47641fdc736',1,'hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__()'],['../classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#a882b4ba550a9356baeb85964848bb5ac',1,'hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__(self, str lang=&apos;es&apos;, int dimensions=25, str model=&apos;bytepair&apos;)']]],
+  ['_5f_5finit_5f_5f_0',['__init__',['../classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering.html#a33f8c5028f3fee8359def47641fdc736',1,'hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__()'],['../classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#a65214ed127cf6a6491b1f249618e626d',1,'hygia.data_pipeline.feature_engineering.key_smash.KeySmash.__init__()'],['../classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#a882b4ba550a9356baeb85964848bb5ac',1,'hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__()'],['../classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#a3ce808991033e28ec22836b3dfc138fb',1,'hygia.data_pipeline.model.random_forest.RandomForestModel.__init__()'],['../classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data.html#a663159ea8e556da4e70de1005d68def7',1,'hygia.data_pipeline.pre_process_data.augment_data.AugmentData.__init__()'],['../classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data.html#a56b7999a113fcad06e993e8aa28ce906',1,'hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__()']]],
   ['_5fload_5fmodel_1',['_load_model',['../classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#ab615ccc3b82284f7877e30370ce3fb8e',1,'hygia::data_pipeline::feature_engineering::word_embedding::WordEmbedding']]],
-  ['_5fnormalize_5fcolumn_2',['_normalize_column',['../classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#afc42a4b6aa51c24fad51e85f0c269fd2',1,'hygia::data_pipeline::feature_engineering::key_smash::KeySmash']]]
-=======
-  ['_5f_5finit_5f_5f_0',['__init__',['../classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#a10817fded0539110daef964d8bf1bd8a',1,'data_pipeline::feature_engineering::word_embedding::WordEmbedding']]]
->>>>>>> fe1d33e (doxygen files)
-=======
-  ['_5f_5finit_5f_5f_17',['__init__',['../classdata__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#a10817fded0539110daef964d8bf1bd8a',1,'data_pipeline::feature_engineering::word_embedding::WordEmbedding']]]
->>>>>>> 1e8b0f9 ((#57)(#58) Update sphinx path)
+  ['_5fnormalize_5fcolumn_2',['_normalize_column',['../classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#afc42a4b6aa51c24fad51e85f0c269fd2',1,'hygia::data_pipeline::feature_engineering::key_smash::KeySmash']]],
+  ['_5freplace_5fabbreviation_3',['_replace_abbreviation',['../classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data.html#a08787d36f285f9d2709433982d8d4926',1,'hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData']]]
 ];

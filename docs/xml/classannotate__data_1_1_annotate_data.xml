@@ -28,17 +28,50 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Annotate data function.
+
+:param df: Dataframe to extract features from.
+:type df: pandas.DataFrame
+:param concatened_column_name: Dataframe column to be used
+:type concatened_column_name: List
+:param ks_thresholds: List of thresholds
+:type ks_thresholds: List
+
+:return: The input dataframe with additional columns for key smashing and word embedding features.
+:rtype: pandas.DataFrame
+</verbatim> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" line="6" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" bodystart="6" bodyend="29"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" line="27" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" bodystart="27" bodyend="64"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para><verbatim>A class to incorporate the data annotation phase, starting from the thresholds 
+(e.g., count sequence squared vowels, count sequence squared consonants) can tell if it&apos;s a ksmash.
+
+Examples
+--------
+Use this class like this:
+
+.. code-block:: python
+
+    annotate_data = hg.AnnotateData()
+    key_smash_thresholds = {
+    &apos;count_sequence_squared_vowels&apos;: 1.00,
+    &apos;count_sequence_squared_consonants&apos;: 1.999,
+    &apos;count_sequence_squared_special_characters&apos;: 2.2499,
+    &apos;ratio_of_numeric_digits_squared&apos;: 2.9,
+    &apos;average_of_char_count_squared&apos;: 2.78,
+    }
+
+    df = annotate_data.annotate_data(df, concatened_column_name, key_smash_thresholds)
+    print(df)
+</verbatim> </para>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" bodystart="4" bodyend="29"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" bodystart="4" bodyend="64"/>
     <listofallmembers>
       <member refid="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" prot="public" virt="non-virtual"><scope>annotate_data::AnnotateData</scope><name>annotate_data</name></member>
     </listofallmembers>

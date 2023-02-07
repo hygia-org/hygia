@@ -51,6 +51,7 @@ Installing from PyPI
    :maxdepth: 2
 
    user_guide/index
+   doxygen/index
 
 
 
