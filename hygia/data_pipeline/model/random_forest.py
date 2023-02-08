@@ -60,10 +60,10 @@ class RandomForestModel:
     # Normalization
     key_smash_features_columns = [column for column in all_features_columns if column.startswith('feature_ks')]
     self._get_absolute_maximums(df_balanced, key_smash_features_columns, concatened_column_name)
-    df_balanced_normalized = self._normalization(df_balanced, key_smash_features_columns, concatened_column_name)
-
+    df_balanced_normalized = self._normalization(df_balanced.copy(), key_smash_features_columns, concatened_column_name)
+    
     # Train/Test split
-    X = df_balanced_normalized[[*all_features_columns]]
+    X = df_balanced_normalized[[*all_features_columns]].values
     y = df_balanced_normalized['is_key_smash']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size)
     
@@ -100,7 +100,7 @@ class RandomForestModel:
     print(f'{Fore.YELLOW}running model...{Fore.WHITE}')
     
     key_smash_features_columns = [column for column in X.columns if column.startswith('feature_ks')]
-    X = self._normalization(X, key_smash_features_columns, concatened_column_name)
+    X = self._normalization(X.copy(), key_smash_features_columns, concatened_column_name)
     
     return self.model.predict(X.values)
   
