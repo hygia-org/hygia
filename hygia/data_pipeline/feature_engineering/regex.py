@@ -1,6 +1,29 @@
 import re
 import pandas as pd
+from hygia.paths.paths import root_path
 class Regex:
+    def __init__(self, country:str=None, context_words_file:str=None):
+        self.context_invalid_words = []
+        if not country and not context_words_file:
+            return
+        country_mappings = {
+            'MEXICO': {'context_words_file': root_path + '/data/dicts/mexico_context.csv'},
+        }
+        if country:
+            context_words_file_path = country_mappings[country]['context_words_file']
+        if context_words_file:
+            context_words_file_path = context_words_file
+            
+        df_context = pd.read_csv(context_words_file_path)
+        self.context_invalid_words = df_context[df_context['valid']==0]['text'].values
+    
+    def contains_context_invalid_words(self, text:str) -> bool:
+        for context_invalid_word in self.context_invalid_words:
+            pattern = rf'{context_invalid_word}'
+            if bool(re.search(pattern, text, re.IGNORECASE)):
+                return True
+        return False
+    
     def contains_exactly_the_word_dell(self, text:str) -> bool:
         pattern = r'\bdell\b'
         return bool(re.search(pattern, text, re.IGNORECASE))
@@ -51,6 +74,7 @@ class Regex:
     
     def extract_regex_features(self, df:pd.DataFrame, column_name:str) -> pd.DataFrame:
         regex_features = [
+            self.contains_context_invalid_words,
             self.contains_exactly_the_word_dell,
             self.contains_exactly_the_word_test,
             self.only_numbers,

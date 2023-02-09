@@ -24,9 +24,9 @@ class AugmentData:
         country_code = country_mappings[country]['code']
         zipcode_file = country_mappings[country]['zipcode_file']
         zipcode_df = pd.read_pickle(root_path + f"/data/zipcode/{zipcode_file}")
-        country_zipcode_df_raw = zipcode_df[zipcode_df['country code']== country_code]
+        country_zipcode_df_raw = zipcode_df[zipcode_df['country code']== country_code].copy()
         if country_mappings[country]['length']:
-            country_zipcode_df_raw['postal code'] = country_zipcode_df_raw['postal code'].astype(str).str.pad(country_mappings[country]['length'],fillchar='0')
+            country_zipcode_df_raw['postal code'] = country_zipcode_df_raw['postal code'].str.pad(country_mappings[country]['length'],fillchar='0')
         self.country_zipcode_df = country_zipcode_df_raw.drop_duplicates(subset=['postal code'])
     
     def validate_zipcode(self, text:str) -> bool:

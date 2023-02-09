@@ -112,11 +112,11 @@ class KeySmash:
             if text[i] in char_set and text[i + 1] in char_set:
                 count_sequence += 1
             else:
-                if count_sequence > 1:
+                if count_sequence > 2:
                     sequences.append(count_sequence ** 2)
                     count_sequence = 1
 
-        if count_sequence > 1:
+        if count_sequence > 2:
             sequences.append(count_sequence ** 2)
 
         return sum(sequences) / len(text)
@@ -177,7 +177,7 @@ class KeySmash:
         return df[column]  / df[column].abs().max() if df[column].abs().max() != 0.0 else 0.0
 
     
-    def extract_key_smash_features(self, df:pd.DataFrame, column_name:str, normalize:bool=False) -> pd.DataFrame:
+    def extract_key_smash_features(self, df:pd.DataFrame, column_name:str) -> pd.DataFrame:
         """
         Extract key smash features from a given dataframe and column.
 
@@ -208,14 +208,5 @@ class KeySmash:
         df[f'feature_ks_count_sequence_squared_special_characters_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'special_characters') if len(x) > 0 else 0.0)
         df[f'feature_ks_ratio_of_numeric_digits_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.ratio_of_numeric_digits_squared(x) if len(x) > 0 else 0.0)
         df[f'feature_ks_average_of_char_count_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.average_of_char_count_squared(x) if len(x) > 0 else 0.0)
-        
-        if normalize:
-            key_smash_columns = [f'feature_ks_count_sequence_squared_vowels_{column_name}',
-                                f'feature_ks_count_sequence_squared_consonants_{column_name}',
-                                f'feature_ks_count_sequence_squared_special_characters_{column_name}',
-                                f'feature_ks_ratio_of_numeric_digits_squared_{column_name}',
-                                f'feature_ks_average_of_char_count_squared_{column_name}']
-            for column in key_smash_columns:
-                df[column] = self._normalize_column(df, column)
         
         return df

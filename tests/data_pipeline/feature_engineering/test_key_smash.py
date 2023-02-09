@@ -15,8 +15,8 @@ class TestKeySmash:
         assert self.key_smash.average_of_char_count_squared(data) == expected_output
 
     @pytest.mark.parametrize("data, opt, expected_output", [
-        ("PUENTECILLA KM. 1.7", "vowels", 0.21052631578947367),
-        ("ASDASD XXXX", "consonants", 2.1818181818181817)
+        ("PUENTECILLA KM. 1.7", "vowels", 0.0),
+        ("ASDASD XXXX", "consonants", 2.272727272727273)
     ])
     def test_count_sequence_squared(self, data, opt, expected_output):
         assert self.key_smash.count_sequence_squared(data, opt) == expected_output
@@ -31,7 +31,7 @@ class TestKeySmash:
     
     def test_extract_key_smash_features(self):
         df = pd.DataFrame({"text_column": ["abcdefgh", "ijklmnop", "qrstuvwxyz"]})
-        result = self.key_smash.extract_key_smash_features(df, "text_column", normalize=False)
+        result = self.key_smash.extract_key_smash_features(df, "text_column")
 
         assert 'feature_ks_count_sequence_squared_vowels_text_column' in result.columns
         assert 'feature_ks_count_sequence_squared_consonants_text_column' in result.columns
