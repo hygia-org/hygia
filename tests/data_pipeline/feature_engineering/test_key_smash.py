@@ -23,6 +23,7 @@ class TestKeySmash:
 
     @pytest.mark.parametrize("data, expected_output", [
         ("ABC 123 !@#", 0.0),
+        ("123456", 0.0),
         ("ABC123 !@#", 0.9)
     ])
     def test_ratio_of_numeric_digits_squared(self, data, expected_output):

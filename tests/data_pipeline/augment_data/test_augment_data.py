@@ -1,6 +1,6 @@
 import pandas as pd
 import pytest
-from hygia.data_pipeline.pre_process_data.augment_data import AugmentData
+from hygia import AugmentData
 
 @pytest.mark.parametrize("zipcode, expected", [
     ('20000', True),
@@ -14,7 +14,7 @@ from hygia.data_pipeline.pre_process_data.augment_data import AugmentData
 ])
 class TestAugmentData:
     def setup_method(self):
-        self.augment_data = AugmentData()
+        self.augment_data = AugmentData(country="MEXICO")
     
     def test_validate_zipcode(self, zipcode, expected):
         assert self.augment_data.validate_zipcode(zipcode) == expected

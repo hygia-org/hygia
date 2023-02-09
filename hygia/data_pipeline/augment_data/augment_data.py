@@ -1,4 +1,5 @@
 import pandas as pd
+from hygia.paths.paths import root_path
 
 class AugmentData:
     """
@@ -9,7 +10,7 @@ class AugmentData:
         we saved the data as pickle files in order to not overwhelm git history
     """
     
-    def __init__(self, country:str='MEXICO') -> None:
+    def __init__(self, country:str) -> None:
         continent_files = {
             'north_america': 'zip_to_lat_lon_North America.pkl',
             'south_america': 'zip_to_lat_lon_South America.pkl'
@@ -22,7 +23,7 @@ class AugmentData:
         }
         country_code = country_mappings[country]['code']
         zipcode_file = country_mappings[country]['zipcode_file']
-        zipcode_df = pd.read_pickle(f"data/zipcode/{zipcode_file}")
+        zipcode_df = pd.read_pickle(root_path + f"/data/zipcode/{zipcode_file}")
         country_zipcode_df_raw = zipcode_df[zipcode_df['country code']== country_code]
         if country_mappings[country]['length']:
             country_zipcode_df_raw['postal code'] = country_zipcode_df_raw['postal code'].astype(str).str.pad(country_mappings[country]['length'],fillchar='0')

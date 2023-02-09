@@ -63,9 +63,13 @@ class RandomForestModel:
       'f1': f1,
     }
     
-    return clf, scores 
+    return scores 
   
   def predict(self, X):
     print(f'{Fore.YELLOW}running model...{Fore.WHITE}')
     return self.model.predict(X)
+  
+  def export_model(self, export_path:str) -> None:
+    print(f'{Fore.YELLOW}exporting model...{Fore.WHITE}')
+    pickle.dump(self.model, open(export_path, 'wb'))
 
