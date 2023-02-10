@@ -25,7 +25,7 @@ sys.path.append("/home/carla/docproj/ext/breathe/")
 # -- Project information -----------------------------------------------------
 
 project = 'Hygia'
-copyright = '2023, Lappis'
+copyright = '2023, Lappis, Eldorado'
 author = 'Lappis'
 
 # import sphinx_rtd_theme
@@ -61,9 +61,12 @@ exclude_patterns = []
 #html_theme = "sphinx_rtd_theme"
 html_theme = "pydata_sphinx_theme"
 html_theme_options = {
-    #[...]
+    "github_url": "https://github.com/hygia-org",
+    "logo": {"image_dark": "horizontal_logo_light.PNG"},
     "primary_sidebar_end": ["indices.html", "sidebar-ethical-ads.html"]
 }
+
+html_logo = "../_static/horizontal_logo_dark.PNG"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,

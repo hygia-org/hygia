@@ -18,20 +18,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains the word DELL. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains the word DELL
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="9" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="9" bodyend="21"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="9" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="9" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aacc74035576c545b1d4d905f2f1e3742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -48,20 +53,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains the word test. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains the word test
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="22" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="22" bodyend="34"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="20" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="20" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab220adb6350bdbc9c40d3b5a8e57cac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -78,20 +88,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains only numbers. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains only numbers
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="35" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="35" bodyend="47"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="31" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="31" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5cdd86f4e05bb41b8ec1f9de60b7e4d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -108,20 +123,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains only special characters. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains only special characters
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="48" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="48" bodyend="60"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="42" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="42" bodyend="52"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -138,20 +158,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains email. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains email
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="61" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="61" bodyend="74"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="53" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="53" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a6d48e296af51cfcab0a7a144987ba88e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -168,20 +193,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains url. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains url
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="75" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="75" bodyend="87"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="65" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="65" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -198,20 +228,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains date. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains date
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="88" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="88" bodyend="100"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="76" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="76" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a2dc27d664c7303c105542f109a5c1573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -228,20 +263,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains invalid words. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains invalid words
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="101" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="101" bodyend="113"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="87" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="87" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ad5645622b440996ae37006ef8e26d7db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -262,20 +302,25 @@
           <declname>column_name</declname>
         </param>
         <briefdescription>
+<para>Check if is a substring of column name. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if is a substring of column name
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="114" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="114" bodyend="125"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="98" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="98" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab9a9fb59c02dd27f8596776c4f52c526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -292,20 +337,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains only one char. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains only one char
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="126" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="126" bodyend="137"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="108" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="108" bodyend="117"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a09ffaff6cfd795ecb3b21d54d97e8f27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -322,20 +372,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains only one word. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains only one word
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="138" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="138" bodyend="149"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="118" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="118" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a10f1616ba55b300afe424accf081d9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -352,20 +407,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if it contains only white spaces. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if it contains only white spaces
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="150" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="150" bodyend="161"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="128" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="128" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a0a749fa9c131a0e1e54f4eedb915c658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -382,20 +442,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if is empty. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if is empty
-
-:param text: Text to be verified
-:type text: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Text to be verified</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="162" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="162" bodyend="173"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="138" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="138" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5ffdae262d81e5f433d66bc44d6e006c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pd.DataFrame</type>
@@ -416,34 +481,41 @@
           <declname>column_name</declname>
         </param>
         <briefdescription>
+<para>Function to extract all regex features. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Function to extract all regex features
-
-:param df: Dataframe with the data.
-:type df: pandas.DataFrame
-
-:param column_name: Column name
-:type column_name: str
-
-:return: true of false
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>df</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: DataFrame) Dataframe with the data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Column name</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) true of false </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="174" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="174" bodyend="205"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="148" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="148" bodyend="175"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>It provides a set of functions that help you verify the content of a text field, such as checking if the field is empty, if it has only one word, if it contains a specific character or pattern, and more. </para>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>It provides a set of functions that help you verify the content of a text field, 
-such as checking if the field is empty, if it has only one word, if it contains 
-a specific character or pattern, and more.
-</verbatim> </para>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="3" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="3" bodyend="205"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="3" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="3" bodyend="175"/>
     <listofallmembers>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_date</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_email</name></member>

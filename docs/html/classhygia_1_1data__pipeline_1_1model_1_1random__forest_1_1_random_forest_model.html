@@ -80,14 +80,20 @@ $(function() {
   <div class="headertitle"><div class="title">hygia.data_pipeline.model.random_forest.RandomForestModel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class presents the model Random Forest, allowing train and predict the model.  
+ <a href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ce808991033e28ec22836b3dfc138fb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#a3ce808991033e28ec22836b3dfc138fb">__init__</a> (self, model_file=None, n_estimators=100, max_depth=None, random_state=0)</td></tr>
+<tr class="memdesc:a3ce808991033e28ec22836b3dfc138fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the RandomForestModel class.  <br /></td></tr>
 <tr class="separator:a3ce808991033e28ec22836b3dfc138fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf7a38d78b4b8100bec3034415cf958e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#acf7a38d78b4b8100bec3034415cf958e">train_and_get_scores</a> (self, df, concatened_column_name, all_features_columns, test_size=0.3)</td></tr>
+<tr class="memdesc:acf7a38d78b4b8100bec3034415cf958e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Train and get scores for the model execution.  <br /></td></tr>
 <tr class="separator:acf7a38d78b4b8100bec3034415cf958e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f97ea337bcc807954c6d68758d91a91"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#a4f97ea337bcc807954c6d68758d91a91">predict</a> (self, X)</td></tr>
+<tr class="memdesc:a4f97ea337bcc807954c6d68758d91a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict the model result.  <br /></td></tr>
 <tr class="separator:a4f97ea337bcc807954c6d68758d91a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -106,17 +112,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ae5ab8b176adb170adad2175c5685163c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">This class presents the model Random Forest, allowing train and predict the model
-
-Examples
---------
-Use this class like this:
-
-.. code-block:: python
-    new_rf_model = hg.RandomForestModel()
-    clf, scores = new_rf_model.train_and_get_scores(df, concatened_column_name, all_features_columns)
-    scores
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p>This class presents the model Random Forest, allowing train and predict the model. </p>
+<p>Examples - Use this class like this:</p>
+<div class="fragment"><div class="line">new_rf_model = hg.RandomForestModel()</div>
+<div class="line">clf, scores = new_rf_model.train_and_get_scores(df, concatened_column_name, all_features_columns)</div>
+<div class="line">scores</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3ce808991033e28ec22836b3dfc138fb" name="a3ce808991033e28ec22836b3dfc138fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ce808991033e28ec22836b3dfc138fb">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -160,11 +161,15 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Initialize the RandomForestModel class.
 
-:param model_file: Path to the model file
-:type model_file: path
-</pre> 
+<p>Initialize the RandomForestModel class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model_file</td><td>(Type: path) Path to the model file </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -193,8 +198,9 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Predict the model result
-</pre> 
+
+<p>Predict the model result. </p>
+
 </div>
 </div>
 <a id="acf7a38d78b4b8100bec3034415cf958e" name="acf7a38d78b4b8100bec3034415cf958e"></a>
@@ -240,17 +246,17 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Train and get scores for the model execution.
 
-:param df: Dataframe with the data.
-:type df: pandas.DataFrame
+<p>Train and get scores for the model execution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">df</td><td>(DataFrame) Dataframe with the data. </td></tr>
+    <tr><td class="paramname">concatened_column_name</td><td>(Type: str) Column name </td></tr>
+    <tr><td class="paramname">all_features_columns</td><td>(Type: List) List of all features column nales </td></tr>
+  </table>
+  </dd>
+</dl>
 
-:param concatened_column_name: Column name
-:type concatened_column_name: str
-
-:param all_features_columns: List of all features column nales
-:type all_features_columns: List
-</pre> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

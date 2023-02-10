@@ -81,18 +81,27 @@ $(function() {
   <div class="headertitle"><div class="title">hygia.data_pipeline.feature_engineering.key_smash.KeySmash Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class for calculating metrics to indicate key smashing behavior in a text.  
+ <a href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a65214ed127cf6a6491b1f249618e626d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#a65214ed127cf6a6491b1f249618e626d">__init__</a> (self)</td></tr>
+<tr class="memitem:a65214ed127cf6a6491b1f249618e626d"><td class="memItemLeft" align="right" valign="top"><a id="a65214ed127cf6a6491b1f249618e626d" name="a65214ed127cf6a6491b1f249618e626d"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self)</td></tr>
+<tr class="memdesc:a65214ed127cf6a6491b1f249618e626d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the KeySmash class. <br /></td></tr>
 <tr class="separator:a65214ed127cf6a6491b1f249618e626d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a682baee004b60c551f63c877a3270b3a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#a682baee004b60c551f63c877a3270b3a">average_of_char_count_squared</a> (self, str text)</td></tr>
+<tr class="memdesc:a682baee004b60c551f63c877a3270b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function takes a string text as input and splits it into words.  <br /></td></tr>
 <tr class="separator:a682baee004b60c551f63c877a3270b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02080ee2e117a12c68b2749b5946734e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#a02080ee2e117a12c68b2749b5946734e">count_sequence_squared</a> (self, str text, str opt)</td></tr>
+<tr class="memdesc:a02080ee2e117a12c68b2749b5946734e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function takes a text and opt as input.  <br /></td></tr>
 <tr class="separator:a02080ee2e117a12c68b2749b5946734e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43cd9f4f2e7bbb1797eea22d0c545f67"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#a43cd9f4f2e7bbb1797eea22d0c545f67">ratio_of_numeric_digits_squared</a> (self, str text)</td></tr>
+<tr class="memdesc:a43cd9f4f2e7bbb1797eea22d0c545f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function takes text as input, splits it into a list of words, initializes a variable to 0.  <br /></td></tr>
 <tr class="separator:a43cd9f4f2e7bbb1797eea22d0c545f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab736e6cfbbdc324b493778627318f41e"><td class="memItemLeft" align="right" valign="top">pd.DataFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#ab736e6cfbbdc324b493778627318f41e">extract_key_smash_features</a> (self, pd.DataFrame df, str column_name, bool normalize=False)</td></tr>
+<tr class="memdesc:ab736e6cfbbdc324b493778627318f41e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract key smash features from a given dataframe and column.  <br /></td></tr>
 <tr class="separator:ab736e6cfbbdc324b493778627318f41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -104,44 +113,17 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:afc42a4b6aa51c24fad51e85f0c269fd2"><td class="memItemLeft" align="right" valign="top">pd.DataFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash.html#afc42a4b6aa51c24fad51e85f0c269fd2">_normalize_column</a> (self, pd.DataFrame df, str column)</td></tr>
+<tr class="memdesc:afc42a4b6aa51c24fad51e85f0c269fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a given column in a dataframe.  <br /></td></tr>
 <tr class="separator:afc42a4b6aa51c24fad51e85f0c269fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A class for calculating metrics to indicate key smashing behavior in a text.
-
-Key smashing is the act of typing on a keyboard in a rapid and uncontrolled manner,
-often resulting in a series of random characters being entered into a document or text field.
-
-Examples
---------
-Use this class like this:
-
-.. code-block:: python
-
-    key_smash = KeySmash()
-    df = key_smash.extract_key_smash_features(df, "text_column")
-    print(df)
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a65214ed127cf6a6491b1f249618e626d" name="a65214ed127cf6a6491b1f249618e626d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65214ed127cf6a6491b1f249618e626d">&#9670;&#160;</a></span>__init__()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def hygia.data_pipeline.feature_engineering.key_smash.KeySmash.__init__ </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Initialize the KeySmash class.
-</pre> 
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>A class for calculating metrics to indicate key smashing behavior in a text. </p>
+<p>Key smashing is the act of typing on a keyboard in a rapid and uncontrolled manner, often resulting in a series of random characters being entered into a document or text field.</p>
+<p>Examples - Use this class like this:</p>
+<div class="fragment"><div class="line">key_smash = KeySmash()</div>
+<div class="line">df = key_smash.extract_key_smash_features(df, <span class="stringliteral">&quot;text_column&quot;</span>)</div>
+<div class="line">print(df)</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afc42a4b6aa51c24fad51e85f0c269fd2" name="afc42a4b6aa51c24fad51e85f0c269fd2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc42a4b6aa51c24fad51e85f0c269fd2">&#9670;&#160;</a></span>_normalize_column()</h2>
 
@@ -181,16 +163,17 @@ Use this class like this:
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Normalize a given column in a dataframe.
 
-:param df: Dataframe to normalize the column in.
-:type df: pandas.DataFrame
-:param column: Name of the column to be normalized.
-:type column: str
+<p>Normalize a given column in a dataframe. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">df</td><td>(Type: DataFrame) Dataframe to normalize the column in. </td></tr>
+    <tr><td class="paramname">column</td><td>(Type: str) Name of the column to be normalized.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type: DataFrame) The input dataframe with the normalized column. </dd></dl>
 
-:return: The input dataframe with the normalized column.
-:rtype: pandas.DataFrame
-</pre> 
 </div>
 </div>
 <a id="a682baee004b60c551f63c877a3270b3a" name="a682baee004b60c551f63c877a3270b3a"></a>
@@ -218,32 +201,27 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">The function takes a string text as input and splits it into words.
-For each word, it counts the number of occurrences of each character in the word, squares those counts, and then sums them.
-It then divides the sum by the length of the word and appends the result to a list words_results.
-Finally, it returns the mean of the words_results list, if the list is not empty, otherwise it returns 0.
 
-:param text: The text to use for the calculation.
-:type text: str
-:return: The calculated Char Frequency Metric.
-:rtype: float
-
-Examples
---------
-Use this function like this:
-
-.. code-block:: python
-
-    key_smash = KeySmash()
-
-    res = key_smash.average_of_char_count_squared("PUENTECILLA KM. 1.7")
-    print(res)
-    # Output: 1.121212121212121
-
-    res = key_smash.average_of_char_count_squared("ASDASD XXXX")
-    print(res)
-    # Output: 3.0
-</pre> 
+<p>The function takes a string text as input and splits it into words. </p>
+<p>For each word, it counts the number of occurrences of each character in the word, squares those counts, and then sums them. It then divides the sum by the length of the word and appends the result to a list words_results. Finally, it returns the mean of the words_results list, if the list is not empty, otherwise it returns 0.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>(Type: str) The text to use for the calculation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type: float) The calculated Char Frequency Metric.</dd></dl>
+<p>Examples - Use this function like this:</p>
+<div class="fragment"><div class="line">key_smash = KeySmash()</div>
+<div class="line"> </div>
+<div class="line">res = key_smash.average_of_char_count_squared(<span class="stringliteral">&quot;PUENTECILLA KM. 1.7&quot;</span>)</div>
+<div class="line">print(res)</div>
+<div class="line"><span class="comment"># Output: 1.121212121212121</span></div>
+<div class="line"> </div>
+<div class="line">res = key_smash.average_of_char_count_squared(<span class="stringliteral">&quot;ASDASD XXXX&quot;</span>)</div>
+<div class="line">print(res)</div>
+<div class="line"><span class="comment"># Output: 3.0</span></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a02080ee2e117a12c68b2749b5946734e" name="a02080ee2e117a12c68b2749b5946734e"></a>
@@ -277,37 +255,32 @@ Use this function like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">This function takes a text and opt as input. It checks a set of characters, converts text to lowercase, iterates through characters,
-increments counter if finds a sequence of characters in set, if not it adds square of counter to a list, resets counter to 1.
-After iterating it returns sum of list divided by length of text.
 
-:param text: The text to use for the calculation.
-:type text: str
-:param opt: The type of characters to consider for the calculation, can be one of 'vowels', 'consonants', or 'special_characters'.
-:type opt: str
-:return: The calculated Irregular Sequence Metric.
-:rtype: float
-
-Examples
---------
-Use this function like this:
-
-.. code-block:: python
-
-    key_smash = KeySmash()
-
-    res = key_smash.count_sequence_squared("PUENTECILLA KM. 1.7", "vowels")
-    print(res)
-    # Output: 0.21052631578947367
-
-    res = key_smash.count_sequence_squared("ASDASD XXXX", "consonants")
-    print(res)
-    # Output: 2.1818181818181817
-
-    res = key_smash.count_sequence_squared("!@#$% ASDFGHJKL", "special_characters")
-    print(res)
-    # Output: 1.5625
-</pre> 
+<p>This function takes a text and opt as input. </p>
+<p>It checks a set of characters, converts text to lowercase, iterates through characters, increments counter if finds a sequence of characters in set, if not it adds square of counter to a list, resets counter to 1. After iterating it returns sum of list divided by length of text.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>(Type: str) The text to use for the calculation. </td></tr>
+    <tr><td class="paramname">opt</td><td>(Type: str) The type of characters to consider for the calculation, can be one of 'vowels', 'consonants', or 'special_characters'.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type:float) The calculated Irregular Sequence Metric.</dd></dl>
+<p>Examples - Use this function like this:</p>
+<div class="fragment"><div class="line">key_smash = KeySmash()</div>
+<div class="line"> </div>
+<div class="line">res = key_smash.count_sequence_squared(<span class="stringliteral">&quot;PUENTECILLA KM. 1.7&quot;</span>, <span class="stringliteral">&quot;vowels&quot;</span>)</div>
+<div class="line">print(res)</div>
+<div class="line"><span class="comment"># Output: 0.21052631578947367</span></div>
+<div class="line"> </div>
+<div class="line">res = key_smash.count_sequence_squared(<span class="stringliteral">&quot;ASDASD XXXX&quot;</span>, <span class="stringliteral">&quot;consonants&quot;</span>)</div>
+<div class="line">print(res)</div>
+<div class="line"><span class="comment"># Output: 2.1818181818181817</span></div>
+<div class="line"> </div>
+<div class="line">res = key_smash.count_sequence_squared(<span class="stringliteral">&quot;!@#$% ASDFGHJKL&quot;</span>, <span class="stringliteral">&quot;special_characters&quot;</span>)</div>
+<div class="line">print(res)</div>
+<div class="line"><span class="comment"># Output: 1.5625</span></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ab736e6cfbbdc324b493778627318f41e" name="ab736e6cfbbdc324b493778627318f41e"></a>
@@ -347,30 +320,24 @@ Use this function like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Extract key smash features from a given dataframe and column.
 
-:param df: Dataframe to extract key smash features from.
-:type df: pandas.DataFrame
-:param column_name: Name of the column in the dataframe that contains the text data to extract features from.
-:type column_name: str
-:param normalize: Indicates whether to normalize the key smash feature columns. Default is True.
-:type normalize: bool, optional
-
-:return: The input dataframe with additional columns for key smash features: 'irregular_sequence_vowels', 'irregular_sequence_consonants', 'irregular_sequence_special_characters', 'number_count_metric', 'char_frequency_metric'
-:rtype: pandas.DataFrame
-
-Examples
---------
-Use this function like this:
-
-.. code-block:: python
-
-    import pandas as pd
-    key_smash = KeySmash()
-    df = pd.DataFrame({"text_column": ["abcdefgh", "ijklmnop", "qrstuvwxyz"]})
-    df = key_smash.extract_key_smash_features(df, "text_column", normalize=False)
-    print(df.head())
-</pre> 
+<p>Extract key smash features from a given dataframe and column. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">df</td><td>(Type: DataFrame) Dataframe to extract key smash features from. </td></tr>
+    <tr><td class="paramname">column_name</td><td>(Type: str) Name of the column in the dataframe that contains the text data to extract features from. </td></tr>
+    <tr><td class="paramname">normalize</td><td>(bool, optional) Indicates whether to normalize the key smash feature columns. Default is True.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type: DataFrame) The input dataframe with additional columns for key smash features: 'irregular_sequence_vowels', 'irregular_sequence_consonants', 'irregular_sequence_special_characters', 'number_count_metric', 'char_frequency_metric'</dd></dl>
+<p>Examples Use this function like this:</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div>
+<div class="line">key_smash = KeySmash()</div>
+<div class="line">df = pd.DataFrame({<span class="stringliteral">&quot;text_column&quot;</span>: [<span class="stringliteral">&quot;abcdefgh&quot;</span>, <span class="stringliteral">&quot;ijklmnop&quot;</span>, <span class="stringliteral">&quot;qrstuvwxyz&quot;</span>]})</div>
+<div class="line">df = key_smash.extract_key_smash_features(df, <span class="stringliteral">&quot;text_column&quot;</span>, normalize=<span class="keyword">False</span>)</div>
+<div class="line">print(df.head())</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a43cd9f4f2e7bbb1797eea22d0c545f67" name="a43cd9f4f2e7bbb1797eea22d0c545f67"></a>
@@ -398,32 +365,27 @@ Use this function like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">This function takes text as input, splits it into a list of words, initializes a variable to 0.
-It iterates through list of words, checking if each word contains both numeric digits and non-numeric characters.
-If yes, it counts number of numeric digits, squares it and adds to variable.
-It returns the value of that variable divided by length of original text, if the list is empty it returns 0.
 
-:param text: The text to extract the metric from.
-:type text: str
-:return: The calculated Number Count Metric.
-:rtype: float
-
-Examples
---------
-Use this function like this:
-
-.. code-block:: python
-
-    key_smash = KeySmash()
-    
-    res = key_smash.ratio_of_numeric_digits_squared("ABC 123 !@#")
-    print(res)
-    # Output: 0.0
-
-    res = key_smash.ratio_of_numeric_digits_squared("ABC123 !@#")
-    print(res)
-    # Output: 0.9
-</pre> 
+<p>This function takes text as input, splits it into a list of words, initializes a variable to 0. </p>
+<p>It iterates through list of words, checking if each word contains both numeric digits and non-numeric characters. If yes, it counts number of numeric digits, squares it and adds to variable. It returns the value of that variable divided by length of original text, if the list is empty it returns 0.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>(Type: str) The text to extract the metric from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type: float) The calculated Number Count Metric.</dd></dl>
+<p>Examples - Use this function like this:</p>
+<div class="fragment"><div class="line">key_smash = KeySmash()</div>
+<div class="line"> </div>
+<div class="line">res = key_smash.ratio_of_numeric_digits_squared(<span class="stringliteral">&quot;ABC 123 !@#&quot;</span>)</div>
+<div class="line">print(res)</div>
+<div class="line"><span class="comment"># Output: 0.0</span></div>
+<div class="line"> </div>
+<div class="line">res = key_smash.ratio_of_numeric_digits_squared(<span class="stringliteral">&quot;ABC123 !@#&quot;</span>)</div>
+<div class="line">print(res)</div>
+<div class="line"><span class="comment"># Output: 0.9</span></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

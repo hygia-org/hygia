@@ -79,34 +79,32 @@ $(function() {
   <div class="headertitle"><div class="title">annotate_data.AnnotateData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class to incorporate the data annotation phase, starting from the thresholds (e.g., count sequence squared vowels, count sequence squared consonants) can tell if it's a ksmash.  
+ <a href="classannotate__data_1_1_annotate_data.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6712eba78da4b9d9ace6b6016c451d0d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classannotate__data_1_1_annotate_data.html#a6712eba78da4b9d9ace6b6016c451d0d">annotate_data</a> (self, df, concatened_column_name, ks_thresholds)</td></tr>
+<tr class="memdesc:a6712eba78da4b9d9ace6b6016c451d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Annotate data function.  <br /></td></tr>
 <tr class="separator:a6712eba78da4b9d9ace6b6016c451d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A class to incorporate the data annotation phase, starting from the thresholds 
-(e.g., count sequence squared vowels, count sequence squared consonants) can tell if it's a ksmash.
-
-Examples
---------
-Use this class like this:
-
-.. code-block:: python
-
-    annotate_data = hg.AnnotateData()
-    key_smash_thresholds = {
-    'count_sequence_squared_vowels': 1.00,
-    'count_sequence_squared_consonants': 1.999,
-    'count_sequence_squared_special_characters': 2.2499,
-    'ratio_of_numeric_digits_squared': 2.9,
-    'average_of_char_count_squared': 2.78,
-    }
-
-    df = annotate_data.annotate_data(df, concatened_column_name, key_smash_thresholds)
-    print(df)
-</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>A class to incorporate the data annotation phase, starting from the thresholds (e.g., count sequence squared vowels, count sequence squared consonants) can tell if it's a ksmash. </p>
+<p>Examples</p>
+<p>Use this class like this:</p>
+<div class="fragment"><div class="line">annotate_data = hg.AnnotateData()</div>
+<div class="line">key_smash_thresholds = {</div>
+<div class="line"><span class="stringliteral">&#39;count_sequence_squared_vowels&#39;</span>: 1.00,</div>
+<div class="line"><span class="stringliteral">&#39;count_sequence_squared_consonants&#39;</span>: 1.999,</div>
+<div class="line"><span class="stringliteral">&#39;count_sequence_squared_special_characters&#39;</span>: 2.2499,</div>
+<div class="line"><span class="stringliteral">&#39;ratio_of_numeric_digits_squared&#39;</span>: 2.9,</div>
+<div class="line"><span class="stringliteral">&#39;average_of_char_count_squared&#39;</span>: 2.78,</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">df = annotate_data.annotate_data(df, concatened_column_name, key_smash_thresholds)</div>
+<div class="line">print(df)</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6712eba78da4b9d9ace6b6016c451d0d" name="a6712eba78da4b9d9ace6b6016c451d0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6712eba78da4b9d9ace6b6016c451d0d">&#9670;&#160;</a></span>annotate_data()</h2>
 
@@ -144,18 +142,18 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Annotate data function.
 
-:param df: Dataframe to extract features from.
-:type df: pandas.DataFrame
-:param concatened_column_name: Dataframe column to be used
-:type concatened_column_name: List
-:param ks_thresholds: List of thresholds
-:type ks_thresholds: List
+<p>Annotate data function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">df</td><td>(Type: DataFrame) Dataframe to extract features from. </td></tr>
+    <tr><td class="paramname">concatened_column_name</td><td>(Type: List) List of columns to be used </td></tr>
+    <tr><td class="paramname">ks_thresholds</td><td>(Type: List) List of thresholds</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type: DataFrame) The input dataframe with additional columns for key smashing and word embedding features. </dd></dl>
 
-:return: The input dataframe with additional columns for key smashing and word embedding features.
-:rtype: pandas.DataFrame
-</pre> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

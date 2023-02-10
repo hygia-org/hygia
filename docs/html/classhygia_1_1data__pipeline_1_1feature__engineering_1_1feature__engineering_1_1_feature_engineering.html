@@ -80,12 +80,17 @@ $(function() {
   <div class="headertitle"><div class="title">hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class for extracting key smashing and word embedding features from text data.  
+ <a href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a33f8c5028f3fee8359def47641fdc736"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering.html#a33f8c5028f3fee8359def47641fdc736">__init__</a> (self, str lang='es', int dimensions=25, str model='bytepair')</td></tr>
+<tr class="memdesc:a33f8c5028f3fee8359def47641fdc736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the FeatureEngineering class.  <br /></td></tr>
 <tr class="separator:a33f8c5028f3fee8359def47641fdc736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6557b5c4dc573fcf0f8454da44c1536f"><td class="memItemLeft" align="right" valign="top">pd.DataFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering.html#a6557b5c4dc573fcf0f8454da44c1536f">extract_features</a> (self, pd.DataFrame df, str text_column)</td></tr>
+<tr class="memdesc:a6557b5c4dc573fcf0f8454da44c1536f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract key smashing and word embedding features from a given dataframe and column.  <br /></td></tr>
 <tr class="separator:a6557b5c4dc573fcf0f8454da44c1536f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -101,20 +106,13 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a11a1b00797fe5ad47ae8eb116b895b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A class for extracting key smashing and word embedding features from text data.
-This class combines the functionality of the KeySmash and WordEmbedding classes
-to extract key smashing and word embedding features from a given text column in a dataframe.
-
-Examples
---------
-Use this class like this:
-
-.. code-block:: python
-
-    feature_engineer = FeatureEngineering()
-    df = feature_engineer.extract_features(df, "text_column")
-    print(df)
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p>A class for extracting key smashing and word embedding features from text data. </p>
+<p>This class combines the functionality of the KeySmash and WordEmbedding classes to extract key smashing and word embedding features from a given text column in a dataframe.</p>
+<p>Examples - Use this class like this:</p>
+<div class="fragment"><div class="line">feature_engineer = FeatureEngineering()</div>
+<div class="line">df = feature_engineer.extract_features(df, <span class="stringliteral">&quot;text_column&quot;</span>)</div>
+<div class="line">print(df)</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a33f8c5028f3fee8359def47641fdc736" name="a33f8c5028f3fee8359def47641fdc736"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33f8c5028f3fee8359def47641fdc736">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -152,15 +150,17 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Initialize the FeatureEngineering class.
 
-:param lang: The language of the text to be processed. (default 'es')
-:type lang: str
-:param dimensions: The number of dimensions of the word embedding vectors. (default 25)
-:type dimensions: int
-:param model: The word embedding model to be used. (default 'bytepair')
-:type model: str
-</pre> 
+<p>Initialize the FeatureEngineering class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lang</td><td>(Type: str) The language of the text to be processed. (default 'es') </td></tr>
+    <tr><td class="paramname">dimensions</td><td>(Type: int) The number of dimensions of the word embedding vectors. (default 25) </td></tr>
+    <tr><td class="paramname">model</td><td>(Type: str) The word embedding model to be used. (default 'bytepair') </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -195,28 +195,22 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Extract key smashing and word embedding features from a given dataframe and column.
 
-:param df: Dataframe to extract features from.
-:type df: pandas.DataFrame
-:param text_column: Name of the column in the dataframe that contains the text data to extract features from.
-:type text_column: str
-:param normalize: Indicates whether to normalize the feature columns. Default is True.
-:type normalize: bool, optional
-
-:return: The input dataframe with additional columns for key smashing and word embedding features.
-:rtype: pandas.DataFrame
-
-Examples
---------
-Use this class like this:
-
-.. code-block:: python
-
-    fe = FeatureEngineering()
-    df = fe.extract_features(df, "text_column")
-    print(df)
-</pre> 
+<p>Extract key smashing and word embedding features from a given dataframe and column. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">df</td><td>(Type: DataFrame) Dataframe to extract features from. </td></tr>
+    <tr><td class="paramname">text_column</td><td>(Type: str) Name of the column in the dataframe that contains the text data to extract features from. </td></tr>
+    <tr><td class="paramname">normalize</td><td>(Type: bool, optional) Indicates whether to normalize the feature columns. Default is True.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type: DataFrame) The input dataframe with additional columns for key smashing and word embedding features.</dd></dl>
+<p>Examples - Use this class like this:</p>
+<div class="fragment"><div class="line">fe = FeatureEngineering()</div>
+<div class="line">df = fe.extract_features(df, <span class="stringliteral">&quot;text_column&quot;</span>)</div>
+<div class="line">print(df)</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

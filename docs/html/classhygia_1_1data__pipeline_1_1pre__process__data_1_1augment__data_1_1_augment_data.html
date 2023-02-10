@@ -80,16 +80,23 @@ $(function() {
   <div class="headertitle"><div class="title">hygia.data_pipeline.pre_process_data.augment_data.AugmentData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This class present a validations based on zipocde data from this website: <a href="https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1">Listen Data</a>.  
+ <a href="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a663159ea8e556da4e70de1005d68def7"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data.html#a663159ea8e556da4e70de1005d68def7">__init__</a> (self, str country='MEXICO')</td></tr>
+<tr class="memdesc:a663159ea8e556da4e70de1005d68def7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the AugmentData class.  <br /></td></tr>
 <tr class="separator:a663159ea8e556da4e70de1005d68def7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada49b52ac86bd4f33771524b6a01d808"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data.html#ada49b52ac86bd4f33771524b6a01d808">validate_zipcode</a> (self, str text)</td></tr>
+<tr class="memdesc:ada49b52ac86bd4f33771524b6a01d808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a zipcode is valid.  <br /></td></tr>
 <tr class="separator:ada49b52ac86bd4f33771524b6a01d808"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49dee300d063cf789362e19869b64ff0"><td class="memItemLeft" align="right" valign="top">pd.DataFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data.html#a49dee300d063cf789362e19869b64ff0">validate_zipcodes</a> (self, pd.DataFrame df, str zipcode_column_name)</td></tr>
+<tr class="memdesc:a49dee300d063cf789362e19869b64ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if all zipcode in a data is valid.  <br /></td></tr>
 <tr class="separator:a49dee300d063cf789362e19869b64ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44556356984e09090a5a3c47259f9beb"><td class="memItemLeft" align="right" valign="top">pd.DataFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data.html#a44556356984e09090a5a3c47259f9beb">augment_data</a> (self, pd.DataFrame df, str zipcode_column_name)</td></tr>
+<tr class="memdesc:a44556356984e09090a5a3c47259f9beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that uses the validate_zipcodes function and concatenates the result to the database.  <br /></td></tr>
 <tr class="separator:a44556356984e09090a5a3c47259f9beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -99,11 +106,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a91aca0028f24813d2eed9b26f7406d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">    This class present a validations based on zipocde data from this website:
-    https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1
-    we downloaded data from some continents and we filter based in the 'country' code
-    we saved the data as pickle files in order to not overwhelm git history.
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p>This class present a validations based on zipocde data from this website: <a href="https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1">Listen Data</a>. </p>
+<p>We obtained data from several continents and filtered it using the 'country' code. To avoid overwhelm the Git history, we saved the data in pickle files. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a663159ea8e556da4e70de1005d68def7" name="a663159ea8e556da4e70de1005d68def7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a663159ea8e556da4e70de1005d68def7">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -129,11 +134,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Initialize the AugmentData class.
 
-:param country: Zipcode list of the region or country used.
-:type country: str
-</pre> 
+<p>Initialize the AugmentData class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">country</td><td>(Type: str) Zipcode list of the region or country used. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -168,17 +177,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Function that uses the validate_zipcodes function and concatenates the result to the database
 
-:param df: Dataframe to extract features from.
-:type df: pandas.DataFrame
+<p>Function that uses the validate_zipcodes function and concatenates the result to the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">df</td><td>(Type: DataFrame) Dataframe to extract features from. </td></tr>
+    <tr><td class="paramname">zipcode_column_name</td><td>(Type: str) Zipcode column name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type: DataFrame) Return a dataframe with a new column. </dd></dl>
 
-:param zipcode_column_name: Zipcode column name
-:type zipcode_column_name: str
-
-:return: Return a dataframe with a new column.
-:rtype: DataFrame
-</pre> 
 </div>
 </div>
 <a id="ada49b52ac86bd4f33771524b6a01d808" name="ada49b52ac86bd4f33771524b6a01d808"></a>
@@ -206,14 +215,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Check if a zipcode is valid.
 
-:param text: Zipcode list of the region or country used.
-:type text: str
+<p>Check if a zipcode is valid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>(Type: str) Zipcode list of the region or country used.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type: bool) Return if the zipcode is valid :rtype: bool </dd></dl>
 
-:return: Return if the zipcode is valid
-:rtype: bool
-</pre> 
 </div>
 </div>
 <a id="a49dee300d063cf789362e19869b64ff0" name="a49dee300d063cf789362e19869b64ff0"></a>
@@ -247,17 +258,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Check if all zipcode in a data is valid.
 
-:param df: Dataframe to extract features from.
-:type df: pandas.DataFrame
+<p>Check if all zipcode in a data is valid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">df</td><td>(Type: DataFrame) Dataframe to extract features. </td></tr>
+    <tr><td class="paramname">zipcode_column_name</td><td>(Type: str) Zipcode column name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return (Type: DataFrame) a dataframe with a new column. </dd></dl>
 
-:param zipcode_column_name: Zipcode column name
-:type zipcode_column_name: str
-
-:return: Return a dataframe with a new column.
-:rtype: DataFrame
-</pre> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

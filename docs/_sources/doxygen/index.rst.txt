@@ -26,11 +26,3 @@ library and take your data processing to the next level.
 
    getting_started/index
    user_guide/index
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

@@ -52,12 +52,3 @@ Installing from PyPI
 
    user_guide/index
    doxygen/index
-
-
-
-.. Indices and tables
-   ==================
-
-   * :ref:`genindex`
-   * :ref:`modindex`
-   * :ref:`search`

@@ -115,11 +115,3 @@ Save predicted data
 
    getting_started/index
    doxygen/index
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

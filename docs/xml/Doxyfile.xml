@@ -37,7 +37,7 @@
   <option  id='JAVADOC_BANNER' default='yes' type='bool'><value>NO</value></option>
   <option  id='QT_AUTOBRIEF' default='yes' type='bool'><value>NO</value></option>
   <option  id='MULTILINE_CPP_IS_BRIEF' default='yes' type='bool'><value>NO</value></option>
-  <option  id='PYTHON_DOCSTRING' default='yes' type='bool'><value>YES</value></option>
+  <option  id='PYTHON_DOCSTRING' default='no' type='bool'><value>NO</value></option>
   <option  id='INHERIT_DOCS' default='yes' type='bool'><value>YES</value></option>
   <option  id='SEPARATE_MEMBER_PAGES' default='yes' type='bool'><value>NO</value></option>
   <option  id='TAB_SIZE' default='yes' type='int'><value>4</value></option>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="34" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="34" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="33" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -35,17 +35,23 @@
           <defval>&apos;MEXICO&apos;</defval>
         </param>
         <briefdescription>
+<para>Initialize the AugmentData class. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Initialize the AugmentData class.
-
-:param country: Zipcode list of the region or country used.
-:type country: str
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>country</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Zipcode list of the region or country used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="11" bodyend="35"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="11" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1ada49b52ac86bd4f33771524b6a01d808" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -62,20 +68,25 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Check if a zipcode is valid. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if a zipcode is valid.
-
-:param text: Zipcode list of the region or country used.
-:type text: str
-
-:return: Return if the zipcode is valid
-:rtype: bool
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Zipcode list of the region or country used.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) Return if the zipcode is valid :rtype: bool </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="36" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="36" bodyend="47"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="35" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="35" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a49dee300d063cf789362e19869b64ff0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pd.DataFrame</type>
@@ -96,23 +107,33 @@
           <declname>zipcode_column_name</declname>
         </param>
         <briefdescription>
+<para>Check if all zipcode in a data is valid. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Check if all zipcode in a data is valid.
-
-:param df: Dataframe to extract features from.
-:type df: pandas.DataFrame
-
-:param zipcode_column_name: Zipcode column name
-:type zipcode_column_name: str
-
-:return: Return a dataframe with a new column.
-:rtype: DataFrame
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>df</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: DataFrame) Dataframe to extract features. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zipcode_column_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Zipcode column name</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Return (Type: DataFrame) a dataframe with a new column. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="48" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="48" bodyend="68"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="46" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="46" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a44556356984e09090a5a3c47259f9beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pd.DataFrame</type>
@@ -133,35 +154,42 @@
           <declname>zipcode_column_name</declname>
         </param>
         <briefdescription>
+<para>Function that uses the validate_zipcodes function and concatenates the result to the database. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Function that uses the validate_zipcodes function and concatenates the result to the database
-
-:param df: Dataframe to extract features from.
-:type df: pandas.DataFrame
-
-:param zipcode_column_name: Zipcode column name
-:type zipcode_column_name: str
-
-:return: Return a dataframe with a new column.
-:rtype: DataFrame
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>df</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: DataFrame) Dataframe to extract features from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zipcode_column_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Zipcode column name</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: DataFrame) Return a dataframe with a new column. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="69" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="69" bodyend="85"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="63" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="63" bodyend="75"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>This class present a validations based on zipocde data from this website: <ulink url="https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1">Listen Data</ulink>. </para>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>    This class present a validations based on zipocde data from this website:
-    https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1
-    we downloaded data from some continents and we filter based in the &apos;country&apos; code
-    we saved the data as pickle files in order to not overwhelm git history.
-</verbatim> </para>
+<para>We obtained data from several continents and filtered it using the &apos;country&apos; code. To avoid overwhelm the Git history, we saved the data in pickle files. </para>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="3" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="3" bodyend="85"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="3" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="3" bodyend="75"/>
     <listofallmembers>
       <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a663159ea8e556da4e70de1005d68def7" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</scope><name>__init__</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a44556356984e09090a5a3c47259f9beb" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</scope><name>augment_data</name></member>

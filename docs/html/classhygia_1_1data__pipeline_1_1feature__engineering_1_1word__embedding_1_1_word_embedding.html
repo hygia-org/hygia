@@ -81,14 +81,20 @@ $(function() {
   <div class="headertitle"><div class="title">hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class for generating word embeddings from text data.  
+ <a href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a882b4ba550a9356baeb85964848bb5ac"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#a882b4ba550a9356baeb85964848bb5ac">__init__</a> (self, str lang='es', int dimensions=25, str model='bytepair')</td></tr>
+<tr class="memdesc:a882b4ba550a9356baeb85964848bb5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the WordEmbedding class.  <br /></td></tr>
 <tr class="separator:a882b4ba550a9356baeb85964848bb5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae76996dafce64d3701891e860e8a145"><td class="memItemLeft" align="right" valign="top">np.ndarray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#aae76996dafce64d3701891e860e8a145">get_embedding</a> (self, str text)</td></tr>
+<tr class="memdesc:aae76996dafce64d3701891e860e8a145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the word embedding vector for a given text.  <br /></td></tr>
 <tr class="separator:aae76996dafce64d3701891e860e8a145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afda634858dcca07e27b954023e854972"><td class="memItemLeft" align="right" valign="top">pd.DataFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#afda634858dcca07e27b954023e854972">extract_word_embedding_features</a> (self, pd.DataFrame df, str column_name, bool normalize=False)</td></tr>
+<tr class="memdesc:afda634858dcca07e27b954023e854972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract word embedding features from a given dataframe and column.  <br /></td></tr>
 <tr class="separator:afda634858dcca07e27b954023e854972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -109,25 +115,20 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab615ccc3b82284f7877e30370ce3fb8e"><td class="memItemLeft" align="right" valign="top">Any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding.html#ab615ccc3b82284f7877e30370ce3fb8e">_load_model</a> (self)</td></tr>
+<tr class="memdesc:ab615ccc3b82284f7877e30370ce3fb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the word embedding model.  <br /></td></tr>
 <tr class="separator:ab615ccc3b82284f7877e30370ce3fb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a28173984f0d56ea34834c3720f55b9"><td class="memItemLeft" align="right" valign="top"><a id="a4a28173984f0d56ea34834c3720f55b9" name="a4a28173984f0d56ea34834c3720f55b9"></a>
 str&#160;</td><td class="memItemRight" valign="bottom"><b>_pre_embedding</b> (self, str text)</td></tr>
 <tr class="separator:a4a28173984f0d56ea34834c3720f55b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A class for generating word embeddings from text data.
-Word embeddings are numerical representations of text data that capture the context and meaning of words within a sentence or document.
-
-Examples
---------
-Use this class like this:
-
-.. code-block:: python
-
-    word_embedding = WordEmbedding()
-    df = word_embedding.extract_word_embedding_features(df, "text_column")
-    print(df)
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p>A class for generating word embeddings from text data. </p>
+<p>Word embeddings are numerical representations of text data that capture the context and meaning of words within a sentence or document.</p>
+<p>Examples - Use this class like this:</p>
+<div class="fragment"><div class="line">word_embedding = WordEmbedding()</div>
+<div class="line">df = word_embedding.extract_word_embedding_features(df, <span class="stringliteral">&quot;text_column&quot;</span>)</div>
+<div class="line">print(df)</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a882b4ba550a9356baeb85964848bb5ac" name="a882b4ba550a9356baeb85964848bb5ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a882b4ba550a9356baeb85964848bb5ac">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -165,15 +166,17 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Initialize the WordEmbedding class.
 
-:param lang: The language of the text to be processed. (default 'es')
-:type lang: str
-:param dimensions: The number of dimensions of the word embedding vectors. (default 25)
-:type dimensions: int
-:param model: The word embedding model to be used. (default 'bytepair')
-:type model: str
-</pre> 
+<p>Initialize the WordEmbedding class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lang</td><td>(Type: str) The language of the text to be processed. (default 'es') </td></tr>
+    <tr><td class="paramname">dimensions</td><td>(Type: int) The number of dimensions of the word embedding vectors. (default 25) </td></tr>
+    <tr><td class="paramname">model</td><td>(Type: str) The word embedding model to be used. (default 'bytepair') </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -200,11 +203,10 @@ Use this class like this:
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Load the word embedding model.
 
-:return: The loaded word embedding model.
-:rtype: Any
-</pre> 
+<p>Load the word embedding model. </p>
+<dl class="section return"><dt>Returns</dt><dd>(Type: Any) The loaded word embedding model. </dd></dl>
+
 </div>
 </div>
 <a id="afda634858dcca07e27b954023e854972" name="afda634858dcca07e27b954023e854972"></a>
@@ -244,29 +246,23 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Extract word embedding features from a given dataframe and column.
 
-:param df: Dataframe to extract word embedding features from.
-:type df: pandas.DataFrame
-:param column_name: Name of the column in the dataframe that contains the text data to extract features from.
-:type column_name: str
-:param normalize: Indicates whether to normalize the word embedding feature columns. Default is True.
-:type normalize: bool, optional
+<p>Extract word embedding features from a given dataframe and column. </p>
+<p>Examples - Use this class like this:</p>
+<div class="fragment"><div class="line">word_embedding = WordEmbedding()</div>
+<div class="line">df = pd.DataFrame({<span class="stringliteral">&quot;text_column&quot;</span>: [<span class="stringliteral">&quot;abcdefgh&quot;</span>, <span class="stringliteral">&quot;ijklmnop&quot;</span>, <span class="stringliteral">&quot;qrstuvwxyz&quot;</span>]})</div>
+<div class="line">df = word_embedding.extract_features(df, <span class="stringliteral">&quot;text_column&quot;</span>, normalize=<span class="keyword">False</span>)</div>
+<div class="line">print(df.head())</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">df</td><td>(Type: DataFrame) Dataframe to extract word embedding features from. </td></tr>
+    <tr><td class="paramname">column_name</td><td>(Type: str) Name of the column in the dataframe that contains the text data to extract features from. </td></tr>
+    <tr><td class="paramname">normalize</td><td>(Type: bool, optional) Indicates whether to normalize the word embedding feature columns. Default is True.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(Type: DataFrame) The input dataframe with additional columns for word embedding features. </dd></dl>
 
-:return: The input dataframe with additional columns for word embedding features.
-:rtype: pandas.DataFrame
-
-Examples
---------
-Use this class like this:
-
-.. code-block:: python
-
-    word_embedding = WordEmbedding()
-    df = pd.DataFrame({"text_column": ["abcdefgh", "ijklmnop", "qrstuvwxyz"]})
-    df = word_embedding.extract_features(df, "text_column", normalize=False)
-    print(df.head())
-</pre> 
 </div>
 </div>
 <a id="aae76996dafce64d3701891e860e8a145" name="aae76996dafce64d3701891e860e8a145"></a>
@@ -294,27 +290,25 @@ Use this class like this:
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Get the word embedding vector for a given text.
 
-:param text: The text to be processed.
-:type text: str
-:return: A word embedding vector for the given text.
-:rtype: np.ndarray
+<p>Get the word embedding vector for a given text. </p>
+<p>Examples - Use this function like this:</p>
+<div class="fragment"><div class="line">word_embedding = WordEmbedding()</div>
+<div class="line">embedding = word_embedding.get_embedding(<span class="stringliteral">&quot;This is a sample text.&quot;</span>)</div>
+<div class="line">print(embedding)</div>
+<div class="line"><span class="comment"># Output: [0.1, 0.2, ..., 0.3] (a list of float values representing the word embedding vector)</span></div>
+<div class="line"> </div>
+<div class="line">embedding = word_embedding.get_embedding(<span class="stringliteral">&quot;Another sample text.&quot;</span>)</div>
+<div class="line">print(embedding)</div>
+<div class="line"><span class="comment"># Output: [0.5, 0.6, ..., 0.7] (a list of float values representing the word embedding vector)</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>(Type: str) The text to be processed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(type: array) A word embedding vector for the given text. </dd></dl>
 
-Examples
---------
-Use this function like this:
-.. code-block:: python
-
-word_embedding = WordEmbedding()
-embedding = word_embedding.get_embedding("This is a sample text.")
-print(embedding)
-# Output: [0.1, 0.2, ..., 0.3] (a list of float values representing the word embedding vector)
-
-embedding = word_embedding.get_embedding("Another sample text.")
-print(embedding)
-# Output: [0.5, 0.6, ..., 0.7] (a list of float values representing the word embedding vector)
-</pre> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

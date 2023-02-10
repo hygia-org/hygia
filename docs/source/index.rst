@@ -61,6 +61,21 @@ The main features are:
 - Organize and display experiments and model metadata however you want
 - Share and collaborate on experiment results and models across the org
 
+4. Supported by
+"""""""""""""""
+
+.. image:: _static/logo_eldorado.png
+  :width: 150
+  :alt: Alternative text
+
+.. image:: _static/logo_unb.svg
+  :width: 150
+  :alt: Alternative text
+
+.. image:: _static/logo_lappis.png
+  :width: 150
+  :alt: Alternative text
+
 
 .. toctree::
    :maxdepth: 2
@@ -71,12 +86,3 @@ The main features are:
    user_guide/index
    doxygen/index
 
-
-..
-  Indices and tables
-  ==================
-
-  * :ref:`genindex`
-  * :ref:`modindex`
-  * :ref:`search`
-..

@@ -97,8 +97,9 @@
   
 
   
+    <img src="../_static/horizontal_logo_dark.PNG" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/horizontal_logo_light.PNG" class="logo__image only-dark" alt="Logo image">
   
-    <p class="title logo__title">Hygia  documentation</p>
   
 </a>
     
@@ -161,6 +162,17 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hygia-org" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
       </ul>
       </div>
       
@@ -246,6 +258,17 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hygia-org" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
       </ul>
       </div>
       
@@ -299,26 +322,20 @@ library and take your data processing to the next level.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="annotate_data.AnnotateData">
 <span class="target" id="classannotate__data_1_1_annotate_data"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AnnotateData</span></span><a class="headerlink" href="#annotate_data.AnnotateData" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="k">class</span> <span class="nc">to</span> <span class="n">incorporate</span> <span class="n">the</span> <span class="n">data</span> <span class="n">annotation</span> <span class="n">phase</span><span class="p">,</span> <span class="n">starting</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">thresholds</span> 
-<span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="n">count</span> <span class="n">sequence</span> <span class="n">squared</span> <span class="n">vowels</span><span class="p">,</span> <span class="n">count</span> <span class="n">sequence</span> <span class="n">squared</span> <span class="n">consonants</span><span class="p">)</span> <span class="n">can</span> <span class="n">tell</span> <span class="k">if</span> <span class="n">it</span><span class="s1">&#39;s a ksmash.</span>
+<dd><p>A class to incorporate the data annotation phase, starting from the thresholds (e.g., count sequence squared vowels, count sequence squared consonants) can tell if it’s a ksmash. </p>
+<p>Examples</p>
+<p>Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">annotate_data</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">AnnotateData</span><span class="p">()</span>
+<span class="n">key_smash_thresholds</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;count_sequence_squared_vowels&#39;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+<span class="s1">&#39;count_sequence_squared_consonants&#39;</span><span class="p">:</span> <span class="mf">1.999</span><span class="p">,</span>
+<span class="s1">&#39;count_sequence_squared_special_characters&#39;</span><span class="p">:</span> <span class="mf">2.2499</span><span class="p">,</span>
+<span class="s1">&#39;ratio_of_numeric_digits_squared&#39;</span><span class="p">:</span> <span class="mf">2.9</span><span class="p">,</span>
+<span class="s1">&#39;average_of_char_count_squared&#39;</span><span class="p">:</span> <span class="mf">2.78</span><span class="p">,</span>
+<span class="p">}</span>
 
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="k">class</span> <span class="nc">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="n">annotate_data</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">AnnotateData</span><span class="p">()</span>
-    <span class="n">key_smash_thresholds</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;count_sequence_squared_vowels&#39;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
-    <span class="s1">&#39;count_sequence_squared_consonants&#39;</span><span class="p">:</span> <span class="mf">1.999</span><span class="p">,</span>
-    <span class="s1">&#39;count_sequence_squared_special_characters&#39;</span><span class="p">:</span> <span class="mf">2.2499</span><span class="p">,</span>
-    <span class="s1">&#39;ratio_of_numeric_digits_squared&#39;</span><span class="p">:</span> <span class="mf">2.9</span><span class="p">,</span>
-    <span class="s1">&#39;average_of_char_count_squared&#39;</span><span class="p">:</span> <span class="mf">2.78</span><span class="p">,</span>
-    <span class="p">}</span>
-
-    <span class="n">df</span> <span class="o">=</span> <span class="n">annotate_data</span><span class="o">.</span><span class="n">annotate_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">concatened_column_name</span><span class="p">,</span> <span class="n">key_smash_thresholds</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">annotate_data</span><span class="o">.</span><span class="n">annotate_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">concatened_column_name</span><span class="p">,</span> <span class="n">key_smash_thresholds</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
  </p>
@@ -327,20 +344,19 @@ library and take your data processing to the next level.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="annotate_data.AnnotateData.annotate_data">
 <span class="target" id="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d"></span><span class="sig-name descname"><span class="pre">annotate_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks_thresholds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#annotate_data.AnnotateData.annotate_data" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Annotate</span> <span class="n">data</span> <span class="n">function</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">features</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">concatened_column_name</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="n">column</span> <span class="n">to</span> <span class="n">be</span> <span class="n">used</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">concatened_column_name</span><span class="p">:</span> <span class="n">List</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">ks_thresholds</span><span class="p">:</span> <span class="n">List</span> <span class="n">of</span> <span class="n">thresholds</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">ks_thresholds</span><span class="p">:</span> <span class="n">List</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="nb">input</span> <span class="n">dataframe</span> <span class="k">with</span> <span class="n">additional</span> <span class="n">columns</span> <span class="k">for</span> <span class="n">key</span> <span class="n">smashing</span> <span class="ow">and</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">features</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Annotate data function. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract features from. </p></li>
+<li><p><strong>concatened_column_name</strong> – (Type: List) List of columns to be used </p></li>
+<li><p><strong>ks_thresholds</strong> – (Type: List) List of thresholds</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns for key smashing and word embedding features. </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -349,76 +365,67 @@ library and take your data processing to the next level.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AugmentData</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    This class present a validations based on zipocde data from this website:
-    https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1
-    we downloaded data from some continents and we filter based in the &#39;country&#39; code
-    we saved the data as pickle files in order to not overwhelm git history.
-</pre></div>
-</div>
- </p>
+<dd><p>This class present a validations based on zipocde data from this website: <a class="reference external" href="https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1">Listen Data</a>. </p>
+<p>We obtained data from several continents and filtered it using the ‘country’ code. To avoid overwhelm the Git history, we saved the data in pickle files. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData.__init__">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a663159ea8e556da4e70de1005d68def7"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country='MEXICO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData.__init__" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Initialize</span> <span class="n">the</span> <span class="n">AugmentData</span> <span class="n">class</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">country</span><span class="p">:</span> <span class="n">Zipcode</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">region</span> <span class="ow">or</span> <span class="n">country</span> <span class="n">used</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">country</span><span class="p">:</span> <span class="nb">str</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Initialize the AugmentData class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>country</strong> – (Type: str) Zipcode list of the region or country used. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcode">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1ada49b52ac86bd4f33771524b6a01d808"></span><span class="sig-name descname"><span class="pre">validate_zipcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcode" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">a</span> <span class="n">zipcode</span> <span class="ow">is</span> <span class="n">valid</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Zipcode</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">region</span> <span class="ow">or</span> <span class="n">country</span> <span class="n">used</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">Return</span> <span class="k">if</span> <span class="n">the</span> <span class="n">zipcode</span> <span class="ow">is</span> <span class="n">valid</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if a zipcode is valid. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Zipcode list of the region or country used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) Return if the zipcode is valid :rtype: bool </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcodes">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a49dee300d063cf789362e19869b64ff0"></span><span class="sig-name descname"><span class="pre">validate_zipcodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">zipcode_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcodes" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="nb">all</span> <span class="n">zipcode</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">data</span> <span class="ow">is</span> <span class="n">valid</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">features</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">zipcode_column_name</span><span class="p">:</span> <span class="n">Zipcode</span> <span class="n">column</span> <span class="n">name</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">zipcode_column_name</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">Return</span> <span class="n">a</span> <span class="n">dataframe</span> <span class="k">with</span> <span class="n">a</span> <span class="n">new</span> <span class="n">column</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">DataFrame</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if all zipcode in a data is valid. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract features. </p></li>
+<li><p><strong>zipcode_column_name</strong> – (Type: str) Zipcode column name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return (Type: DataFrame) a dataframe with a new column. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData.augment_data">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a44556356984e09090a5a3c47259f9beb"></span><span class="sig-name descname"><span class="pre">augment_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">zipcode_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData.augment_data" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span> <span class="n">that</span> <span class="n">uses</span> <span class="n">the</span> <span class="n">validate_zipcodes</span> <span class="n">function</span> <span class="ow">and</span> <span class="n">concatenates</span> <span class="n">the</span> <span class="n">result</span> <span class="n">to</span> <span class="n">the</span> <span class="n">database</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">features</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">zipcode_column_name</span><span class="p">:</span> <span class="n">Zipcode</span> <span class="n">column</span> <span class="n">name</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">zipcode_column_name</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">Return</span> <span class="n">a</span> <span class="n">dataframe</span> <span class="k">with</span> <span class="n">a</span> <span class="n">new</span> <span class="n">column</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">DataFrame</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Function that uses the validate_zipcodes function and concatenates the result to the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract features from. </p></li>
+<li><p><strong>zipcode_column_name</strong> – (Type: str) Zipcode column name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) Return a dataframe with a new column. </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -435,19 +442,12 @@ library and take your data processing to the next level.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FeatureEngineering</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="k">class</span> <span class="nc">for</span> <span class="n">extracting</span> <span class="n">key</span> <span class="n">smashing</span> <span class="ow">and</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">features</span> <span class="kn">from</span> <span class="nn">text</span> <span class="n">data</span><span class="o">.</span>
-<span class="n">This</span> <span class="k">class</span> <span class="nc">combines</span> <span class="n">the</span> <span class="n">functionality</span> <span class="n">of</span> <span class="n">the</span> <span class="n">KeySmash</span> <span class="ow">and</span> <span class="n">WordEmbedding</span> <span class="n">classes</span>
-<span class="n">to</span> <span class="n">extract</span> <span class="n">key</span> <span class="n">smashing</span> <span class="ow">and</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">features</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">given</span> <span class="n">text</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">dataframe</span><span class="o">.</span>
-
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="k">class</span> <span class="nc">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="n">feature_engineer</span> <span class="o">=</span> <span class="n">FeatureEngineering</span><span class="p">()</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">feature_engineer</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<dd><p>A class for extracting key smashing and word embedding features from text data. </p>
+<p>This class combines the functionality of the KeySmash and WordEmbedding classes to extract key smashing and word embedding features from a given text column in a dataframe.</p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">feature_engineer</span> <span class="o">=</span> <span class="n">FeatureEngineering</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">feature_engineer</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
  </p>
@@ -456,46 +456,42 @@ library and take your data processing to the next level.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a33f8c5028f3fee8359def47641fdc736"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">lang='es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">dimensions=25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">model='bytepair'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Initialize</span> <span class="n">the</span> <span class="n">FeatureEngineering</span> <span class="n">class</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">lang</span><span class="p">:</span> <span class="n">The</span> <span class="n">language</span> <span class="n">of</span> <span class="n">the</span> <span class="n">text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">processed</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span> <span class="s1">&#39;es&#39;</span><span class="p">)</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">lang</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">dimensions</span><span class="p">:</span> <span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">dimensions</span> <span class="n">of</span> <span class="n">the</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">vectors</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span> <span class="mi">25</span><span class="p">)</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">dimensions</span><span class="p">:</span> <span class="nb">int</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">model</span><span class="p">:</span> <span class="n">The</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">model</span> <span class="n">to</span> <span class="n">be</span> <span class="n">used</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span> <span class="s1">&#39;bytepair&#39;</span><span class="p">)</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Initialize the FeatureEngineering class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lang</strong> – (Type: str) The language of the text to be processed. (default ‘es’) </p></li>
+<li><p><strong>dimensions</strong> – (Type: int) The number of dimensions of the word embedding vectors. (default 25) </p></li>
+<li><p><strong>model</strong> – (Type: str) The word embedding model to be used. (default ‘bytepair’) </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.extract_features">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a6557b5c4dc573fcf0f8454da44c1536f"></span><span class="sig-name descname"><span class="pre">extract_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text_column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.extract_features" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Extract</span> <span class="n">key</span> <span class="n">smashing</span> <span class="ow">and</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">features</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">given</span> <span class="n">dataframe</span> <span class="ow">and</span> <span class="n">column</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">features</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">text_column</span><span class="p">:</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">dataframe</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">text</span> <span class="n">data</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">features</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text_column</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">normalize</span><span class="p">:</span> <span class="n">Indicates</span> <span class="n">whether</span> <span class="n">to</span> <span class="n">normalize</span> <span class="n">the</span> <span class="n">feature</span> <span class="n">columns</span><span class="o">.</span> <span class="n">Default</span> <span class="ow">is</span> <span class="kc">True</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">normalize</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">optional</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="nb">input</span> <span class="n">dataframe</span> <span class="k">with</span> <span class="n">additional</span> <span class="n">columns</span> <span class="k">for</span> <span class="n">key</span> <span class="n">smashing</span> <span class="ow">and</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">features</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="k">class</span> <span class="nc">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="n">fe</span> <span class="o">=</span> <span class="n">FeatureEngineering</span><span class="p">()</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">fe</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<dd><p>Extract key smashing and word embedding features from a given dataframe and column. </p>
+<p>
+Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fe</span> <span class="o">=</span> <span class="n">FeatureEngineering</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">fe</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
  </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract features from. </p></li>
+<li><p><strong>text_column</strong> – (Type: str) Name of the column in the dataframe that contains the text data to extract features from. </p></li>
+<li><p><strong>normalize</strong> – (Type: bool, optional) Indicates whether to normalize the feature columns. Default is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns for key smashing and word embedding features.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -522,20 +518,12 @@ library and take your data processing to the next level.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">KeySmash</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="k">class</span> <span class="nc">for</span> <span class="n">calculating</span> <span class="n">metrics</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">key</span> <span class="n">smashing</span> <span class="n">behavior</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">text</span><span class="o">.</span>
-
-<span class="n">Key</span> <span class="n">smashing</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">act</span> <span class="n">of</span> <span class="n">typing</span> <span class="n">on</span> <span class="n">a</span> <span class="n">keyboard</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">rapid</span> <span class="ow">and</span> <span class="n">uncontrolled</span> <span class="n">manner</span><span class="p">,</span>
-<span class="n">often</span> <span class="n">resulting</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">series</span> <span class="n">of</span> <span class="n">random</span> <span class="n">characters</span> <span class="n">being</span> <span class="n">entered</span> <span class="n">into</span> <span class="n">a</span> <span class="n">document</span> <span class="ow">or</span> <span class="n">text</span> <span class="n">field</span><span class="o">.</span>
-
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="k">class</span> <span class="nc">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">extract_key_smash_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<dd><p>A class for calculating metrics to indicate key smashing behavior in a text. </p>
+<p>Key smashing is the act of typing on a keyboard in a rapid and uncontrolled manner, often resulting in a series of random characters being entered into a document or text field.</p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">extract_key_smash_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
  </p>
@@ -544,145 +532,129 @@ library and take your data processing to the next level.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.__init__">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a65214ed127cf6a6491b1f249618e626d"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.__init__" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Initialize</span> <span class="n">the</span> <span class="n">KeySmash</span> <span class="n">class</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Initialize the KeySmash class. </p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.average_of_char_count_squared">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a682baee004b60c551f63c877a3270b3a"></span><span class="sig-name descname"><span class="pre">average_of_char_count_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.average_of_char_count_squared" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">function</span> <span class="n">takes</span> <span class="n">a</span> <span class="n">string</span> <span class="n">text</span> <span class="k">as</span> <span class="nb">input</span> <span class="ow">and</span> <span class="n">splits</span> <span class="n">it</span> <span class="n">into</span> <span class="n">words</span><span class="o">.</span>
-<span class="n">For</span> <span class="n">each</span> <span class="n">word</span><span class="p">,</span> <span class="n">it</span> <span class="n">counts</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">occurrences</span> <span class="n">of</span> <span class="n">each</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">word</span><span class="p">,</span> <span class="n">squares</span> <span class="n">those</span> <span class="n">counts</span><span class="p">,</span> <span class="ow">and</span> <span class="n">then</span> <span class="n">sums</span> <span class="n">them</span><span class="o">.</span>
-<span class="n">It</span> <span class="n">then</span> <span class="n">divides</span> <span class="n">the</span> <span class="nb">sum</span> <span class="n">by</span> <span class="n">the</span> <span class="n">length</span> <span class="n">of</span> <span class="n">the</span> <span class="n">word</span> <span class="ow">and</span> <span class="n">appends</span> <span class="n">the</span> <span class="n">result</span> <span class="n">to</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">words_results</span><span class="o">.</span>
-<span class="n">Finally</span><span class="p">,</span> <span class="n">it</span> <span class="n">returns</span> <span class="n">the</span> <span class="n">mean</span> <span class="n">of</span> <span class="n">the</span> <span class="n">words_results</span> <span class="nb">list</span><span class="p">,</span> <span class="k">if</span> <span class="n">the</span> <span class="nb">list</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">empty</span><span class="p">,</span> <span class="n">otherwise</span> <span class="n">it</span> <span class="n">returns</span> <span class="mf">0.</span>
+<dd><p>The function takes a string text as input and splits it into words. </p>
+<p>For each word, it counts the number of occurrences of each character in the word, squares those counts, and then sums them. It then divides the sum by the length of the word and appends the result to a list words_results. Finally, it returns the mean of the words_results list, if the list is not empty, otherwise it returns 0.</p>
+<p>
+Examples - Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
 
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">The</span> <span class="n">text</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="n">calculation</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="n">calculated</span> <span class="n">Char</span> <span class="n">Frequency</span> <span class="n">Metric</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">float</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">average_of_char_count_squared</span><span class="p">(</span><span class="s2">&quot;PUENTECILLA KM. 1.7&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 1.121212121212121</span>
 
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="n">function</span> <span class="n">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
-
-    <span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">average_of_char_count_squared</span><span class="p">(</span><span class="s2">&quot;PUENTECILLA KM. 1.7&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-    <span class="c1"># Output: 1.121212121212121</span>
-
-    <span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">average_of_char_count_squared</span><span class="p">(</span><span class="s2">&quot;ASDASD XXXX&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-    <span class="c1"># Output: 3.0</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">average_of_char_count_squared</span><span class="p">(</span><span class="s2">&quot;ASDASD XXXX&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 3.0</span>
 </pre></div>
 </div>
  </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) The text to use for the calculation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: float) The calculated Char Frequency Metric.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.count_sequence_squared">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a02080ee2e117a12c68b2749b5946734e"></span><span class="sig-name descname"><span class="pre">count_sequence_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">opt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.count_sequence_squared" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">function</span> <span class="n">takes</span> <span class="n">a</span> <span class="n">text</span> <span class="ow">and</span> <span class="n">opt</span> <span class="k">as</span> <span class="nb">input</span><span class="o">.</span> <span class="n">It</span> <span class="n">checks</span> <span class="n">a</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">characters</span><span class="p">,</span> <span class="n">converts</span> <span class="n">text</span> <span class="n">to</span> <span class="n">lowercase</span><span class="p">,</span> <span class="n">iterates</span> <span class="n">through</span> <span class="n">characters</span><span class="p">,</span>
-<span class="n">increments</span> <span class="n">counter</span> <span class="k">if</span> <span class="n">finds</span> <span class="n">a</span> <span class="n">sequence</span> <span class="n">of</span> <span class="n">characters</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">,</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">it</span> <span class="n">adds</span> <span class="n">square</span> <span class="n">of</span> <span class="n">counter</span> <span class="n">to</span> <span class="n">a</span> <span class="nb">list</span><span class="p">,</span> <span class="n">resets</span> <span class="n">counter</span> <span class="n">to</span> <span class="mf">1.</span>
-<span class="n">After</span> <span class="n">iterating</span> <span class="n">it</span> <span class="n">returns</span> <span class="nb">sum</span> <span class="n">of</span> <span class="nb">list</span> <span class="n">divided</span> <span class="n">by</span> <span class="n">length</span> <span class="n">of</span> <span class="n">text</span><span class="o">.</span>
+<dd><p>This function takes a text and opt as input. </p>
+<p>It checks a set of characters, converts text to lowercase, iterates through characters, increments counter if finds a sequence of characters in set, if not it adds square of counter to a list, resets counter to 1. After iterating it returns sum of list divided by length of text.</p>
+<p>
+Examples - Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
 
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">The</span> <span class="n">text</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="n">calculation</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">opt</span><span class="p">:</span> <span class="n">The</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">characters</span> <span class="n">to</span> <span class="n">consider</span> <span class="k">for</span> <span class="n">the</span> <span class="n">calculation</span><span class="p">,</span> <span class="n">can</span> <span class="n">be</span> <span class="n">one</span> <span class="n">of</span> <span class="s1">&#39;vowels&#39;</span><span class="p">,</span> <span class="s1">&#39;consonants&#39;</span><span class="p">,</span> <span class="ow">or</span> <span class="s1">&#39;special_characters&#39;</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">opt</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="n">calculated</span> <span class="n">Irregular</span> <span class="n">Sequence</span> <span class="n">Metric</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">float</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">count_sequence_squared</span><span class="p">(</span><span class="s2">&quot;PUENTECILLA KM. 1.7&quot;</span><span class="p">,</span> <span class="s2">&quot;vowels&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 0.21052631578947367</span>
 
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="n">function</span> <span class="n">like</span> <span class="n">this</span><span class="p">:</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">count_sequence_squared</span><span class="p">(</span><span class="s2">&quot;ASDASD XXXX&quot;</span><span class="p">,</span> <span class="s2">&quot;consonants&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 2.1818181818181817</span>
 
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
-
-    <span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">count_sequence_squared</span><span class="p">(</span><span class="s2">&quot;PUENTECILLA KM. 1.7&quot;</span><span class="p">,</span> <span class="s2">&quot;vowels&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-    <span class="c1"># Output: 0.21052631578947367</span>
-
-    <span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">count_sequence_squared</span><span class="p">(</span><span class="s2">&quot;ASDASD XXXX&quot;</span><span class="p">,</span> <span class="s2">&quot;consonants&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-    <span class="c1"># Output: 2.1818181818181817</span>
-
-    <span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">count_sequence_squared</span><span class="p">(</span><span class="s2">&quot;!@#$% ASDFGHJKL&quot;</span><span class="p">,</span> <span class="s2">&quot;special_characters&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-    <span class="c1"># Output: 1.5625</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">count_sequence_squared</span><span class="p">(</span><span class="s2">&quot;!@#$% ASDFGHJKL&quot;</span><span class="p">,</span> <span class="s2">&quot;special_characters&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 1.5625</span>
 </pre></div>
 </div>
  </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – (Type: str) The text to use for the calculation. </p></li>
+<li><p><strong>opt</strong> – (Type: str) The type of characters to consider for the calculation, can be one of ‘vowels’, ‘consonants’, or ‘special_characters’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type:float) The calculated Irregular Sequence Metric.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.ratio_of_numeric_digits_squared">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a43cd9f4f2e7bbb1797eea22d0c545f67"></span><span class="sig-name descname"><span class="pre">ratio_of_numeric_digits_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.ratio_of_numeric_digits_squared" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">function</span> <span class="n">takes</span> <span class="n">text</span> <span class="k">as</span> <span class="nb">input</span><span class="p">,</span> <span class="n">splits</span> <span class="n">it</span> <span class="n">into</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">words</span><span class="p">,</span> <span class="n">initializes</span> <span class="n">a</span> <span class="n">variable</span> <span class="n">to</span> <span class="mf">0.</span>
-<span class="n">It</span> <span class="n">iterates</span> <span class="n">through</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">words</span><span class="p">,</span> <span class="n">checking</span> <span class="k">if</span> <span class="n">each</span> <span class="n">word</span> <span class="n">contains</span> <span class="n">both</span> <span class="n">numeric</span> <span class="n">digits</span> <span class="ow">and</span> <span class="n">non</span><span class="o">-</span><span class="n">numeric</span> <span class="n">characters</span><span class="o">.</span>
-<span class="n">If</span> <span class="n">yes</span><span class="p">,</span> <span class="n">it</span> <span class="n">counts</span> <span class="n">number</span> <span class="n">of</span> <span class="n">numeric</span> <span class="n">digits</span><span class="p">,</span> <span class="n">squares</span> <span class="n">it</span> <span class="ow">and</span> <span class="n">adds</span> <span class="n">to</span> <span class="n">variable</span><span class="o">.</span>
-<span class="n">It</span> <span class="n">returns</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">that</span> <span class="n">variable</span> <span class="n">divided</span> <span class="n">by</span> <span class="n">length</span> <span class="n">of</span> <span class="n">original</span> <span class="n">text</span><span class="p">,</span> <span class="k">if</span> <span class="n">the</span> <span class="nb">list</span> <span class="ow">is</span> <span class="n">empty</span> <span class="n">it</span> <span class="n">returns</span> <span class="mf">0.</span>
+<dd><p>This function takes text as input, splits it into a list of words, initializes a variable to 0. </p>
+<p>It iterates through list of words, checking if each word contains both numeric digits and non-numeric characters. If yes, it counts number of numeric digits, squares it and adds to variable. It returns the value of that variable divided by length of original text, if the list is empty it returns 0.</p>
+<p>
+Examples - Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
 
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">The</span> <span class="n">text</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">the</span> <span class="n">metric</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="n">calculated</span> <span class="n">Number</span> <span class="n">Count</span> <span class="n">Metric</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">float</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">ratio_of_numeric_digits_squared</span><span class="p">(</span><span class="s2">&quot;ABC 123 !@#&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 0.0</span>
 
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="n">function</span> <span class="n">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
-    
-    <span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">ratio_of_numeric_digits_squared</span><span class="p">(</span><span class="s2">&quot;ABC 123 !@#&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-    <span class="c1"># Output: 0.0</span>
-
-    <span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">ratio_of_numeric_digits_squared</span><span class="p">(</span><span class="s2">&quot;ABC123 !@#&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-    <span class="c1"># Output: 0.9</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">ratio_of_numeric_digits_squared</span><span class="p">(</span><span class="s2">&quot;ABC123 !@#&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 0.9</span>
 </pre></div>
 </div>
  </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) The text to extract the metric from.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: float) The calculated Number Count Metric.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e"></span><span class="sig-name descname"><span class="pre">extract_key_smash_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">normalize=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Extract</span> <span class="n">key</span> <span class="n">smash</span> <span class="n">features</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">given</span> <span class="n">dataframe</span> <span class="ow">and</span> <span class="n">column</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">key</span> <span class="n">smash</span> <span class="n">features</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">column_name</span><span class="p">:</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">dataframe</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">text</span> <span class="n">data</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">features</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">column_name</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">normalize</span><span class="p">:</span> <span class="n">Indicates</span> <span class="n">whether</span> <span class="n">to</span> <span class="n">normalize</span> <span class="n">the</span> <span class="n">key</span> <span class="n">smash</span> <span class="n">feature</span> <span class="n">columns</span><span class="o">.</span> <span class="n">Default</span> <span class="ow">is</span> <span class="kc">True</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">normalize</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">optional</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="nb">input</span> <span class="n">dataframe</span> <span class="k">with</span> <span class="n">additional</span> <span class="n">columns</span> <span class="k">for</span> <span class="n">key</span> <span class="n">smash</span> <span class="n">features</span><span class="p">:</span> <span class="s1">&#39;irregular_sequence_vowels&#39;</span><span class="p">,</span> <span class="s1">&#39;irregular_sequence_consonants&#39;</span><span class="p">,</span> <span class="s1">&#39;irregular_sequence_special_characters&#39;</span><span class="p">,</span> <span class="s1">&#39;number_count_metric&#39;</span><span class="p">,</span> <span class="s1">&#39;char_frequency_metric&#39;</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="n">function</span> <span class="n">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-    <span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;text_column&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abcdefgh&quot;</span><span class="p">,</span> <span class="s2">&quot;ijklmnop&quot;</span><span class="p">,</span> <span class="s2">&quot;qrstuvwxyz&quot;</span><span class="p">]})</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">extract_key_smash_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<dd><p>Extract key smash features from a given dataframe and column. </p>
+<p>
+Examples Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;text_column&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abcdefgh&quot;</span><span class="p">,</span> <span class="s2">&quot;ijklmnop&quot;</span><span class="p">,</span> <span class="s2">&quot;qrstuvwxyz&quot;</span><span class="p">]})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">extract_key_smash_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
  </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract key smash features from. </p></li>
+<li><p><strong>column_name</strong> – (Type: str) Name of the column in the dataframe that contains the text data to extract features from. </p></li>
+<li><p><strong>normalize</strong> – (bool, optional) Indicates whether to normalize the key smash feature columns. Default is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns for key smash features: ‘irregular_sequence_vowels’, ‘irregular_sequence_consonants’, ‘irregular_sequence_special_characters’, ‘number_count_metric’, ‘char_frequency_metric’</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -699,18 +671,18 @@ library and take your data processing to the next level.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash._normalize_column">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1afc42a4b6aa51c24fad51e85f0c269fd2"></span><span class="sig-name descname"><span class="pre">_normalize_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash._normalize_column" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Normalize</span> <span class="n">a</span> <span class="n">given</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">dataframe</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="n">to</span> <span class="n">normalize</span> <span class="n">the</span> <span class="n">column</span> <span class="ow">in</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">column</span><span class="p">:</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">column</span> <span class="n">to</span> <span class="n">be</span> <span class="n">normalized</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">column</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="nb">input</span> <span class="n">dataframe</span> <span class="k">with</span> <span class="n">the</span> <span class="n">normalized</span> <span class="n">column</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Normalize a given column in a dataframe. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to normalize the column in. </p></li>
+<li><p><strong>column</strong> – (Type: str) Name of the column to be normalized.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with the normalized column. </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -719,18 +691,12 @@ library and take your data processing to the next level.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PreProcessData</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="k">class</span> <span class="nc">presents</span> <span class="n">a</span> <span class="n">series</span> <span class="n">of</span> <span class="n">functions</span> <span class="n">that</span> <span class="n">help</span> <span class="ow">in</span> <span class="n">data</span> <span class="n">pre</span><span class="o">-</span><span class="n">processing</span><span class="o">.</span>
-<span class="n">As</span> <span class="n">concatenate</span> <span class="n">columns</span><span class="p">,</span> <span class="n">replace</span> <span class="n">abbreviation</span><span class="p">,</span> <span class="ow">and</span> <span class="n">etc</span><span class="o">.</span>
-
-
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="k">class</span> <span class="nc">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-    <span class="n">pre_process_data</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">PreProcessData</span><span class="p">()</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pre_process_data</span><span class="o">.</span><span class="n">pre_process_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;COLUMN_1&#39;</span><span class="p">,</span> <span class="s1">&#39;COLUMN_2&#39;</span><span class="p">],</span> <span class="n">concatened_column_name</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<dd><p>This class presents a series of functions that help in data pre-processing. </p>
+<p>As concatenate columns, replace abbreviation, and etc.</p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pre_process_data</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">PreProcessData</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pre_process_data</span><span class="o">.</span><span class="n">pre_process_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;COLUMN_1&#39;</span><span class="p">,</span> <span class="s1">&#39;COLUMN_2&#39;</span><span class="p">],</span> <span class="n">concatened_column_name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
  </p>
@@ -739,84 +705,76 @@ library and take your data processing to the next level.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a56b7999a113fcad06e993e8aa28ce906"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country='MEXICO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Initialize</span> <span class="n">the</span> <span class="n">PreProcessData</span> <span class="n">class</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">country</span><span class="p">:</span> <span class="n">Zipcode</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">the</span> <span class="n">region</span> <span class="ow">or</span> <span class="n">country</span> <span class="n">used</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">country</span><span class="p">:</span> <span class="nb">str</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Initialize the PreProcessData class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>country</strong> – (Type: str) Zipcode list of the region or country used. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.concatenate_columns">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1aa918dadaa5fad237dfabbbcb95933376"></span><span class="sig-name descname"><span class="pre">concatenate_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatenated_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.concatenate_columns" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span> <span class="n">that</span> <span class="n">concatenates</span> <span class="n">two</span> <span class="n">columns</span> <span class="ow">and</span> <span class="n">saves</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">new</span> <span class="n">one</span><span class="p">,</span> <span class="n">whose</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">informed</span> <span class="n">by</span> <span class="n">the</span> <span class="n">user</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">columns</span><span class="p">:</span> <span class="n">List</span> <span class="n">of</span> <span class="n">columns</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">columns</span><span class="p">:</span> <span class="n">List</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">concatenated_column_name</span><span class="p">:</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">new</span> <span class="n">column</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">concatenated_column_name</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">Return</span> <span class="n">the</span> <span class="n">columns</span> <span class="n">concatenated</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Function that concatenates two columns and saves in a new one, whose name is informed by the user. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe.</p></li>
+<li><p><strong>columns</strong> – (Type: List) List of columns</p></li>
+<li><p><strong>concatenated_column_name</strong> – (Type: str) Name of the new column</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return the columns concatenated </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_nulls">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0f373aa2c3685df2291a25aab0473707"></span><span class="sig-name descname"><span class="pre">handle_nulls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_nulls" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Handle</span> <span class="n">null</span> <span class="n">values</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">column_name</span><span class="p">:</span> <span class="n">Column</span> <span class="n">name</span> <span class="n">to</span> <span class="n">check</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">column_name</span><span class="p">:</span> <span class="nb">str</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Handle null values. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: Dataframe) Dataframe</p></li>
+<li><p><strong>column_name</strong> – (Type: str) Column name to check </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_abreviations">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a5e81ba265ff8746bb5558901884f1160"></span><span class="sig-name descname"><span class="pre">handle_abreviations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_abreviations" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Handles</span> <span class="n">abbreviations</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">dataframe</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">column_name</span><span class="p">:</span> <span class="n">Column</span> <span class="n">name</span> <span class="n">to</span> <span class="n">check</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">column_name</span><span class="p">:</span> <span class="nb">str</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Handles abbreviations in the dataframe. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe</p></li>
+<li><p><strong>column_name</strong> – (Type: str) Column name to check </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a9434e258aada55019b9a7cbd9a243bda"></span><span class="sig-name descname"><span class="pre">pre_process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_to_concat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zipcode_columns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Função</span> <span class="n">que</span> <span class="n">reune</span> <span class="n">todos</span> <span class="n">preprocessamentos</span> <span class="n">implementados</span> <span class="p">(</span><span class="n">concatenar</span> <span class="n">colunas</span><span class="p">,</span> <span class="n">handle</span> <span class="k">with</span> <span class="n">nulls</span> <span class="ow">and</span> <span class="n">abreviations</span><span class="p">)</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">DataFrame</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">columns_to_concat</span><span class="p">:</span> <span class="n">List</span> <span class="n">of</span> <span class="n">columns</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">columns_to_concat</span><span class="p">:</span> <span class="n">List</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">column_name</span><span class="p">:</span> <span class="n">Column</span> <span class="n">name</span> <span class="n">to</span> <span class="n">check</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">column_name</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="nb">input</span> <span class="n">dataframe</span> <span class="k">with</span> <span class="n">additional</span> <span class="n">columns</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Função que reune todos preprocessamentos implementados (concatenar colunas, handle with nulls and abreviations) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe </p></li>
+<li><p><strong>columns_to_concat</strong> – (Type: List) List of columns </p></li>
+<li><p><strong>column_name</strong> – (Type: str) Column name to check</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -833,13 +791,12 @@ library and take your data processing to the next level.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData._replace_abbreviation">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a08787d36f285f9d2709433982d8d4926"></span><span class="sig-name descname"><span class="pre">_replace_abbreviation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData._replace_abbreviation" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span> <span class="n">that</span> <span class="n">identifies</span> <span class="n">abbreviations</span> <span class="ow">and</span> <span class="n">according</span> <span class="n">to</span> <span class="n">the</span> <span class="n">dictionary</span> <span class="n">changes</span> <span class="n">the</span> <span class="n">names</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">analyzed</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Function that identifies abbreviations and according to the dictionary changes the names. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be analyzed </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -848,16 +805,11 @@ library and take your data processing to the next level.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel">
 <span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RandomForestModel</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="k">class</span> <span class="nc">presents</span> <span class="n">the</span> <span class="n">model</span> <span class="n">Random</span> <span class="n">Forest</span><span class="p">,</span> <span class="n">allowing</span> <span class="n">train</span> <span class="ow">and</span> <span class="n">predict</span> <span class="n">the</span> <span class="n">model</span>
-
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="k">class</span> <span class="nc">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-    <span class="n">new_rf_model</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">RandomForestModel</span><span class="p">()</span>
-    <span class="n">clf</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">new_rf_model</span><span class="o">.</span><span class="n">train_and_get_scores</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">concatened_column_name</span><span class="p">,</span> <span class="n">all_features_columns</span><span class="p">)</span>
-    <span class="n">scores</span>
+<dd><p>This class presents the model Random Forest, allowing train and predict the model. </p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">new_rf_model</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">RandomForestModel</span><span class="p">()</span>
+<span class="n">clf</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">new_rf_model</span><span class="o">.</span><span class="n">train_and_get_scores</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">concatened_column_name</span><span class="p">,</span> <span class="n">all_features_columns</span><span class="p">)</span>
+<span class="n">scores</span>
 </pre></div>
 </div>
  </p>
@@ -866,40 +818,33 @@ library and take your data processing to the next level.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.__init__">
 <span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a3ce808991033e28ec22836b3dfc138fb"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_estimators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.__init__" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Initialize</span> <span class="n">the</span> <span class="n">RandomForestModel</span> <span class="n">class</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">model_file</span><span class="p">:</span> <span class="n">Path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">model</span> <span class="n">file</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">model_file</span><span class="p">:</span> <span class="n">path</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Initialize the RandomForestModel class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model_file</strong> – (Type: path) Path to the model file </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.train_and_get_scores">
 <span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf7a38d78b4b8100bec3034415cf958e"></span><span class="sig-name descname"><span class="pre">train_and_get_scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_features_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.train_and_get_scores" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Train</span> <span class="ow">and</span> <span class="n">get</span> <span class="n">scores</span> <span class="k">for</span> <span class="n">the</span> <span class="n">model</span> <span class="n">execution</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="k">with</span> <span class="n">the</span> <span class="n">data</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">concatened_column_name</span><span class="p">:</span> <span class="n">Column</span> <span class="n">name</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">concatened_column_name</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">all_features_columns</span><span class="p">:</span> <span class="n">List</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">features</span> <span class="n">column</span> <span class="n">nales</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">all_features_columns</span><span class="p">:</span> <span class="n">List</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Train and get scores for the model execution. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (DataFrame) Dataframe with the data. </p></li>
+<li><p><strong>concatened_column_name</strong> – (Type: str) Column name </p></li>
+<li><p><strong>all_features_columns</strong> – (Type: List) List of all features column nales </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.predict">
 <span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a4f97ea337bcc807954c6d68758d91a91"></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.predict" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Predict</span> <span class="n">the</span> <span class="n">model</span> <span class="n">result</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Predict the model result. </p>
 </dd></dl>
 
 </div>
@@ -931,225 +876,206 @@ library and take your data processing to the next level.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Regex</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">It</span> <span class="n">provides</span> <span class="n">a</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">functions</span> <span class="n">that</span> <span class="n">help</span> <span class="n">you</span> <span class="n">verify</span> <span class="n">the</span> <span class="n">content</span> <span class="n">of</span> <span class="n">a</span> <span class="n">text</span> <span class="n">field</span><span class="p">,</span> 
-<span class="n">such</span> <span class="k">as</span> <span class="n">checking</span> <span class="k">if</span> <span class="n">the</span> <span class="n">field</span> <span class="ow">is</span> <span class="n">empty</span><span class="p">,</span> <span class="k">if</span> <span class="n">it</span> <span class="n">has</span> <span class="n">only</span> <span class="n">one</span> <span class="n">word</span><span class="p">,</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> 
-<span class="n">a</span> <span class="n">specific</span> <span class="n">character</span> <span class="ow">or</span> <span class="n">pattern</span><span class="p">,</span> <span class="ow">and</span> <span class="n">more</span><span class="o">.</span>
-</pre></div>
-</div>
- </p>
+<dd><p>It provides a set of functions that help you verify the content of a text field, such as checking if the field is empty, if it has only one word, if it contains a specific character or pattern, and more. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_dell">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4ebb9444dc8e77ed8adabf6e22aee251"></span><span class="sig-name descname"><span class="pre">contains_exactly_the_word_dell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_dell" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">word</span> <span class="n">DELL</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains the word DELL. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_test">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aacc74035576c545b1d4d905f2f1e3742"></span><span class="sig-name descname"><span class="pre">contains_exactly_the_word_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_test" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">word</span> <span class="n">test</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains the word test. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_numbers">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab220adb6350bdbc9c40d3b5a8e57cac3"></span><span class="sig-name descname"><span class="pre">only_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_numbers" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">only</span> <span class="n">numbers</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains only numbers. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_special_characters">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5cdd86f4e05bb41b8ec1f9de60b7e4d1"></span><span class="sig-name descname"><span class="pre">only_special_characters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_special_characters" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">only</span> <span class="n">special</span> <span class="n">characters</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains only special characters. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_email">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f"></span><span class="sig-name descname"><span class="pre">contains_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_email" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">email</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains email. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_url">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a6d48e296af51cfcab0a7a144987ba88e"></span><span class="sig-name descname"><span class="pre">contains_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_url" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">url</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains url. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_date">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474"></span><span class="sig-name descname"><span class="pre">contains_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_date" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">date</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains date. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_invalid_words">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a2dc27d664c7303c105542f109a5c1573"></span><span class="sig-name descname"><span class="pre">contains_exactly_invalid_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_invalid_words" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">invalid</span> <span class="n">words</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains invalid words. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.is_substring_of_column_name">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ad5645622b440996ae37006ef8e26d7db"></span><span class="sig-name descname"><span class="pre">is_substring_of_column_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.is_substring_of_column_name" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">substring</span> <span class="n">of</span> <span class="n">column</span> <span class="n">name</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if is a substring of column name. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_one_char">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab9a9fb59c02dd27f8596776c4f52c526"></span><span class="sig-name descname"><span class="pre">only_one_char</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_one_char" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">only</span> <span class="n">one</span> <span class="n">char</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains only one char. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_one_word">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a09ffaff6cfd795ecb3b21d54d97e8f27"></span><span class="sig-name descname"><span class="pre">only_one_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_one_word" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">only</span> <span class="n">one</span> <span class="n">word</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains only one word. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_white_spaces">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a10f1616ba55b300afe424accf081d9cf"></span><span class="sig-name descname"><span class="pre">only_white_spaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_white_spaces" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="n">it</span> <span class="n">contains</span> <span class="n">only</span> <span class="n">white</span> <span class="n">spaces</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if it contains only white spaces. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.empty">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a0a749fa9c131a0e1e54f4eedb915c658"></span><span class="sig-name descname"><span class="pre">empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.empty" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Check</span> <span class="k">if</span> <span class="ow">is</span> <span class="n">empty</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">Text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">verified</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Check if is empty. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.extract_regex_features">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5ffdae262d81e5f433d66bc44d6e006c"></span><span class="sig-name descname"><span class="pre">extract_regex_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.extract_regex_features" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span> <span class="n">to</span> <span class="n">extract</span> <span class="nb">all</span> <span class="n">regex</span> <span class="n">features</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="k">with</span> <span class="n">the</span> <span class="n">data</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">column_name</span><span class="p">:</span> <span class="n">Column</span> <span class="n">name</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">column_name</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">true</span> <span class="n">of</span> <span class="n">false</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="nb">bool</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Function to extract all regex features. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe with the data. </p></li>
+<li><p><strong>column_name</strong> – (Type: str) Column name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -1158,18 +1084,12 @@ library and take your data processing to the next level.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WordEmbedding</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="k">class</span> <span class="nc">for</span> <span class="n">generating</span> <span class="n">word</span> <span class="n">embeddings</span> <span class="kn">from</span> <span class="nn">text</span> <span class="n">data</span><span class="o">.</span>
-<span class="n">Word</span> <span class="n">embeddings</span> <span class="n">are</span> <span class="n">numerical</span> <span class="n">representations</span> <span class="n">of</span> <span class="n">text</span> <span class="n">data</span> <span class="n">that</span> <span class="n">capture</span> <span class="n">the</span> <span class="n">context</span> <span class="ow">and</span> <span class="n">meaning</span> <span class="n">of</span> <span class="n">words</span> <span class="n">within</span> <span class="n">a</span> <span class="n">sentence</span> <span class="ow">or</span> <span class="n">document</span><span class="o">.</span>
-
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="k">class</span> <span class="nc">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="n">word_embedding</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">word_embedding</span><span class="o">.</span><span class="n">extract_word_embedding_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<dd><p>A class for generating word embeddings from text data. </p>
+<p>Word embeddings are numerical representations of text data that capture the context and meaning of words within a sentence or document.</p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_embedding</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">word_embedding</span><span class="o">.</span><span class="n">extract_word_embedding_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 </div>
  </p>
@@ -1178,35 +1098,24 @@ library and take your data processing to the next level.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a882b4ba550a9356baeb85964848bb5ac"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">lang='es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">dimensions=25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">model='bytepair'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Initialize</span> <span class="n">the</span> <span class="n">WordEmbedding</span> <span class="n">class</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">lang</span><span class="p">:</span> <span class="n">The</span> <span class="n">language</span> <span class="n">of</span> <span class="n">the</span> <span class="n">text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">processed</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span> <span class="s1">&#39;es&#39;</span><span class="p">)</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">lang</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">dimensions</span><span class="p">:</span> <span class="n">The</span> <span class="n">number</span> <span class="n">of</span> <span class="n">dimensions</span> <span class="n">of</span> <span class="n">the</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">vectors</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span> <span class="mi">25</span><span class="p">)</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">dimensions</span><span class="p">:</span> <span class="nb">int</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">model</span><span class="p">:</span> <span class="n">The</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">model</span> <span class="n">to</span> <span class="n">be</span> <span class="n">used</span><span class="o">.</span> <span class="p">(</span><span class="n">default</span> <span class="s1">&#39;bytepair&#39;</span><span class="p">)</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">model</span><span class="p">:</span> <span class="nb">str</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Initialize the WordEmbedding class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lang</strong> – (Type: str) The language of the text to be processed. (default ‘es’) </p></li>
+<li><p><strong>dimensions</strong> – (Type: int) The number of dimensions of the word embedding vectors. (default 25) </p></li>
+<li><p><strong>model</strong> – (Type: str) The word embedding model to be used. (default ‘bytepair’) </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.get_embedding">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1aae76996dafce64d3701891e860e8a145"></span><span class="sig-name descname"><span class="pre">get_embedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.get_embedding" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="n">the</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">vector</span> <span class="k">for</span> <span class="n">a</span> <span class="n">given</span> <span class="n">text</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">text</span><span class="p">:</span> <span class="n">The</span> <span class="n">text</span> <span class="n">to</span> <span class="n">be</span> <span class="n">processed</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">A</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">vector</span> <span class="k">for</span> <span class="n">the</span> <span class="n">given</span> <span class="n">text</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
-
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="n">function</span> <span class="n">like</span> <span class="n">this</span><span class="p">:</span>
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-<span class="n">word_embedding</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
+<dd><p>Get the word embedding vector for a given text. </p>
+<p>Examples - Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_embedding</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
 <span class="n">embedding</span> <span class="o">=</span> <span class="n">word_embedding</span><span class="o">.</span><span class="n">get_embedding</span><span class="p">(</span><span class="s2">&quot;This is a sample text.&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">embedding</span><span class="p">)</span>
 <span class="c1"># Output: [0.1, 0.2, ..., 0.3] (a list of float values representing the word embedding vector)</span>
@@ -1216,37 +1125,41 @@ library and take your data processing to the next level.</p>
 <span class="c1"># Output: [0.5, 0.6, ..., 0.7] (a list of float values representing the word embedding vector)</span>
 </pre></div>
 </div>
- </p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) The text to be processed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(type: array) A word embedding vector for the given text. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.extract_word_embedding_features">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1afda634858dcca07e27b954023e854972"></span><span class="sig-name descname"><span class="pre">extract_word_embedding_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">normalize=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.extract_word_embedding_features" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Extract</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">features</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">given</span> <span class="n">dataframe</span> <span class="ow">and</span> <span class="n">column</span><span class="o">.</span>
-
-<span class="p">:</span><span class="n">param</span> <span class="n">df</span><span class="p">:</span> <span class="n">Dataframe</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">features</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">df</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">column_name</span><span class="p">:</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">dataframe</span> <span class="n">that</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">text</span> <span class="n">data</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">features</span> <span class="n">from</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">column_name</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">:</span><span class="n">param</span> <span class="n">normalize</span><span class="p">:</span> <span class="n">Indicates</span> <span class="n">whether</span> <span class="n">to</span> <span class="n">normalize</span> <span class="n">the</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">feature</span> <span class="n">columns</span><span class="o">.</span> <span class="n">Default</span> <span class="ow">is</span> <span class="kc">True</span><span class="o">.</span>
-<span class="p">:</span><span class="nb">type</span> <span class="n">normalize</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">optional</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="nb">input</span> <span class="n">dataframe</span> <span class="k">with</span> <span class="n">additional</span> <span class="n">columns</span> <span class="k">for</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">features</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span>
-
-<span class="n">Examples</span>
-<span class="o">--------</span>
-<span class="n">Use</span> <span class="n">this</span> <span class="k">class</span> <span class="nc">like</span> <span class="n">this</span><span class="p">:</span>
-
-<span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
-
-    <span class="n">word_embedding</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;text_column&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abcdefgh&quot;</span><span class="p">,</span> <span class="s2">&quot;ijklmnop&quot;</span><span class="p">,</span> <span class="s2">&quot;qrstuvwxyz&quot;</span><span class="p">]})</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">word_embedding</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<dd><p>Extract word embedding features from a given dataframe and column. </p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_embedding</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;text_column&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abcdefgh&quot;</span><span class="p">,</span> <span class="s2">&quot;ijklmnop&quot;</span><span class="p">,</span> <span class="s2">&quot;qrstuvwxyz&quot;</span><span class="p">]})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">word_embedding</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
- </p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract word embedding features from. </p></li>
+<li><p><strong>column_name</strong> – (Type: str) Name of the column in the dataframe that contains the text data to extract features from. </p></li>
+<li><p><strong>normalize</strong> – (Type: bool, optional) Indicates whether to normalize the word embedding feature columns. Default is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns for word embedding features. </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -1278,13 +1191,12 @@ library and take your data processing to the next level.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding._load_model">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1ab615ccc3b82284f7877e30370ce3fb8e"></span><span class="sig-name descname"><span class="pre">_load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding._load_model" title="Permalink to this definition">#</a></dt>
-<dd><p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Load</span> <span class="n">the</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">model</span><span class="o">.</span>
-
-<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="n">The</span> <span class="n">loaded</span> <span class="n">word</span> <span class="n">embedding</span> <span class="n">model</span><span class="o">.</span>
-<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">Any</span>
-</pre></div>
-</div>
- </p>
+<dd><p>Load the word embedding model. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(Type: Any) The loaded word embedding model. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -1454,14 +1366,6 @@ library and take your data processing to the next level.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">#</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="../py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="../search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
-</section>
 
 
             </article>
@@ -1487,28 +1391,6 @@ library and take your data processing to the next level.</p>
           
             <div class="bd-sidebar-secondary bd-toc">
               
-<div class="toc-item">
-  
-<div class="tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-</div>
-<nav id="bd-toc-nav" class="page-toc">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Classes and Functions
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#indices-and-tables">
-   Indices and tables
-  </a>
- </li>
-</ul>
-
-</nav>
-</div>
-
 <div class="toc-item">
   
 <div id="searchbox"></div>
@@ -1554,7 +1436,7 @@ library and take your data processing to the next level.</p>
     
 <p class="copyright">
 
-    &copy; Copyright 2023, Lappis.<br>
+    &copy; Copyright 2023, Lappis, Eldorado.<br>
 
 </p>
 

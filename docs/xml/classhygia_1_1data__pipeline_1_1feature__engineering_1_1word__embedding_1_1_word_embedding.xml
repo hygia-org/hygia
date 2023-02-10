@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="38" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="38" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="35" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a3827a074c2147ffccaada75c74cdf522" prot="public" static="no" mutable="no">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="39" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="39" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="36" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a91e57b13006bd6e8917f07dafcbe0463" prot="public" static="no" mutable="no">
         <type></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="40" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="40" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="37" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a6f1775d462dc90ecbb099d5290a9dfc8" prot="public" static="no" mutable="no">
         <type></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="41" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="41" bodyend="-1"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="38" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -87,21 +87,39 @@
           <defval>&apos;bytepair&apos;</defval>
         </param>
         <briefdescription>
+<para>Initialize the WordEmbedding class. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Initialize the WordEmbedding class.
-
-:param lang: The language of the text to be processed. (default &apos;es&apos;)
-:type lang: str
-:param dimensions: The number of dimensions of the word embedding vectors. (default 25)
-:type dimensions: int
-:param model: The word embedding model to be used. (default &apos;bytepair&apos;)
-:type model: str
-</verbatim> </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lang</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) The language of the text to be processed. (default &apos;es&apos;) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dimensions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: int) The number of dimensions of the word embedding vectors. (default 25) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) The word embedding model to be used. (default &apos;bytepair&apos;) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="27" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="27" bodyend="42"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="27" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="27" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1aae76996dafce64d3701891e860e8a145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>np.ndarray</type>
@@ -118,33 +136,35 @@
           <declname>text</declname>
         </param>
         <briefdescription>
+<para>Get the word embedding vector for a given text. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Get the word embedding vector for a given text.
-
-:param text: The text to be processed.
-:type text: str
-:return: A word embedding vector for the given text.
-:rtype: np.ndarray
-
-Examples
---------
-Use this function like this:
-.. code-block:: python
-
-word_embedding = WordEmbedding()
-embedding = word_embedding.get_embedding(&quot;This is a sample text.&quot;)
-print(embedding)
-# Output: [0.1, 0.2, ..., 0.3] (a list of float values representing the word embedding vector)
-
-embedding = word_embedding.get_embedding(&quot;Another sample text.&quot;)
-print(embedding)
-# Output: [0.5, 0.6, ..., 0.7] (a list of float values representing the word embedding vector)
-</verbatim> </para>
+<para>Examples - Use this function like this:</para>
+<para><programlisting filename=".py"><codeline><highlight class="normal">word_embedding<sp/>=<sp/>WordEmbedding()</highlight></codeline>
+<codeline><highlight class="normal">embedding<sp/>=<sp/>word_embedding.get_embedding(</highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>a<sp/>sample<sp/>text.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">print(embedding)</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Output:<sp/>[0.1,<sp/>0.2,<sp/>...,<sp/>0.3]<sp/>(a<sp/>list<sp/>of<sp/>float<sp/>values<sp/>representing<sp/>the<sp/>word<sp/>embedding<sp/>vector)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">embedding<sp/>=<sp/>word_embedding.get_embedding(</highlight><highlight class="stringliteral">&quot;Another<sp/>sample<sp/>text.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">print(embedding)</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Output:<sp/>[0.5,<sp/>0.6,<sp/>...,<sp/>0.7]<sp/>(a<sp/>list<sp/>of<sp/>float<sp/>values<sp/>representing<sp/>the<sp/>word<sp/>embedding<sp/>vector)</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) The text to be processed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(type: array) A word embedding vector for the given text. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="67" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="67" bodyend="100"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="63" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="63" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1afda634858dcca07e27b954023e854972" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pd.DataFrame</type>
@@ -170,35 +190,47 @@ print(embedding)
           <defval>False</defval>
         </param>
         <briefdescription>
+<para>Extract word embedding features from a given dataframe and column. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Extract word embedding features from a given dataframe and column.
-
-:param df: Dataframe to extract word embedding features from.
-:type df: pandas.DataFrame
-:param column_name: Name of the column in the dataframe that contains the text data to extract features from.
-:type column_name: str
-:param normalize: Indicates whether to normalize the word embedding feature columns. Default is True.
-:type normalize: bool, optional
-
-:return: The input dataframe with additional columns for word embedding features.
-:rtype: pandas.DataFrame
-
-Examples
---------
-Use this class like this:
-
-.. code-block:: python
-
-    word_embedding = WordEmbedding()
-    df = pd.DataFrame({&quot;text_column&quot;: [&quot;abcdefgh&quot;, &quot;ijklmnop&quot;, &quot;qrstuvwxyz&quot;]})
-    df = word_embedding.extract_features(df, &quot;text_column&quot;, normalize=False)
-    print(df.head())
-</verbatim> </para>
+<para>Examples - Use this class like this:</para>
+<para><programlisting filename=".py"><codeline><highlight class="normal">word_embedding<sp/>=<sp/>WordEmbedding()</highlight></codeline>
+<codeline><highlight class="normal">df<sp/>=<sp/>pd.DataFrame({</highlight><highlight class="stringliteral">&quot;text_column&quot;</highlight><highlight class="normal">:<sp/>[</highlight><highlight class="stringliteral">&quot;abcdefgh&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ijklmnop&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;qrstuvwxyz&quot;</highlight><highlight class="normal">]})</highlight></codeline>
+<codeline><highlight class="normal">df<sp/>=<sp/>word_embedding.extract_features(df,<sp/></highlight><highlight class="stringliteral">&quot;text_column&quot;</highlight><highlight class="normal">,<sp/>normalize=</highlight><highlight class="keyword">False</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">print(df.head())</highlight></codeline>
+</programlisting></para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>df</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: DataFrame) Dataframe to extract word embedding features from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Name of the column in the dataframe that contains the text data to extract features from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normalize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: bool, optional) Indicates whether to normalize the word embedding feature columns. Default is True.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: DataFrame) The input dataframe with additional columns for word embedding features. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="101" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="101" bodyend="138"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="96" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="96" bodyend="129"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -213,17 +245,16 @@ Use this class like this:
           <defname>self</defname>
         </param>
         <briefdescription>
+<para>Load the word embedding model. </para>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Load the word embedding model.
-
-:return: The loaded word embedding model.
-:rtype: Any
-</verbatim> </para>
+<para><simplesect kind="return"><para>(Type: Any) The loaded word embedding model. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="43" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="43" bodyend="62"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="40" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="40" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a4a28173984f0d56ea34834c3720f55b9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>str</type>
@@ -245,27 +276,21 @@ Use this class like this:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="63" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="63" bodyend="66"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="59" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="59" bodyend="62"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>A class for generating word embeddings from text data. </para>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>A class for generating word embeddings from text data.
-Word embeddings are numerical representations of text data that capture the context and meaning of words within a sentence or document.
-
-Examples
---------
-Use this class like this:
-
-.. code-block:: python
-
-    word_embedding = WordEmbedding()
-    df = word_embedding.extract_word_embedding_features(df, &quot;text_column&quot;)
-    print(df)
-</verbatim> </para>
+<para>Word embeddings are numerical representations of text data that capture the context and meaning of words within a sentence or document.</para>
+<para>Examples - Use this class like this:</para>
+<para><programlisting filename=".py"><codeline><highlight class="normal">word_embedding<sp/>=<sp/>WordEmbedding()</highlight></codeline>
+<codeline><highlight class="normal">df<sp/>=<sp/>word_embedding.extract_word_embedding_features(df,<sp/></highlight><highlight class="stringliteral">&quot;text_column&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">print(df)</highlight></codeline>
+</programlisting> </para>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="11" bodyend="138"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/word_embedding.py" bodystart="11" bodyend="129"/>
     <listofallmembers>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a882b4ba550a9356baeb85964848bb5ac" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::word_embedding::WordEmbedding</scope><name>__init__</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1ab615ccc3b82284f7877e30370ce3fb8e" prot="protected" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::word_embedding::WordEmbedding</scope><name>_load_model</name></member>
