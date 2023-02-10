@@ -3,18 +3,17 @@ from hygia.paths.paths import root_path
 
 class AugmentData:
     """
-        This class present a validations based on zipocde data from this website:
-        https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1
-        we downloaded data from some continents and we filter based in the 'country' code
-        we saved the data as pickle files in order to not overwhelm git history.
+        This class present a validations based on zipocde data from this website: 
+        <a href="https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1">Listen Data</a>. 
+        We obtained data from several continents and filtered it using the 'country' code. 
+        To avoid overwhelm the Git history, we saved the data in pickle files.
     """
     
     def __init__(self, country:str) -> None:
         """
         Initialize the AugmentData class.
         
-        :param country: Zipcode list of the region or country used.
-        :type country: str
+        \param country (Type: str) Zipcode list of the region or country used.
         """
         continent_files = {
             'north_america': 'zip_to_lat_lon_North America.pkl',
@@ -38,10 +37,9 @@ class AugmentData:
         """
         Check if a zipcode is valid.
         
-        :param text: Zipcode list of the region or country used.
-        :type text: str
+        \param text (Type: str) Zipcode list of the region or country used.
 
-        :return: Return if the zipcode is valid
+        \return (Type: bool) Return if the zipcode is valid
         :rtype: bool
         """
         return text in self.country_zipcode_df['postal code'].values
@@ -50,14 +48,10 @@ class AugmentData:
         """
         Check if all zipcode in a data is valid.
         
-        :param df: Dataframe to extract features from.
-        :type df: pandas.DataFrame
+        \param df (Type: DataFrame) Dataframe to extract features.
+        \param zipcode_column_name (Type: str) Zipcode column name
 
-        :param zipcode_column_name: Zipcode column name
-        :type zipcode_column_name: str
-
-        :return: Return a dataframe with a new column.
-        :rtype: DataFrame
+        \return Return (Type: DataFrame) a dataframe with a new column.
         """
         if zipcode_column_name not in df:
             return
@@ -71,14 +65,10 @@ class AugmentData:
         """
         Function that uses the validate_zipcodes function and concatenates the result to the database
         
-        :param df: Dataframe to extract features from.
-        :type df: pandas.DataFrame
+        \param df (Type: DataFrame) Dataframe to extract features from.
+        \param zipcode_column_name (Type: str) Zipcode column name
 
-        :param zipcode_column_name: Zipcode column name
-        :type zipcode_column_name: str
-
-        :return: Return a dataframe with a new column.
-        :rtype: DataFrame
+        \return (Type: DataFrame) Return a dataframe with a new column.
         """
         df = pd.concat([df, self.validate_zipcodes(df, zipcode_column_name)], axis=1)
         return df

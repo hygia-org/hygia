@@ -9,21 +9,20 @@ class PreProcessData:
     As concatenate columns, replace abbreviation, and etc.
 
 
-    Examples
-    --------
+    Examples - 
     Use this class like this:
 
-    .. code-block:: python
+    \code{.py}
         pre_process_data = hg.PreProcessData()
         df = pre_process_data.pre_process_data(df, ['COLUMN_1', 'COLUMN_2'], concatened_column_name)
         print(df)
+    \endcode
     """
     def __init__(self, country:str=None, abbreviations_file:str=None) -> None:
         """
         Initialize the PreProcessData class.
         
-        :param country: Zipcode list of the region or country used.
-        :type country: str
+        \param country (Type: str) Zipcode list of the region or country used.
         """
         self.abbreviations_dict = {}
         if not country and not abbreviations_file:
@@ -44,16 +43,13 @@ class PreProcessData:
         """
         Function that concatenates two columns and saves in a new one, whose name is informed by the user.
         
-        :param df: Dataframe.
-        :type df: pandas.DataFrame
+        \param df (Type: DataFrame) Dataframe.
 
-        :param columns: List of columns
-        :type columns: List
+        \param columns (Type: List) List of columns
 
-        :param concatenated_column_name: Name of the new column
-        :type concatenated_column_name: str
+        \param concatenated_column_name (Type: str) Name of the new column
 
-        :return: Return the columns concatenated
+        \return  Return the columns concatenated
         """
 
         print(f'aliases indified: {Style.BRIGHT}{concatenated_column_name} -> {Style.NORMAL}{columns}')
@@ -65,11 +61,9 @@ class PreProcessData:
         """
         Handle null values
         
-        :param df: Dataframe
-        :type df: pandas.DataFrame
+        \param df (Type: Dataframe) Dataframe
 
-        :param column_name: Column name to check
-        :type column_name: str
+        \param column_name (Type: str) Column name to check
         """
         print(f'handle null values in the column {Style.BRIGHT}{column_name}{Style.NORMAL}')
         
@@ -84,8 +78,7 @@ class PreProcessData:
         """
         Function that identifies abbreviations and according to the dictionary changes the names
         
-        :param text: Text to be analyzed
-        :type text: str
+        \param text (Type: str) Text to be analyzed
         """
         for abbreviation in self.abbreviations_dict:
             text = ' '.join([re.sub(rf'(\b|(?<=[^a-zA-Z])){abbreviation}(\.|\b|(?=[^a-zA-Z]))', self.abbreviations_dict[abbreviation], e, flags=re.IGNORECASE) for e in text.split()])
@@ -95,11 +88,9 @@ class PreProcessData:
         """
         Handles abbreviations in the dataframe
         
-        :param df: Dataframe
-        :type df: DataFrame
+        \param df (Type: DataFrame) Dataframe
 
-        :param column_name: Column name to check
-        :type column_name: str
+        \param column_name (Type: str) Column name to check
         """
 
         df[column_name] = df[column_name].apply(lambda x: self._replace_abbreviation(x))
@@ -109,17 +100,11 @@ class PreProcessData:
         """
         Function that gathers all implemented preprocessing (column concatenation, handle with nulls and abbreviations)
         
-        :param df: Dataframe
-        :type df: DataFrame
+        \param df (Type: DataFrame) Dataframe
+        \param columns_to_concat (Type: List) List of columns
+        \param column_name (Type: str) Column name to check
 
-        :param columns_to_concat: List of columns
-        :type columns_to_concat: List
-
-        :param column_name: Column name to check
-        :type column_name: str
-
-        :return: The input dataframe with additional columns
-        :rtype: pandas.DataFrame
+        \return (Type: DataFrame) The input dataframe with additional columns
         """
         if columns_to_concat and column_name:
             df = self.concatenate_columns(df, columns_to_concat, column_name)

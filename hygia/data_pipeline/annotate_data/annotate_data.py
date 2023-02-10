@@ -2,15 +2,14 @@ import pandas as pd
 from colorama import Fore, Style
 
 class AnnotateData:
-    """
-    A class to incorporate the data annotation phase, starting from the thresholds 
+    """A class to incorporate the data annotation phase, starting from the thresholds 
     (e.g., count sequence squared vowels, count sequence squared consonants) can tell if it's a ksmash.
 
     Examples
-    --------
+    
     Use this class like this:
 
-    .. code-block:: python
+    \code{.py}
 
         annotate_data = hg.AnnotateData()
         key_smash_thresholds = {
@@ -23,20 +22,17 @@ class AnnotateData:
 
         df = annotate_data.annotate_data(df, concatened_column_name, key_smash_thresholds)
         print(df)
+    \endcode
     """
     def annotate_data(self, df, concatened_column_name, ks_thresholds):
         """
         Annotate data function.
         
-        :param df: Dataframe to extract features from.
-        :type df: pandas.DataFrame
-        :param concatened_column_name: Dataframe column to be used
-        :type concatened_column_name: List
-        :param ks_thresholds: List of thresholds
-        :type ks_thresholds: List
+        \param df (Type: DataFrame) Dataframe to extract features from.
+        \param concatened_column_name (Type: List) List of columns to be used
+        \param ks_thresholds (Type: List) List of thresholds
 
-        :return: The input dataframe with additional columns for key smashing and word embedding features.
-        :rtype: pandas.DataFrame
+        \return (Type: DataFrame) The input dataframe with additional columns for key smashing and word embedding features.
         """
 
         print(f'{Fore.YELLOW}running annotate data with configs below...{Fore.WHITE}')

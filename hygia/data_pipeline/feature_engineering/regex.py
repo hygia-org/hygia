@@ -33,11 +33,9 @@ class Regex:
         """
         Check if it contains the word DELL
 
-        :param text: Text to be verified
-        :type text: str
-
-        :return: true of false
-        :rtype: bool
+        \param text (Type: str) Text to be verified
+        
+        \return (Type: bool) true of false
         """
         pattern = r'\bdell\b'
         return bool(re.search(pattern, text, re.IGNORECASE))
@@ -46,11 +44,9 @@ class Regex:
         """
         Check if it contains the word test
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         pattern = r'\btest\b'
         return bool(re.search(pattern, text, re.IGNORECASE))
@@ -59,11 +55,9 @@ class Regex:
         """
         Check if it contains only numbers
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         pattern = r'^[0-9]+$'
         return bool(re.search(pattern, text, re.IGNORECASE))
@@ -72,11 +66,9 @@ class Regex:
         """
         Check if it contains only special characters
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         pattern = r'^[^a-zA-Z0-9]+$'
         return bool(re.search(pattern, text, re.IGNORECASE))
@@ -85,11 +77,9 @@ class Regex:
         """
         Check if it contains email
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         pattern_1 = r'\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b'
         pattern_2 = r'(GMAIL|HOTMAIL|YAHOO|OUTLOOK)'
@@ -99,11 +89,9 @@ class Regex:
         """
         Check if it contains url
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         pattern = r'\b(https?:\/\/|www\.)[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&//=]*)'
         return bool(re.search(pattern, text, re.IGNORECASE))
@@ -112,11 +100,9 @@ class Regex:
         """
         Check if it contains date
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         pattern = r'^(?P<day>\d{1,2})(?:-|\.|/)(?P<month>\d{1,2})(?:-|\.|/)(?P<year>\d{4})$'
         return bool(re.search(pattern, text, re.IGNORECASE))
@@ -125,11 +111,9 @@ class Regex:
         """
         Check if it contains invalid words
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         pattern = r'\b(null|undefined|dummy)\b'
         return bool(re.search(pattern, text, re.IGNORECASE))
@@ -138,11 +122,9 @@ class Regex:
         """
         Check if is a substring of column name
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         return text.lower() in column_name.lower()
     
@@ -150,11 +132,9 @@ class Regex:
         """
         Check if it contains only one char
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         return len(text.strip()) == 1
 
@@ -162,11 +142,9 @@ class Regex:
         """
         Check if it contains only one word
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         return len(text.strip().split()) == 1
     
@@ -174,11 +152,9 @@ class Regex:
         """
         Check if it contains only white spaces
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         return text != '' and not text.strip()
     
@@ -186,11 +162,9 @@ class Regex:
         """
         Check if is empty
 
-        :param text: Text to be verified
-        :type text: str
+        \param text (Type: str) Text to be verified
 
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         return text == ''
     
@@ -198,14 +172,10 @@ class Regex:
         """
         Function to extract all regex features
 
-        :param df: Dataframe with the data.
-        :type df: pandas.DataFrame
+        \param df (Type: DataFrame) Dataframe with the data.
+        \param column_name (Type: str) Column name
 
-        :param column_name: Column name
-        :type column_name: str
-
-        :return: true of false
-        :rtype: bool
+        \return (Type: bool) true of false
         """
         regex_features = [
             self.contains_context_invalid_words,

@@ -11,30 +11,26 @@ class FeatureEngineering:
     This class combines the functionality of the KeySmash and WordEmbedding classes
     to extract key smashing and word embedding features from a given text column in a dataframe.
 
-    Examples
-    --------
+    Examples - 
     Use this class like this:
 
-    .. code-block:: python
+    \code{.py}
 
         feature_engineer = FeatureEngineering()
         df = feature_engineer.extract_features(df, "text_column")
         print(df)
+    \endcode
     """
 
     def __init__(self, lang:str='es', dimensions:int=25, model:str='bytepair', country:str=None, context_words_file:str=None):
         """
         Initialize the FeatureEngineering class.
         
-        :param lang: The language of the text to be processed. (default 'es')
-        :type lang: str
-        :param dimensions: The number of dimensions of the word embedding vectors. (default 25)
-        :type dimensions: int
-        :param model: The word embedding model to be used. (default 'bytepair')
-        :type model: str
+        \param lang (Type: str) The language of the text to be processed. (default 'es')
+        \param dimensions (Type: int) The number of dimensions of the word embedding vectors. (default 25)
+        \param model (Type: str) The word embedding model to be used. (default 'bytepair')
         """
         print(f'{Fore.YELLOW}running feature engineering with configs below...{Fore.WHITE}')
-        
         print(f'{Style.BRIGHT}language -> {Style.NORMAL}{lang}')
         print(f'{Style.BRIGHT}dimensions -> {Style.NORMAL}{dimensions}')
         
@@ -47,25 +43,21 @@ class FeatureEngineering:
         """
         Extract key smashing and word embedding features from a given dataframe and column.
 
-        :param df: Dataframe to extract features from.
-        :type df: pandas.DataFrame
-        :param text_column: Name of the column in the dataframe that contains the text data to extract features from.
-        :type text_column: str
-        :param normalize: Indicates whether to normalize the feature columns. Default is True.
-        :type normalize: bool, optional
+        \param df (Type: DataFrame) Dataframe to extract features from.
+        \param text_column (Type: str) Name of the column in the dataframe that contains the text data to extract features from.
+        \param normalize (Type: bool, optional) Indicates whether to normalize the feature columns. Default is True.
 
-        :return: The input dataframe with additional columns for key smashing and word embedding features.
-        :rtype: pandas.DataFrame
+        \return (Type: DataFrame) The input dataframe with additional columns for key smashing and word embedding features.
 
-        Examples
-        --------
+        Examples - 
         Use this class like this:
 
-        .. code-block:: python
+        \code{.py}
 
             fe = FeatureEngineering()
             df = fe.extract_features(df, "text_column")
             print(df)
+        \endcode
         """
         print(f'extract features from -> {text_column}')
         

@@ -13,21 +13,20 @@ class RandomForestModel:
   """
     This class presents the model Random Forest, allowing train and predict the model
 
-    Examples
-    --------
+    Examples - 
     Use this class like this:
 
-    .. code-block:: python
+    \code{.py}
         new_rf_model = hg.RandomForestModel()
         clf, scores = new_rf_model.train_and_get_scores(df, concatened_column_name, all_features_columns)
         scores
-  """
+    \endcode
+    """
   def __init__(self, model_file=None, normalization_absolutes_file=None ,n_estimators=100, max_depth=None, random_state=0, normalize=True):
     """
     Initialize the RandomForestModel class.
-    
-    :param model_file: Path to the model file
-    :type model_file: path
+
+    \param model_file (Type: path) Path to the model file
     """
     self.normalize = normalize
     self.model = None
@@ -65,15 +64,10 @@ class RandomForestModel:
   def train_and_get_scores(self, df, concatened_column_name, all_features_columns, test_size=0.3):
     """
     Train and get scores for the model execution.
-    
-    :param df: Dataframe with the data.
-    :type df: pandas.DataFrame
 
-    :param concatened_column_name: Column name
-    :type concatened_column_name: str
-
-    :param all_features_columns: List of all features column nales
-    :type all_features_columns: List
+    \param df (DataFrame) Dataframe with the data.
+    \param concatened_column_name (Type: str) Column name
+    \param all_features_columns (Type: List) List of all features column nales
     """    
     print(f'{Fore.YELLOW}tranning model...{Fore.WHITE}')
     
