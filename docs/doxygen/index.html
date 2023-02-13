@@ -97,8 +97,8 @@
   
 
   
-    <img src="../_static/horizontal_logo_dark.PNG" class="logo__image only-light" alt="Logo image">
-    <img src="../_static/horizontal_logo_light.PNG" class="logo__image only-dark" alt="Logo image">
+    <img src="../_static/horizontal_logo_dark.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/horizontal_logo_light.png" class="logo__image only-dark" alt="Logo image">
   
   
 </a>
@@ -363,15 +363,15 @@ library and take your data processing to the next level.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData">
-<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AugmentData</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AugmentData</span></span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData" title="Permalink to this definition">#</a></dt>
 <dd><p>This class present a validations based on zipocde data from this website: <a class="reference external" href="https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1">Listen Data</a>. </p>
 <p>We obtained data from several continents and filtered it using the ‘country’ code. To avoid overwhelm the Git history, we saved the data in pickle files. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData.__init__">
-<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a663159ea8e556da4e70de1005d68def7"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country='MEXICO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData.__init__" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.__init__">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1acdd587cda67cc40ddef5334d4f35b108"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.__init__" title="Permalink to this definition">#</a></dt>
 <dd><p>Initialize the AugmentData class. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -381,8 +381,8 @@ library and take your data processing to the next level.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcode">
-<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1ada49b52ac86bd4f33771524b6a01d808"></span><span class="sig-name descname"><span class="pre">validate_zipcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcode" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.validate_zipcode">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1a73cedef6b1d5af8195f9de8b0caaafec"></span><span class="sig-name descname"><span class="pre">validate_zipcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.validate_zipcode" title="Permalink to this definition">#</a></dt>
 <dd><p>Check if a zipcode is valid. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -395,8 +395,8 @@ library and take your data processing to the next level.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcodes">
-<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a49dee300d063cf789362e19869b64ff0"></span><span class="sig-name descname"><span class="pre">validate_zipcodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">zipcode_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcodes" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.validate_zipcodes">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1acce50060fb8a379cb149ab475c7d6c1e"></span><span class="sig-name descname"><span class="pre">validate_zipcodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">zipcode_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.validate_zipcodes" title="Permalink to this definition">#</a></dt>
 <dd><p>Check if all zipcode in a data is valid. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -412,8 +412,8 @@ library and take your data processing to the next level.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData.augment_data">
-<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a44556356984e09090a5a3c47259f9beb"></span><span class="sig-name descname"><span class="pre">augment_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">zipcode_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData.augment_data" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.augment_data">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1a97a6ef190ac4b4fbe59417bb3a537e38"></span><span class="sig-name descname"><span class="pre">augment_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">zipcode_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.augment_data" title="Permalink to this definition">#</a></dt>
 <dd><p>Function that uses the validate_zipcodes function and concatenates the result to the database. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -432,8 +432,8 @@ library and take your data processing to the next level.</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data.AugmentData.country_zipcode_df">
-<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a91aca0028f24813d2eed9b26f7406d4f"></span><span class="sig-name descname"><span class="pre">country_zipcode_df</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data.AugmentData.country_zipcode_df" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.country_zipcode_df">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1ad2fef9f10639319723704485f4b5dc14"></span><span class="sig-name descname"><span class="pre">country_zipcode_df</span></span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.country_zipcode_df" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -455,7 +455,7 @@ library and take your data processing to the next level.</p>
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__">
-<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a33f8c5028f3fee8359def47641fdc736"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">lang='es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">dimensions=25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">model='bytepair'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__" title="Permalink to this definition">#</a></dt>
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a1959c7911e80be9885848aaf711dc019"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">lang='es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">dimensions=25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">model='bytepair'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">context_words_file=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__" title="Permalink to this definition">#</a></dt>
 <dd><p>Initialize the FeatureEngineering class. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -631,7 +631,7 @@ Examples - Use this function like this:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features">
-<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e"></span><span class="sig-name descname"><span class="pre">extract_key_smash_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">normalize=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features" title="Permalink to this definition">#</a></dt>
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a203a70c5924e1a618e48e797fbcb4c18"></span><span class="sig-name descname"><span class="pre">extract_key_smash_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features" title="Permalink to this definition">#</a></dt>
 <dd><p>Extract key smash features from a given dataframe and column. </p>
 <p>
 Examples Use this function like this:</p>
@@ -704,7 +704,7 @@ Examples Use this function like this:</p>
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__">
-<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a56b7999a113fcad06e993e8aa28ce906"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country='MEXICO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__" title="Permalink to this definition">#</a></dt>
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0e49112145543042a6fcb5172ee72ee0"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">abbreviations_file=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__" title="Permalink to this definition">#</a></dt>
 <dd><p>Initialize the PreProcessData class. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -746,6 +746,11 @@ Examples Use this function like this:</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_extra_spaces">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a67dc109c2f1a4fb1baa9f5e32aabd6fc"></span><span class="sig-name descname"><span class="pre">handle_extra_spaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_extra_spaces" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_abreviations">
 <span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a5e81ba265ff8746bb5558901884f1160"></span><span class="sig-name descname"><span class="pre">handle_abreviations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_abreviations" title="Permalink to this definition">#</a></dt>
 <dd><p>Handles abbreviations in the dataframe. </p>
@@ -761,8 +766,8 @@ Examples Use this function like this:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data">
-<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a9434e258aada55019b9a7cbd9a243bda"></span><span class="sig-name descname"><span class="pre">pre_process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_to_concat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zipcode_columns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data" title="Permalink to this definition">#</a></dt>
-<dd><p>Função que reune todos preprocessamentos implementados (concatenar colunas, handle with nulls and abreviations) </p>
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a6c4c76f8e3ed9460bba760086cd9e2c4"></span><span class="sig-name descname"><span class="pre">pre_process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_to_concat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data" title="Permalink to this definition">#</a></dt>
+<dd><p>Function that gathers all implemented preprocessing (column concatenation, handle with nulls and abbreviations) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -817,7 +822,7 @@ Examples Use this function like this:</p>
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.__init__">
-<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a3ce808991033e28ec22836b3dfc138fb"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_estimators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.__init__" title="Permalink to this definition">#</a></dt>
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a0ac4c1072e5e85aa0c3ab41ac05b5d40"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_absolutes_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_estimators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.__init__" title="Permalink to this definition">#</a></dt>
 <dd><p>Initialize the RandomForestModel class. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -843,16 +848,35 @@ Examples Use this function like this:</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.predict">
-<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a4f97ea337bcc807954c6d68758d91a91"></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.predict" title="Permalink to this definition">#</a></dt>
-<dd><p>Predict the model result. </p>
-</dd></dl>
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a9fda257a8e61eeb676e4520cb7569018"></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.predict" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.export_model">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a0072e249e16a1ac521e41d960c248668"></span><span class="sig-name descname"><span class="pre">export_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">export_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">normalization_absolutes_file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.export_model" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.normalize">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a69bc06ee69d0634fa3ea4c83079d6eaf"></span><span class="sig-name descname"><span class="pre">normalize</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.normalize" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.model">
 <span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a41a98e36844137b7486aa925a998f2c3"></span><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.model" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.normalization_absolutes">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ad3c46532103ddc6e4250e877372255fd"></span><span class="sig-name descname"><span class="pre">normalization_absolutes</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.normalization_absolutes" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.pre_trained">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ac014e58fd640d5ab0e64eb22ba0383d5"></span><span class="sig-name descname"><span class="pre">pre_trained</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.pre_trained" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -871,6 +895,19 @@ Examples Use this function like this:</p>
 <dd></dd></dl>
 
 </div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel._get_absolute_maximums">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a487146fef6fedbbc18035178bd06bdd5"></span><span class="sig-name descname"><span class="pre">_get_absolute_maximums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_columns_to_normalize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel._get_absolute_maximums" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel._normalization">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf6c3db77f3a45bcd63b3c4ea0d9c472"></span><span class="sig-name descname"><span class="pre">_normalization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_columns_to_normalize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel._normalization" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
 </dd></dl>
 
 <dl class="py class">
@@ -879,6 +916,16 @@ Examples Use this function like this:</p>
 <dd><p>It provides a set of functions that help you verify the content of a text field, such as checking if the field is empty, if it has only one word, if it contains a specific character or pattern, and more. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.__init__">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab78b6f04d5b2f4510f2feead7ef2933a"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">context_words_file=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.__init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_context_invalid_words">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1add28fd7d48786eb2039ff1ba11cc00d0"></span><span class="sig-name descname"><span class="pre">contains_context_invalid_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_context_invalid_words" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_dell">
 <span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4ebb9444dc8e77ed8adabf6e22aee251"></span><span class="sig-name descname"><span class="pre">contains_exactly_the_word_dell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_dell" title="Permalink to this definition">#</a></dt>
@@ -1079,6 +1126,14 @@ Examples Use this function like this:</p>
 </dd></dl>
 
 </div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.context_invalid_words">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1af1a3b825f093dec085fb483149f780e6"></span><span class="sig-name descname"><span class="pre">context_invalid_words</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.context_invalid_words" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
 </dd></dl>
 
 <dl class="py class">
@@ -1223,6 +1278,16 @@ Examples Use this function like this:</p>
 <dd></dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1augment__data"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">augment_data</span></span><a class="headerlink" href="#hygia.data_pipeline.augment_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1augment__data_1_1augment__data"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">augment_data</span></span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering">
 <span class="target" id="namespacehygia_1_1data__pipeline_1_1feature__engineering"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">feature_engineering</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -1263,11 +1328,6 @@ Examples Use this function like this:</p>
 <dd></dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.augment_data">
-<span class="target" id="namespacehygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">augment_data</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.augment_data" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data">
 <span class="target" id="namespacehygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">pre_process_data</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
@@ -1275,6 +1335,11 @@ Examples Use this function like this:</p>
 <dl>
 <dt class="sig sig-object py">
 <span class="target" id="____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="augment__data_2____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
 <dd></dd></dl>
 
 <dl>
@@ -1295,6 +1360,11 @@ Examples Use this function like this:</p>
 <dl>
 <dt class="sig sig-object py">
 <span class="target" id="annotate__data_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">annotate_data.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="augment__data_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">augment_data.py</span></span></dt>
 <dd></dd></dl>
 
 <dl>
@@ -1324,17 +1394,17 @@ Examples Use this function like this:</p>
 
 <dl>
 <dt class="sig sig-object py">
-<span class="target" id="augment__data_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">augment_data.py</span></span></dt>
-<dd></dd></dl>
-
-<dl>
-<dt class="sig sig-object py">
 <span class="target" id="pre__process__data_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">pre_process_data.py</span></span></dt>
 <dd></dd></dl>
 
 <dl>
 <dt class="sig sig-object cpp">
 <span class="target" id="dir_91a15d825a96576a4dcc58d71733340b"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_ab55cbfa9103f49f3c25fd3cc10f01ab"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/augment_data</span></span></dt>
 <dd></dd></dl>
 
 <dl>

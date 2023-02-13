@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">hygia.data_pipeline.feature_engineering.regex.Regex Class Reference</div></div>
 </div><!--header-->
@@ -85,6 +86,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab78b6f04d5b2f4510f2feead7ef2933a"><td class="memItemLeft" align="right" valign="top"><a id="ab78b6f04d5b2f4510f2feead7ef2933a" name="ab78b6f04d5b2f4510f2feead7ef2933a"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, str country=None, str context_words_file=None)</td></tr>
+<tr class="separator:ab78b6f04d5b2f4510f2feead7ef2933a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add28fd7d48786eb2039ff1ba11cc00d0"><td class="memItemLeft" align="right" valign="top"><a id="add28fd7d48786eb2039ff1ba11cc00d0" name="add28fd7d48786eb2039ff1ba11cc00d0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>contains_context_invalid_words</b> (self, str text)</td></tr>
+<tr class="separator:add28fd7d48786eb2039ff1ba11cc00d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ebb9444dc8e77ed8adabf6e22aee251"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex.html#a4ebb9444dc8e77ed8adabf6e22aee251">contains_exactly_the_word_dell</a> (self, str text)</td></tr>
 <tr class="memdesc:a4ebb9444dc8e77ed8adabf6e22aee251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if it contains the word DELL.  <br /></td></tr>
 <tr class="separator:a4ebb9444dc8e77ed8adabf6e22aee251"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +134,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5ffdae262d81e5f433d66bc44d6e006c"><td class="memItemLeft" align="right" valign="top">pd.DataFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex.html#a5ffdae262d81e5f433d66bc44d6e006c">extract_regex_features</a> (self, pd.DataFrame df, str column_name)</td></tr>
 <tr class="memdesc:a5ffdae262d81e5f433d66bc44d6e006c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to extract all regex features.  <br /></td></tr>
 <tr class="separator:a5ffdae262d81e5f433d66bc44d6e006c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:af1a3b825f093dec085fb483149f780e6"><td class="memItemLeft" align="right" valign="top"><a id="af1a3b825f093dec085fb483149f780e6" name="af1a3b825f093dec085fb483149f780e6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>context_invalid_words</b></td></tr>
+<tr class="separator:af1a3b825f093dec085fb483149f780e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>It provides a set of functions that help you verify the content of a text field, such as checking if the field is empty, if it has only one word, if it contains a specific character or pattern, and more. </p>

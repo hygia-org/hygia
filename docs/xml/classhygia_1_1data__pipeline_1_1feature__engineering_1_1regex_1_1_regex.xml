@@ -2,7 +2,73 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
   <compounddef id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex" kind="class" language="Python" prot="public">
     <compoundname>hygia::data_pipeline::feature_engineering::regex::Regex</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1af1a3b825f093dec085fb483149f780e6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.feature_engineering.regex.Regex::context_invalid_words</definition>
+        <argsstring></argsstring>
+        <name>context_invalid_words</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.context_invalid_words</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab78b6f04d5b2f4510f2feead7ef2933a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.data_pipeline.feature_engineering.regex.Regex.__init__</definition>
+        <argsstring>(self, str country=None, str context_words_file=None)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>country</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>context_words_file</declname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="10" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="10" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1add28fd7d48786eb2039ff1ba11cc00d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.contains_context_invalid_words</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>contains_context_invalid_words</name>
+        <qualifiedname>hygia.data_pipeline.feature_engineering.regex.Regex.contains_context_invalid_words</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="25" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="25" bodyend="31"/>
+      </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4ebb9444dc8e77ed8adabf6e22aee251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition> bool hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_dell</definition>
@@ -36,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="9" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="9" bodyend="19"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="32" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="32" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aacc74035576c545b1d4d905f2f1e3742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -71,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="20" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="20" bodyend="30"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="43" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="43" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab220adb6350bdbc9c40d3b5a8e57cac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -106,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="31" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="31" bodyend="41"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="54" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="54" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5cdd86f4e05bb41b8ec1f9de60b7e4d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -141,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="42" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="42" bodyend="52"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="65" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="65" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -176,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="53" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="53" bodyend="64"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="76" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="76" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a6d48e296af51cfcab0a7a144987ba88e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -211,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="65" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="65" bodyend="75"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="88" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="88" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -246,7 +312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="76" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="76" bodyend="86"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="99" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="99" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a2dc27d664c7303c105542f109a5c1573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -281,7 +347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="87" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="87" bodyend="97"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="110" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="110" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ad5645622b440996ae37006ef8e26d7db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -320,7 +386,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="98" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="98" bodyend="107"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="121" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="121" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab9a9fb59c02dd27f8596776c4f52c526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -355,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="108" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="108" bodyend="117"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="131" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="131" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a09ffaff6cfd795ecb3b21d54d97e8f27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -390,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="118" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="118" bodyend="127"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="141" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="141" bodyend="150"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a10f1616ba55b300afe424accf081d9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -425,7 +491,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="128" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="128" bodyend="137"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="151" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="151" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a0a749fa9c131a0e1e54f4eedb915c658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -460,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="138" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="138" bodyend="147"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="161" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="161" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5ffdae262d81e5f433d66bc44d6e006c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pd.DataFrame</type>
@@ -507,7 +573,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="148" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="148" bodyend="175"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="171" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="171" bodyend="199"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -515,14 +581,17 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="3" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="3" bodyend="175"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/regex.py" bodystart="4" bodyend="199"/>
     <listofallmembers>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab78b6f04d5b2f4510f2feead7ef2933a" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1add28fd7d48786eb2039ff1ba11cc00d0" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_context_invalid_words</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_date</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_email</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a2dc27d664c7303c105542f109a5c1573" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_exactly_invalid_words</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4ebb9444dc8e77ed8adabf6e22aee251" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_exactly_the_word_dell</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aacc74035576c545b1d4d905f2f1e3742" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_exactly_the_word_test</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a6d48e296af51cfcab0a7a144987ba88e" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>contains_url</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1af1a3b825f093dec085fb483149f780e6" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>context_invalid_words</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a0a749fa9c131a0e1e54f4eedb915c658" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>empty</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5ffdae262d81e5f433d66bc44d6e006c" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>extract_regex_features</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ad5645622b440996ae37006ef8e26d7db" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::regex::Regex</scope><name>is_substring_of_column_name</name></member>

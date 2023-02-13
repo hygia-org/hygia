@@ -86,9 +86,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a33f8c5028f3fee8359def47641fdc736"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering.html#a33f8c5028f3fee8359def47641fdc736">__init__</a> (self, str lang='es', int dimensions=25, str model='bytepair')</td></tr>
-<tr class="memdesc:a33f8c5028f3fee8359def47641fdc736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the FeatureEngineering class.  <br /></td></tr>
-<tr class="separator:a33f8c5028f3fee8359def47641fdc736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1959c7911e80be9885848aaf711dc019"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering.html#a1959c7911e80be9885848aaf711dc019">__init__</a> (self, str lang='es', int dimensions=25, str model='bytepair', str country=None, str context_words_file=None)</td></tr>
+<tr class="memdesc:a1959c7911e80be9885848aaf711dc019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the FeatureEngineering class.  <br /></td></tr>
+<tr class="separator:a1959c7911e80be9885848aaf711dc019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6557b5c4dc573fcf0f8454da44c1536f"><td class="memItemLeft" align="right" valign="top">pd.DataFrame&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering.html#a6557b5c4dc573fcf0f8454da44c1536f">extract_features</a> (self, pd.DataFrame df, str text_column)</td></tr>
 <tr class="memdesc:a6557b5c4dc573fcf0f8454da44c1536f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract key smashing and word embedding features from a given dataframe and column.  <br /></td></tr>
 <tr class="separator:a6557b5c4dc573fcf0f8454da44c1536f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,8 +113,8 @@ Public Attributes</h2></td></tr>
 <div class="line">df = feature_engineer.extract_features(df, <span class="stringliteral">&quot;text_column&quot;</span>)</div>
 <div class="line">print(df)</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a33f8c5028f3fee8359def47641fdc736" name="a33f8c5028f3fee8359def47641fdc736"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33f8c5028f3fee8359def47641fdc736">&#9670;&#160;</a></span>__init__()</h2>
+<a id="a1959c7911e80be9885848aaf711dc019" name="a1959c7911e80be9885848aaf711dc019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1959c7911e80be9885848aaf711dc019">&#9670;&#160;</a></span>__init__()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,20 +128,32 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">str &#160;</td>
+          <td class="paramtype">str&#160;</td>
           <td class="paramname"><em>lang</em> = <code>'es'</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int &#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>dimensions</em> = <code>25</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">str &#160;</td>
-          <td class="paramname"><em>model</em> = <code>'bytepair'</code>&#160;</td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>model</em> = <code>'bytepair'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>country</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>context_words_file</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

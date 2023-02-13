@@ -76,6 +76,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">hygia.data_pipeline.model.random_forest.RandomForestModel Class Reference</div></div>
 </div><!--header-->
@@ -86,21 +87,33 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3ce808991033e28ec22836b3dfc138fb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#a3ce808991033e28ec22836b3dfc138fb">__init__</a> (self, model_file=None, n_estimators=100, max_depth=None, random_state=0)</td></tr>
-<tr class="memdesc:a3ce808991033e28ec22836b3dfc138fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the RandomForestModel class.  <br /></td></tr>
-<tr class="separator:a3ce808991033e28ec22836b3dfc138fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac4c1072e5e85aa0c3ab41ac05b5d40"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#a0ac4c1072e5e85aa0c3ab41ac05b5d40">__init__</a> (self, model_file=None, normalization_absolutes_file=None, n_estimators=100, max_depth=None, random_state=0, normalize=True)</td></tr>
+<tr class="memdesc:a0ac4c1072e5e85aa0c3ab41ac05b5d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the RandomForestModel class.  <br /></td></tr>
+<tr class="separator:a0ac4c1072e5e85aa0c3ab41ac05b5d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf7a38d78b4b8100bec3034415cf958e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#acf7a38d78b4b8100bec3034415cf958e">train_and_get_scores</a> (self, df, concatened_column_name, all_features_columns, test_size=0.3)</td></tr>
 <tr class="memdesc:acf7a38d78b4b8100bec3034415cf958e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Train and get scores for the model execution.  <br /></td></tr>
 <tr class="separator:acf7a38d78b4b8100bec3034415cf958e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f97ea337bcc807954c6d68758d91a91"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model.html#a4f97ea337bcc807954c6d68758d91a91">predict</a> (self, X)</td></tr>
-<tr class="memdesc:a4f97ea337bcc807954c6d68758d91a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict the model result.  <br /></td></tr>
-<tr class="separator:a4f97ea337bcc807954c6d68758d91a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fda257a8e61eeb676e4520cb7569018"><td class="memItemLeft" align="right" valign="top"><a id="a9fda257a8e61eeb676e4520cb7569018" name="a9fda257a8e61eeb676e4520cb7569018"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>predict</b> (self, X, concatened_column_name)</td></tr>
+<tr class="separator:a9fda257a8e61eeb676e4520cb7569018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0072e249e16a1ac521e41d960c248668"><td class="memItemLeft" align="right" valign="top"><a id="a0072e249e16a1ac521e41d960c248668" name="a0072e249e16a1ac521e41d960c248668"></a>
+None&#160;</td><td class="memItemRight" valign="bottom"><b>export_model</b> (self, str export_path, str normalization_absolutes_file_path)</td></tr>
+<tr class="separator:a0072e249e16a1ac521e41d960c248668"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a69bc06ee69d0634fa3ea4c83079d6eaf"><td class="memItemLeft" align="right" valign="top"><a id="a69bc06ee69d0634fa3ea4c83079d6eaf" name="a69bc06ee69d0634fa3ea4c83079d6eaf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>normalize</b></td></tr>
+<tr class="separator:a69bc06ee69d0634fa3ea4c83079d6eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a98e36844137b7486aa925a998f2c3"><td class="memItemLeft" align="right" valign="top"><a id="a41a98e36844137b7486aa925a998f2c3" name="a41a98e36844137b7486aa925a998f2c3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>model</b></td></tr>
 <tr class="separator:a41a98e36844137b7486aa925a998f2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c46532103ddc6e4250e877372255fd"><td class="memItemLeft" align="right" valign="top"><a id="ad3c46532103ddc6e4250e877372255fd" name="ad3c46532103ddc6e4250e877372255fd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>normalization_absolutes</b></td></tr>
+<tr class="separator:ad3c46532103ddc6e4250e877372255fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac014e58fd640d5ab0e64eb22ba0383d5"><td class="memItemLeft" align="right" valign="top"><a id="ac014e58fd640d5ab0e64eb22ba0383d5" name="ac014e58fd640d5ab0e64eb22ba0383d5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>pre_trained</b></td></tr>
+<tr class="separator:ac014e58fd640d5ab0e64eb22ba0383d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e7f43eeb0068f2d7f7f365434f3abc5"><td class="memItemLeft" align="right" valign="top"><a id="a5e7f43eeb0068f2d7f7f365434f3abc5" name="a5e7f43eeb0068f2d7f7f365434f3abc5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>n_estimators</b></td></tr>
 <tr class="separator:a5e7f43eeb0068f2d7f7f365434f3abc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,6 +123,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ae5ab8b176adb170adad2175c5685163c"><td class="memItemLeft" align="right" valign="top"><a id="ae5ab8b176adb170adad2175c5685163c" name="ae5ab8b176adb170adad2175c5685163c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>random_state</b></td></tr>
 <tr class="separator:ae5ab8b176adb170adad2175c5685163c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a487146fef6fedbbc18035178bd06bdd5"><td class="memItemLeft" align="right" valign="top"><a id="a487146fef6fedbbc18035178bd06bdd5" name="a487146fef6fedbbc18035178bd06bdd5"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>_get_absolute_maximums</b> (self, df, features_columns_to_normalize, concatened_column_name)</td></tr>
+<tr class="separator:a487146fef6fedbbc18035178bd06bdd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf6c3db77f3a45bcd63b3c4ea0d9c472"><td class="memItemLeft" align="right" valign="top"><a id="acf6c3db77f3a45bcd63b3c4ea0d9c472" name="acf6c3db77f3a45bcd63b3c4ea0d9c472"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>_normalization</b> (self, df, features_columns_to_normalize, concatened_column_name)</td></tr>
+<tr class="separator:acf6c3db77f3a45bcd63b3c4ea0d9c472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class presents the model Random Forest, allowing train and predict the model. </p>
@@ -118,8 +140,8 @@ Public Attributes</h2></td></tr>
 <div class="line">clf, scores = new_rf_model.train_and_get_scores(df, concatened_column_name, all_features_columns)</div>
 <div class="line">scores</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a3ce808991033e28ec22836b3dfc138fb" name="a3ce808991033e28ec22836b3dfc138fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ce808991033e28ec22836b3dfc138fb">&#9670;&#160;</a></span>__init__()</h2>
+<a id="a0ac4c1072e5e85aa0c3ab41ac05b5d40" name="a0ac4c1072e5e85aa0c3ab41ac05b5d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ac4c1072e5e85aa0c3ab41ac05b5d40">&#9670;&#160;</a></span>__init__()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,6 +162,12 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>normalization_absolutes_file</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>n_estimators</em> = <code>100</code>, </td>
         </tr>
         <tr>
@@ -152,7 +180,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>random_state</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>random_state</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>normalize</em> = <code>True</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -173,36 +207,6 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4f97ea337bcc807954c6d68758d91a91" name="a4f97ea337bcc807954c6d68758d91a91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f97ea337bcc807954c6d68758d91a91">&#9670;&#160;</a></span>predict()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def hygia.data_pipeline.model.random_forest.RandomForestModel.predict </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>X</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Predict the model result. </p>
-
-</div>
-</div>
 <a id="acf7a38d78b4b8100bec3034415cf958e" name="acf7a38d78b4b8100bec3034415cf958e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf7a38d78b4b8100bec3034415cf958e">&#9670;&#160;</a></span>train_and_get_scores()</h2>
 

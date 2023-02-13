@@ -3,18 +3,18 @@
   <compound refid="classannotate__data_1_1_annotate_data" kind="class"><name>annotate_data::AnnotateData</name>
     <member refid="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" kind="function"><name>annotate_data</name></member>
   </compound>
-  <compound refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data" kind="class"><name>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</name>
-    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a91aca0028f24813d2eed9b26f7406d4f" kind="variable"><name>country_zipcode_df</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a663159ea8e556da4e70de1005d68def7" kind="function"><name>__init__</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1ada49b52ac86bd4f33771524b6a01d808" kind="function"><name>validate_zipcode</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a49dee300d063cf789362e19869b64ff0" kind="function"><name>validate_zipcodes</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a44556356984e09090a5a3c47259f9beb" kind="function"><name>augment_data</name></member>
+  <compound refid="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data" kind="class"><name>hygia::data_pipeline::augment_data::augment_data::AugmentData</name>
+    <member refid="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1ad2fef9f10639319723704485f4b5dc14" kind="variable"><name>country_zipcode_df</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1acdd587cda67cc40ddef5334d4f35b108" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1a73cedef6b1d5af8195f9de8b0caaafec" kind="function"><name>validate_zipcode</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1acce50060fb8a379cb149ab475c7d6c1e" kind="function"><name>validate_zipcodes</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1a97a6ef190ac4b4fbe59417bb3a537e38" kind="function"><name>augment_data</name></member>
   </compound>
   <compound refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering" kind="class"><name>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</name>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2bd145aad20dc0e4ea9e189dbd1bb915" kind="variable"><name>key_smash</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2da3933aa33b0658bd43357765cbd97f" kind="variable"><name>word_embedding</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a11a1b00797fe5ad47ae8eb116b895b92" kind="variable"><name>regex</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a33f8c5028f3fee8359def47641fdc736" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a1959c7911e80be9885848aaf711dc019" kind="function"><name>__init__</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a6557b5c4dc573fcf0f8454da44c1536f" kind="function"><name>extract_features</name></member>
   </compound>
   <compound refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash" kind="class"><name>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</name>
@@ -23,28 +23,38 @@
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a682baee004b60c551f63c877a3270b3a" kind="function"><name>average_of_char_count_squared</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a02080ee2e117a12c68b2749b5946734e" kind="function"><name>count_sequence_squared</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a43cd9f4f2e7bbb1797eea22d0c545f67" kind="function"><name>ratio_of_numeric_digits_squared</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e" kind="function"><name>extract_key_smash_features</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a203a70c5924e1a618e48e797fbcb4c18" kind="function"><name>extract_key_smash_features</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1afc42a4b6aa51c24fad51e85f0c269fd2" kind="function"><name>_normalize_column</name></member>
   </compound>
   <compound refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data" kind="class"><name>hygia::data_pipeline::pre_process_data::pre_process_data::PreProcessData</name>
     <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a54c1b51a0b092d4c4cf4a575c7e9d682" kind="variable"><name>abbreviations_dict</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a56b7999a113fcad06e993e8aa28ce906" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0e49112145543042a6fcb5172ee72ee0" kind="function"><name>__init__</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1aa918dadaa5fad237dfabbbcb95933376" kind="function"><name>concatenate_columns</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0f373aa2c3685df2291a25aab0473707" kind="function"><name>handle_nulls</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a67dc109c2f1a4fb1baa9f5e32aabd6fc" kind="function"><name>handle_extra_spaces</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a5e81ba265ff8746bb5558901884f1160" kind="function"><name>handle_abreviations</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a9434e258aada55019b9a7cbd9a243bda" kind="function"><name>pre_process_data</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a6c4c76f8e3ed9460bba760086cd9e2c4" kind="function"><name>pre_process_data</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a08787d36f285f9d2709433982d8d4926" kind="function"><name>_replace_abbreviation</name></member>
   </compound>
   <compound refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model" kind="class"><name>hygia::data_pipeline::model::random_forest::RandomForestModel</name>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a69bc06ee69d0634fa3ea4c83079d6eaf" kind="variable"><name>normalize</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a41a98e36844137b7486aa925a998f2c3" kind="variable"><name>model</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ad3c46532103ddc6e4250e877372255fd" kind="variable"><name>normalization_absolutes</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ac014e58fd640d5ab0e64eb22ba0383d5" kind="variable"><name>pre_trained</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a5e7f43eeb0068f2d7f7f365434f3abc5" kind="variable"><name>n_estimators</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5dd6d72a32285fd8e86219a8fdf71ec" kind="variable"><name>max_depth</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5ab8b176adb170adad2175c5685163c" kind="variable"><name>random_state</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a3ce808991033e28ec22836b3dfc138fb" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a0ac4c1072e5e85aa0c3ab41ac05b5d40" kind="function"><name>__init__</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf7a38d78b4b8100bec3034415cf958e" kind="function"><name>train_and_get_scores</name></member>
-    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a4f97ea337bcc807954c6d68758d91a91" kind="function"><name>predict</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a9fda257a8e61eeb676e4520cb7569018" kind="function"><name>predict</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a0072e249e16a1ac521e41d960c248668" kind="function"><name>export_model</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a487146fef6fedbbc18035178bd06bdd5" kind="function"><name>_get_absolute_maximums</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf6c3db77f3a45bcd63b3c4ea0d9c472" kind="function"><name>_normalization</name></member>
   </compound>
   <compound refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex" kind="class"><name>hygia::data_pipeline::feature_engineering::regex::Regex</name>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1af1a3b825f093dec085fb483149f780e6" kind="variable"><name>context_invalid_words</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab78b6f04d5b2f4510f2feead7ef2933a" kind="function"><name>__init__</name></member>
+    <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1add28fd7d48786eb2039ff1ba11cc00d0" kind="function"><name>contains_context_invalid_words</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4ebb9444dc8e77ed8adabf6e22aee251" kind="function"><name>contains_exactly_the_word_dell</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aacc74035576c545b1d4d905f2f1e3742" kind="function"><name>contains_exactly_the_word_test</name></member>
     <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab220adb6350bdbc9c40d3b5a8e57cac3" kind="function"><name>only_numbers</name></member>
@@ -77,6 +87,10 @@
   </compound>
   <compound refid="namespacehygia_1_1data__pipeline" kind="namespace"><name>hygia::data_pipeline</name>
   </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1augment__data" kind="namespace"><name>hygia::data_pipeline::augment_data</name>
+  </compound>
+  <compound refid="namespacehygia_1_1data__pipeline_1_1augment__data_1_1augment__data" kind="namespace"><name>hygia::data_pipeline::augment_data::augment_data</name>
+  </compound>
   <compound refid="namespacehygia_1_1data__pipeline_1_1feature__engineering" kind="namespace"><name>hygia::data_pipeline::feature_engineering</name>
   </compound>
   <compound refid="namespacehygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering" kind="namespace"><name>hygia::data_pipeline::feature_engineering::feature_engineering</name>
@@ -93,11 +107,11 @@
   </compound>
   <compound refid="namespacehygia_1_1data__pipeline_1_1pre__process__data" kind="namespace"><name>hygia::data_pipeline::pre_process_data</name>
   </compound>
-  <compound refid="namespacehygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data" kind="namespace"><name>hygia::data_pipeline::pre_process_data::augment_data</name>
-  </compound>
   <compound refid="namespacehygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data" kind="namespace"><name>hygia::data_pipeline::pre_process_data::pre_process_data</name>
   </compound>
   <compound refid="____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="augment__data_2____init_____8py" kind="file"><name>__init__.py</name>
   </compound>
   <compound refid="feature__engineering_2____init_____8py" kind="file"><name>__init__.py</name>
   </compound>
@@ -106,6 +120,8 @@
   <compound refid="pre__process__data_2____init_____8py" kind="file"><name>__init__.py</name>
   </compound>
   <compound refid="annotate__data_8py" kind="file"><name>annotate_data.py</name>
+  </compound>
+  <compound refid="augment__data_8py" kind="file"><name>augment_data.py</name>
   </compound>
   <compound refid="feature__engineering_8py" kind="file"><name>feature_engineering.py</name>
   </compound>
@@ -117,11 +133,11 @@
   </compound>
   <compound refid="random__forest_8py" kind="file"><name>random_forest.py</name>
   </compound>
-  <compound refid="augment__data_8py" kind="file"><name>augment_data.py</name>
-  </compound>
   <compound refid="pre__process__data_8py" kind="file"><name>pre_process_data.py</name>
   </compound>
   <compound refid="dir_91a15d825a96576a4dcc58d71733340b" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data</name>
+  </compound>
+  <compound refid="dir_ab55cbfa9103f49f3c25fd3cc10f01ab" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/augment_data</name>
   </compound>
   <compound refid="dir_70dcd5b75320c8bd61e96866e72ecc25" kind="dir"><name>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline</name>
   </compound>

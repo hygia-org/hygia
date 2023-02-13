@@ -62,11 +62,11 @@ exclude_patterns = []
 html_theme = "pydata_sphinx_theme"
 html_theme_options = {
     "github_url": "https://github.com/hygia-org",
-    "logo": {"image_dark": "horizontal_logo_light.PNG"},
+    "logo": {"image_dark": "horizontal_logo_light.png"},
     "primary_sidebar_end": ["indices.html", "sidebar-ethical-ads.html"]
 }
 
-html_logo = "../_static/horizontal_logo_dark.PNG"
+html_logo = "../_static/horizontal_logo_dark.png"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,

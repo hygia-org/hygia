@@ -192,10 +192,10 @@ Examples - Use this function like this:</para>
         </inbodydescription>
         <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="124" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="124" bodyend="163"/>
       </memberdef>
-      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a203a70c5924e1a618e48e797fbcb4c18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pd.DataFrame</type>
         <definition> pd.DataFrame hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features</definition>
-        <argsstring>(self, pd.DataFrame df, str column_name, bool normalize=False)</argsstring>
+        <argsstring>(self, pd.DataFrame df, str column_name)</argsstring>
         <name>extract_key_smash_features</name>
         <qualifiedname>hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features</qualifiedname>
         <param>
@@ -209,11 +209,6 @@ Examples - Use this function like this:</para>
         <param>
           <type>str</type>
           <declname>column_name</declname>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>normalize</declname>
-          <defval>False</defval>
         </param>
         <briefdescription>
 <para>Extract key smash features from a given dataframe and column. </para>
@@ -256,7 +251,7 @@ Examples Use this function like this:</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="176" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="176" bodyend="214"/>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="176" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="176" bodyend="205"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -319,14 +314,14 @@ Examples Use this function like this:</para>
 <codeline><highlight class="normal">print(df)</highlight></codeline>
 </programlisting> </para>
     </detaileddescription>
-    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="5" bodyend="214"/>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/key_smash.py" bodystart="5" bodyend="205"/>
     <listofallmembers>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a65214ed127cf6a6491b1f249618e626d" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>__init__</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1afc42a4b6aa51c24fad51e85f0c269fd2" prot="protected" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>_normalize_column</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a682baee004b60c551f63c877a3270b3a" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>average_of_char_count_squared</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1abaf990cf994cfa58ac61d7188e9db461" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>char_sets</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a02080ee2e117a12c68b2749b5946734e" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>count_sequence_squared</name></member>
-      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1ab736e6cfbbdc324b493778627318f41e" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>extract_key_smash_features</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a203a70c5924e1a618e48e797fbcb4c18" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>extract_key_smash_features</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a43cd9f4f2e7bbb1797eea22d0c545f67" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::key_smash::KeySmash</scope><name>ratio_of_numeric_digits_squared</name></member>
     </listofallmembers>
   </compounddef>

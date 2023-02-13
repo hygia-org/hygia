@@ -47,10 +47,10 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a33f8c5028f3fee8359def47641fdc736" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a1959c7911e80be9885848aaf711dc019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__</definition>
-        <argsstring>(self, str lang=&apos;es&apos;, int dimensions=25, str model=&apos;bytepair&apos;)</argsstring>
+        <argsstring>(self, str lang=&apos;es&apos;, int dimensions=25, str model=&apos;bytepair&apos;, str country=None, str context_words_file=None)</argsstring>
         <name>__init__</name>
         <qualifiedname>hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__</qualifiedname>
         <param>
@@ -71,6 +71,16 @@
           <type>str</type>
           <declname>model</declname>
           <defval>&apos;bytepair&apos;</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>country</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>context_words_file</declname>
+          <defval>None</defval>
         </param>
         <briefdescription>
 <para>Initialize the FeatureEngineering class. </para>
@@ -180,7 +190,7 @@ Examples - Use this class like this:</para>
     </detaileddescription>
     <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" line="8" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/feature_engineering.py" bodystart="8" bodyend="68"/>
     <listofallmembers>
-      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a33f8c5028f3fee8359def47641fdc736" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a1959c7911e80be9885848aaf711dc019" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>__init__</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a6557b5c4dc573fcf0f8454da44c1536f" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>extract_features</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2bd145aad20dc0e4ea9e189dbd1bb915" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>key_smash</name></member>
       <member refid="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a11a1b00797fe5ad47ae8eb116b895b92" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::feature_engineering::feature_engineering::FeatureEngineering</scope><name>regex</name></member>
