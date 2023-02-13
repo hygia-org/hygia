@@ -12,17 +12,24 @@
 #
 # import os
 # import sys
-# sys.path.insert(0, os.path.abspath('.'))
+# 
 
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../xml'))
+sys.path.insert(0, os.path.abspath('/usr/local/lib/python3.10/site-packages'))
+sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('..'))
+sys.path.append("/home/carla/docproj/ext/breathe/")
 # -- Project information -----------------------------------------------------
 
 project = 'Hygia'
-copyright = '2023, Lappis'
+copyright = '2023, Lappis, Eldorado'
 author = 'Lappis'
 
-import sphinx_rtd_theme
-
+# import sphinx_rtd_theme
+import breathe
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,7 +38,9 @@ import sphinx_rtd_theme
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx_rtd_theme',
+    # 'sphinx_rtd_theme',
+    'sphinx_panels',
+    'breathe'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -52,9 +61,12 @@ exclude_patterns = []
 #html_theme = "sphinx_rtd_theme"
 html_theme = "pydata_sphinx_theme"
 html_theme_options = {
-    #[...]
+    "github_url": "https://github.com/hygia-org",
+    "logo": {"image_dark": "horizontal_logo_light.png"},
     "primary_sidebar_end": ["indices.html", "sidebar-ethical-ads.html"]
 }
+
+html_logo = "../_static/horizontal_logo_dark.png"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -63,3 +75,4 @@ html_theme_options = {
 html_theme_path = ["_themes", ]
 
 
+breathe_projects = { "teste": "../xml" }

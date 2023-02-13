@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data" kind="class" language="Python" prot="public">
+    <compoundname>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a91aca0028f24813d2eed9b26f7406d4f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.data_pipeline.pre_process_data.augment_data.AugmentData::country_zipcode_df</definition>
+        <argsstring></argsstring>
+        <name>country_zipcode_df</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.augment_data.AugmentData.country_zipcode_df</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="33" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a663159ea8e556da4e70de1005d68def7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None hygia.data_pipeline.pre_process_data.augment_data.AugmentData.__init__</definition>
+        <argsstring>(self, str country=&apos;MEXICO&apos;)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.augment_data.AugmentData.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>country</declname>
+          <defval>&apos;MEXICO&apos;</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the AugmentData class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>country</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Zipcode list of the region or country used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="11" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1ada49b52ac86bd4f33771524b6a01d808" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition> bool hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcode</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>validate_zipcode</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcode</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Check if a zipcode is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Zipcode list of the region or country used.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: bool) Return if the zipcode is valid :rtype: bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="35" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="35" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a49dee300d063cf789362e19869b64ff0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pd.DataFrame</type>
+        <definition> pd.DataFrame hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcodes</definition>
+        <argsstring>(self, pd.DataFrame df, str zipcode_column_name)</argsstring>
+        <name>validate_zipcodes</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.augment_data.AugmentData.validate_zipcodes</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pd.DataFrame</type>
+          <declname>df</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>zipcode_column_name</declname>
+        </param>
+        <briefdescription>
+<para>Check if all zipcode in a data is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>df</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: DataFrame) Dataframe to extract features. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zipcode_column_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Zipcode column name</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Return (Type: DataFrame) a dataframe with a new column. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="46" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="46" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a44556356984e09090a5a3c47259f9beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pd.DataFrame</type>
+        <definition> pd.DataFrame hygia.data_pipeline.pre_process_data.augment_data.AugmentData.augment_data</definition>
+        <argsstring>(self, pd.DataFrame df, str zipcode_column_name)</argsstring>
+        <name>augment_data</name>
+        <qualifiedname>hygia.data_pipeline.pre_process_data.augment_data.AugmentData.augment_data</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pd.DataFrame</type>
+          <declname>df</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>zipcode_column_name</declname>
+        </param>
+        <briefdescription>
+<para>Function that uses the validate_zipcodes function and concatenates the result to the database. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>df</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: DataFrame) Dataframe to extract features from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zipcode_column_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: str) Zipcode column name</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: DataFrame) Return a dataframe with a new column. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="63" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="63" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class present a validations based on zipocde data from this website: <ulink url="https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1">Listen Data</ulink>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>We obtained data from several continents and filtered it using the &apos;country&apos; code. To avoid overwhelm the Git history, we saved the data in pickle files. </para>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" line="3" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data/augment_data.py" bodystart="3" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a663159ea8e556da4e70de1005d68def7" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a44556356984e09090a5a3c47259f9beb" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</scope><name>augment_data</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a91aca0028f24813d2eed9b26f7406d4f" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</scope><name>country_zipcode_df</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1ada49b52ac86bd4f33771524b6a01d808" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</scope><name>validate_zipcode</name></member>
+      <member refid="classhygia_1_1data__pipeline_1_1pre__process__data_1_1augment__data_1_1_augment_data_1a49dee300d063cf789362e19869b64ff0" prot="public" virt="non-virtual"><scope>hygia::data_pipeline::pre_process_data::augment_data::AugmentData</scope><name>validate_zipcodes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

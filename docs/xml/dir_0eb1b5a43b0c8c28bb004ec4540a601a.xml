@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_0eb1b5a43b0c8c28bb004ec4540a601a" kind="dir">
+    <compoundname>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model</compoundname>
+    <innerfile refid="model_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="random__forest_8py">random_forest.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model/"/>
+  </compounddef>
+</doxygen>

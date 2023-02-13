@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser" kind="class" language="Python" prot="public">
+    <compoundname>hygia::parser::pre_processing_parser::PreProcessingParser</compoundname>
+    <basecompoundref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" prot="public" virt="non-virtual">hygia.parser.parser_base.ParserBase</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a815cbdb2483ef87911c44fe661e26c2d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.parser.pre_processing_parser.PreProcessingParser::columns_name</definition>
+        <argsstring></argsstring>
+        <name>columns_name</name>
+        <qualifiedname>hygia.parser.pre_processing_parser.PreProcessingParser.columns_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" line="6" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1aa55b29e8583465be0d550bd191151227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.pre_processing_parser.PreProcessingParser.__init__</definition>
+        <argsstring>(self, columns_name)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>hygia.parser.pre_processing_parser.PreProcessingParser.__init__</qualifiedname>
+        <reimplements refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a202cb7e0b981b3107240f9d3a569459b">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>columns_name</type>
+          <defname>columns_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" bodystart="5" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a4308214645ae23c94e6d391a6230349c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.pre_processing_parser.PreProcessingParser.parse</definition>
+        <argsstring>(self, list data)</argsstring>
+        <name>parse</name>
+        <qualifiedname>hygia.parser.pre_processing_parser.PreProcessingParser.parse</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" line="8" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" bodystart="8" bodyend="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1acb982c6ad677b3c994e1ad0b47c106ed" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.pre_processing_parser.PreProcessingParser._parse_pre_processing_configs</definition>
+        <argsstring>(self, list data)</argsstring>
+        <name>_parse_pre_processing_configs</name>
+        <qualifiedname>hygia.parser.pre_processing_parser.PreProcessingParser._parse_pre_processing_configs</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" bodystart="11" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1ae1d78066abfe59fe8620a3a377f89db1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.pre_processing_parser.PreProcessingParser._get_dataframe</definition>
+        <argsstring>(self, dict aliases)</argsstring>
+        <name>_get_dataframe</name>
+        <qualifiedname>hygia.parser.pre_processing_parser.PreProcessingParser._get_dataframe</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>dict</type>
+          <declname>aliases</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" line="19" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" bodystart="19" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hygia.parser.pre_processing_parser.PreProcessingParser</label>
+        <link refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hygia.parser.parser_base.ParserBase</label>
+        <link refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hygia.parser.pre_processing_parser.PreProcessingParser</label>
+        <link refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hygia.parser.parser_base.ParserBase</label>
+        <link refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" line="3" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/pre_processing_parser.py" bodystart="3" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1aa55b29e8583465be0d550bd191151227" prot="public" virt="non-virtual"><scope>hygia::parser::pre_processing_parser::PreProcessingParser</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1ae1d78066abfe59fe8620a3a377f89db1" prot="protected" virt="non-virtual"><scope>hygia::parser::pre_processing_parser::PreProcessingParser</scope><name>_get_dataframe</name></member>
+      <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1acb982c6ad677b3c994e1ad0b47c106ed" prot="protected" virt="non-virtual"><scope>hygia::parser::pre_processing_parser::PreProcessingParser</scope><name>_parse_pre_processing_configs</name></member>
+      <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a815cbdb2483ef87911c44fe661e26c2d" prot="public" virt="non-virtual"><scope>hygia::parser::pre_processing_parser::PreProcessingParser</scope><name>columns_name</name></member>
+      <member refid="classhygia_1_1parser_1_1pre__processing__parser_1_1_pre_processing_parser_1a4308214645ae23c94e6d391a6230349c" prot="public" virt="non-virtual"><scope>hygia::parser::pre_processing_parser::PreProcessingParser</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

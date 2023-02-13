@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_3836cc05125af4c9824ab70f348a3ea5" kind="dir">
+    <compoundname>/Users/alvesisaque/workspace/Playground/hygia/parser</compoundname>
+    <innerfile refid="parser_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="annotate__data__parser_8py">annotate_data_parser.py</innerfile>
+    <innerfile refid="const_8py">const.py</innerfile>
+    <innerfile refid="feature__engineering__parser_8py">feature_engineering_parser.py</innerfile>
+    <innerfile refid="model__parser_8py">model_parser.py</innerfile>
+    <innerfile refid="parser__base_8py">parser_base.py</innerfile>
+    <innerfile refid="pre__processing__parser_8py">pre_processing_parser.py</innerfile>
+    <innerfile refid="_y_a_m_l__parser_8py">YAML_parser.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespacehygia_1_1main" kind="namespace" language="Python">
+    <compoundname>hygia::main</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8py_1ac4c1470ae0fe116f19c0bd1cc6875979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.main.run_with_config</definition>
+        <argsstring>(str yaml_path)</argsstring>
+        <name>run_with_config</name>
+        <qualifiedname>hygia.main.run_with_config</qualifiedname>
+        <param>
+          <type>str</type>
+          <declname>yaml_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/main.py" line="15" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/main.py" bodystart="15" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/main.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

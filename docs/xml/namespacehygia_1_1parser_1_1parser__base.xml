@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespacehygia_1_1parser_1_1parser__base" kind="namespace" language="Python">
+    <compoundname>hygia::parser::parser_base</compoundname>
+    <innerclass refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" prot="public">hygia::parser::parser_base::ParserBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/parser_base.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

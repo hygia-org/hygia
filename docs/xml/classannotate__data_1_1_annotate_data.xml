@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classannotate__data_1_1_annotate_data" kind="class" language="Python" prot="public">
+    <compoundname>annotate_data::AnnotateData</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def annotate_data.AnnotateData.annotate_data</definition>
+        <argsstring>(self, df, concatened_column_name, ks_thresholds)</argsstring>
+        <name>annotate_data</name>
+        <qualifiedname>annotate_data.AnnotateData.annotate_data</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>df</type>
+          <defname>df</defname>
+        </param>
+        <param>
+          <type>concatened_column_name</type>
+          <defname>concatened_column_name</defname>
+        </param>
+        <param>
+          <type>ks_thresholds</type>
+          <defname>ks_thresholds</defname>
+        </param>
+        <briefdescription>
+<para>Annotate data function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>df</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: DataFrame) Dataframe to extract features from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>concatened_column_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: List) List of columns to be used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ks_thresholds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Type: List) List of thresholds</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(Type: DataFrame) The input dataframe with additional columns for key smashing and word embedding features. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" line="27" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" bodystart="27" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class to incorporate the data annotation phase, starting from the thresholds (e.g., count sequence squared vowels, count sequence squared consonants) can tell if it&apos;s a ksmash. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Examples</para>
+<para>Use this class like this:</para>
+<para><programlisting filename=".py"><codeline><highlight class="normal">annotate_data<sp/>=<sp/>hg.AnnotateData()</highlight></codeline>
+<codeline><highlight class="normal">key_smash_thresholds<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="stringliteral">&apos;count_sequence_squared_vowels&apos;</highlight><highlight class="normal">:<sp/>1.00,</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="stringliteral">&apos;count_sequence_squared_consonants&apos;</highlight><highlight class="normal">:<sp/>1.999,</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="stringliteral">&apos;count_sequence_squared_special_characters&apos;</highlight><highlight class="normal">:<sp/>2.2499,</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="stringliteral">&apos;ratio_of_numeric_digits_squared&apos;</highlight><highlight class="normal">:<sp/>2.9,</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="stringliteral">&apos;average_of_char_count_squared&apos;</highlight><highlight class="normal">:<sp/>2.78,</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">df<sp/>=<sp/>annotate_data.annotate_data(df,<sp/>concatened_column_name,<sp/>key_smash_thresholds)</highlight></codeline>
+<codeline><highlight class="normal">print(df)</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" line="4" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data/annotate_data.py" bodystart="4" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d" prot="public" virt="non-virtual"><scope>annotate_data::AnnotateData</scope><name>annotate_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

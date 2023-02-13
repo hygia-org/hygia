@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_6eee28b6f6c823bd37508cabbb2cbccd" kind="dir">
+    <compoundname>/Users/alvesisaque/workspace/Playground/hygia</compoundname>
+    <innerdir refid="dir_70dcd5b75320c8bd61e96866e72ecc25">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/"/>
+  </compounddef>
+</doxygen>

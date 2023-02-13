@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser" kind="class" language="Python" prot="public">
+    <compoundname>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</compoundname>
+    <basecompoundref refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base" prot="public" virt="non-virtual">hygia.parser.parser_base.ParserBase</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1af0e9a86e7edeec6e31825b29e3ed1dee" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>hygia.parser.feature_engineering_parser.FeatureEngineeringParser::columns_alias</definition>
+        <argsstring></argsstring>
+        <name>columns_alias</name>
+        <qualifiedname>hygia.parser.feature_engineering_parser.FeatureEngineeringParser.columns_alias</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" line="6" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a274bce55a70c7e2be6e2b0c62dbf2f3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.feature_engineering_parser.FeatureEngineeringParser.__init__</definition>
+        <argsstring>(self, columns_alias)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>hygia.parser.feature_engineering_parser.FeatureEngineeringParser.__init__</qualifiedname>
+        <reimplements refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base_1a202cb7e0b981b3107240f9d3a569459b">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>columns_alias</type>
+          <defname>columns_alias</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" line="5" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" bodystart="5" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a008bc671bdc8817f3f005b005a570b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.feature_engineering_parser.FeatureEngineeringParser.parse</definition>
+        <argsstring>(self, list data)</argsstring>
+        <name>parse</name>
+        <qualifiedname>hygia.parser.feature_engineering_parser.FeatureEngineeringParser.parse</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" line="8" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" bodystart="8" bodyend="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a52bcec6fb77b320fe51f58c8a38854ca" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.feature_engineering_parser.FeatureEngineeringParser._parse_feature_engineering_configs</definition>
+        <argsstring>(self, list data)</argsstring>
+        <name>_parse_feature_engineering_configs</name>
+        <qualifiedname>hygia.parser.feature_engineering_parser.FeatureEngineeringParser._parse_feature_engineering_configs</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" line="11" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" bodystart="11" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1afc4943959986ea43d18f79d0ba2c525f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.feature_engineering_parser.FeatureEngineeringParser._get_features_details</definition>
+        <argsstring>(self, dict features)</argsstring>
+        <name>_get_features_details</name>
+        <qualifiedname>hygia.parser.feature_engineering_parser.FeatureEngineeringParser._get_features_details</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>dict</type>
+          <declname>features</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" line="40" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" bodystart="40" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a33a1de2427ac001fe7c9fd86fe54916a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.feature_engineering_parser.FeatureEngineeringParser._get_word_embedding_config</definition>
+        <argsstring>(self, dict feature, list columns_alias)</argsstring>
+        <name>_get_word_embedding_config</name>
+        <qualifiedname>hygia.parser.feature_engineering_parser.FeatureEngineeringParser._get_word_embedding_config</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>dict</type>
+          <declname>feature</declname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>columns_alias</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" line="50" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" bodystart="50" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a5ae3a664f141127aace27bf2de7f1a90" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hygia.parser.feature_engineering_parser.FeatureEngineeringParser._get_keyboard_smash_config</definition>
+        <argsstring>(self, dict features)</argsstring>
+        <name>_get_keyboard_smash_config</name>
+        <qualifiedname>hygia.parser.feature_engineering_parser.FeatureEngineeringParser._get_keyboard_smash_config</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>dict</type>
+          <declname>features</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" line="70" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" bodystart="70" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>hygia.parser.feature_engineering_parser.FeatureEngineeringParser</label>
+        <link refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hygia.parser.parser_base.ParserBase</label>
+        <link refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>hygia.parser.feature_engineering_parser.FeatureEngineeringParser</label>
+        <link refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>hygia.parser.parser_base.ParserBase</label>
+        <link refid="classhygia_1_1parser_1_1parser__base_1_1_parser_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" line="3" column="1" bodyfile="/Users/alvesisaque/workspace/Playground/hygia/parser/feature_engineering_parser.py" bodystart="3" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a274bce55a70c7e2be6e2b0c62dbf2f3d" prot="public" virt="non-virtual"><scope>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>__init__</name></member>
+      <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1afc4943959986ea43d18f79d0ba2c525f" prot="protected" virt="non-virtual"><scope>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>_get_features_details</name></member>
+      <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a5ae3a664f141127aace27bf2de7f1a90" prot="protected" virt="non-virtual"><scope>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>_get_keyboard_smash_config</name></member>
+      <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a33a1de2427ac001fe7c9fd86fe54916a" prot="protected" virt="non-virtual"><scope>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>_get_word_embedding_config</name></member>
+      <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a52bcec6fb77b320fe51f58c8a38854ca" prot="protected" virt="non-virtual"><scope>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>_parse_feature_engineering_configs</name></member>
+      <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1af0e9a86e7edeec6e31825b29e3ed1dee" prot="public" virt="non-virtual"><scope>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>columns_alias</name></member>
+      <member refid="classhygia_1_1parser_1_1feature__engineering__parser_1_1_feature_engineering_parser_1a008bc671bdc8817f3f005b005a570b72" prot="public" virt="non-virtual"><scope>hygia::parser::feature_engineering_parser::FeatureEngineeringParser</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

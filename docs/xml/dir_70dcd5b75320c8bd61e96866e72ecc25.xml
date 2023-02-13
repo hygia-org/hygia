@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_70dcd5b75320c8bd61e96866e72ecc25" kind="dir">
+    <compoundname>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline</compoundname>
+    <innerdir refid="dir_91a15d825a96576a4dcc58d71733340b">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data</innerdir>
+    <innerdir refid="dir_ab55cbfa9103f49f3c25fd3cc10f01ab">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/augment_data</innerdir>
+    <innerdir refid="dir_0d5961b63244dbb5decf45bc05eaa7c3">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering</innerdir>
+    <innerdir refid="dir_0eb1b5a43b0c8c28bb004ec4540a601a">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model</innerdir>
+    <innerdir refid="dir_58e6109ac17f9a85dc40764e86627f6a">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data</innerdir>
+    <innerfile refid="____init_____8py">__init__.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/"/>
+  </compounddef>
+</doxygen>

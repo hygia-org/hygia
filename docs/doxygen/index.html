@@ -1,0 +1,1536 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Classes and Functions &#8212; Hygia  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'doxygen/index';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="User Guide" href="../user_guide/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="None">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../_static/horizontal_logo_dark.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/horizontal_logo_light.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Classes and Functions
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hygia-org" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../user_guide/index.html">
+                        User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Classes and Functions
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hygia-org" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item"><nav class="sidebar-indices-items">
+  <p class="sidebar-indices-items__title" role="heading" aria-level="1">
+      Indices
+  </p>
+  <ul class="indices-link">
+    <li class="toctree-l1"><a class="reference internal" href="../genindex.html" accesskey="I">General Index</a></li>
+  </ul>
+</nav>
+    </div>
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="classes-and-functions">
+<h1>Classes and Functions<a class="headerlink" href="#classes-and-functions" title="Permalink to this headline">#</a></h1>
+<p>This documentation provides an in-depth overview of the Hygia library classes and functions,
+aimed at helping users fully understand and utilize the library’s capabilities.
+With comprehensive explanations and examples, users will be able to easily
+navigate through the different classes and functions to carry out their
+data analysis and modeling tasks efficiently. Whether you are a beginner or an experienced user,
+this documentation will serve as a valuable resource to enhance your understanding of the Hygia
+library and take your data processing to the next level.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="annotate_data.AnnotateData">
+<span class="target" id="classannotate__data_1_1_annotate_data"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AnnotateData</span></span><a class="headerlink" href="#annotate_data.AnnotateData" title="Permalink to this definition">#</a></dt>
+<dd><p>A class to incorporate the data annotation phase, starting from the thresholds (e.g., count sequence squared vowels, count sequence squared consonants) can tell if it’s a ksmash. </p>
+<p>Examples</p>
+<p>Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">annotate_data</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">AnnotateData</span><span class="p">()</span>
+<span class="n">key_smash_thresholds</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;count_sequence_squared_vowels&#39;</span><span class="p">:</span> <span class="mf">1.00</span><span class="p">,</span>
+<span class="s1">&#39;count_sequence_squared_consonants&#39;</span><span class="p">:</span> <span class="mf">1.999</span><span class="p">,</span>
+<span class="s1">&#39;count_sequence_squared_special_characters&#39;</span><span class="p">:</span> <span class="mf">2.2499</span><span class="p">,</span>
+<span class="s1">&#39;ratio_of_numeric_digits_squared&#39;</span><span class="p">:</span> <span class="mf">2.9</span><span class="p">,</span>
+<span class="s1">&#39;average_of_char_count_squared&#39;</span><span class="p">:</span> <span class="mf">2.78</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">annotate_data</span><span class="o">.</span><span class="n">annotate_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">concatened_column_name</span><span class="p">,</span> <span class="n">key_smash_thresholds</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="annotate_data.AnnotateData.annotate_data">
+<span class="target" id="classannotate__data_1_1_annotate_data_1a6712eba78da4b9d9ace6b6016c451d0d"></span><span class="sig-name descname"><span class="pre">annotate_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ks_thresholds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#annotate_data.AnnotateData.annotate_data" title="Permalink to this definition">#</a></dt>
+<dd><p>Annotate data function. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract features from. </p></li>
+<li><p><strong>concatened_column_name</strong> – (Type: List) List of columns to be used </p></li>
+<li><p><strong>ks_thresholds</strong> – (Type: List) List of thresholds</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns for key smashing and word embedding features. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">AugmentData</span></span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData" title="Permalink to this definition">#</a></dt>
+<dd><p>This class present a validations based on zipocde data from this website: <a class="reference external" href="https://www.listendata.com/2020/11/zip-code-to-latitude-and-longitude.html?m=1">Listen Data</a>. </p>
+<p>We obtained data from several continents and filtered it using the ‘country’ code. To avoid overwhelm the Git history, we saved the data in pickle files. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.__init__">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1acdd587cda67cc40ddef5334d4f35b108"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialize the AugmentData class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>country</strong> – (Type: str) Zipcode list of the region or country used. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.validate_zipcode">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1a73cedef6b1d5af8195f9de8b0caaafec"></span><span class="sig-name descname"><span class="pre">validate_zipcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.validate_zipcode" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if a zipcode is valid. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Zipcode list of the region or country used.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) Return if the zipcode is valid :rtype: bool </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.validate_zipcodes">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1acce50060fb8a379cb149ab475c7d6c1e"></span><span class="sig-name descname"><span class="pre">validate_zipcodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">zipcode_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.validate_zipcodes" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if all zipcode in a data is valid. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract features. </p></li>
+<li><p><strong>zipcode_column_name</strong> – (Type: str) Zipcode column name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return (Type: DataFrame) a dataframe with a new column. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.augment_data">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1a97a6ef190ac4b4fbe59417bb3a537e38"></span><span class="sig-name descname"><span class="pre">augment_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">zipcode_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.augment_data" title="Permalink to this definition">#</a></dt>
+<dd><p>Function that uses the validate_zipcodes function and concatenates the result to the database. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract features from. </p></li>
+<li><p><strong>zipcode_column_name</strong> – (Type: str) Zipcode column name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) Return a dataframe with a new column. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data.AugmentData.country_zipcode_df">
+<span class="target" id="classhygia_1_1data__pipeline_1_1augment__data_1_1augment__data_1_1_augment_data_1ad2fef9f10639319723704485f4b5dc14"></span><span class="sig-name descname"><span class="pre">country_zipcode_df</span></span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data.AugmentData.country_zipcode_df" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">FeatureEngineering</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering" title="Permalink to this definition">#</a></dt>
+<dd><p>A class for extracting key smashing and word embedding features from text data. </p>
+<p>This class combines the functionality of the KeySmash and WordEmbedding classes to extract key smashing and word embedding features from a given text column in a dataframe.</p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">feature_engineer</span> <span class="o">=</span> <span class="n">FeatureEngineering</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">feature_engineer</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a1959c7911e80be9885848aaf711dc019"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">lang='es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">dimensions=25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">model='bytepair'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">context_words_file=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialize the FeatureEngineering class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lang</strong> – (Type: str) The language of the text to be processed. (default ‘es’) </p></li>
+<li><p><strong>dimensions</strong> – (Type: int) The number of dimensions of the word embedding vectors. (default 25) </p></li>
+<li><p><strong>model</strong> – (Type: str) The word embedding model to be used. (default ‘bytepair’) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.extract_features">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a6557b5c4dc573fcf0f8454da44c1536f"></span><span class="sig-name descname"><span class="pre">extract_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text_column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.extract_features" title="Permalink to this definition">#</a></dt>
+<dd><p>Extract key smashing and word embedding features from a given dataframe and column. </p>
+<p>
+Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fe</span> <span class="o">=</span> <span class="n">FeatureEngineering</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">fe</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract features from. </p></li>
+<li><p><strong>text_column</strong> – (Type: str) Name of the column in the dataframe that contains the text data to extract features from. </p></li>
+<li><p><strong>normalize</strong> – (Type: bool, optional) Indicates whether to normalize the feature columns. Default is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns for key smashing and word embedding features.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.key_smash">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2bd145aad20dc0e4ea9e189dbd1bb915"></span><span class="sig-name descname"><span class="pre">key_smash</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.key_smash" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.word_embedding">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a2da3933aa33b0658bd43357765cbd97f"></span><span class="sig-name descname"><span class="pre">word_embedding</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.word_embedding" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.regex">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering_1_1_feature_engineering_1a11a1b00797fe5ad47ae8eb116b895b92"></span><span class="sig-name descname"><span class="pre">regex</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering.FeatureEngineering.regex" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">KeySmash</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash" title="Permalink to this definition">#</a></dt>
+<dd><p>A class for calculating metrics to indicate key smashing behavior in a text. </p>
+<p>Key smashing is the act of typing on a keyboard in a rapid and uncontrolled manner, often resulting in a series of random characters being entered into a document or text field.</p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">extract_key_smash_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.__init__">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a65214ed127cf6a6491b1f249618e626d"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialize the KeySmash class. </p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.average_of_char_count_squared">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a682baee004b60c551f63c877a3270b3a"></span><span class="sig-name descname"><span class="pre">average_of_char_count_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.average_of_char_count_squared" title="Permalink to this definition">#</a></dt>
+<dd><p>The function takes a string text as input and splits it into words. </p>
+<p>For each word, it counts the number of occurrences of each character in the word, squares those counts, and then sums them. It then divides the sum by the length of the word and appends the result to a list words_results. Finally, it returns the mean of the words_results list, if the list is not empty, otherwise it returns 0.</p>
+<p>
+Examples - Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">average_of_char_count_squared</span><span class="p">(</span><span class="s2">&quot;PUENTECILLA KM. 1.7&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 1.121212121212121</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">average_of_char_count_squared</span><span class="p">(</span><span class="s2">&quot;ASDASD XXXX&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 3.0</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) The text to use for the calculation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: float) The calculated Char Frequency Metric.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.count_sequence_squared">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a02080ee2e117a12c68b2749b5946734e"></span><span class="sig-name descname"><span class="pre">count_sequence_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">opt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.count_sequence_squared" title="Permalink to this definition">#</a></dt>
+<dd><p>This function takes a text and opt as input. </p>
+<p>It checks a set of characters, converts text to lowercase, iterates through characters, increments counter if finds a sequence of characters in set, if not it adds square of counter to a list, resets counter to 1. After iterating it returns sum of list divided by length of text.</p>
+<p>
+Examples - Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">count_sequence_squared</span><span class="p">(</span><span class="s2">&quot;PUENTECILLA KM. 1.7&quot;</span><span class="p">,</span> <span class="s2">&quot;vowels&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 0.21052631578947367</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">count_sequence_squared</span><span class="p">(</span><span class="s2">&quot;ASDASD XXXX&quot;</span><span class="p">,</span> <span class="s2">&quot;consonants&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 2.1818181818181817</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">count_sequence_squared</span><span class="p">(</span><span class="s2">&quot;!@#$% ASDFGHJKL&quot;</span><span class="p">,</span> <span class="s2">&quot;special_characters&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 1.5625</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – (Type: str) The text to use for the calculation. </p></li>
+<li><p><strong>opt</strong> – (Type: str) The type of characters to consider for the calculation, can be one of ‘vowels’, ‘consonants’, or ‘special_characters’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type:float) The calculated Irregular Sequence Metric.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.ratio_of_numeric_digits_squared">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a43cd9f4f2e7bbb1797eea22d0c545f67"></span><span class="sig-name descname"><span class="pre">ratio_of_numeric_digits_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.ratio_of_numeric_digits_squared" title="Permalink to this definition">#</a></dt>
+<dd><p>This function takes text as input, splits it into a list of words, initializes a variable to 0. </p>
+<p>It iterates through list of words, checking if each word contains both numeric digits and non-numeric characters. If yes, it counts number of numeric digits, squares it and adds to variable. It returns the value of that variable divided by length of original text, if the list is empty it returns 0.</p>
+<p>
+Examples - Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">ratio_of_numeric_digits_squared</span><span class="p">(</span><span class="s2">&quot;ABC 123 !@#&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 0.0</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">ratio_of_numeric_digits_squared</span><span class="p">(</span><span class="s2">&quot;ABC123 !@#&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="c1"># Output: 0.9</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) The text to extract the metric from.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: float) The calculated Number Count Metric.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1a203a70c5924e1a618e48e797fbcb4c18"></span><span class="sig-name descname"><span class="pre">extract_key_smash_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.extract_key_smash_features" title="Permalink to this definition">#</a></dt>
+<dd><p>Extract key smash features from a given dataframe and column. </p>
+<p>
+Examples Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">key_smash</span> <span class="o">=</span> <span class="n">KeySmash</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;text_column&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abcdefgh&quot;</span><span class="p">,</span> <span class="s2">&quot;ijklmnop&quot;</span><span class="p">,</span> <span class="s2">&quot;qrstuvwxyz&quot;</span><span class="p">]})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">key_smash</span><span class="o">.</span><span class="n">extract_key_smash_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+ </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract key smash features from. </p></li>
+<li><p><strong>column_name</strong> – (Type: str) Name of the column in the dataframe that contains the text data to extract features from. </p></li>
+<li><p><strong>normalize</strong> – (bool, optional) Indicates whether to normalize the key smash feature columns. Default is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns for key smash features: ‘irregular_sequence_vowels’, ‘irregular_sequence_consonants’, ‘irregular_sequence_special_characters’, ‘number_count_metric’, ‘char_frequency_metric’</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash.char_sets">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1abaf990cf994cfa58ac61d7188e9db461"></span><span class="sig-name descname"><span class="pre">char_sets</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash.char_sets" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash.KeySmash._normalize_column">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash_1_1_key_smash_1afc42a4b6aa51c24fad51e85f0c269fd2"></span><span class="sig-name descname"><span class="pre">_normalize_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash.KeySmash._normalize_column" title="Permalink to this definition">#</a></dt>
+<dd><p>Normalize a given column in a dataframe. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to normalize the column in. </p></li>
+<li><p><strong>column</strong> – (Type: str) Name of the column to be normalized.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with the normalized column. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PreProcessData</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData" title="Permalink to this definition">#</a></dt>
+<dd><p>This class presents a series of functions that help in data pre-processing. </p>
+<p>As concatenate columns, replace abbreviation, and etc.</p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pre_process_data</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">PreProcessData</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pre_process_data</span><span class="o">.</span><span class="n">pre_process_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;COLUMN_1&#39;</span><span class="p">,</span> <span class="s1">&#39;COLUMN_2&#39;</span><span class="p">],</span> <span class="n">concatened_column_name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0e49112145543042a6fcb5172ee72ee0"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">abbreviations_file=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialize the PreProcessData class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>country</strong> – (Type: str) Zipcode list of the region or country used. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.concatenate_columns">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1aa918dadaa5fad237dfabbbcb95933376"></span><span class="sig-name descname"><span class="pre">concatenate_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatenated_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.concatenate_columns" title="Permalink to this definition">#</a></dt>
+<dd><p>Function that concatenates two columns and saves in a new one, whose name is informed by the user. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe.</p></li>
+<li><p><strong>columns</strong> – (Type: List) List of columns</p></li>
+<li><p><strong>concatenated_column_name</strong> – (Type: str) Name of the new column</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return the columns concatenated </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_nulls">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a0f373aa2c3685df2291a25aab0473707"></span><span class="sig-name descname"><span class="pre">handle_nulls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_nulls" title="Permalink to this definition">#</a></dt>
+<dd><p>Handle null values. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: Dataframe) Dataframe</p></li>
+<li><p><strong>column_name</strong> – (Type: str) Column name to check </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_extra_spaces">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a67dc109c2f1a4fb1baa9f5e32aabd6fc"></span><span class="sig-name descname"><span class="pre">handle_extra_spaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_extra_spaces" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_abreviations">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a5e81ba265ff8746bb5558901884f1160"></span><span class="sig-name descname"><span class="pre">handle_abreviations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.handle_abreviations" title="Permalink to this definition">#</a></dt>
+<dd><p>Handles abbreviations in the dataframe. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe</p></li>
+<li><p><strong>column_name</strong> – (Type: str) Column name to check </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a6c4c76f8e3ed9460bba760086cd9e2c4"></span><span class="sig-name descname"><span class="pre">pre_process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_to_concat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.pre_process_data" title="Permalink to this definition">#</a></dt>
+<dd><p>Function that gathers all implemented preprocessing (column concatenation, handle with nulls and abbreviations) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe </p></li>
+<li><p><strong>columns_to_concat</strong> – (Type: List) List of columns </p></li>
+<li><p><strong>column_name</strong> – (Type: str) Column name to check</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.abbreviations_dict">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a54c1b51a0b092d4c4cf4a575c7e9d682"></span><span class="sig-name descname"><span class="pre">abbreviations_dict</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData.abbreviations_dict" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData._replace_abbreviation">
+<span class="target" id="classhygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data_1_1_pre_process_data_1a08787d36f285f9d2709433982d8d4926"></span><span class="sig-name descname"><span class="pre">_replace_abbreviation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data.PreProcessData._replace_abbreviation" title="Permalink to this definition">#</a></dt>
+<dd><p>Function that identifies abbreviations and according to the dictionary changes the names. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be analyzed </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RandomForestModel</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel" title="Permalink to this definition">#</a></dt>
+<dd><p>This class presents the model Random Forest, allowing train and predict the model. </p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">new_rf_model</span> <span class="o">=</span> <span class="n">hg</span><span class="o">.</span><span class="n">RandomForestModel</span><span class="p">()</span>
+<span class="n">clf</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">new_rf_model</span><span class="o">.</span><span class="n">train_and_get_scores</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">concatened_column_name</span><span class="p">,</span> <span class="n">all_features_columns</span><span class="p">)</span>
+<span class="n">scores</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.__init__">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a0ac4c1072e5e85aa0c3ab41ac05b5d40"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_absolutes_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_estimators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialize the RandomForestModel class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model_file</strong> – (Type: path) Path to the model file </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.train_and_get_scores">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf7a38d78b4b8100bec3034415cf958e"></span><span class="sig-name descname"><span class="pre">train_and_get_scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_features_columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.train_and_get_scores" title="Permalink to this definition">#</a></dt>
+<dd><p>Train and get scores for the model execution. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (DataFrame) Dataframe with the data. </p></li>
+<li><p><strong>concatened_column_name</strong> – (Type: str) Column name </p></li>
+<li><p><strong>all_features_columns</strong> – (Type: List) List of all features column nales </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.predict">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a9fda257a8e61eeb676e4520cb7569018"></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.predict" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.export_model">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a0072e249e16a1ac521e41d960c248668"></span><span class="sig-name descname"><span class="pre">export_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">export_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">normalization_absolutes_file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.export_model" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.normalize">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a69bc06ee69d0634fa3ea4c83079d6eaf"></span><span class="sig-name descname"><span class="pre">normalize</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.normalize" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.model">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a41a98e36844137b7486aa925a998f2c3"></span><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.model" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.normalization_absolutes">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ad3c46532103ddc6e4250e877372255fd"></span><span class="sig-name descname"><span class="pre">normalization_absolutes</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.normalization_absolutes" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.pre_trained">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ac014e58fd640d5ab0e64eb22ba0383d5"></span><span class="sig-name descname"><span class="pre">pre_trained</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.pre_trained" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.n_estimators">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a5e7f43eeb0068f2d7f7f365434f3abc5"></span><span class="sig-name descname"><span class="pre">n_estimators</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.n_estimators" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.max_depth">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5dd6d72a32285fd8e86219a8fdf71ec"></span><span class="sig-name descname"><span class="pre">max_depth</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.max_depth" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel.random_state">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1ae5ab8b176adb170adad2175c5685163c"></span><span class="sig-name descname"><span class="pre">random_state</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel.random_state" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel._get_absolute_maximums">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1a487146fef6fedbbc18035178bd06bdd5"></span><span class="sig-name descname"><span class="pre">_get_absolute_maximums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_columns_to_normalize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel._get_absolute_maximums" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest.RandomForestModel._normalization">
+<span class="target" id="classhygia_1_1data__pipeline_1_1model_1_1random__forest_1_1_random_forest_model_1acf6c3db77f3a45bcd63b3c4ea0d9c472"></span><span class="sig-name descname"><span class="pre">_normalization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_columns_to_normalize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">concatened_column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest.RandomForestModel._normalization" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Regex</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex" title="Permalink to this definition">#</a></dt>
+<dd><p>It provides a set of functions that help you verify the content of a text field, such as checking if the field is empty, if it has only one word, if it contains a specific character or pattern, and more. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.__init__">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab78b6f04d5b2f4510f2feead7ef2933a"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">country=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">context_words_file=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.__init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_context_invalid_words">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1add28fd7d48786eb2039ff1ba11cc00d0"></span><span class="sig-name descname"><span class="pre">contains_context_invalid_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_context_invalid_words" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_dell">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4ebb9444dc8e77ed8adabf6e22aee251"></span><span class="sig-name descname"><span class="pre">contains_exactly_the_word_dell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_dell" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains the word DELL. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_test">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1aacc74035576c545b1d4d905f2f1e3742"></span><span class="sig-name descname"><span class="pre">contains_exactly_the_word_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_the_word_test" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains the word test. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_numbers">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab220adb6350bdbc9c40d3b5a8e57cac3"></span><span class="sig-name descname"><span class="pre">only_numbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_numbers" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains only numbers. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_special_characters">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5cdd86f4e05bb41b8ec1f9de60b7e4d1"></span><span class="sig-name descname"><span class="pre">only_special_characters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_special_characters" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains only special characters. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_email">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4f61bea2e8a25b794c78e7082704583f"></span><span class="sig-name descname"><span class="pre">contains_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_email" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains email. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_url">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a6d48e296af51cfcab0a7a144987ba88e"></span><span class="sig-name descname"><span class="pre">contains_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_url" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains url. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_date">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a4cfe4970aaa3ebcf678eb1fab9043474"></span><span class="sig-name descname"><span class="pre">contains_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_date" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains date. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_invalid_words">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a2dc27d664c7303c105542f109a5c1573"></span><span class="sig-name descname"><span class="pre">contains_exactly_invalid_words</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.contains_exactly_invalid_words" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains invalid words. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.is_substring_of_column_name">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ad5645622b440996ae37006ef8e26d7db"></span><span class="sig-name descname"><span class="pre">is_substring_of_column_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.is_substring_of_column_name" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if is a substring of column name. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_one_char">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1ab9a9fb59c02dd27f8596776c4f52c526"></span><span class="sig-name descname"><span class="pre">only_one_char</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_one_char" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains only one char. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_one_word">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a09ffaff6cfd795ecb3b21d54d97e8f27"></span><span class="sig-name descname"><span class="pre">only_one_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_one_word" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains only one word. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.only_white_spaces">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a10f1616ba55b300afe424accf081d9cf"></span><span class="sig-name descname"><span class="pre">only_white_spaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.only_white_spaces" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if it contains only white spaces. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.empty">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a0a749fa9c131a0e1e54f4eedb915c658"></span><span class="sig-name descname"><span class="pre">empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.empty" title="Permalink to this definition">#</a></dt>
+<dd><p>Check if is empty. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) Text to be verified</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.extract_regex_features">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1a5ffdae262d81e5f433d66bc44d6e006c"></span><span class="sig-name descname"><span class="pre">extract_regex_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.extract_regex_features" title="Permalink to this definition">#</a></dt>
+<dd><p>Function to extract all regex features. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe with the data. </p></li>
+<li><p><strong>column_name</strong> – (Type: str) Column name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: bool) true of false </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex.Regex.context_invalid_words">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1regex_1_1_regex_1af1a3b825f093dec085fb483149f780e6"></span><span class="sig-name descname"><span class="pre">context_invalid_words</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex.Regex.context_invalid_words" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding"></span><em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">WordEmbedding</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding" title="Permalink to this definition">#</a></dt>
+<dd><p>A class for generating word embeddings from text data. </p>
+<p>Word embeddings are numerical representations of text data that capture the context and meaning of words within a sentence or document.</p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_embedding</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">word_embedding</span><span class="o">.</span><span class="n">extract_word_embedding_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+ </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a882b4ba550a9356baeb85964848bb5ac"></span><span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">lang='es'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">dimensions=25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">model='bytepair'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initialize the WordEmbedding class. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lang</strong> – (Type: str) The language of the text to be processed. (default ‘es’) </p></li>
+<li><p><strong>dimensions</strong> – (Type: int) The number of dimensions of the word embedding vectors. (default 25) </p></li>
+<li><p><strong>model</strong> – (Type: str) The word embedding model to be used. (default ‘bytepair’) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.get_embedding">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1aae76996dafce64d3701891e860e8a145"></span><span class="sig-name descname"><span class="pre">get_embedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.get_embedding" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the word embedding vector for a given text. </p>
+<p>Examples - Use this function like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_embedding</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">word_embedding</span><span class="o">.</span><span class="n">get_embedding</span><span class="p">(</span><span class="s2">&quot;This is a sample text.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">embedding</span><span class="p">)</span>
+<span class="c1"># Output: [0.1, 0.2, ..., 0.3] (a list of float values representing the word embedding vector)</span>
+
+<span class="n">embedding</span> <span class="o">=</span> <span class="n">word_embedding</span><span class="o">.</span><span class="n">get_embedding</span><span class="p">(</span><span class="s2">&quot;Another sample text.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">embedding</span><span class="p">)</span>
+<span class="c1"># Output: [0.5, 0.6, ..., 0.7] (a list of float values representing the word embedding vector)</span>
+</pre></div>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – (Type: str) The text to be processed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(type: array) A word embedding vector for the given text. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.extract_word_embedding_features">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1afda634858dcca07e27b954023e854972"></span><span class="sig-name descname"><span class="pre">extract_word_embedding_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pd.DataFrame</span> <span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">column_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">normalize=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.extract_word_embedding_features" title="Permalink to this definition">#</a></dt>
+<dd><p>Extract word embedding features from a given dataframe and column. </p>
+<p>Examples - Use this class like this:</p>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">word_embedding</span> <span class="o">=</span> <span class="n">WordEmbedding</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;text_column&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abcdefgh&quot;</span><span class="p">,</span> <span class="s2">&quot;ijklmnop&quot;</span><span class="p">,</span> <span class="s2">&quot;qrstuvwxyz&quot;</span><span class="p">]})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">word_embedding</span><span class="o">.</span><span class="n">extract_features</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;text_column&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – (Type: DataFrame) Dataframe to extract word embedding features from. </p></li>
+<li><p><strong>column_name</strong> – (Type: str) Name of the column in the dataframe that contains the text data to extract features from. </p></li>
+<li><p><strong>normalize</strong> – (Type: bool, optional) Indicates whether to normalize the word embedding feature columns. Default is True.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Type: DataFrame) The input dataframe with additional columns for word embedding features. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.lang">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1aa4cd2a933690feb70d025e32739c9362"></span><span class="sig-name descname"><span class="pre">lang</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.lang" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.dimensions">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a3827a074c2147ffccaada75c74cdf522"></span><span class="sig-name descname"><span class="pre">dimensions</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.dimensions" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.model">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a91e57b13006bd6e8917f07dafcbe0463"></span><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.model" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.word_embedding_model">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a6f1775d462dc90ecbb099d5290a9dfc8"></span><span class="sig-name descname"><span class="pre">word_embedding_model</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding.word_embedding_model" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding._load_model">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1ab615ccc3b82284f7877e30370ce3fb8e"></span><span class="sig-name descname"><span class="pre">_load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding._load_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Load the word embedding model. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(Type: Any) The loaded word embedding model. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding._pre_embedding">
+<span class="target" id="classhygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding_1_1_word_embedding_1a4a28173984f0d56ea34834c3720f55b9"></span><span class="sig-name descname"><span class="pre">_pre_embedding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">str</span> <span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding.WordEmbedding._pre_embedding" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="annotate_data">
+<span class="target" id="namespaceannotate__data"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">annotate_data</span></span><a class="headerlink" href="#annotate_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia">
+<span class="target" id="namespacehygia"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">hygia</span></span><a class="headerlink" href="#hygia" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline">
+<span class="target" id="namespacehygia_1_1data__pipeline"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">data_pipeline</span></span><a class="headerlink" href="#hygia.data_pipeline" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1augment__data"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">augment_data</span></span><a class="headerlink" href="#hygia.data_pipeline.augment_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.augment_data.augment_data">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1augment__data_1_1augment__data"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">augment_data</span></span><a class="headerlink" href="#hygia.data_pipeline.augment_data.augment_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1feature__engineering"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">feature_engineering</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.feature_engineering">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1feature__engineering_1_1feature__engineering"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">feature_engineering</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.feature_engineering" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.key_smash">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1feature__engineering_1_1key__smash"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">key_smash</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.key_smash" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.regex">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1feature__engineering_1_1regex"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">regex</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.regex" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.feature_engineering.word_embedding">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1feature__engineering_1_1word__embedding"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">word_embedding</span></span><a class="headerlink" href="#hygia.data_pipeline.feature_engineering.word_embedding" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1model"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#hygia.data_pipeline.model" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.model.random_forest">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1model_1_1random__forest"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">random_forest</span></span><a class="headerlink" href="#hygia.data_pipeline.model.random_forest" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1pre__process__data"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">pre_process_data</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hygia.data_pipeline.pre_process_data.pre_process_data">
+<span class="target" id="namespacehygia_1_1data__pipeline_1_1pre__process__data_1_1pre__process__data"></span><em class="property"><span class="pre">module</span> </em><span class="sig-name descname"><span class="pre">pre_process_data</span></span><a class="headerlink" href="#hygia.data_pipeline.pre_process_data.pre_process_data" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="augment__data_2____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="feature__engineering_2____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="model_2____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="pre__process__data_2____init_____8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">__init__.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="annotate__data_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">annotate_data.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="augment__data_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">augment_data.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="feature__engineering_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">feature_engineering.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="key__smash_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">key_smash.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="regex_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">regex.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="word__embedding_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">word_embedding.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="random__forest_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">random_forest.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object py">
+<span class="target" id="pre__process__data_8py"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">pre_process_data.py</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_91a15d825a96576a4dcc58d71733340b"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/annotate_data</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_ab55cbfa9103f49f3c25fd3cc10f01ab"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/augment_data</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_70dcd5b75320c8bd61e96866e72ecc25"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_0d5961b63244dbb5decf45bc05eaa7c3"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_6eee28b6f6c823bd37508cabbb2cbccd"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/alvesisaque/workspace/Playground/hygia</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_0eb1b5a43b0c8c28bb004ec4540a601a"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/model</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_58e6109ac17f9a85dc40764e86627f6a"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/pre_process_data</span></span></dt>
+<dd></dd></dl>
+
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="../user_guide/index.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">User Guide</p>
+      </div>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+<div class="tocsection sourcelink">
+    <a href="../_sources/doxygen/index.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+</div>
+
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2023, Lappis, Eldorado.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

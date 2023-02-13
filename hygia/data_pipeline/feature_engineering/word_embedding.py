@@ -13,27 +13,24 @@ class WordEmbedding:
     A class for generating word embeddings from text data.
     Word embeddings are numerical representations of text data that capture the context and meaning of words within a sentence or document.
 
-    Examples
-    --------
+    Examples - 
     Use this class like this:
 
-    .. code-block:: python
+    \code{.py}
 
         word_embedding = WordEmbedding()
         df = word_embedding.extract_word_embedding_features(df, "text_column")
         print(df)
+    \endcode
     """
 
     def __init__(self, lang: str = 'es', dimensions: int = 25, model: str = 'bytepair'):
         """
         Initialize the WordEmbedding class.
 
-        :param lang: The language of the text to be processed. (default 'es')
-        :type lang: str
-        :param dimensions: The number of dimensions of the word embedding vectors. (default 25)
-        :type dimensions: int
-        :param model: The word embedding model to be used. (default 'bytepair')
-        :type model: str
+        \param lang (Type: str) The language of the text to be processed. (default 'es')
+        \param dimensions (Type: int) The number of dimensions of the word embedding vectors. (default 25)
+        \param model (Type: str) The word embedding model to be used. (default 'bytepair')
         """
         self.lang = lang
         self.dimensions = dimensions
@@ -44,8 +41,7 @@ class WordEmbedding:
         """
         Load the word embedding model.
 
-        :return: The loaded word embedding model.
-        :rtype: Any
+        \return (Type: Any) The loaded word embedding model.
         """
         if self.model == 'bytepair':
             return BytePairLanguage(lang=self.lang, dim=self.dimensions)
@@ -67,25 +63,24 @@ class WordEmbedding:
     def get_embedding(self, text: str) -> np.ndarray:
         """
         Get the word embedding vector for a given text.
-
-        :param text: The text to be processed.
-        :type text: str
-        :return: A word embedding vector for the given text.
-        :rtype: np.ndarray
         
-        Examples
-        --------
+        Examples - 
         Use this function like this:
-        .. code-block:: python
+        
+        \code{.py}
+            word_embedding = WordEmbedding()
+            embedding = word_embedding.get_embedding("This is a sample text.")
+            print(embedding)
+            # Output: [0.1, 0.2, ..., 0.3] (a list of float values representing the word embedding vector)
 
-        word_embedding = WordEmbedding()
-        embedding = word_embedding.get_embedding("This is a sample text.")
-        print(embedding)
-        # Output: [0.1, 0.2, ..., 0.3] (a list of float values representing the word embedding vector)
+            embedding = word_embedding.get_embedding("Another sample text.")
+            print(embedding)
+            # Output: [0.5, 0.6, ..., 0.7] (a list of float values representing the word embedding vector)
+        \endcode
 
-        embedding = word_embedding.get_embedding("Another sample text.")
-        print(embedding)
-        # Output: [0.5, 0.6, ..., 0.7] (a list of float values representing the word embedding vector)
+        \param text (Type: str) The text to be processed.
+        
+        \return (type: array) A word embedding vector for the given text.
         """
         
         empty_vector = [0.0] * self.dimensions
@@ -102,26 +97,22 @@ class WordEmbedding:
         """
         Extract word embedding features from a given dataframe and column.
 
-        :param df: Dataframe to extract word embedding features from.
-        :type df: pandas.DataFrame
-        :param column_name: Name of the column in the dataframe that contains the text data to extract features from.
-        :type column_name: str
-        :param normalize: Indicates whether to normalize the word embedding feature columns. Default is True.
-        :type normalize: bool, optional
-
-        :return: The input dataframe with additional columns for word embedding features.
-        :rtype: pandas.DataFrame
-
-        Examples
-        --------
+        Examples - 
         Use this class like this:
 
-        .. code-block:: python
+        \code{.py}
 
             word_embedding = WordEmbedding()
             df = pd.DataFrame({"text_column": ["abcdefgh", "ijklmnop", "qrstuvwxyz"]})
             df = word_embedding.extract_features(df, "text_column", normalize=False)
             print(df.head())
+        \endcode
+
+        \param df (Type: DataFrame) Dataframe to extract word embedding features from.
+        \param column_name (Type: str) Name of the column in the dataframe that contains the text data to extract features from.
+        \param normalize (Type: bool, optional) Indicates whether to normalize the word embedding feature columns. Default is True.
+
+        \return (Type: DataFrame) The input dataframe with additional columns for word embedding features.
         """
         
         feature_we_tmp = df[column_name].fillna('').apply(lambda x: self.get_embedding(x))

@@ -136,3 +136,15 @@ poetry.lock
 
 # Custom paths
 data/tmp/*
+# Sphinx
+docs/html
+docs/xml
+docs/searchindex.js
+docs/objects.inv
+docs/.doctrees
+docs/.buildinfo
+docs/_sources
+docs/_panels_static
+
+genindex.html
+search.html

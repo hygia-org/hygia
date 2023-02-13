@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to Hygia’s documentation! &#8212; Hygia  documentation</title>
+    <title>Welcome to Hygia’s documentation &#8212; Hygia  documentation</title>
   
   
   
@@ -27,6 +27,9 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
@@ -35,15 +38,13 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="User Guide" href="user_guide/index.html" />
+    <link rel="next" title="Getting Started" href="getting_started/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="en">
+  <meta name="docsearch:language" content="None">
   </head>
   
   
@@ -96,8 +97,9 @@
   
 
   
+    <img src="_static/horizontal_logo_dark.png" class="logo__image only-light" alt="Logo image">
+    <img src="_static/horizontal_logo_light.png" class="logo__image only-dark" alt="Logo image">
   
-    <p class="title logo__title">Hygia  documentation</p>
   
 </a>
     
@@ -115,8 +117,22 @@
     <ul id="navbar-main-elements" class="navbar-nav">
         
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="user_guide/index.html">
                         User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="doxygen/index.html">
+                        Classes and Functions
                       </a>
                     </li>
                 
@@ -146,6 +162,17 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hygia-org" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
       </ul>
       </div>
       
@@ -191,8 +218,22 @@
     <ul id="navbar-main-elements" class="navbar-nav">
         
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started/index.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="user_guide/index.html">
                         User Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="doxygen/index.html">
+                        Classes and Functions
                       </a>
                     </li>
                 
@@ -217,6 +258,17 @@
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/hygia-org" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-square-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
       </ul>
       </div>
       
@@ -259,14 +311,40 @@
             <article class="bd-article" role="main">
               
   <section id="welcome-to-hygia-s-documentation">
-<h1>Welcome to Hygia’s documentation!<a class="headerlink" href="#welcome-to-hygia-s-documentation" title="Permalink to this heading"></a></h1>
+<h1>Welcome to Hygia’s documentation<a class="headerlink" href="#welcome-to-hygia-s-documentation" title="Permalink to this headline">#</a></h1>
 <p><cite>Hygia</cite> is an open source, MIT-licensed library providing high-performance,
 easy-to-use playground to organize, compare, register and share Machine Learning experiments on Databases developed in <a class="reference external" href="https://www.python.org/">Python</a>
 programming language.</p>
 </section>
-<section id="features">
-<h1>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h1>
-<p>With <cite>Hygia</cite>, you can configure your data pipeline, customize the operations executed in each stage of the pipeline. The main features are:</p>
+<section id="why-hygia">
+<h1>Why <cite>Hygia</cite>?<a class="headerlink" href="#why-hygia" title="Permalink to this headline">#</a></h1>
+<section id="rework">
+<h2>1. Rework<a class="headerlink" href="#rework" title="Permalink to this headline">#</a></h2>
+<p>Data Scientists often invest significant time and effort in creating experiments, developing functions,
+and retraining models to identify Keyboard Smash. However, this process can be hindered by replication of
+functions and code. Reusing code with errors can lead to unreliable results, rendering all of the processing
+and study done using that code invalid.
+Therefore, it is essential to ensure that the code being reused is
+thoroughly tested and validated before it is used in any further experiments or analysis.</p>
+<a class="reference internal image-reference" href="_static/Frame1.png"><img alt="Alternative text" src="_static/Frame1.png" style="width: 1000px;" /></a>
+</section>
+<section id="loosing-time-and-spend-money">
+<h2>2. Loosing time and spend money<a class="headerlink" href="#loosing-time-and-spend-money" title="Permalink to this headline">#</a></h2>
+<p>The data science process can become repetitive and time-consuming when working with different data from various structures.
+The testing and experimentation required for each new dataset can add to the repetitive nature of the work.
+Additionally, maintaining and evolving the generated codes can pose significant challenges, especially when the
+necessary processes, such as storage, versioning, and evolution, are not given the necessary attention.
+This can have a detrimental long-term impact on the overall data science process.</p>
+<a class="reference internal image-reference" href="_static/Frame2.png"><img alt="Alternative text" src="_static/Frame2.png" style="width: 1000px;" /></a>
+</section>
+<section id="hygia-as-a-solution">
+<h2>3. Hygia as a solution<a class="headerlink" href="#hygia-as-a-solution" title="Permalink to this headline">#</a></h2>
+<p><cite>Hygia</cite> offers a flexible solution for configuring your data pipeline. With it, you can customize the operations executed
+at each stage of the pipeline. Our current implementation includes the identification of Keyboard Smash for the
+Latin alphabet (also known as the Roman alphabet) through specific functions that have been integrated into the pipeline.
+This allows for efficient and accurate identification of Keyboard Smash in your data.</p>
+<a class="reference internal image-reference" href="_static/Frame3.png"><img alt="Alternative text" src="_static/Frame3.png" style="width: 1000px;" /></a>
+<p>The main features are:</p>
 <ul class="simple">
 <li><p>Be able to experiment on several databases</p></li>
 <li><p>Customize data pipeline for each database</p></li>
@@ -276,16 +354,15 @@ programming language.</p>
 <li><p>Organize and display experiments and model metadata however you want</p></li>
 <li><p>Share and collaborate on experiment results and models across the org</p></li>
 </ul>
+</section>
+<section id="supported-by">
+<h2>4. Supported by<a class="headerlink" href="#supported-by" title="Permalink to this headline">#</a></h2>
+<a class="reference internal image-reference" href="_static/logo_eldorado.png"><img alt="Alternative text" src="_static/logo_eldorado.png" style="width: 150px;" /></a>
+<a class="reference internal image-reference" href="_static/logo_unb.svg"><img alt="Alternative text" src="_static/logo_unb.svg" width="150" /></a>
+<a class="reference internal image-reference" href="_static/logo_lappis.png"><img alt="Alternative text" src="_static/logo_lappis.png" style="width: 150px;" /></a>
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
 </section>
 
 
@@ -296,10 +373,10 @@ programming language.</p>
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='right-next' id="next-link" href="user_guide/index.html" title="next page">
+  <a class='right-next' id="next-link" href="getting_started/index.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">User Guide</p>
+      <p class="prev-next-title">Getting Started</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -321,18 +398,39 @@ programming language.</p>
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Welcome to Hygia’s documentation!
+   Welcome to Hygia’s documentation
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#features">
-   Features
+  <a class="reference internal nav-link" href="#why-hygia">
+   Why
+   <cite>
+    Hygia
+   </cite>
+   ?
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#indices-and-tables">
-   Indices and tables
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rework">
+     1. Rework
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loosing-time-and-spend-money">
+     2. Loosing time and spend money
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hygia-as-a-solution">
+     3. Hygia as a solution
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#supported-by">
+     4. Supported by
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -384,7 +482,7 @@ programming language.</p>
     
 <p class="copyright">
 
-    &copy; Copyright 2023, Lappis.<br>
+    &copy; Copyright 2023, Lappis, Eldorado.<br>
 
 </p>
 
@@ -403,7 +501,7 @@ programming language.</p>
   <div class="footer-item">
     
 <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
 
   </div>

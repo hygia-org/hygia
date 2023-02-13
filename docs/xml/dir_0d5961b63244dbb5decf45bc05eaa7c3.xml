@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_0d5961b63244dbb5decf45bc05eaa7c3" kind="dir">
+    <compoundname>/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering</compoundname>
+    <innerfile refid="feature__engineering_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="feature__engineering_8py">feature_engineering.py</innerfile>
+    <innerfile refid="key__smash_8py">key_smash.py</innerfile>
+    <innerfile refid="regex_8py">regex.py</innerfile>
+    <innerfile refid="word__embedding_8py">word_embedding.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/alvesisaque/workspace/Playground/hygia/data_pipeline/feature_engineering/"/>
+  </compounddef>
+</doxygen>
