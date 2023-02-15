@@ -21,11 +21,12 @@ class KeySmash:
     \endcode
     """
     
-    def __init__(self, ignore_shannon_entropy:bool=True):
+    def __init__(self, ignore_ratio_of_numeric_digits_squared:bool=True, ignore_shannon_entropy:bool=True):
         """
         Initialize the KeySmash class.
         """
         self.ignore_shannon_entropy = ignore_shannon_entropy
+        self.ignore_ratio_of_numeric_digits_squared = ignore_ratio_of_numeric_digits_squared
         self.char_sets = {
             "vowels": 'aeiouáéíóúãõ',
             "consonants": 'bcdfghjklmnñpqrstvwxz', # except 'y'
@@ -210,7 +211,8 @@ class KeySmash:
         df[f'feature_ks_count_sequence_squared_vowels_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'vowels') if len(x) > 0 else 0.0)
         df[f'feature_ks_count_sequence_squared_consonants_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'consonants') if len(x) > 0 else 0.0)
         df[f'feature_ks_count_sequence_squared_special_characters_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'special_characters') if len(x) > 0 else 0.0)
-        df[f'feature_ks_ratio_of_numeric_digits_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.ratio_of_numeric_digits_squared(x) if len(x) > 0 else 0.0)
+        if not self.ignore_ratio_of_numeric_digits_squared:
+            df[f'feature_ks_ratio_of_numeric_digits_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.ratio_of_numeric_digits_squared(x) if len(x) > 0 else 0.0)
         df[f'feature_ks_average_of_char_count_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.average_of_char_count_squared(x) if len(x) > 0 else 0.0)
         if not self.ignore_shannon_entropy:
             df[f'feature_ks_shannon_entropy_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.shannon_entropy(x) if len(x) > 0 else 0.0)

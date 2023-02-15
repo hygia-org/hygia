@@ -22,7 +22,11 @@ class RandomForestModel:
         scores
     \endcode
     """
-  def __init__(self, model_file=None, normalization_absolutes_file=None ,n_estimators=100, max_depth=None, random_state=0, normalize=True):
+  def __init__(self, model_file=None,
+               normalization_absolutes_file=None,
+               n_estimators=100, max_depth=None,
+               random_state=0,
+               normalize=True) -> None:
     """
     Initialize the RandomForestModel class.
 

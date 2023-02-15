@@ -28,7 +28,8 @@ class FeatureEngineering:
                  country:str=None,
                  context_words_file:str=None,
                  ignore_word_embedding:bool=False,
-                 ignore_shannon_entropy:bool=True):
+                 ignore_ratio_of_numeric_digits_squared:bool=True,
+                 ignore_shannon_entropy:bool=True) -> None:
         """
         Initialize the FeatureEngineering class.
         
@@ -41,7 +42,7 @@ class FeatureEngineering:
         print(f'{Style.BRIGHT}dimensions -> {Style.NORMAL}{dimensions}')
         
         self.ignore_word_embedding = ignore_word_embedding
-        self.key_smash = KeySmash(ignore_shannon_entropy)
+        self.key_smash = KeySmash(ignore_ratio_of_numeric_digits_squared, ignore_shannon_entropy)
         self.word_embedding = WordEmbedding(lang=lang, dimensions=dimensions, model=model)
         self.regex = Regex(country=country, context_words_file=context_words_file)
 
