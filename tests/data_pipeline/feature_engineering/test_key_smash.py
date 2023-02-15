@@ -16,7 +16,8 @@ class TestKeySmash:
 
     @pytest.mark.parametrize("data, opt, expected_output", [
         ("PUENTECILLA KM. 1.7", "vowels", 0.0),
-        ("ASDASD XXXX", "consonants", 2.272727272727273)
+        ("ASDASD XXXX", "consonants", 2.272727272727273),
+        ("ABC123 !@#$%", "special_characters", 2.0833333333333335)
     ])
     def test_count_sequence_squared(self, data, opt, expected_output):
         assert self.key_smash.count_sequence_squared(data, opt) == expected_output
