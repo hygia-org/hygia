@@ -26,7 +26,7 @@ class KeySmash:
         """
         self.char_sets = {
             "vowels": 'aeiouáéíóúãõ',
-            "consonants": 'bcdfghjklmnñpqrstvwxyz',
+            "consonants": 'bcdfghjklmnñpqrstvwxz', # except 'y'
             "special_characters": '!@#$%^¨|\'\"&*()_+:;~`´]}{[}ºª=-.¿¡'
         }
     
