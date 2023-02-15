@@ -5,7 +5,7 @@ from hygia import KeySmash
 class TestKeySmash:
     
     def setup_method(self):
-        self.key_smash = KeySmash()
+        self.key_smash = KeySmash(ignore_shannon_entropy=False)
 
     @pytest.mark.parametrize("data, expected_output", [
         ("PUENTECILLA KM. 1.7", 1.121212121212121),
@@ -29,6 +29,15 @@ class TestKeySmash:
     def test_ratio_of_numeric_digits_squared(self, data, expected_output):
         assert self.key_smash.ratio_of_numeric_digits_squared(data) == expected_output
     
+    @pytest.mark.parametrize("data, expected_output", [
+        ("PUENTECILLA KM. 1.7",3.7345216647797517),
+        ("ASDASD XXXX",1.9219280948873623),
+        ("AS AA",0.8112781244591328),
+        ("XX XX",-0.0)
+    ])
+    def test_shannon_entropy(self, data, expected_output):
+        assert self.key_smash.shannon_entropy(data) == expected_output
+    
     def test_extract_key_smash_features(self):
         df = pd.DataFrame({"text_column": ["abcdefgh", "ijklmnop", "qrstuvwxyz"]})
         result = self.key_smash.extract_key_smash_features(df, "text_column")
@@ -38,4 +47,5 @@ class TestKeySmash:
         assert 'feature_ks_count_sequence_squared_special_characters_text_column' in result.columns
         assert 'feature_ks_ratio_of_numeric_digits_squared_text_column' in result.columns
         assert 'feature_ks_average_of_char_count_squared_text_column' in result.columns
-        assert result.shape[1] == 6 # Ensure no extra columns are added
+        assert 'feature_ks_shannon_entropy_text_column' in result.columns
+        assert result.shape[1] == 7 # Ensure no extra columns are added

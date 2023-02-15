@@ -16,11 +16,12 @@ class TestAnnotateData:
         })
         
         key_smash_thresholds = {
-            'count_sequence_squared_vowels': 0.9,
-            'count_sequence_squared_consonants': 0.9,
-            'count_sequence_squared_special_characters': 0.9,
-            'ratio_of_numeric_digits_squared': 0.9,
-            'average_of_char_count_squared': 0.9,
+            'count_sequence_squared_vowels': ['above', 1.00],
+            'count_sequence_squared_consonants':['above',  1.999],
+            'count_sequence_squared_special_characters': ['above', 2.2499],
+            # 'ratio_of_numeric_digits_squared': ['above', 2.9],
+            'average_of_char_count_squared': ['above', 2.78],
+            'shannon_entropy' : ['below', 2.0]
         }
         
         result = self.annotate_data.annotate_data(df, concatened_column_name='concat_address', ks_thresholds=key_smash_thresholds)
