@@ -7,7 +7,8 @@ class PreProcessData:
     """
     This class presents a series of functions that help in data pre-processing.
     As concatenate columns, replace abbreviation, and etc.
-
+    
+    Some abbreviations were taken from this website: https://en.wikipedia.org/wiki/Template:Mexico_State-Abbreviation_Codes
 
     Examples - 
     Use this class like this:
