@@ -68,7 +68,7 @@ class PreProcessData:
         """
         print(f'handle null values in the column {Style.BRIGHT}{column_name}{Style.NORMAL}')
         
-        df[column_name].fillna('').astype(str)
+        df[column_name] = df[column_name].fillna('').astype(str)
         return df
 
     def handle_extra_spaces(self, df, column_name:str) -> str:

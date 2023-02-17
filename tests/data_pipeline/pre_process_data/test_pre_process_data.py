@@ -1,23 +1,43 @@
 import pytest
-
+import pandas as pd
 from hygia.data_pipeline.pre_process_data.pre_process_data import PreProcessData
-from hygia.paths.paths import root_path
 
-@pytest.mark.parametrize("abbreviation, expected_replacement", [
-    ('NO', "NUMBER"),
-    ('no', "NUMBER"),
-    ('no123', "NUMBER123"),
-    ('no 123', "NUMBER 123"),
-    ('123 no', "123 NUMBER"),
-    ('not', "not"),
-    ('NOT', "NOT"),
-    ('ono', "ono")
-])
 class TestPreProcessData:
-    def test_replace_abbreviation_coutry(self, abbreviation, expected_replacement):
-        pre_process_data = PreProcessData(country='MEXICO')
-        assert pre_process_data.__replace_abbreviation(abbreviation) == expected_replacement
-        
-    def test_replace_abbreviation_abbreviations_file(self, abbreviation, expected_replacement):
-        pre_process_data = PreProcessData(abbreviations_file=root_path + '/data/dicts/mexico_abbreviations.csv')
-        assert pre_process_data.__replace_abbreviation(abbreviation) == expected_replacement
+    def setup_method(self):
+        self.pre_processor = PreProcessData(country='MEXICO')
+
+    def test_concatenate_columns(self):
+        data = {'A': ['a', 'b', 'c'], 'B': ['d', 'e', 'f']}
+        df = pd.DataFrame(data)
+        expected_output = ['a d', 'b e', 'c f']
+        output = self.pre_processor.concatenate_columns(df, ['A', 'B'], 'C')
+        assert list(output['C']) == expected_output
+
+    def test_handle_nulls(self):
+        data = {'A': ['a', 'b', None]}
+        df = pd.DataFrame(data)
+        expected_output = ['a', 'b', '']
+        output = self.pre_processor.handle_nulls(df, 'A')
+        assert list(output['A']) == expected_output
+
+    def test_handle_extra_spaces(self):
+        data = {'A': ['  a  ', ' b  ', ' c']}
+        df = pd.DataFrame(data)
+        expected_output = ['a', 'b', 'c']
+        output = self.pre_processor.handle_extra_spaces(df, 'A')
+        assert list(output['A']) == expected_output
+
+    def test_handle_abreviations(self):
+        data = {'A': ['CDMX', 'MZ', 'BCN']}
+        df = pd.DataFrame(data)
+        expected_output = ['Ciudad de México', 'MANZANA', 'Baja California']
+        output = self.pre_processor.handle_abreviations(df, 'A')
+        assert list(output['A']) == expected_output
+
+    def test_pre_process_data(self):
+        data = {'A': ['  a  ', ' b  ', ' c'], 'B': ['d', 'e', 'f'], 'C': ['NLE', 'CANCUN', 'NLE Monterrey']}
+        df = pd.DataFrame(data)
+        expected_output = ['a d', 'b e', 'c f']
+        output = self.pre_processor.pre_process_data(df, ['A', 'B'], 'D')
+        assert 'D' in output.columns
+        assert list(output['D']) == expected_output

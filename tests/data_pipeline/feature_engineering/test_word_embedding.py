@@ -1,23 +1,22 @@
 import pytest
 import pandas as pd
 import numpy as np
-from whatlies.language import BytePairLanguage
 
 from hygia import WordEmbedding
 
 class TestWordEmbedding:
-    def setup_method(self):
+    @pytest.fixture(autouse=True)
+    def setup_class(self):
         self.word_embedding = WordEmbedding()
 
-    def test_load_model(self):
-        assert isinstance(self.word_embedding.__load_model(), BytePairLanguage)
-    
+    def test_pre_embedding(self):
+        text = 'A test with ABC123 AVENUE'
+        pre_embedding = self.word_embedding._WordEmbedding__pre_embedding(text)
+        assert pre_embedding == 'test with AVENUE'
+
     def test_get_embedding(self):
         embedding = self.word_embedding.get_embedding("This is a sample text.")
         assert isinstance(embedding, np.ndarray)
-
-    def test_pre_embedding(self):
-        assert self.word_embedding.__pre_embedding("A test with ABC123 AVENUE") == "test with AVENUE"
 
     def test_extract_word_embedding_features(self):
         df = pd.DataFrame({"text_column": ["This is a sample text.", "Another sample text."]})

@@ -39,6 +39,24 @@ class TestKeySmash:
     def test_shannon_entropy(self, data, expected_output):
         assert self.key_smash.shannon_entropy(data) == expected_output
     
+    @pytest.mark.parametrize("data, expected_output", [
+        ("PUENTECILLA KM. 1.7",1.0),
+        ("ASDASD XXXX",1.3636363636363638),
+        ("AAAAAA AAAA",1.6363636363636362),
+        ("XX XX",1.2)
+    ])
+    def test_repeated_bigram_ratio(self, data, expected_output):
+        assert self.key_smash.repeated_bigram_ratio(data) == expected_output
+    
+    @pytest.mark.parametrize("data, expected_output", [
+        ("PUENTECILLA KM. 1.7",1.7894736842105263),
+        ("ASDASD XXXX",1.4545454545454546),
+        ("AAAAAA AAAA",1.1818181818181819),
+        ("XX XX",1.4)
+    ])
+    def test_unique_char_ratio(self, data, expected_output):
+        assert self.key_smash.unique_char_ratio(data) == expected_output
+    
     def test_extract_key_smash_features(self):
         df = pd.DataFrame({"text_column": ["abcdefgh", "ijklmnop", "qrstuvwxyz"]})
         result = self.key_smash.extract_key_smash_features(df, "text_column")
