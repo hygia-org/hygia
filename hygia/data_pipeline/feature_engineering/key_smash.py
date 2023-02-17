@@ -1,7 +1,8 @@
-from statistics import mean
 import pandas as pd
+import numpy as np
 import re
 
+MAX_STRING_LENGTH = 128
 class KeySmash:
     """
     A class for calculating metrics to indicate key smashing behavior in a text.
@@ -20,13 +21,22 @@ class KeySmash:
     \endcode
     """
     
-    def __init__(self):
+    def __init__(self,
+                ignore_ratio_of_numeric_digits_squared:bool=True,
+                ignore_shannon_entropy:bool=True,
+                ignore_repeated_bigram_ratio:bool=True,
+                ignore_unique_char_ratio:bool=True
+                ):
         """
         Initialize the KeySmash class.
         """
+        self.ignore_shannon_entropy = ignore_shannon_entropy
+        self.ignore_ratio_of_numeric_digits_squared = ignore_ratio_of_numeric_digits_squared
+        self.ignore_repeated_bigram_ratio = ignore_repeated_bigram_ratio
+        self.ignore_unique_char_ratio = ignore_unique_char_ratio
         self.char_sets = {
             "vowels": 'aeiouáéíóúãõ',
-            "consonants": 'bcdfghjklmnñpqrstvwxyz',
+            "consonants": 'bcdfghjklmnñpqrstvwxz', # except 'y'
             "special_characters": '!@#$%^¨|\'\"&*()_+:;~`´]}{[}ºª=-.¿¡'
         }
     
@@ -160,18 +170,57 @@ class KeySmash:
             return num_of_numeric_digits / len(' '.join(text_list))
         else:
             return 0
-    
-    def _normalize_column(self, df: pd.DataFrame, column: str) -> pd.DataFrame:
+
+    def shannon_entropy(self, text:str) -> float:
         """
-        Normalize a given column in a dataframe.
+        Calculates the Shannon entropy for the given string.
+
+        \param text (Type: str) The text to extract the metric from.
         
-        \param df (Type: DataFrame) Dataframe to normalize the column in.
-        \param column (Type: str) Name of the column to be normalized.
-
-        \return (Type: DataFrame) The input dataframe with the normalized column.
+        \return (Type: float) Shannon entropy (min bits per byte-character).
         """
-        return df[column]  / df[column].abs().max() if df[column].abs().max() != 0.0 else 0.0
+        text = str(text)
+        text = text.replace(" ", "")
+        size = len(text)
+        if size < 2:
+            return 0.0
+        unique_chars = set(text)
+        freq_dict = {char: text.count(char) for char in unique_chars}
+        freq_array = np.array(list(freq_dict.values()), dtype=float)
+        prob_array = freq_array / size
+        log_array = np.log2(prob_array)
+        ent = -np.sum(prob_array * log_array)
+        return ent
+    
+    def __count_repeated_bigrams(self, text:str):
+        bigrams = [text[i:i+2] for i in range(len(text)-1)]
+        unique_bigrams = set(bigrams)
+        count = len(bigrams) - len(unique_bigrams)
+        return count
 
+    def repeated_bigram_ratio(self, text:str) -> float:
+        """
+        Calculates the Repeated Bigrams Ratio for the given string.
+
+        \param text (Type: str) The text to extract the metric from.
+        
+        \return (Type: float) Repeated Bigrams Ratio (min bits per byte-character).
+        """
+        repeated_bigram_count = self.__count_repeated_bigrams(text)
+        ratio = repeated_bigram_count * 1.0 / len(text) + 1
+        return ratio
+    
+    def unique_char_ratio(self, text:str) -> float:
+        """
+        Calculates the Unique Char Ratio for the given string.
+
+        \param text (Type: str) The text to extract the metric from.
+        
+        \return (Type: float) Unique Char Ratio (min bits per byte-character).
+        """
+        unique_chars = set(text)
+        ratio = len(unique_chars) / len(text) + 1
+        return ratio
     
     def extract_key_smash_features(self, df:pd.DataFrame, column_name:str) -> pd.DataFrame:
         """
@@ -181,7 +230,15 @@ class KeySmash:
         \param column_name (Type: str) Name of the column in the dataframe that contains the text data to extract features from.
         \param normalize (bool, optional) Indicates whether to normalize the key smash feature columns. Default is True.
 
-        \return (Type: DataFrame) The input dataframe with additional columns for key smash features: 'irregular_sequence_vowels', 'irregular_sequence_consonants', 'irregular_sequence_special_characters', 'number_count_metric', 'char_frequency_metric'
+        \return (Type: DataFrame) The input dataframe with additional columns for key smash features:
+            'irregular_sequence_vowels',
+            'irregular_sequence_consonants',
+            'irregular_sequence_special_characters',
+            'number_count_metric',
+            'char_frequency_metric',
+            'shannon_entropy',
+            'repeated_bigram_ratio',
+            'unique_char_ratio'
 
         Examples
         Use this function like this:
@@ -198,7 +255,14 @@ class KeySmash:
         df[f'feature_ks_count_sequence_squared_vowels_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'vowels') if len(x) > 0 else 0.0)
         df[f'feature_ks_count_sequence_squared_consonants_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'consonants') if len(x) > 0 else 0.0)
         df[f'feature_ks_count_sequence_squared_special_characters_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.count_sequence_squared(x, 'special_characters') if len(x) > 0 else 0.0)
-        df[f'feature_ks_ratio_of_numeric_digits_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.ratio_of_numeric_digits_squared(x) if len(x) > 0 else 0.0)
+        if not self.ignore_ratio_of_numeric_digits_squared:
+            df[f'feature_ks_ratio_of_numeric_digits_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.ratio_of_numeric_digits_squared(x) if len(x) > 0 else 0.0)
         df[f'feature_ks_average_of_char_count_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.average_of_char_count_squared(x) if len(x) > 0 else 0.0)
+        if not self.ignore_shannon_entropy:
+            df[f'feature_ks_shannon_entropy_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.shannon_entropy(x) if len(x) > 0 else 0.0)
+        if not self.ignore_repeated_bigram_ratio:
+            df[f'feature_ks_repeated_bigram_ratio_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.repeated_bigram_ratio(x) if len(x) > 0 else 0.0)
+        if not self.ignore_unique_char_ratio:
+            df[f'feature_ks_unique_char_ratio_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.unique_char_ratio(x) if len(x) > 0 else 0.0)
         
         return df

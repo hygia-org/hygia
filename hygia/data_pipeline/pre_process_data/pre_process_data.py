@@ -7,7 +7,8 @@ class PreProcessData:
     """
     This class presents a series of functions that help in data pre-processing.
     As concatenate columns, replace abbreviation, and etc.
-
+    
+    Some abbreviations were taken from this website: https://en.wikipedia.org/wiki/Template:Mexico_State-Abbreviation_Codes
 
     Examples - 
     Use this class like this:
@@ -67,14 +68,14 @@ class PreProcessData:
         """
         print(f'handle null values in the column {Style.BRIGHT}{column_name}{Style.NORMAL}')
         
-        df[column_name].fillna('').astype(str)
+        df[column_name] = df[column_name].fillna('').astype(str)
         return df
 
     def handle_extra_spaces(self, df, column_name:str) -> str:
         df[column_name] = df[column_name].apply(lambda x: ' '.join(x.split()))
         return df
     
-    def _replace_abbreviation(self, text:str) -> str:
+    def __replace_abbreviation(self, text:str) -> str:
         """
         Function that identifies abbreviations and according to the dictionary changes the names
         
@@ -93,7 +94,7 @@ class PreProcessData:
         \param column_name (Type: str) Column name to check
         """
 
-        df[column_name] = df[column_name].apply(lambda x: self._replace_abbreviation(x))
+        df[column_name] = df[column_name].apply(lambda x: self.__replace_abbreviation(x))
         return df
     
     def pre_process_data(self, df, columns_to_concat=None, column_name=None):

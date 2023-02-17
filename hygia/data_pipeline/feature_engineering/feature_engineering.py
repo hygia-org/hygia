@@ -22,7 +22,17 @@ class FeatureEngineering:
     \endcode
     """
 
-    def __init__(self, lang:str='es', dimensions:int=25, model:str='bytepair', country:str=None, context_words_file:str=None):
+    def __init__(self, lang:str='es',
+                 dimensions:int=25,
+                 model:str='bytepair',
+                 country:str=None,
+                 context_words_file:str=None,
+                 ignore_word_embedding:bool=False,
+                 ignore_ratio_of_numeric_digits_squared:bool=True,
+                 ignore_shannon_entropy:bool=True,
+                 ignore_repeated_bigram_ratio:bool=True,
+                 ignore_unique_char_ratio:bool=True,
+                 ignore_regex_features:bool=False) -> None:
         """
         Initialize the FeatureEngineering class.
         
@@ -34,8 +44,12 @@ class FeatureEngineering:
         print(f'{Style.BRIGHT}language -> {Style.NORMAL}{lang}')
         print(f'{Style.BRIGHT}dimensions -> {Style.NORMAL}{dimensions}')
         
-        
-        self.key_smash = KeySmash()
+        self.ignore_word_embedding = ignore_word_embedding
+        self.ignore_regex_features = ignore_regex_features
+        self.key_smash = KeySmash(ignore_ratio_of_numeric_digits_squared,
+                                  ignore_shannon_entropy,
+                                  ignore_repeated_bigram_ratio,
+                                  ignore_unique_char_ratio)
         self.word_embedding = WordEmbedding(lang=lang, dimensions=dimensions, model=model)
         self.regex = Regex(country=country, context_words_file=context_words_file)
 
@@ -62,6 +76,8 @@ class FeatureEngineering:
         print(f'extract features from -> {text_column}')
         
         df = self.key_smash.extract_key_smash_features(df, text_column)
-        df = self.word_embedding.extract_word_embedding_features(df, text_column)
-        df = self.regex.extract_regex_features(df, text_column)
+        if not self.ignore_word_embedding:
+            df = self.word_embedding.extract_word_embedding_features(df, text_column)
+        if not self.ignore_regex_features:
+            df = self.regex.extract_regex_features(df, text_column)
         return df

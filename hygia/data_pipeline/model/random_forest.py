@@ -22,7 +22,11 @@ class RandomForestModel:
         scores
     \endcode
     """
-  def __init__(self, model_file=None, normalization_absolutes_file=None ,n_estimators=100, max_depth=None, random_state=0, normalize=True):
+  def __init__(self, model_file=None,
+               normalization_absolutes_file=None,
+               n_estimators=100, max_depth=None,
+               random_state=0,
+               normalize=True) -> None:
     """
     Initialize the RandomForestModel class.
 
@@ -44,7 +48,7 @@ class RandomForestModel:
       self.random_state = random_state
       self.model = RandomForestClassifier(n_estimators=self.n_estimators, max_depth=self.max_depth, random_state=self.random_state)
   
-  def _get_absolute_maximums(self, df, features_columns_to_normalize, concatened_column_name):
+  def __get_absolute_maximums(self, df, features_columns_to_normalize, concatened_column_name):
     if self.normalization_absolutes:
       return
     absolutes_dict = {}
@@ -53,7 +57,7 @@ class RandomForestModel:
       absolutes_dict[column.replace(f"_{concatened_column_name}", '')] = [absolute_maximum] if absolute_maximum else [1.0]
     self.normalization_absolutes = pd.DataFrame(absolutes_dict)
       
-  def _normalization(self, df, features_columns_to_normalize, concatened_column_name):
+  def __normalization(self, df, features_columns_to_normalize, concatened_column_name):
     if not self.normalize:
       return df
     for features_column_to_normalize in features_columns_to_normalize:
@@ -83,8 +87,8 @@ class RandomForestModel:
     
     # Normalization
     key_smash_features_columns = [column for column in all_features_columns if column.startswith('feature_ks')]
-    self._get_absolute_maximums(df_balanced, key_smash_features_columns, concatened_column_name)
-    df_balanced_normalized = self._normalization(df_balanced.copy(), key_smash_features_columns, concatened_column_name)
+    self.__get_absolute_maximums(df_balanced, key_smash_features_columns, concatened_column_name)
+    df_balanced_normalized = self.__normalization(df_balanced.copy(), key_smash_features_columns, concatened_column_name)
     
     # Train/Test split
     X = df_balanced_normalized[[*all_features_columns]].values
@@ -123,7 +127,7 @@ class RandomForestModel:
     print(f'{Fore.YELLOW}running model...{Fore.WHITE}')
     
     key_smash_features_columns = [column for column in X.columns if column.startswith('feature_ks')]
-    X = self._normalization(X.copy(), key_smash_features_columns, concatened_column_name)
+    X = self.__normalization(X.copy(), key_smash_features_columns, concatened_column_name)
     
     return self.model.predict(X.values)
   

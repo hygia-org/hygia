@@ -13,11 +13,12 @@ class AnnotateData:
 
         annotate_data = hg.AnnotateData()
         key_smash_thresholds = {
-        'count_sequence_squared_vowels': 1.00,
-        'count_sequence_squared_consonants': 1.999,
-        'count_sequence_squared_special_characters': 2.2499,
-        'ratio_of_numeric_digits_squared': 2.9,
-        'average_of_char_count_squared': 2.78,
+        'count_sequence_squared_vowels': ['above', 1.00],
+        'count_sequence_squared_consonants': ['above', 1.999],
+        'count_sequence_squared_special_characters': ['above', 2.2499],
+        # 'ratio_of_numeric_digits_squared': ['above', 2.9],
+        'average_of_char_count_squared': ['above', 2.78],
+        'shannon_entropy' : ['below', 2.0]
         }
 
         df = annotate_data.annotate_data(df, concatened_column_name, key_smash_thresholds)
@@ -42,13 +43,13 @@ class AnnotateData:
         
         df['target'] = 'valid'
         
-        ks_colummns = [col for col in df if col.startswith('feature_ks')]
+        ks_colummns = [col for col in df if col.startswith('feature_ks') and col.endswith(concatened_column_name)]
         for ks_colummn in ks_colummns:
-            threshold = float("inf")
-            for th in ks_thresholds:
-                if th in ks_colummn:
-                    threshold = ks_thresholds[th]
-            df['target'] = df.apply(lambda x: 'key_smash' if x[ks_colummn] >= threshold else x['target'], axis=1) 
+            threshold = ks_thresholds[ks_colummn.replace('feature_ks_', '').replace(f'_{concatened_column_name}', '')]
+            if threshold[0] == 'above':
+                df['target'] = df.apply(lambda x: 'key_smash' if x[ks_colummn] >= threshold[1] else x['target'], axis=1) 
+            elif threshold[0] == 'below':
+                df['target'] = df.apply(lambda x: 'key_smash' if x[ks_colummn] <= threshold[1] else x['target'], axis=1)
         
         re_colummns = [col for col in df if col.startswith('feature_re')]
         for re_colummn in re_colummns:

@@ -20,6 +20,5 @@ class TestFeatureEngineering:
         assert 'feature_ks_count_sequence_squared_vowels_text_column' in df.columns
         assert 'feature_ks_count_sequence_squared_consonants_text_column' in df.columns
         assert 'feature_ks_count_sequence_squared_special_characters_text_column' in df.columns
-        assert 'feature_ks_ratio_of_numeric_digits_squared_text_column' in df.columns
         assert 'feature_ks_average_of_char_count_squared_text_column' in df.columns
         assert 'feature_we_0_text_column' in df.columns
