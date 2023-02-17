@@ -35,9 +35,9 @@ class WordEmbedding:
         self.lang = lang
         self.dimensions = dimensions
         self.model = model
-        self.word_embedding_model = self._load_model()
+        self.word_embedding_model = self.__load_model()
 
-    def _load_model(self) -> Any:
+    def __load_model(self) -> Any:
         """
         Load the word embedding model.
 
@@ -56,7 +56,7 @@ class WordEmbedding:
         else:
             raise ValueError
     
-    def _pre_embedding(self, text: str) -> str:
+    def __pre_embedding(self, text: str) -> str:
         text = ' '.join(e for e in text.split() if e.isalpha() and len(e) >= 3 and not e.isspace())
         return text
         
@@ -85,7 +85,7 @@ class WordEmbedding:
         
         empty_vector = [0.0] * self.dimensions
 
-        text = self._pre_embedding(text)
+        text = self.__pre_embedding(text)
         
         # White space string
         if len(text.strip().split()) == 0:

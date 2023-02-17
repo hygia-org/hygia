@@ -184,7 +184,18 @@ class KeySmash:
         log_array = np.log2(prob_array)
         ent = -np.sum(prob_array * log_array)
         return ent
+    
+    def __count_repeated_bigrams(self, string):
+        bigrams = [string[i:i+2] for i in range(len(string)-1)]
+        unique_bigrams = set(bigrams)
+        count = len(bigrams) - len(unique_bigrams)
+        return count
 
+    def repeated_bigram_ratio(self, string):
+        bigram_count = self.__count_repeated_bigrams(string)
+        total_bigrams = len(string) - 1
+        ratio = bigram_count / total_bigrams
+        return ratio
     
     def extract_key_smash_features(self, df:pd.DataFrame, column_name:str) -> pd.DataFrame:
         """

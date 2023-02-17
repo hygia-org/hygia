@@ -75,7 +75,7 @@ class PreProcessData:
         df[column_name] = df[column_name].apply(lambda x: ' '.join(x.split()))
         return df
     
-    def _replace_abbreviation(self, text:str) -> str:
+    def __replace_abbreviation(self, text:str) -> str:
         """
         Function that identifies abbreviations and according to the dictionary changes the names
         
@@ -94,7 +94,7 @@ class PreProcessData:
         \param column_name (Type: str) Column name to check
         """
 
-        df[column_name] = df[column_name].apply(lambda x: self._replace_abbreviation(x))
+        df[column_name] = df[column_name].apply(lambda x: self.__replace_abbreviation(x))
         return df
     
     def pre_process_data(self, df, columns_to_concat=None, column_name=None):

@@ -16,8 +16,8 @@ from hygia.paths.paths import root_path
 class TestPreProcessData:
     def test_replace_abbreviation_coutry(self, abbreviation, expected_replacement):
         pre_process_data = PreProcessData(country='MEXICO')
-        assert pre_process_data._replace_abbreviation(abbreviation) == expected_replacement
+        assert pre_process_data.__replace_abbreviation(abbreviation) == expected_replacement
         
     def test_replace_abbreviation_abbreviations_file(self, abbreviation, expected_replacement):
         pre_process_data = PreProcessData(abbreviations_file=root_path + '/data/dicts/mexico_abbreviations.csv')
-        assert pre_process_data._replace_abbreviation(abbreviation) == expected_replacement
+        assert pre_process_data.__replace_abbreviation(abbreviation) == expected_replacement
