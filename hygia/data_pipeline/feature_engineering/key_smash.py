@@ -21,12 +21,19 @@ class KeySmash:
     \endcode
     """
     
-    def __init__(self, ignore_ratio_of_numeric_digits_squared:bool=True, ignore_shannon_entropy:bool=True):
+    def __init__(self,
+                ignore_ratio_of_numeric_digits_squared:bool=True,
+                ignore_shannon_entropy:bool=True,
+                ignore_repeated_bigram_ratio:bool=True,
+                ignore_unique_char_ratio:bool=True
+                ):
         """
         Initialize the KeySmash class.
         """
         self.ignore_shannon_entropy = ignore_shannon_entropy
         self.ignore_ratio_of_numeric_digits_squared = ignore_ratio_of_numeric_digits_squared
+        self.ignore_repeated_bigram_ratio = ignore_repeated_bigram_ratio
+        self.ignore_unique_char_ratio = ignore_unique_char_ratio
         self.char_sets = {
             "vowels": 'aeiouáéíóúãõ',
             "consonants": 'bcdfghjklmnñpqrstvwxz', # except 'y'
@@ -185,16 +192,34 @@ class KeySmash:
         ent = -np.sum(prob_array * log_array)
         return ent
     
-    def __count_repeated_bigrams(self, string):
-        bigrams = [string[i:i+2] for i in range(len(string)-1)]
+    def __count_repeated_bigrams(self, text:str):
+        bigrams = [text[i:i+2] for i in range(len(text)-1)]
         unique_bigrams = set(bigrams)
         count = len(bigrams) - len(unique_bigrams)
         return count
 
-    def repeated_bigram_ratio(self, string):
-        bigram_count = self.__count_repeated_bigrams(string)
-        total_bigrams = len(string) - 1
-        ratio = bigram_count / total_bigrams
+    def repeated_bigram_ratio(self, text:str) -> float:
+        """
+        Calculates the Repeated Bigrams Ratio for the given string.
+
+        \param text (Type: str) The text to extract the metric from.
+        
+        \return (Type: float) Repeated Bigrams Ratio (min bits per byte-character).
+        """
+        repeated_bigram_count = self.__count_repeated_bigrams(text)
+        ratio = repeated_bigram_count * 1.0 / len(text) + 1
+        return ratio
+    
+    def unique_char_ratio(self, text:str) -> float:
+        """
+        Calculates the Unique Char Ratio for the given string.
+
+        \param text (Type: str) The text to extract the metric from.
+        
+        \return (Type: float) Unique Char Ratio (min bits per byte-character).
+        """
+        unique_chars = set(text)
+        ratio = len(unique_chars) / len(text) + 1
         return ratio
     
     def extract_key_smash_features(self, df:pd.DataFrame, column_name:str) -> pd.DataFrame:
@@ -205,7 +230,15 @@ class KeySmash:
         \param column_name (Type: str) Name of the column in the dataframe that contains the text data to extract features from.
         \param normalize (bool, optional) Indicates whether to normalize the key smash feature columns. Default is True.
 
-        \return (Type: DataFrame) The input dataframe with additional columns for key smash features: 'irregular_sequence_vowels', 'irregular_sequence_consonants', 'irregular_sequence_special_characters', 'number_count_metric', 'char_frequency_metric'
+        \return (Type: DataFrame) The input dataframe with additional columns for key smash features:
+            'irregular_sequence_vowels',
+            'irregular_sequence_consonants',
+            'irregular_sequence_special_characters',
+            'number_count_metric',
+            'char_frequency_metric',
+            'shannon_entropy',
+            'repeated_bigram_ratio',
+            'unique_char_ratio'
 
         Examples
         Use this function like this:
@@ -227,5 +260,9 @@ class KeySmash:
         df[f'feature_ks_average_of_char_count_squared_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.average_of_char_count_squared(x) if len(x) > 0 else 0.0)
         if not self.ignore_shannon_entropy:
             df[f'feature_ks_shannon_entropy_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.shannon_entropy(x) if len(x) > 0 else 0.0)
+        if not self.ignore_repeated_bigram_ratio:
+            df[f'feature_ks_repeated_bigram_ratio_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.repeated_bigram_ratio(x) if len(x) > 0 else 0.0)
+        if not self.ignore_unique_char_ratio:
+            df[f'feature_ks_unique_char_ratio_{column_name}'] = df[column_name].fillna('').apply(lambda x: self.unique_char_ratio(x) if len(x) > 0 else 0.0)
         
         return df
