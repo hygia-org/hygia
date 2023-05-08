@@ -57,4 +57,28 @@ Follow [template Pull Request](/.github/pull_request_template.md).
 
 #### Tag's
 
-<!-- Explicar tag's -->
+| name | description |
+| :--: | :---------: |
+| documentation | Improve or additions to documentation |
+| bug | Something isn't wrong |
+| cli |  |
+| data preprocessing | Consists of all changing, cleaning and validating the data before running the model | 
+| data-validation |  |
+| duplicate | This issue or pull request already exists |
+| enhancement | New feature or request |
+| epic | |
+| feture-engineering | |
+| good first issue | Good for newcomers |
+| help wanted | Extra attention is needed |
+| invalid | This doesn't seem right |
+| library | |
+| model | |
+| need-refinement | | 
+| not-mapped | |
+| prototype | |
+| question | Further information is requested |
+| spike | |
+| tech viablity | |
+| user-story | |
+| wontfix | This will not be worked on |
+| yaml | |
