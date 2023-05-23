@@ -1,42 +1,50 @@
-## Installation Guide
+## Installation Guide for Contributors
 
 ### Recommendation
-We recommend Ubuntu 22.04, Python 3.09 and Jupyter Notebook to run.
+We recommend Ubuntu 22.04 (or WSL2 with Ubuntu 22.04 on Windows 11 machines), Python 3.9 and Jupyter Notebook. It is also recommended to have Jupyter and Python extensions in your favorite code editor.
 
 ### Requirements
-#### Python
-python3.9-dev
-python3.9-venv
+#### Python 3.9
+- python3.9-dev
+- python3.9-venv
 
-#### Poetry
-```
-pip install poetry
-```
 #### Pytest
 ```
 pip install pytest
 ```
 
-First you need to have env in your virtual machine. Check the documentation [available here](https://virtualenv.pypa.io/en/latest/installation.html).
-
-
-Then create a venv and install the requirements.
-
+#### Poetry
 ```
-python -m venv env
+pip install poetry
+```
+
+### Running
+First you need to have env in your virtual machine, as mentioned above, and then clone the repository. You can also check the documentation [available here](https://virtualenv.pypa.io/en/latest/installation.html).
+
+Then create a venv and install the requirements with the following commands:
+```
+python3.9 -m venv env
 source env/bin/activate
 pip install -r requirements-dev.txt
 ```
 
-### Guide for users
+The next step is to install Hygia itself. You will need poetry to do it:
+```
+poetry install hygia
+```
 
-### Guide for contributors
+You may now open the code. Access examples/yaml_example.ipynb and click on Execute Cell as shown in the image bellow (using Visual Studio Code).
+
+![image](https://github.com/hygia-org/hygia/assets/87672491/24bcc336-cdb9-4dbf-ba8d-0301c2e529ff)
+
+This step will ask you to choose a kernel. We recommend using the Python3.9 kernel (this may need some recommended extensions for Jupyter and Python).
+
+You may need to fix some issues before it runs completely. Feel free to create a copy of config/default_config.yaml and change it as needed. Also, reporting errors really help to enhance this code, please let us know what problems you faced!
 
 ### Testing
-
 To run and verify the tests run:
-
 ```
 pytest --cov
 ```
+
 ### Common problems
