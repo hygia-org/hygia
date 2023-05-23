@@ -48,3 +48,5 @@ pytest --cov
 ```
 
 ### Common problems
+
+![image](https://github.com/hygia-org/hygia/assets/88175144/91ea8a8d-8c56-4175-8ccc-e1b31c4757e1)
