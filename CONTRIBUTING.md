@@ -15,11 +15,22 @@ To contribute to this project, follow the next steps:
 
 ### Commit Policy
 
-The *issues* need title, description, at least one assigned, *labels*, *milestoner* (the *sprint* to conclude).
+The *issues* need title, description, at least one assigned, *labels*, *milestones* (the *sprint* to conclude).
 
 The Labels used in the project are described in the topic [Labels](https://github.com/PDA-FGA/Playground/labels).
 
 To create an issue follow [task template](/.github/ISSUE_TEMPLATE/task.md) or [user history template](/.github/ISSUE_TEMPLATE/user-story.md)
+
+All commits must be mention the issue, for that, just add `#<issue_number>`.
+
+```
+ #21 Adding contributing guide
+```
+
+**By default, the `#` character defines a comment line in the commit message file. To resolve this issue, use the command:**
+```
+git config --local core.commentChar '!'
+```
 
 ### Branches Policy
 
@@ -33,18 +44,6 @@ See the merge policy in the topic [Merges to *main*](CONTRIBUTING.md#merges-to-m
 
 The development branches will be created from the *main* branch with the default naming `x/issue_name`, where `x` represents the issue tracking code.
 
-### Commits Policy
-
-All commits must be mention the issue, for that, just add `#<issue_number>`.
-
-```
- #21 Adding contributing guide
-```
-
-**By default, the `#` character defines a comment line in the commit message file. To resolve this issue, use the command:**
-```
-git config --local core.commentChar '!'
-```
 
 ### Merges and Pull Requests Policy
 
