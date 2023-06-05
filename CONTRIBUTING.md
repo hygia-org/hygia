@@ -56,28 +56,4 @@ Follow [template Pull Request](/.github/pull_request_template.md).
 
 #### Tag's
 
-| name | description |
-| :--: | :---------: |
-| documentation | Improve or additions to documentation |
-| bug | Something isn't wrong |
-| cli | Related to the command-line interface. |
-| data preprocessing | Consists of all changing, cleaning and validating the data before running the model | 
-| data-validation | Related to validating data. |
-| duplicate | This issue or pull request already exists |
-| enhancement | New feature or request |
-| epic | Refers to a larger, high-level task or feature |
-| feture-engineering | Related to creating or improving features used in the model|
-| good first issue | Good for newcomers |
-| help wanted | Extra attention is needed |
-| invalid | This doesn't seem right |
-| library | Related to a specific library used in the project |
-| model | Related to the machine learning model|
-| need-refinement | That issue need further refinement or improvement | 
-| not-mapped |That issue have not been mapped to a specific category |
-| prototype | Related to creating a prototype or proof-of-concept |
-| question | Further information is requested |
-| spike | Short-term tasks to investigate specific problems or technologies |
-| tech viablity | Related to the feasibility of a technology used in the project |
-| user-story | A description of a specific feature from a user's perspective |
-| wontfix | This will not be worked on |
-| yaml | Related to YAML configuration files |
+<!-- Explicar tag's -->
