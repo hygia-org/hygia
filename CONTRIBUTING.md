@@ -15,11 +15,11 @@ To contribute to this project, follow the next steps:
 
 ### Commit Policy
 
-The *issues* need title, description, at least one assigned, *labels*, *milestoner* (the *sprint* to conclude)
+The *issues* need title, description, at least one assigned, *labels*, *milestones* (the *sprint* to conclude).
 
 The Labels used in the project are described in the topic [Labels](https://github.com/PDA-FGA/Playground/labels).
 
-To create a issue follow [task template](/.github/ISSUE_TEMPLATE/task.md) or [user history template](/.github/ISSUE_TEMPLATE/user-story.md)
+To create an issue follow [task template](/.github/ISSUE_TEMPLATE/task.md) or [user history template](/.github/ISSUE_TEMPLATE/user-story.md)
 
 All commits must be mention the issue, for that, just add `#<issue_number>`.
 
@@ -37,7 +37,7 @@ git config --local core.commentChar '!'
 #### *main*
 
 The *main* is the production branch, where the stable version of the project will be. It will be closed for commits and for pushes.
-See the merge policy in the topic [Merges para *master*](CONTRIBUTING.md#merges-to-main).
+See the merge policy in the topic [Merges to *main*](CONTRIBUTING.md#merges-to-main).
 
 
 #### Branch Names  
