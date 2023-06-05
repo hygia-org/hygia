@@ -48,5 +48,25 @@ pytest --cov
 ```
 
 ### Common problems
+Some problems may occur due to the low percentage of test coverage or errors in the code itself. In these cases, don't worry. Soon the problems will be solved.
+
+Don't forget to send a message or create new issues if you find any unexpected situation.
+
+#### 1.0 - Execution errors
+The problem shown below is caused by unexpected parameters in config/default_config.yaml. We are currently working to solve this problem, as well as others related to this step.
 
 ![image](https://github.com/hygia-org/hygia/assets/88175144/91ea8a8d-8c56-4175-8ccc-e1b31c4757e1)
+
+#### 2.0 - No arguments expected for "install" command
+This is a simple error that may occur depending on the poetry version you are using. If you are facing it, just type "poetry install" instead of "poetry install hygia".
+
+![image](assets/img/error2.png)
+
+#### 3.0 - Couldn't install requirements-dev.txt
+This is another simple error. It occurs when you forget the "-r" in the command presented in the Running section. Just write as shown below:
+
+```
+pip install -r requirements-dev.txt
+```
+
+If you still can't install the requirements, let us know exactly what you're facing by opening an issue.
