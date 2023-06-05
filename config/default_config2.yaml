@@ -1,0 +1,47 @@
+dag:
+  id: basic_example
+  description: DAG de teste
+  output_folder: '../data/tmp/'
+  data_path:
+    - '../data/data_example.csv'
+  data_config:
+    separator: ','
+    engine: 'python'
+    encoding: 'utf-8'
+    nrows: 100000
+
+  pre_processing:
+    aliases:
+      - street: ['ADDRESS', 'ZIPCODE']
+
+  feature_engineering:
+    - input:
+        columns:
+          - 'street'
+        features:
+          word_embedding:
+            data_lang: 'es'
+            street:
+              dimensions: 25
+
+  annotate_data:
+    - input:
+        columns:
+          - 'street'
+        thresholds:
+          count_sequence_squared_vowels: 1.00
+          count_sequence_squared_consonants: 1.999
+          count_sequence_squared_special_characters: 2.2499
+          ratio_of_numeric_digits_squared: 2.9
+          average_of_char_count_squared: 2.78
+
+  model:
+    random_forest:
+      - input:
+          trained_model_file: '../data/models/RandomForest_Ksmash_WordEmbedding_Regex.pkl'
+          type: 'address'
+          columns:
+            - 'street'
+          thresholds:
+            test_size: 0.3
+            n_estimators: 100
