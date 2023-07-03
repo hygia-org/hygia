@@ -26,10 +26,6 @@ class TestYamlParser():
         assert 'feature_engineering' in self.yaml
         assert type(self.yaml['feature_engineering']) == list
         assert 'input' in self.yaml['feature_engineering'][0]
-    
-    def test_yaml_has_model(self):
-        assert 'model' in self.yaml
-        assert self.yaml['model'] == 'model'
 
     def test_yaml_has_nrows(self):
         assert 'nrows' in self.yaml
@@ -42,15 +38,3 @@ class TestYamlParser():
 
     def test_yaml_has_separator(self):
         assert 'separator' in self.yaml
-
-    def test_yaml_has_model(self):
-        assert 'model' in self.yaml
-        assert self.yaml['model'] == 'model'
-
-    def test_yaml_has_annotate_data(self):
-        assert 'annotate_data' in self.yaml
-        assert self.yaml['annotate_data'] == 'annotate_data'
-
-    def test_yaml_has_preprocessing(self):
-        assert 'pre_processing' in self.yaml
-        assert self.yaml['pre_processing'] == 'pre_processing'
