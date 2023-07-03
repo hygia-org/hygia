@@ -1,3 +1,4 @@
+import yaml
 from hygia.parser.YAML_parser import YAMLParser
 
 class TestYamlParser():
@@ -18,7 +19,7 @@ class TestYamlParser():
         assert 'description' in self.yaml
         assert self.yaml['description'] == 'DAG de teste'
         
-    def test_yaml_has_feature_settings(self):
+    def test_yaml_has_output_folder(self):
         assert 'output_folder' in self.yaml
         assert self.yaml['output_folder'] == 'output'
     
@@ -29,12 +30,16 @@ class TestYamlParser():
 
     def test_yaml_has_nrows(self):
         assert 'nrows' in self.yaml
-    
+        assert isinstance(self.yaml['nrows'], int)
+
     def test_yaml_has_engine(self):
         assert 'engine' in self.yaml
+        assert isinstance(self.yaml['engine'], str)
 
     def test_yaml_has_encoding(self):
         assert 'encoding' in self.yaml
+        assert isinstance(self.yaml['encoding'], str)
 
     def test_yaml_has_separator(self):
         assert 'separator' in self.yaml
+        assert isinstance(self.yaml['separator'], str)
