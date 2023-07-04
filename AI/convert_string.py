@@ -28,9 +28,11 @@ def convert_to_natural_language(text):
         return f"{hour_words} {minute_words}"
 
     # Convert the text
-    converted_text = re.sub(r'\d+', convert_numbers, text)
-    converted_text = re.sub(r'\$\d+\.\d+', convert_currency, converted_text)
-    converted_text = re.sub(r'\d+:\d+', convert_time, converted_text)
+    converted_text = re.sub(r'\d+:\d+|\$\d+\.\d+|\d+', 
+                            lambda match: convert_time(match) if ':' in match.group(0)
+                            else convert_currency(match) if '$' in match.group(0)
+                            else convert_numbers(match),
+                            text)
 
     return converted_text
 
