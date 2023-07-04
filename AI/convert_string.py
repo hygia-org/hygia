@@ -1,4 +1,5 @@
 import inflect
+import json
 import re
 
 def convert_to_natural_language(text):
@@ -41,4 +42,14 @@ if __name__ == '__main__':
     converted_data = convert_to_natural_language(content_txt)
     print("==== TXT ====")
     print(f"original:\n{content_txt}\n")
+    print(f"converted:\n{converted_data}\n")
+
+    # Open the text file in read mode
+    with open('./AI/examples/ex.json', 'r') as file:
+        # Read the entire contents of the file
+        content_json = json.load(file)
+
+    converted_data = convert_to_natural_language(json.dumps(content_json))
+    print("==== JSON ====")
+    print(f"original:\n{content_json}\n")
     print(f"converted:\n{converted_data}\n")
