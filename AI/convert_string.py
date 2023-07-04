@@ -1,5 +1,6 @@
 import inflect
 import json
+import yaml
 import re
 
 def convert_to_natural_language(text):
@@ -52,4 +53,15 @@ if __name__ == '__main__':
     converted_data = convert_to_natural_language(json.dumps(content_json))
     print("==== JSON ====")
     print(f"original:\n{content_json}\n")
+    print(f"converted:\n{converted_data}\n")
+
+    # Open the text file in read mode
+    with open('./AI/examples/ex.yaml', 'r') as file:
+        # Read the entire contents of the file
+        content_yaml = yaml.safe_load(file)
+
+    converted_data = convert_to_natural_language(json.dumps(content_yaml))
+    
+    print("==== YAML ====")
+    print(f"original:\n{content_yaml}\n")
     print(f"converted:\n{converted_data}\n")
