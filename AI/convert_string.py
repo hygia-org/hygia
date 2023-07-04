@@ -33,5 +33,12 @@ def convert_to_natural_language(text):
     return converted_text
 
 if __name__ == '__main__':
-    converted_data = convert_to_natural_language("I need to wake up at 6:30 AM.")
-    print(converted_data)
+    # Open the text file in read mode
+    with open('./AI/examples/ex.txt', 'r') as file:
+        # Read the entire contents of the file
+        content_txt = file.read()
+
+    converted_data = convert_to_natural_language(content_txt)
+    print("==== TXT ====")
+    print(f"original:\n{content_txt}\n")
+    print(f"converted:\n{converted_data}\n")
