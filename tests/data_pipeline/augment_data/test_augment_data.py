@@ -12,6 +12,7 @@ from hygia import AugmentData
     ('00000', False),
     ('00001', False)
 ])
+
 class TestAugmentData:
     def setup_method(self):
         self.augment_data = AugmentData(country="MEXICO")
@@ -22,7 +23,8 @@ class TestAugmentData:
     def test_validate_zipcodes(self, zipcode, expected):
         df = pd.DataFrame({'zipcode': [zipcode]})
         result = self.augment_data.validate_zipcodes(df, 'zipcode')
-        assert result.equals(pd.DataFrame({'zipcode_is_valid': [expected]}))
+        expected_result = pd.DataFrame({'zipcode_is_valid': [expected]})
+        assert result.equals(expected_result)
 
     def test_augment_data(self, zipcode, expected):
         df = pd.DataFrame({'zipcode': [zipcode]})
