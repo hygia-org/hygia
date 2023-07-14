@@ -13,13 +13,58 @@ class TestAnnotateData:
             'feature_ks_count_sequence_squared_special_characters': [0.05, 0.15, 0.25, 0.35],
             'feature_ks_ratio_of_numeric_digits_squared': [0.05, 0.15, 0.25, 0.9],
             'feature_ks_average_of_char_count_squared': [0.05, 0.15, 0.25, 0.35],
+            'feature_re_target1': [True, False, True, False],
+            'feature_re_target2': [False, True, False, True],
         })
         
         key_smash_thresholds = {
             'count_sequence_squared_vowels': ['above', 1.00],
             'count_sequence_squared_consonants':['above',  1.999],
             'count_sequence_squared_special_characters': ['above', 2.2499],
-            # 'ratio_of_numeric_digits_squared': ['above', 2.9],
+            'ratio_of_numeric_digits_squared': ['above', 0.5],
+            'average_of_char_count_squared': ['above', 2.78],
+            'shannon_entropy' : ['below', 2.0]
+        }
+        
+        result = self.annotate_data.annotate_data(df, concatened_column_name='concat_address', ks_thresholds=key_smash_thresholds)
+        
+        assert 'target' in result.columns
+
+    def test_annotate_data_no_key_smash_columns(self):
+        df = pd.DataFrame({
+            'concat_address': ['test', 'asdasd', 'DELL', 'PENDIENTE 123!@#'],
+            'feature_re_target1': [True, False, True, False],
+            'feature_re_target2': [False, True, False, True],
+        })
+        
+        key_smash_thresholds = {
+            'count_sequence_squared_vowels': ['above', 1.00],
+            'count_sequence_squared_consonants':['above',  1.999],
+            'count_sequence_squared_special_characters': ['above', 2.2499],
+            'ratio_of_numeric_digits_squared': ['above', 0.5],
+            'average_of_char_count_squared': ['above', 2.78],
+            'shannon_entropy' : ['below', 2.0]
+        }
+        
+        result = self.annotate_data.annotate_data(df, concatened_column_name='concat_address', ks_thresholds=key_smash_thresholds)
+        
+        assert 'target' in result.columns
+
+    def test_annotate_data_no_regex_columns(self):
+        df = pd.DataFrame({
+            'concat_address': ['test', 'asdasd', 'DELL', 'PENDIENTE 123!@#'],
+            'feature_ks_count_sequence_squared_vowels': [0.05, 0.15, 0.25, 0.35],
+            'feature_ks_count_sequence_squared_consonants': [0.05, 0.15, 0.9, 0.35],
+            'feature_ks_count_sequence_squared_special_characters': [0.05, 0.15, 0.25, 0.35],
+            'feature_ks_ratio_of_numeric_digits_squared': [0.05, 0.15, 0.25, 0.9],
+            'feature_ks_average_of_char_count_squared': [0.05, 0.15, 0.25, 0.35],
+        })
+        
+        key_smash_thresholds = {
+            'count_sequence_squared_vowels': ['above', 1.00],
+            'count_sequence_squared_consonants':['above',  1.999],
+            'count_sequence_squared_special_characters': ['above', 2.2499],
+            'ratio_of_numeric_digits_squared': ['above', 0.5],
             'average_of_char_count_squared': ['above', 2.78],
             'shannon_entropy' : ['below', 2.0]
         }
