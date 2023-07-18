@@ -2,6 +2,7 @@ import inflect
 import json
 import yaml
 import re
+import xml.etree.ElementTree as ET
 
 def convert_to_natural_language(text):
     p = inflect.engine()
@@ -66,4 +67,19 @@ if __name__ == '__main__':
     
     print("==== YAML ====")
     print(f"original:\n{content_yaml}\n")
+    print(f"converted:\n{converted_data}\n")
+
+    with open('./AI/examples/ex.xml', 'r') as file:
+    root = ET.parse(file).getroot()
+
+    content_xml = {}
+    for child in root:
+        content_xml[child.tag] = child.text
+
+    content_json = json.dumps(content_xml)
+
+    converted_data = convert_to_natural_language(content_json)
+
+    print("==== XML ====")
+    print(f"original:\n{content_xml}\n")
     print(f"converted:\n{converted_data}\n")
