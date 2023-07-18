@@ -1,0 +1,21 @@
+<root>
+    <name>Tommy</name>
+    <age>30</age>
+    <address>
+        <street>123 Main Street</street>
+        <city>Anytown</city>
+        <state>XYZ</state>
+    </address>
+    <pets>
+        <pet>
+            <name>Bolt</name>
+            <species>Dog</species>
+            <age>5</age>
+        </pet>
+        <pet>
+            <name>Bill</name>
+            <species>Cat</species>
+            <age>3</age>
+        </pet>
+    </pets>
+</root>

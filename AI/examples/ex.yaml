@@ -1,0 +1,17 @@
+# Example YAML File
+person:
+  name: Tommy
+  age: 30
+  address:
+    street: 123 Main Street
+    city: Anytown
+    state: XYZ
+    postal_code: 12345
+
+pets:
+  - name: Bolt
+    species: Dog
+    age: 5
+  - name: Bill
+    species: Cat
+    age: 3
